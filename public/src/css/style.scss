@@ -634,7 +634,8 @@ html {
                 gap: 7px;
 
               }
-              a:hover > img{
+
+              a:hover > img {
                 transform: translateX(5px) translateY(-5px);
               }
             }
@@ -794,7 +795,8 @@ html {
                 gap: 7px;
 
               }
-              a:hover > img{
+
+              a:hover > img {
                 transform: translateX(5px) translateY(-5px);
               }
             }
@@ -954,7 +956,8 @@ html {
                 gap: 7px;
 
               }
-              a:hover > img{
+
+              a:hover > img {
                 transform: translateX(5px) translateY(-5px);
               }
             }
@@ -4082,14 +4085,14 @@ html {
 
     //login page
 
-    #loginBody {
+    #login-body {
       display: flex;
       flex-direction: column;
       justify-content: center;
       margin: 0 auto;
       height: 100vh;
 
-      .loginContainer {
+      .login-container {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -4099,13 +4102,14 @@ html {
         width: 324px;
         gap: 16px;
 
-        .upContainer {
+        .up-container {
           display: flex;
           flex-direction: row;
           justify-content: space-between;
           align-items: center;
           gap: 16px;
-          .backHomeBtn {
+
+          .back-home-button {
             display: flex;
             flex-direction: row;
             justify-content: center;
@@ -4136,6 +4140,7 @@ html {
               scale: 1.2;
             }
           }
+
           .logo {
             display: flex;
             flex-direction: row;
@@ -4147,6 +4152,7 @@ html {
             background: rgba(255, 255, 255, 0.05);
             padding: 12px 0;
             width: 100%;
+
             p {
               display: flex;
               justify-content: center;
@@ -4158,7 +4164,7 @@ html {
           }
         }
 
-        .inputContainer {
+        .input-container {
           display: flex;
           flex-direction: column;
           border-radius: 16px;
@@ -4167,7 +4173,7 @@ html {
           padding: 33px;
           gap: 20px;
 
-          .inputContent {
+          .input-content {
             display: flex;
             padding: 16px 48px 16px 16px;
             border-radius: 14px;
@@ -4197,6 +4203,102 @@ html {
         }
       }
 
+    }
+
+    // Dashboard Page
+
+    #dashboard-body {
+      display: flex;
+      font-family: $font-default;
+
+      #dashboard-header-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 60%;
+        margin: 24px auto;
+        #dashboard-title-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 16px;
+
+          li {
+            list-style: none;
+            .dashboard-index-back {
+              display: flex;
+              padding: 9px;
+              border-radius: 33554400px;
+              border: 1px solid rgba(255, 255, 255, 0.20);
+              background: rgba(255, 255, 255, 0.10);
+              align-items: center;
+
+              img {
+                height: 20px;
+                width: 20px;
+              }
+            }
+          }
+
+          .dashboard-title {
+            display: flex;
+            flex-direction: column;
+
+            #dashboard-title-h1 {
+              color: $text-default;
+              font-size: 24px;
+              line-height: 32px;
+            }
+
+            #dashboard-title-p {
+              color: rgba(255, 255, 255, 0.60);
+              font-size: 14px;
+              line-height: 20px;
+            }
+          }
+        }
+        #dashboard-state-system {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+          #dashboard-status-dot {
+            display: inline-block;
+            height: 8px;
+            width: 8px;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+
+            &.dashboard-dot-active {
+              background-color: #05df72;
+              box-shadow: 0 0 8px #05df72;
+            }
+
+            &.dashboard-dot-inactive {
+              background-color: #ff4d4d;
+              box-shadow: 0 0 8px #ff4d4d;
+            }
+          }
+          #dashboard-status-text {
+            display: flex;
+            color: $text-default;
+          }
+          @keyframes pulse {
+            0% {
+              opacity: 1;
+            }
+            50% {
+              opacity: 0.5;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
+        }
+      }
     }
 
     footer {

@@ -18,7 +18,8 @@ app.post('/login', (req, res) => {
     if (username && password) {
         db.query('SELECT * FROM users WHERE username = ? AND password = ?', [username, password], (error, results) => {
             if (error) {
-                res.send('Erreur serveur');
+                console.error("Détail de l'erreur SQL :", error);
+                res.send('Erreur serveu');
                 return;
             }
             if (results.length > 0) {

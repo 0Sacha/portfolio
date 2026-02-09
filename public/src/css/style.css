@@ -3712,14 +3712,14 @@ html body #contactSection #contactRightMainContent #contactPart p {
   font-size: 12px;
   padding: 10px;
 }
-html body #loginBody {
+html body #login-body {
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin: 0 auto;
   height: 100vh;
 }
-html body #loginBody .loginContainer {
+html body #login-body .login-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3729,14 +3729,14 @@ html body #loginBody .loginContainer {
   width: 324px;
   gap: 16px;
 }
-html body #loginBody .loginContainer .upContainer {
+html body #login-body .login-container .up-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   gap: 16px;
 }
-html body #loginBody .loginContainer .upContainer .backHomeBtn {
+html body #login-body .login-container .up-container .back-home-button {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -3748,7 +3748,7 @@ html body #loginBody .loginContainer .upContainer .backHomeBtn {
   padding: 5px 15px;
   width: 95px;
 }
-html body #loginBody .loginContainer .upContainer .backHomeBtn a {
+html body #login-body .login-container .up-container .back-home-button a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3757,14 +3757,14 @@ html body #loginBody .loginContainer .upContainer .backHomeBtn a {
   padding: 5px 15px;
   gap: 8px;
 }
-html body #loginBody .loginContainer .upContainer .backHomeBtn a img {
+html body #login-body .login-container .up-container .back-home-button a img {
   transition: all ease 0.2s;
 }
-html body #loginBody .loginContainer .upContainer .backHomeBtn a:hover > img {
+html body #login-body .login-container .up-container .back-home-button a:hover > img {
   transform: translateX(-5px);
   scale: 1.2;
 }
-html body #loginBody .loginContainer .upContainer .logo {
+html body #login-body .login-container .up-container .logo {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -3776,7 +3776,7 @@ html body #loginBody .loginContainer .upContainer .logo {
   padding: 12px 0;
   width: 100%;
 }
-html body #loginBody .loginContainer .upContainer .logo p {
+html body #login-body .login-container .up-container .logo p {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3784,7 +3784,7 @@ html body #loginBody .loginContainer .upContainer .logo p {
   text-decoration: none;
   gap: 8px;
 }
-html body #loginBody .loginContainer .inputContainer {
+html body #login-body .login-container .input-container {
   display: flex;
   flex-direction: column;
   border-radius: 16px;
@@ -3793,7 +3793,7 @@ html body #loginBody .loginContainer .inputContainer {
   padding: 33px;
   gap: 20px;
 }
-html body #loginBody .loginContainer .inputContainer .inputContent {
+html body #login-body .login-container .input-container .input-content {
   display: flex;
   padding: 16px 48px 16px 16px;
   border-radius: 14px;
@@ -3802,7 +3802,7 @@ html body #loginBody .loginContainer .inputContainer .inputContent {
   color: rgba(255, 255, 255, 0.3);
   font-size: 14px;
 }
-html body #loginBody .loginContainer .inputContainer button {
+html body #login-body .login-container .input-container button {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3815,8 +3815,93 @@ html body #loginBody .loginContainer .inputContainer button {
   font-size: 14px;
   transition: all ease 0.2s;
 }
-html body #loginBody .loginContainer .inputContainer button:hover {
+html body #login-body .login-container .input-container button:hover {
   scale: 1.03;
+}
+html body #dashboard-body {
+  display: flex;
+  font-family: "Space Grotesk";
+}
+html body #dashboard-body #dashboard-header-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  margin: 24px auto;
+}
+html body #dashboard-body #dashboard-header-content #dashboard-title-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+html body #dashboard-body #dashboard-header-content #dashboard-title-container li {
+  list-style: none;
+}
+html body #dashboard-body #dashboard-header-content #dashboard-title-container li .dashboard-index-back {
+  display: flex;
+  padding: 9px;
+  border-radius: 33554400px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  align-items: center;
+}
+html body #dashboard-body #dashboard-header-content #dashboard-title-container li .dashboard-index-back img {
+  height: 20px;
+  width: 20px;
+}
+html body #dashboard-body #dashboard-header-content #dashboard-title-container .dashboard-title {
+  display: flex;
+  flex-direction: column;
+}
+html body #dashboard-body #dashboard-header-content #dashboard-title-container .dashboard-title #dashboard-title-h1 {
+  color: rgb(255, 255, 255);
+  font-size: 24px;
+  line-height: 32px;
+}
+html body #dashboard-body #dashboard-header-content #dashboard-title-container .dashboard-title #dashboard-title-p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  line-height: 20px;
+}
+html body #dashboard-body #dashboard-header-content #dashboard-state-system {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+html body #dashboard-body #dashboard-header-content #dashboard-state-system #dashboard-status-dot {
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  border-radius: 50%;
+  animation: pulse 2s infinite;
+}
+html body #dashboard-body #dashboard-header-content #dashboard-state-system #dashboard-status-dot.dashboard-dot-active {
+  background-color: #05df72;
+  box-shadow: 0 0 8px #05df72;
+}
+html body #dashboard-body #dashboard-header-content #dashboard-state-system #dashboard-status-dot.dashboard-dot-inactive {
+  background-color: #ff4d4d;
+  box-shadow: 0 0 8px #ff4d4d;
+}
+html body #dashboard-body #dashboard-header-content #dashboard-state-system #dashboard-status-text {
+  display: flex;
+  color: rgb(255, 255, 255);
+}
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 html body footer {
   display: flex;
