@@ -93,7 +93,7 @@ html body #nav {
     margin-right: 20px;
   }
 }
-html body #nav nav {
+html body #nav #navbar {
   display: flex;
   color: rgba(255, 255, 255, 0.8);
   background-color: rgba(255, 255, 255, 0.1);
@@ -112,7 +112,7 @@ html body #nav nav {
   transition: scale 0.2s ease-out;
 }
 @media (max-width: 1100px) {
-  html body #nav nav {
+  html body #nav #navbar {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -121,79 +121,79 @@ html body #nav nav {
     height: 50px;
   }
 }
-html body #nav nav .title {
+html body #nav #navbar .title {
   display: flex;
   align-items: center;
   gap: 12px;
 }
 @media (max-width: 1100px) {
-  html body #nav nav .title {
+  html body #nav #navbar .title {
     display: none;
   }
 }
-html body #nav nav .title img {
+html body #nav #navbar .title img {
   width: 32px;
   height: 32px;
 }
-html body #nav nav .title h1 {
+html body #nav #navbar .title h1 {
   color: #ffffff;
   font-size: 16px;
 }
 @media (max-width: 1100px) {
-  html body #nav nav .title h1 {
+  html body #nav #navbar .title h1 {
     display: none;
   }
 }
-html body #nav nav ul {
+html body #nav #navbar ul {
   display: flex;
   gap: 32px;
   padding: 0;
   align-items: center;
 }
 @media (max-width: 1100px) {
-  html body #nav nav ul {
+  html body #nav #navbar ul {
     display: none;
   }
 }
-html body #nav nav ul li {
+html body #nav #navbar ul li {
   display: flex;
   list-style: none;
 }
-html body #nav nav ul li a {
+html body #nav #navbar ul li a {
   color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   font-size: 16px;
 }
-html body #nav nav ul li a:hover {
+html body #nav #navbar ul li a:hover {
   color: #ffffff;
 }
-html body #nav nav ul #loginBtn {
+html body #nav #navbar ul #loginBtn {
   padding: 9px;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 999px;
 }
-html body #nav nav ul #loginBtn:hover {
+html body #nav #navbar ul #loginBtn:hover {
   background-color: rgba(255, 255, 255, 0.15);
   border: 1px solid rgba(255, 255, 255, 0.25);
 }
-html body #nav nav #hamburgerBtn {
+html body #nav #navbar #hamburgerBtn {
   display: none;
 }
-html body #nav nav #hamburgerBtn:checked + label {
+html body #nav #navbar #hamburgerBtn:checked + label {
   transform: translateY(2px);
 }
-html body #nav nav #hamburgerBtn:checked + label #hamburgerLines1 {
+html body #nav #navbar #hamburgerBtn:checked + label #hamburgerLines1 {
   transform: rotate(45deg)translateX(7px)translateY(6px);
 }
-html body #nav nav #hamburgerBtn:checked + label #hamburgerLines2 {
+html body #nav #navbar #hamburgerBtn:checked + label #hamburgerLines2 {
   transform: rotate(-45deg);
 }
-html body #nav nav #hamburgerBtn:checked + label #hamburgerLines3 {
+html body #nav #navbar #hamburgerBtn:checked + label #hamburgerLines3 {
   transform: translateY(4px);
   opacity: 0;
 }
-html body #nav nav label {
+html body #nav #navbar label {
   display: none;
   flex-direction: column;
   gap: 7px;
@@ -202,24 +202,24 @@ html body #nav nav label {
   cursor: pointer;
 }
 @media (max-width: 1100px) {
-  html body #nav nav label {
+  html body #nav #navbar label {
     display: flex;
   }
 }
-html body #nav nav label #hamburgerLines1, html body #nav nav label #hamburgerLines2, html body #nav nav label #hamburgerLines3 {
+html body #nav #navbar label #hamburgerLines1, html body #nav #navbar label #hamburgerLines2, html body #nav #navbar label #hamburgerLines3 {
   transition: all 300ms ease-in-out;
 }
-html body #nav nav label #hamburgerLines1 {
+html body #nav #navbar label #hamburgerLines1 {
   height: 2px;
   width: 25px;
   background-color: #ffffff;
 }
-html body #nav nav label #hamburgerLines2 {
+html body #nav #navbar label #hamburgerLines2 {
   height: 2px;
   width: 25px;
   background-color: #ffffff;
 }
-html body #nav nav label #hamburgerLines3 {
+html body #nav #navbar label #hamburgerLines3 {
   height: 2px;
   width: 25px;
   background-color: #ffffff;
@@ -3929,7 +3929,10 @@ html body #dashboard-body #dashboard-nav #dashboard-navbar-container li #dashboa
 }
 html body #dashboard-body #dashboard-container {
   display: flex;
-  margin-top: 50px;
+  flex-direction: column;
+  margin-top: 48px;
+  width: 100%;
+  gap: 48px;
 }
 html body #dashboard-body #dashboard-container .dashboard-card {
   display: grid;
@@ -4021,6 +4024,246 @@ html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-4
   display: flex;
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
+}
+html body #dashboard-body #dashboard-container .dashboard-perf-et-activité {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 24px;
+}
+html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .dashboard-performance-du-site {
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  padding: 33px 33px 1px 33px;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  width: 100%;
+  height: 496px;
+  gap: 16px;
+}
+html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .dashboard-performance-du-site .performance-titre {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .dashboard-performance-du-site .performance-temps-de-chargement,
+html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .dashboard-performance-du-site .performance-disponibilité,
+html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .dashboard-performance-du-site .performance-utilisation-cpu,
+html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .dashboard-performance-du-site .performance-stockage-utilisé {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  font-size: 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 16px;
+}
+html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .dashboard-activité-récente {
+  display: flex;
+  flex-direction: column;
+  border-radius: 24px;
+  padding: 33px 33px 1px 33px;
+  color: rgb(255, 255, 255);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  width: 100%;
+  height: 496px;
+  gap: 16px;
+}
+html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .dashboard-activité-récente .activité-titre {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .dashboard-activité-récente .activité-card-default {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 16px;
+  gap: 12px;
+}
+html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .dashboard-activité-récente .activité-card-default .activité-informations-icon {
+  display: flex;
+  padding: 9px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+}
+html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .dashboard-activité-récente .activité-card-default .activité-informations {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  gap: 4px;
+}
+html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .dashboard-activité-récente .activité-card-default .activité-informations .activité-informations-description {
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  line-height: 20px;
+}
+html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .dashboard-activité-récente .activité-card-default .activité-informations .activité-temps-passé {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+  line-height: 16px;
+}
+html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  color: rgb(255, 255, 255);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .stat-dernières-modifications {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 410px;
+  padding: 33px 33px 1px 33px;
+  gap: 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+}
+html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .stat-dernières-modifications .dernières-modifications-titre {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+}
+html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .stat-dernières-modifications .dernières-modifications-default {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 95%;
+  height: 60px;
+  padding: 0 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+}
+html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .stat-dernières-modifications .dernières-modifications-default .dernières-modifications-default-status-et-descriptions {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  gap: 12px;
+}
+html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .stat-dernières-modifications .dernières-modifications-default .dernières-modifications-default-status-et-descriptions .dernières-modifications-default-status {
+  display: flex;
+  width: 61px;
+  height: 26px;
+  padding: 4px 8px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  border: 1px solid rgba(81, 162, 255, 0.3);
+  background: rgba(43, 127, 255, 0.2);
+  color: #51A2FF;
+  font-size: 12px;
+}
+html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .stat-dernières-modifications .dernières-modifications-default .dernières-modifications-default-status-et-descriptions .dernières-modifications-default-description {
+  display: flex;
+  flex-direction: row;
+  color: rgb(255, 255, 255);
+  align-items: center;
+}
+html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .stat-dernières-modifications .dernières-modifications-default .dernières-modifications-default-temps-passé {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.5);
+}
+html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .bdd-base-de-donnée {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  height: 410px;
+  padding: 33px 33px 1px 33px;
+  gap: 24px;
+  border-radius: 24px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+}
+html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .bdd-base-de-donnée .base-de-donnée-entrées-titre {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+}
+html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .bdd-base-de-donnée .base-de-donnée-entrées-totales {
+  display: flex;
+  width: 100%;
+  height: 90px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 0 0 17px;
+  justify-content: center;
+  gap: 4px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+}
+html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .bdd-base-de-donnée .base-de-donnée-entrées-totales .totales-titre {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  font-style: normal;
+}
+html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .bdd-base-de-donnée .base-de-donnée-dernière-sauvegarde {
+  display: flex;
+  width: 100%;
+  height: 90px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 0 0 17px;
+  justify-content: center;
+  gap: 4px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+}
+html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .bdd-base-de-donnée .base-de-donnée-dernière-sauvegarde .sauvegarde-titre {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  font-style: normal;
+}
+html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .bdd-base-de-donnée .base-de-donnée-taille {
+  display: flex;
+  width: 100%;
+  height: 90px;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0 0 0 17px;
+  justify-content: center;
+  gap: 4px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+}
+html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .bdd-base-de-donnée .base-de-donnée-taille .taille-titre {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 14px;
+  font-style: normal;
 }
 html body footer {
   display: flex;

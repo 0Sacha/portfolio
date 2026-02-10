@@ -117,7 +117,7 @@ html {
         margin-right: 20px;
       }
 
-      nav {
+      #navbar {
         display: flex;
         color: $text-navbar-color;
         background-color: $bg-navbar-color;
@@ -4344,7 +4344,10 @@ html {
 
       #dashboard-container {
         display: flex;
-        margin-top: 50px;
+        flex-direction: column;
+        margin-top: 48px;
+        width: 100%;
+        gap: 48px;
 
         .dashboard-card {
           display: grid;
@@ -4375,6 +4378,7 @@ html {
               border-radius: 14px;
               border: 1px solid rgba(255, 255, 255, 0.20);
               background: rgba(255, 255, 255, 0.10);
+
               .dashboard-card-chiffre {
                 .dashboard-card-label {
                   p {
@@ -4467,6 +4471,285 @@ html {
                     display: flex;
                     color: rgba(255, 255, 255, 0.60);
                     font-size: 14px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .dashboard-perf-et-activité {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          gap: 24px;
+
+          .dashboard-performance-du-site {
+            display: flex;
+            flex-direction: column;
+            border-radius: 24px;
+            padding: 33px 33px 1px 33px;
+            color: $text-default;
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            background: rgba(255, 255, 255, 0.05);
+            width: 100%;
+            height: 496px;
+            gap: 16px;
+
+            .performance-titre {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              gap: 8px;
+              font-size: 20px;
+              margin-bottom: 20px;
+            }
+
+            .performance-temps-de-chargement,
+            .performance-disponibilité,
+            .performance-utilisation-cpu,
+            .performance-stockage-utilisé {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              gap: 12px;
+              font-size: 16px;
+              border-radius: 14px;
+              border: 1px solid rgba(255, 255, 255, 0.10);
+              background: rgba(255, 255, 255, 0.05);
+              padding: 16px;
+            }
+          }
+
+          .dashboard-activité-récente {
+            display: flex;
+            flex-direction: column;
+            border-radius: 24px;
+            padding: 33px 33px 1px 33px;
+            color: $text-default;
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            background: rgba(255, 255, 255, 0.05);
+            width: 100%;
+            height: 496px;
+            gap: 16px;
+
+            .activité-titre {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              gap: 8px;
+              font-size: 20px;
+              margin-bottom: 20px;
+            }
+
+            .activité-card-default {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              font-size: 16px;
+              border-radius: 14px;
+              border: 1px solid rgba(255, 255, 255, 0.10);
+              background: rgba(255, 255, 255, 0.05);
+              padding: 16px;
+              gap: 12px;
+
+              .activité-informations-icon {
+                display: flex;
+                padding: 9px;
+                border-radius: 10px;
+                border: 1px solid rgba(255, 255, 255, 0.10);
+                background: rgba(255, 255, 255, 0.05);
+              }
+
+              .activité-informations {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+                gap: 4px;
+
+                .activité-informations-description {
+                  color: $text-default;
+                  font-size: 14px;
+                  line-height: 20px;
+                }
+
+                .activité-temps-passé {
+                  color: rgba(255, 255, 255, 0.40);
+                  font-size: 12px;
+                  line-height: 16px;
+                }
+              }
+            }
+          }
+        }
+
+        .dashboard-stat-et-bdd {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          width: 100%;
+          color: $text-default;
+          gap: 24px;
+          margin-bottom: 48px;
+
+          .stat-dernières-modifications {
+            display: flex;
+            flex-direction: column;
+            width: 70%;
+            height: 410px;
+            padding: 33px 33px 1px 33px;
+            gap: 24px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            background: rgba(255, 255, 255, 0.05);
+
+            .dernières-modifications-titre {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              gap: 8px;
+              font-size: 20px;
+            }
+
+            .dernières-modifications-default {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              margin: 0 auto;
+              width: 95%;
+              height: 60px;
+              padding: 0 16px;
+              border-radius: 14px;
+              border: 1px solid rgba(255, 255, 255, 0.10);
+              background: rgba(255, 255, 255, 0.05);
+
+              .dernières-modifications-default-status-et-descriptions {
+                display: flex;
+                flex-direction: row;
+                justify-content: start;
+                align-items: center;
+                gap: 12px;
+
+                .dernières-modifications-default-status {
+                  display: flex;
+                  width: 61px;
+                  height: 26px;
+                  padding: 4px 8px;
+                  align-items: center;
+                  justify-content: center;
+                  border-radius: 10px;
+                  border: 1px solid rgba(81, 162, 255, 0.30);
+                  background: rgba(43, 127, 255, 0.20);
+                  color: #51A2FF;
+                  font-size: 12px;
+                }
+
+                .dernières-modifications-default-description {
+                  display: flex;
+                  flex-direction: row;
+                  color: $text-default;
+                  align-items: center;
+                }
+              }
+
+              .dernières-modifications-default-temps-passé {
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                color: rgba(255, 255, 255, 0.50);
+              }
+            }
+          }
+
+          .bdd-base-de-donnée {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 30%;
+            height: 410px;
+            padding: 33px 33px 1px 33px;
+            gap: 24px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            background: rgba(255, 255, 255, 0.05);
+
+            .base-de-donnée-entrées-titre {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              gap: 8px;
+              font-size: 20px;
+            }
+
+            .base-de-donnée-entrées-totales {
+              display: flex;
+              width: 100%;
+              height: 90px;
+              flex-direction: column;
+              align-items: flex-start;
+              padding: 0 0 0 17px;
+              justify-content: center;
+              gap: 4px;
+              border-radius: 14px;
+              border: 1px solid rgba(255, 255, 255, 0.10);
+              background: rgba(255, 255, 255, 0.05);
+
+              .totales-titre {
+                color: rgba(255, 255, 255, 0.60);
+                font-size: 14px;
+                font-style: normal;
+
+                .totales-description {
+                }
+              }
+            }
+
+            .base-de-donnée-dernière-sauvegarde {
+              display: flex;
+              width: 100%;
+              height: 90px;
+              flex-direction: column;
+              align-items: flex-start;
+              padding: 0 0 0 17px;
+              justify-content: center;
+              gap: 4px;
+              border-radius: 14px;
+              border: 1px solid rgba(255, 255, 255, 0.10);
+              background: rgba(255, 255, 255, 0.05);
+
+              .sauvegarde-titre {
+                color: rgba(255, 255, 255, 0.60);
+                font-size: 14px;
+                font-style: normal;
+
+                .sauvegarde-description {
+                }
+              }
+            }
+
+            .base-de-donnée-taille {
+              display: flex;
+              width: 100%;
+              height: 90px;
+              flex-direction: column;
+              align-items: flex-start;
+              padding: 0 0 0 17px;
+              justify-content: center;
+              gap: 4px;
+              border-radius: 14px;
+              border: 1px solid rgba(255, 255, 255, 0.10);
+              background: rgba(255, 255, 255, 0.05);
+
+              .taille-titre {
+                color: rgba(255, 255, 255, 0.60);
+                font-size: 14px;
+                font-style: normal;
+
+                .tailles-description {
+                  .taille-progress-barre {
+
                   }
                 }
               }
