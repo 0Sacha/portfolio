@@ -31,12 +31,15 @@
 
     <link rel="icon" href="src/images/LogoPortfolio.png" type="image/x-icon">
     <link rel="stylesheet" href="src/css/style.css">
-    <script src="src/scripts/script.js" defer></script>
+    <script src="./src/scripts/script.js"></script>
 </head>
 <body>
 
 <div id="login-body">
     <div class="login-container">
+        <div id="error-message">
+            <p id="error-message-p">Pseudo ou mot de passe incorrect !</p>
+        </div>
         <div class="up-container">
             <div class="back-home-button">
                 <a href="index.html"><img src="src/images/icons/leftArrowWhiteIcon.svg">Retour</a>
@@ -56,6 +59,13 @@
 <footer>
     <p>Portfolio codé entièrement par <a href="https://github.com/0Sacha/">0Sacha</a></p>
 </footer>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+    if (params.has('error')) {
+        document.getElementById('error-message').style.display = 'block';
+    }
+</script>
 
 </body>
 </html>

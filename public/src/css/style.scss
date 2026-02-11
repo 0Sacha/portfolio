@@ -3654,6 +3654,24 @@ html {
         width: 324px;
         gap: 16px;
 
+        #error-message {
+          display: none;
+          width: 100%;
+
+          #error-message-p {
+            color: red;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+            border-radius: 16px;
+            border: 1px solid rgba(255, 0, 0, 0.1);
+            background: rgba(255, 0, 0, 0.05);
+            padding: 10px 15px;
+          }
+        }
+
         .up-container {
           display: flex;
           flex-direction: row;

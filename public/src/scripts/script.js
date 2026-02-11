@@ -1,3 +1,5 @@
+
+
 // navbar re-sizing to scroll
 
 const nav = document.querySelector('#navbar');
