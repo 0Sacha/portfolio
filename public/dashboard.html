@@ -28,115 +28,74 @@
     </div>
     <div id="dashboard-nav">
         <nav id="dashboard-navbar-container">
-            <li><img src="./src/images/icons/dashboard/monitoring.svg" alt=""><span
-                    id="dashboard-active-page">Monitoring</span></li>
-            <li><img src="./src/images/icons/dashboard/message.svg" alt=""><span>Messages</span></li>
-            <li><img src="./src/images/icons/dashboard/files.svg" alt=""><span>Mes Cours</span></li>
-            <li><img src="./src/images/icons/dashboard/stylet.svg" alt=""><span>Projets</span></li>
-            <li><img src="./src/images/icons/dashboard/user.svg" alt=""><span>À Propos</span></li>
+            <li>
+                <a href="#" data-page="views/monitoring.html" class="nav-link" id="dashboard-active-page">
+                    <svg id="dashboard-active-svg" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.75 2.25H3C2.58579 2.25 2.25 2.58579 2.25 3V8.25C2.25 8.66421 2.58579 9 3 9H6.75C7.16421 9 7.5 8.66421 7.5 8.25V3C7.5 2.58579 7.16421 2.25 6.75 2.25Z"
+                              stroke="#51A2FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15 2.25H11.25C10.8358 2.25 10.5 2.58579 10.5 3V5.25C10.5 5.66421 10.8358 6 11.25 6H15C15.4142 6 15.75 5.66421 15.75 5.25V3C15.75 2.58579 15.4142 2.25 15 2.25Z"
+                              stroke="#51A2FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M15 9H11.25C10.8358 9 10.5 9.33579 10.5 9.75V15C10.5 15.4142 10.8358 15.75 11.25 15.75H15C15.4142 15.75 15.75 15.4142 15.75 15V9.75C15.75 9.33579 15.4142 9 15 9Z"
+                              stroke="#51A2FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M6.5 12.3375H2.75C2.33579 12.3375 2 12.6733 2 13.0875V15.3375C2 15.7517 2.33579 16.0875 2.75 16.0875H6.5C6.91421 16.0875 7.25 15.7517 7.25 15.3375V13.0875C7.25 12.6733 6.91421 12.3375 6.5 12.3375Z"
+                              stroke="#51A2FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>Monitoring</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" data-page="views/messages.html" class="nav-link">
+                    <svg class="nav-link" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M16.5 12.75C16.5 13.1478 16.342 13.5294 16.0607 13.8107C15.7794 14.092 15.3978 14.25 15 14.25H5.121C4.72321 14.2501 4.34174 14.4082 4.0605 14.6895L2.409 16.341C2.33453 16.4155 2.23965 16.4662 2.13637 16.4867C2.03308 16.5072 1.92602 16.4967 1.82873 16.4564C1.73144 16.4161 1.64828 16.3479 1.58976 16.2603C1.53125 16.1727 1.50001 16.0698 1.5 15.9645V3.75C1.5 3.35218 1.65804 2.97064 1.93934 2.68934C2.22064 2.40804 2.60218 2.25 3 2.25H15C15.3978 2.25 15.7794 2.40804 16.0607 2.68934C16.342 2.97064 16.5 3.35218 16.5 3.75V12.75Z"
+                              stroke="white" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                    <span>Messages</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" data-page="views/cours.html" class="nav-link">
+                    <svg class="nav-link" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.5 10.5L5.625 8.32495C5.7473 8.08206 5.93334 7.87698 6.16321 7.73166C6.39307 7.58634 6.65812 7.50625 6.93 7.49995H15M15 7.49995C15.2291 7.49955 15.4553 7.55165 15.6612 7.65226C15.8671 7.75287 16.0472 7.89932 16.1877 8.08035C16.3282 8.26139 16.4253 8.4722 16.4716 8.69661C16.518 8.92103 16.5123 9.15308 16.455 9.37495L15.3 13.875C15.2164 14.1986 15.0272 14.4851 14.7622 14.6889C14.4972 14.8927 14.1718 15.0022 13.8375 14.9999H3C2.60218 14.9999 2.22064 14.8419 1.93934 14.5606C1.65804 14.2793 1.5 13.8978 1.5 13.5V3.74995C1.5 3.35213 1.65804 2.97059 1.93934 2.68929C2.22064 2.40799 2.60218 2.24995 3 2.24995H5.925C6.17586 2.24749 6.42334 2.30799 6.64477 2.42592C6.86621 2.54384 7.05453 2.71542 7.1925 2.92495L7.8 3.82495C7.93658 4.03235 8.12252 4.20259 8.34113 4.3204C8.55973 4.43821 8.80417 4.49991 9.0525 4.49995H13.5C13.8978 4.49995 14.2794 4.65799 14.5607 4.93929C14.842 5.22059 15 5.60213 15 5.99995V7.49995Z"
+                              stroke="white" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round"
+                              stroke-linejoin="round"/>
+                    </svg>
+                    <span>Mes Cours</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" data-page="views/projets.html" class="nav-link">
+                    <svg class="nav-link" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_261_292)">
+                            <path d="M9.75 15.75H15.75" stroke="white" stroke-opacity="0.6" stroke-width="1.5"
+                                  stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M15.8805 5.10904C16.277 4.71261 16.4998 4.17489 16.4999 3.61418C16.4999 3.05347 16.2773 2.5157 15.8808 2.11917C15.4844 1.72263 14.9467 1.49983 14.386 1.49976C13.8253 1.49969 13.2875 1.72236 12.891 2.11879L2.88145 12.1305C2.70732 12.3042 2.57854 12.5179 2.50645 12.753L1.5157 16.017C1.49632 16.0819 1.49485 16.1508 1.51146 16.2164C1.52807 16.2821 1.56214 16.342 1.61005 16.3898C1.65796 16.4376 1.71792 16.4716 1.78357 16.4881C1.84922 16.5046 1.91812 16.503 1.98295 16.4835L5.2477 15.4935C5.48258 15.4221 5.69633 15.2941 5.8702 15.1208L15.8805 5.10904Z"
+                                  stroke="white" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round"
+                                  stroke-linejoin="round"/>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_261_292">
+                                <rect width="18" height="18" fill="white"/>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                    <span>Projets</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" data-page="views/propos.html" class="nav-link">
+                    <svg class="nav-link" width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 16.5C13.1421 16.5 16.5 13.1421 16.5 9C16.5 4.85786 13.1421 1.5 9 1.5C4.85786 1.5 1.5 4.85786 1.5 9C1.5 13.1421 4.85786 16.5 9 16.5Z" stroke="white" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9 9.75C10.2426 9.75 11.25 8.74264 11.25 7.5C11.25 6.25736 10.2426 5.25 9 5.25C7.75736 5.25 6.75 6.25736 6.75 7.5C6.75 8.74264 7.75736 9.75 9 9.75Z" stroke="white" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M5.25 15.4965V14.25C5.25 13.8522 5.40804 13.4706 5.68934 13.1893C5.97064 12.908 6.35218 12.75 6.75 12.75H11.25C11.6478 12.75 12.0294 12.908 12.3107 13.1893C12.592 13.4706 12.75 13.8522 12.75 14.25V15.4965" stroke="white" stroke-opacity="0.6" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    <span>À Propos</span>
+                </a>
+            </li>
         </nav>
     </div>
-    <div id="dashboard-container">
-        <div class="dashboard-card">
-            <div id="dashboard-card-1">
-                <img src="./src/images/icons/dashboard/teams.svg" class="dashboard-card-image">
-                <div class="dashboard-card-chiffre"><h1>0</h1></div>
-                <div class="dashboard-card-label"><p>Visiteurs Totaux</p></div>
-            </div>
-            <div id="dashboard-card-2">
-                <img src="./src/images/icons/dashboard/eyes.svg" class="dashboard-card-image">
-                <div class="dashboard-card-chiffre"><h1>0</h1></div>
-                <div class="dashboard-card-label"><p>Pages Vues</p></div>
-            </div>
-            <div id="dashboard-card-3">
-                <img src="./src/images/icons/dashboard/clock.svg" class="dashboard-card-image">
-                <div class="dashboard-card-chiffre"><h1>0</h1></div>
-                <div class="dashboard-card-label"><p>Temps Moyen</p></div>
-            </div>
-            <div id="dashboard-card-4">
-                <img src="./src/images/icons/dashboard/stonks.svg" class="dashboard-card-image">
-                <div class="dashboard-card-chiffre"><h1>0</h1></div>
-                <div class="dashboard-card-label"><p>Taux de Rebond</p></div>
-            </div>
-        </div>
-        <div class="dashboard-perf-et-activité">
-            <div class="dashboard-performance-du-site">
-                <div class="performance-titre">
-                    <img src="./src/images/icons/dashboard/bpm.svg" alt="">
-                    <p>Performance du Site</p>
-                    <span></span>
-                </div>
-                <div class="performance-temps-de-chargement">
-                    <img src="./src/images/icons/dashboard/eclaire.svg" alt="">
-                    <p>Temps de Chargement</p>
-                    <span></span>
-                </div>
-                <div class="performance-disponibilité">
-                    <img src="./src/images/icons/dashboard/nass.svg" alt="">
-                    <p>Disponibilité</p>
-                </div>
-                <div class="performance-utilisation-cpu">
-                    <img src="./src/images/icons/dashboard/puce.svg" alt="">
-                    <p>Utilisation CPU</p>
-                    <span></span>
-                </div>
-                <div class="performance-stockage-utilisé">
-                    <img src="./src/images/icons/dashboard/server.svg" alt="">
-                    <p>Stockage Utilisé</p>
-                    <span></span>
-                </div>
-            </div>
-            <div class="dashboard-activité-récente">
-                <div class="activité-titre">
-                    <img src="./src/images/icons/dashboard/clock.svg" alt="">
-                    <p>Activité Récente</p>
-                </div>
-                <div class="activité-card-default">
-                    <div class="activité-informations-icon">
-                        <img src="./src/images/icons/dashboard/internet.svg" alt="">
-                    </div>
-                    <div class="activité-informations">
-                        <p class="activité-informations-description">Ex. Nouvelle visite depuis Paris, France</p>
-                        <p class="activité-temps-passé">il y a 2 min</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="dashboard-stat-et-bdd">
-            <div class="stat-dernières-modifications">
-                <div class="dernières-modifications-titre">
-                    <img src="./src/images/icons/dashboard/stylet.svg" alt="">
-                    <p>Dernières Modifications</p>
-                </div>
-                <div class="dernières-modifications-default">
-                    <div class="dernières-modifications-default-status-et-descriptions">
-                        <p class="dernières-modifications-default-status">modifié</p>
-                        <p class="dernières-modifications-default-description">Ex. Projet "Portfolio 3D"</p>
-                    </div>
-                    <p class="dernières-modifications-default-temps-passé">il y a 2h</p>
-                </div>
-            </div>
-            <div class="bdd-base-de-donnée">
-                <div class="base-de-donnée-entrées-titre">
-                    <img src="./src/images/icons/dashboard/bdd.svg" alt="">
-                    <p>Base de données</p>
-                </div>
-                <div class="base-de-donnée-entrées-totales">
-                    <div class="totales-titre"><p>Entrées Totales</p></div>
-                    <div class="totales-description"><p>0</p></div>
-                </div>
-                <div class="base-de-donnée-dernière-sauvegarde">
-                    <div class="sauvegarde-titre"><p>Dernière sauvegarde</p></div>
-                    <div class="sauvegarde-description"><p>Il y a 0 heures</p></div>
-                </div>
-                <div class="base-de-donnée-taille">
-                    <div class="taille-titre"><p>Taille</p></div>
-                    <div class="taille-description"><p>0 / 75 GB</p></div>
-                    <progress class="taille-progress-barre" max="75" value="0"></progress>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div id="monitoring-container"></div>
+    <div id="messages-container"></div>
 </div>
 </body>
 </html>

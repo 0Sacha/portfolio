@@ -3901,21 +3901,43 @@ html {
               color: #51A2FF;
             }
 
-            span {
+            a {
+              display: flex;
+              gap: 8px;
+              text-decoration: none;
+              align-items: center;
+              color: $text-default;
+
+              .nav-link {
+                svg {
+                  path {
+                    stroke: gray;
+                    transition: stroke 0.3s ease;
+                  }
+                }
+
+                #dashboard-active-svg {
+                  svg path {
+                    stroke: #51A2FF;
+                  }
+                }
+
+                span {
+
+                }
+              }
 
             }
 
-            img {
 
-            }
           }
         }
       }
 
-      #dashboard-container {
+      #monitoring-container {
         display: flex;
         flex-direction: column;
-        margin-top: 48px;
+        margin-top: 24px;
         width: 100%;
         gap: 48px;
 
@@ -4055,6 +4077,7 @@ html {
           align-items: center;
           width: 100%;
           gap: 24px;
+          box-sizing: border-box;
 
           .dashboard-performance-du-site {
             display: flex;
@@ -4324,6 +4347,55 @@ html {
                 }
               }
             }
+          }
+        }
+      }
+
+      #messages-container {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        #messages-titre {
+          display: flex;
+          flex-direction: column;
+
+          #messages-titre-h1 {
+            color: $text-default;
+            font-size: 30px;
+            line-height: 36px
+          }
+
+          #messages-titre-p {
+            color: rgba(255, 255, 255, 0.60);
+            font-size: 16px;
+            line-height: 24px;
+          }
+        }
+
+        #messages {
+          display: flex;
+          flex-direction: column;
+          width: 100%;
+          height: 186px;
+          padding: 49px;
+          gap: 16px;
+          justify-content: center;
+          align-items: center;
+          border-radius: 16px;
+          box-sizing: border-box;
+          border: 1px solid rgba(255, 255, 255, 0.10);
+          background: rgba(255, 255, 255, 0.05);
+
+          #messages-icon {
+            height: 48px;
+            width: 48px;
+          }
+
+          #messages-notfound {
+            color: rgba(255, 255, 255, 0.60);
+            font-size: 16px;
+            line-height: 24px;
           }
         }
       }

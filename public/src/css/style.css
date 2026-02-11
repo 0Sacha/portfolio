@@ -3528,14 +3528,28 @@ html body #dashboard-body #dashboard-nav #dashboard-navbar-container li {
 html body #dashboard-body #dashboard-nav #dashboard-navbar-container li #dashboard-active-page {
   color: #51A2FF;
 }
-html body #dashboard-body #dashboard-container {
+html body #dashboard-body #dashboard-nav #dashboard-navbar-container li a {
+  display: flex;
+  gap: 8px;
+  text-decoration: none;
+  align-items: center;
+  color: rgb(255, 255, 255);
+}
+html body #dashboard-body #dashboard-nav #dashboard-navbar-container li a .nav-link svg path {
+  stroke: gray;
+  transition: stroke 0.3s ease;
+}
+html body #dashboard-body #dashboard-nav #dashboard-navbar-container li a .nav-link #dashboard-active-svg svg path {
+  stroke: #51A2FF;
+}
+html body #dashboard-body #monitoring-container {
   display: flex;
   flex-direction: column;
-  margin-top: 48px;
+  margin-top: 24px;
   width: 100%;
   gap: 48px;
 }
-html body #dashboard-body #dashboard-container .dashboard-card {
+html body #dashboard-body #monitoring-container .dashboard-card {
   display: grid;
   flex-direction: row;
   justify-content: space-between;
@@ -3548,7 +3562,7 @@ html body #dashboard-body #dashboard-container .dashboard-card {
   grid-template-rows: repeat(1, minmax(0, 1fr));
   grid-template-columns: repeat(4, minmax(0, 1fr));
 }
-html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-1, html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-2, html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-3, html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-4 {
+html body #dashboard-body #monitoring-container .dashboard-card #dashboard-card-1, html body #dashboard-body #monitoring-container .dashboard-card #dashboard-card-2, html body #dashboard-body #monitoring-container .dashboard-card #dashboard-card-3, html body #dashboard-body #monitoring-container .dashboard-card #dashboard-card-4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3556,7 +3570,7 @@ html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-1
   padding: 25px;
   border-radius: 16px;
 }
-html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-1 .dashboard-card-image, html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-2 .dashboard-card-image, html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-3 .dashboard-card-image, html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-4 .dashboard-card-image {
+html body #dashboard-body #monitoring-container .dashboard-card #dashboard-card-1 .dashboard-card-image, html body #dashboard-body #monitoring-container .dashboard-card #dashboard-card-2 .dashboard-card-image, html body #dashboard-body #monitoring-container .dashboard-card #dashboard-card-3 .dashboard-card-image, html body #dashboard-body #monitoring-container .dashboard-card #dashboard-card-4 .dashboard-card-image {
   display: flex;
   padding: 13px;
   flex-direction: column;
@@ -3565,76 +3579,77 @@ html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-1
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: rgba(255, 255, 255, 0.1);
 }
-html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-1 .dashboard-card-image .dashboard-card-chiffre .dashboard-card-label p, html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-2 .dashboard-card-image .dashboard-card-chiffre .dashboard-card-label p, html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-3 .dashboard-card-image .dashboard-card-chiffre .dashboard-card-label p, html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-4 .dashboard-card-image .dashboard-card-chiffre .dashboard-card-label p {
+html body #dashboard-body #monitoring-container .dashboard-card #dashboard-card-1 .dashboard-card-image .dashboard-card-chiffre .dashboard-card-label p, html body #dashboard-body #monitoring-container .dashboard-card #dashboard-card-2 .dashboard-card-image .dashboard-card-chiffre .dashboard-card-label p, html body #dashboard-body #monitoring-container .dashboard-card #dashboard-card-3 .dashboard-card-image .dashboard-card-chiffre .dashboard-card-label p, html body #dashboard-body #monitoring-container .dashboard-card #dashboard-card-4 .dashboard-card-image .dashboard-card-chiffre .dashboard-card-label p {
   display: flex;
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
 }
-html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-1 {
+html body #dashboard-body #monitoring-container .dashboard-card #dashboard-card-1 {
   border: 1px solid rgba(81, 162, 255, 0.3);
   background: linear-gradient(135deg, rgba(43, 127, 255, 0.2) 0%, rgba(43, 127, 255, 0.05) 100%);
   gap: 16px;
 }
-html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-1 .dashboard-card-image .dashboard-card-chiffre h1 {
+html body #dashboard-body #monitoring-container .dashboard-card #dashboard-card-1 .dashboard-card-image .dashboard-card-chiffre h1 {
   color: #51A2FF;
   font-size: 30px;
 }
-html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-1 .dashboard-card-image .dashboard-card-chiffre .dashboard-card-label p {
+html body #dashboard-body #monitoring-container .dashboard-card #dashboard-card-1 .dashboard-card-image .dashboard-card-chiffre .dashboard-card-label p {
   display: flex;
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
 }
-html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-2 {
+html body #dashboard-body #monitoring-container .dashboard-card #dashboard-card-2 {
   border: 1px solid rgba(194, 122, 255, 0.3);
   background: linear-gradient(135deg, rgba(173, 70, 255, 0.2) 0%, rgba(173, 70, 255, 0.05) 100%);
   gap: 16px;
 }
-html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-2 .dashboard-card-image .dashboard-card-chiffre {
+html body #dashboard-body #monitoring-container .dashboard-card #dashboard-card-2 .dashboard-card-image .dashboard-card-chiffre {
   color: #C27AFF;
   font-size: 30px;
 }
-html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-2 .dashboard-card-image .dashboard-card-chiffre .dashboard-card-label p {
+html body #dashboard-body #monitoring-container .dashboard-card #dashboard-card-2 .dashboard-card-image .dashboard-card-chiffre .dashboard-card-label p {
   display: flex;
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
 }
-html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-3 {
+html body #dashboard-body #monitoring-container .dashboard-card #dashboard-card-3 {
   border: 1px solid rgba(0, 211, 242, 0.3);
   background: linear-gradient(135deg, rgba(0, 184, 219, 0.2) 0%, rgba(0, 184, 219, 0.05) 100%);
   gap: 16px;
 }
-html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-3 .dashboard-card-image .dashboard-card-chiffre {
+html body #dashboard-body #monitoring-container .dashboard-card #dashboard-card-3 .dashboard-card-image .dashboard-card-chiffre {
   color: #00D3F2;
   font-size: 30px;
 }
-html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-3 .dashboard-card-image .dashboard-card-chiffre .dashboard-card-label p {
+html body #dashboard-body #monitoring-container .dashboard-card #dashboard-card-3 .dashboard-card-image .dashboard-card-chiffre .dashboard-card-label p {
   display: flex;
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
 }
-html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-4 {
+html body #dashboard-body #monitoring-container .dashboard-card #dashboard-card-4 {
   border: 1px solid rgba(5, 223, 114, 0.3);
   background: linear-gradient(135deg, rgba(0, 201, 80, 0.2) 0%, rgba(0, 201, 80, 0.05) 100%);
   gap: 16px;
 }
-html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-4 .dashboard-card-image .dashboard-card-chiffre {
+html body #dashboard-body #monitoring-container .dashboard-card #dashboard-card-4 .dashboard-card-image .dashboard-card-chiffre {
   color: #05DF72;
   font-size: 30px;
 }
-html body #dashboard-body #dashboard-container .dashboard-card #dashboard-card-4 .dashboard-card-image .dashboard-card-chiffre .dashboard-card-label p {
+html body #dashboard-body #monitoring-container .dashboard-card #dashboard-card-4 .dashboard-card-image .dashboard-card-chiffre .dashboard-card-label p {
   display: flex;
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
 }
-html body #dashboard-body #dashboard-container .dashboard-perf-et-activité {
+html body #dashboard-body #monitoring-container .dashboard-perf-et-activité {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   width: 100%;
   gap: 24px;
+  box-sizing: border-box;
 }
-html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .dashboard-performance-du-site {
+html body #dashboard-body #monitoring-container .dashboard-perf-et-activité .dashboard-performance-du-site {
   display: flex;
   flex-direction: column;
   border-radius: 24px;
@@ -3646,7 +3661,7 @@ html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .das
   height: 496px;
   gap: 16px;
 }
-html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .dashboard-performance-du-site .performance-titre {
+html body #dashboard-body #monitoring-container .dashboard-perf-et-activité .dashboard-performance-du-site .performance-titre {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -3654,10 +3669,10 @@ html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .das
   font-size: 20px;
   margin-bottom: 20px;
 }
-html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .dashboard-performance-du-site .performance-temps-de-chargement,
-html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .dashboard-performance-du-site .performance-disponibilité,
-html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .dashboard-performance-du-site .performance-utilisation-cpu,
-html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .dashboard-performance-du-site .performance-stockage-utilisé {
+html body #dashboard-body #monitoring-container .dashboard-perf-et-activité .dashboard-performance-du-site .performance-temps-de-chargement,
+html body #dashboard-body #monitoring-container .dashboard-perf-et-activité .dashboard-performance-du-site .performance-disponibilité,
+html body #dashboard-body #monitoring-container .dashboard-perf-et-activité .dashboard-performance-du-site .performance-utilisation-cpu,
+html body #dashboard-body #monitoring-container .dashboard-perf-et-activité .dashboard-performance-du-site .performance-stockage-utilisé {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -3668,7 +3683,7 @@ html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .das
   background: rgba(255, 255, 255, 0.05);
   padding: 16px;
 }
-html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .dashboard-activité-récente {
+html body #dashboard-body #monitoring-container .dashboard-perf-et-activité .dashboard-activité-récente {
   display: flex;
   flex-direction: column;
   border-radius: 24px;
@@ -3680,7 +3695,7 @@ html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .das
   height: 496px;
   gap: 16px;
 }
-html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .dashboard-activité-récente .activité-titre {
+html body #dashboard-body #monitoring-container .dashboard-perf-et-activité .dashboard-activité-récente .activité-titre {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -3688,7 +3703,7 @@ html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .das
   font-size: 20px;
   margin-bottom: 20px;
 }
-html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .dashboard-activité-récente .activité-card-default {
+html body #dashboard-body #monitoring-container .dashboard-perf-et-activité .dashboard-activité-récente .activité-card-default {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -3699,30 +3714,30 @@ html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .das
   padding: 16px;
   gap: 12px;
 }
-html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .dashboard-activité-récente .activité-card-default .activité-informations-icon {
+html body #dashboard-body #monitoring-container .dashboard-perf-et-activité .dashboard-activité-récente .activité-card-default .activité-informations-icon {
   display: flex;
   padding: 9px;
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
 }
-html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .dashboard-activité-récente .activité-card-default .activité-informations {
+html body #dashboard-body #monitoring-container .dashboard-perf-et-activité .dashboard-activité-récente .activité-card-default .activité-informations {
   display: flex;
   flex-direction: column;
   justify-content: start;
   gap: 4px;
 }
-html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .dashboard-activité-récente .activité-card-default .activité-informations .activité-informations-description {
+html body #dashboard-body #monitoring-container .dashboard-perf-et-activité .dashboard-activité-récente .activité-card-default .activité-informations .activité-informations-description {
   color: rgb(255, 255, 255);
   font-size: 14px;
   line-height: 20px;
 }
-html body #dashboard-body #dashboard-container .dashboard-perf-et-activité .dashboard-activité-récente .activité-card-default .activité-informations .activité-temps-passé {
+html body #dashboard-body #monitoring-container .dashboard-perf-et-activité .dashboard-activité-récente .activité-card-default .activité-informations .activité-temps-passé {
   color: rgba(255, 255, 255, 0.4);
   font-size: 12px;
   line-height: 16px;
 }
-html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd {
+html body #dashboard-body #monitoring-container .dashboard-stat-et-bdd {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -3731,7 +3746,7 @@ html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd {
   gap: 24px;
   margin-bottom: 48px;
 }
-html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .stat-dernières-modifications {
+html body #dashboard-body #monitoring-container .dashboard-stat-et-bdd .stat-dernières-modifications {
   display: flex;
   flex-direction: column;
   width: 70%;
@@ -3742,14 +3757,14 @@ html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .stat-dern
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
 }
-html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .stat-dernières-modifications .dernières-modifications-titre {
+html body #dashboard-body #monitoring-container .dashboard-stat-et-bdd .stat-dernières-modifications .dernières-modifications-titre {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 8px;
   font-size: 20px;
 }
-html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .stat-dernières-modifications .dernières-modifications-default {
+html body #dashboard-body #monitoring-container .dashboard-stat-et-bdd .stat-dernières-modifications .dernières-modifications-default {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -3761,14 +3776,14 @@ html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .stat-dern
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
 }
-html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .stat-dernières-modifications .dernières-modifications-default .dernières-modifications-default-status-et-descriptions {
+html body #dashboard-body #monitoring-container .dashboard-stat-et-bdd .stat-dernières-modifications .dernières-modifications-default .dernières-modifications-default-status-et-descriptions {
   display: flex;
   flex-direction: row;
   justify-content: start;
   align-items: center;
   gap: 12px;
 }
-html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .stat-dernières-modifications .dernières-modifications-default .dernières-modifications-default-status-et-descriptions .dernières-modifications-default-status {
+html body #dashboard-body #monitoring-container .dashboard-stat-et-bdd .stat-dernières-modifications .dernières-modifications-default .dernières-modifications-default-status-et-descriptions .dernières-modifications-default-status {
   display: flex;
   width: 61px;
   height: 26px;
@@ -3781,19 +3796,19 @@ html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .stat-dern
   color: #51A2FF;
   font-size: 12px;
 }
-html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .stat-dernières-modifications .dernières-modifications-default .dernières-modifications-default-status-et-descriptions .dernières-modifications-default-description {
+html body #dashboard-body #monitoring-container .dashboard-stat-et-bdd .stat-dernières-modifications .dernières-modifications-default .dernières-modifications-default-status-et-descriptions .dernières-modifications-default-description {
   display: flex;
   flex-direction: row;
   color: rgb(255, 255, 255);
   align-items: center;
 }
-html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .stat-dernières-modifications .dernières-modifications-default .dernières-modifications-default-temps-passé {
+html body #dashboard-body #monitoring-container .dashboard-stat-et-bdd .stat-dernières-modifications .dernières-modifications-default .dernières-modifications-default-temps-passé {
   display: flex;
   justify-content: end;
   align-items: center;
   color: rgba(255, 255, 255, 0.5);
 }
-html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .bdd-base-de-donnée {
+html body #dashboard-body #monitoring-container .dashboard-stat-et-bdd .bdd-base-de-donnée {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3805,14 +3820,14 @@ html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .bdd-base-
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
 }
-html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .bdd-base-de-donnée .base-de-donnée-entrées-titre {
+html body #dashboard-body #monitoring-container .dashboard-stat-et-bdd .bdd-base-de-donnée .base-de-donnée-entrées-titre {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 8px;
   font-size: 20px;
 }
-html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .bdd-base-de-donnée .base-de-donnée-entrées-totales {
+html body #dashboard-body #monitoring-container .dashboard-stat-et-bdd .bdd-base-de-donnée .base-de-donnée-entrées-totales {
   display: flex;
   width: 100%;
   height: 90px;
@@ -3825,12 +3840,12 @@ html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .bdd-base-
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
 }
-html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .bdd-base-de-donnée .base-de-donnée-entrées-totales .totales-titre {
+html body #dashboard-body #monitoring-container .dashboard-stat-et-bdd .bdd-base-de-donnée .base-de-donnée-entrées-totales .totales-titre {
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
   font-style: normal;
 }
-html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .bdd-base-de-donnée .base-de-donnée-dernière-sauvegarde {
+html body #dashboard-body #monitoring-container .dashboard-stat-et-bdd .bdd-base-de-donnée .base-de-donnée-dernière-sauvegarde {
   display: flex;
   width: 100%;
   height: 90px;
@@ -3843,12 +3858,12 @@ html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .bdd-base-
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
 }
-html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .bdd-base-de-donnée .base-de-donnée-dernière-sauvegarde .sauvegarde-titre {
+html body #dashboard-body #monitoring-container .dashboard-stat-et-bdd .bdd-base-de-donnée .base-de-donnée-dernière-sauvegarde .sauvegarde-titre {
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
   font-style: normal;
 }
-html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .bdd-base-de-donnée .base-de-donnée-taille {
+html body #dashboard-body #monitoring-container .dashboard-stat-et-bdd .bdd-base-de-donnée .base-de-donnée-taille {
   display: flex;
   width: 100%;
   height: 90px;
@@ -3861,10 +3876,52 @@ html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .bdd-base-
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
 }
-html body #dashboard-body #dashboard-container .dashboard-stat-et-bdd .bdd-base-de-donnée .base-de-donnée-taille .taille-titre {
+html body #dashboard-body #monitoring-container .dashboard-stat-et-bdd .bdd-base-de-donnée .base-de-donnée-taille .taille-titre {
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
   font-style: normal;
+}
+html body #dashboard-body #messages-container {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+html body #dashboard-body #messages-container #messages-titre {
+  display: flex;
+  flex-direction: column;
+}
+html body #dashboard-body #messages-container #messages-titre #messages-titre-h1 {
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  line-height: 36px;
+}
+html body #dashboard-body #messages-container #messages-titre #messages-titre-p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  line-height: 24px;
+}
+html body #dashboard-body #messages-container #messages {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 186px;
+  padding: 49px;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  box-sizing: border-box;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+}
+html body #dashboard-body #messages-container #messages #messages-icon {
+  height: 48px;
+  width: 48px;
+}
+html body #dashboard-body #messages-container #messages #messages-notfound {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  line-height: 24px;
 }
 html body footer {
   display: flex;
