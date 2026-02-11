@@ -438,28 +438,38 @@ html body #interTitre p {
 html body #selection {
   display: flex;
   flex-direction: column;
-  margin: 80px 300px 0 300px;
-  gap: 130px;
   justify-content: center;
   align-items: center;
   scroll-behavior: smooth;
-  scroll-snap-type: x mandatory;
+  width: 100%;
+  max-width: 1200px;
+  margin: 75px auto;
 }
 @media (max-width: 1260px) {
   html body #selection {
-    display: flex;
-    gap: 50px;
-    justify-content: start;
     flex-direction: row;
-    margin: 0 20px 0 20px;
-    overflow-x: scroll;
+    gap: 50px;
+    justify-content: flex-start;
+    margin: 0 auto;
+    padding: 0 20px;
+    overflow-x: auto;
     scrollbar-width: none;
+    scroll-snap-type: x mandatory;
+    width: 100%;
   }
 }
-html body #selection #selectionCard01 {
+html body #selection .section-container {
+  display: flex;
+  flex-direction: column;
+  gap: 130px;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+html body #selection .section-container #selectionCard01 {
   scroll-snap-align: start;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   align-items: center;
   scroll-snap-stop: always;
   gap: 33px;
@@ -467,7 +477,7 @@ html body #selection #selectionCard01 {
   flex-shrink: 0;
 }
 @media (max-width: 1260px) {
-  html body #selection #selectionCard01 {
+  html body #selection .section-container #selectionCard01 {
     margin-top: 80px;
     display: flex;
     flex-direction: column;
@@ -475,68 +485,68 @@ html body #selection #selectionCard01 {
     align-items: center;
   }
 }
-html body #selection #selectionCard01 #leftSelectCard01 {
+html body #selection .section-container #selectionCard01 #leftSelectCard01 {
   display: flex;
   flex-direction: column;
 }
-html body #selection #selectionCard01 #midSelectCard01 img {
+html body #selection .section-container #selectionCard01 #midSelectCard01 img {
   border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 300ms ease-out;
 }
 @media (max-width: 1260px) {
-  html body #selection #selectionCard01 #midSelectCard01 img {
+  html body #selection .section-container #selectionCard01 #midSelectCard01 img {
     display: flex;
     width: 326px;
     height: 204px;
   }
 }
-html body #selection #selectionCard01 #midSelectCard01 img:hover {
+html body #selection .section-container #selectionCard01 #midSelectCard01 img:hover {
   transform: scale(1.02);
 }
-html body #selection #selectionCard01 #rightSelectCard01 {
+html body #selection .section-container #selectionCard01 #rightSelectCard01 {
   display: flex;
   flex-direction: column;
   gap: 38px;
 }
 @media (max-width: 1260px) {
-  html body #selection #selectionCard01 #rightSelectCard01 {
+  html body #selection .section-container #selectionCard01 #rightSelectCard01 {
     display: flex;
     gap: 33px;
     width: 328.66px;
   }
 }
-html body #selection #selectionCard01 #rightSelectCard01 h1 {
+html body #selection .section-container #selectionCard01 #rightSelectCard01 h1 {
   color: rgba(81, 162, 255, 0.7);
   font-size: 72px;
   font-weight: 700;
 }
 @media (max-width: 1260px) {
-  html body #selection #selectionCard01 #rightSelectCard01 h1 {
+  html body #selection .section-container #selectionCard01 #rightSelectCard01 h1 {
     font-size: 60px;
   }
 }
-html body #selection #selectionCard01 #rightSelectCard01 h2 {
+html body #selection .section-container #selectionCard01 #rightSelectCard01 h2 {
   color: rgb(255, 255, 255);
   font-size: 36px;
   font-weight: 400;
 }
 @media (max-width: 1260px) {
-  html body #selection #selectionCard01 #rightSelectCard01 h2 {
+  html body #selection .section-container #selectionCard01 #rightSelectCard01 h2 {
     font-size: 30px;
   }
 }
-html body #selection #selectionCard01 #rightSelectCard01 p {
+html body #selection .section-container #selectionCard01 #rightSelectCard01 p {
   color: rgba(255, 255, 255, 0.8);
   font-size: 18px;
   font-weight: 400;
 }
 @media (max-width: 1260px) {
-  html body #selection #selectionCard01 #rightSelectCard01 p {
+  html body #selection .section-container #selectionCard01 #rightSelectCard01 p {
     font-size: 16px;
   }
 }
-html body #selection #selectionCard01 #rightSelectCard01 #selectionTopic {
+html body #selection .section-container #selectionCard01 #rightSelectCard01 #selectionTopic {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   flex-direction: row;
@@ -544,11 +554,11 @@ html body #selection #selectionCard01 #rightSelectCard01 #selectionTopic {
   align-items: center;
 }
 @media (max-width: 1260px) {
-  html body #selection #selectionCard01 #rightSelectCard01 #selectionTopic {
+  html body #selection .section-container #selectionCard01 #rightSelectCard01 #selectionTopic {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-html body #selection #selectionCard01 #rightSelectCard01 #selectionTopic li {
+html body #selection .section-container #selectionCard01 #rightSelectCard01 #selectionTopic li {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -560,14 +570,14 @@ html body #selection #selectionCard01 #rightSelectCard01 #selectionTopic li {
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
 }
-html body #selection #selectionCard01 #rightSelectCard01 #selectionTopic li a {
+html body #selection .section-container #selectionCard01 #rightSelectCard01 #selectionTopic li a {
   font-size: 14px;
 }
-html body #selection #selectionCard01 #rightSelectCard01 #selectionMore {
+html body #selection .section-container #selectionCard01 #rightSelectCard01 #selectionMore {
   display: flex;
   gap: 16px;
 }
-html body #selection #selectionCard01 #rightSelectCard01 #selectionMore #selectionShowMore {
+html body #selection .section-container #selectionCard01 #rightSelectCard01 #selectionMore #selectionShowMore {
   display: flex;
   align-items: center;
   list-style: none;
@@ -578,10 +588,10 @@ html body #selection #selectionCard01 #rightSelectCard01 #selectionMore #selecti
   transition: all 300ms ease-out;
   gap: 7px;
 }
-html body #selection #selectionCard01 #rightSelectCard01 #selectionMore #selectionShowMore img {
+html body #selection .section-container #selectionCard01 #rightSelectCard01 #selectionMore #selectionShowMore img {
   transition: all 300ms ease-out;
 }
-html body #selection #selectionCard01 #rightSelectCard01 #selectionMore #selectionShowMore a {
+html body #selection .section-container #selectionCard01 #rightSelectCard01 #selectionMore #selectionShowMore a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -590,15 +600,15 @@ html body #selection #selectionCard01 #rightSelectCard01 #selectionMore #selecti
   font-size: 16px;
   gap: 7px;
 }
-html body #selection #selectionCard01 #rightSelectCard01 #selectionMore #selectionShowMore a:hover > img {
+html body #selection .section-container #selectionCard01 #rightSelectCard01 #selectionMore #selectionShowMore a:hover > img {
   transform: translateX(5px) translateY(-5px);
 }
-html body #selection #selectionCard01 #rightSelectCard01 #selectionMore #selectionShowMore:hover {
+html body #selection .section-container #selectionCard01 #rightSelectCard01 #selectionMore #selectionShowMore:hover {
   border: 1px solid rgba(81, 162, 255, 0.7);
   background: rgba(43, 127, 255, 0.4);
   cursor: pointer;
 }
-html body #selection #selectionCard01 #rightSelectCard01 #selectionMore #selectionGithub {
+html body #selection .section-container #selectionCard01 #rightSelectCard01 #selectionMore #selectionGithub {
   display: flex;
   align-items: center;
   padding: 0 24px;
@@ -607,7 +617,7 @@ html body #selection #selectionCard01 #rightSelectCard01 #selectionMore #selecti
   background: rgba(255, 255, 255, 0.1);
   list-style: none;
 }
-html body #selection #selectionCard02 {
+html body #selection .section-container #selectionCard02 {
   scroll-snap-align: start;
   display: flex;
   scroll-snap-stop: always;
@@ -616,7 +626,7 @@ html body #selection #selectionCard02 {
   flex-shrink: 0;
 }
 @media (max-width: 1260px) {
-  html body #selection #selectionCard02 {
+  html body #selection .section-container #selectionCard02 {
     display: flex;
     flex-direction: column-reverse;
     gap: 33px;
@@ -625,68 +635,68 @@ html body #selection #selectionCard02 {
     align-items: center;
   }
 }
-html body #selection #selectionCard02 #leftSelectCard02 {
+html body #selection .section-container #selectionCard02 #leftSelectCard02 {
   display: flex;
   flex-direction: column;
 }
-html body #selection #selectionCard02 #midSelectCard02 img {
+html body #selection .section-container #selectionCard02 #midSelectCard02 img {
   border-radius: 24px;
   border: 1px solid rgba(255, 255, 255, 0.1);
   transition: all 300ms ease-out;
 }
 @media (max-width: 1260px) {
-  html body #selection #selectionCard02 #midSelectCard02 img {
+  html body #selection .section-container #selectionCard02 #midSelectCard02 img {
     display: flex;
     width: 326px;
     height: 204px;
   }
 }
-html body #selection #selectionCard02 #midSelectCard02 img:hover {
+html body #selection .section-container #selectionCard02 #midSelectCard02 img:hover {
   transform: scale(1.02);
 }
-html body #selection #selectionCard02 #rightSelectCard02 {
+html body #selection .section-container #selectionCard02 #rightSelectCard02 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
 @media (max-width: 1260px) {
-  html body #selection #selectionCard02 #rightSelectCard02 {
+  html body #selection .section-container #selectionCard02 #rightSelectCard02 {
     display: flex;
     gap: 33px;
     width: 328.66px;
   }
 }
-html body #selection #selectionCard02 #rightSelectCard02 h1 {
+html body #selection .section-container #selectionCard02 #rightSelectCard02 h1 {
   color: rgba(81, 162, 255, 0.7);
   font-size: 72px;
   font-weight: 700;
 }
 @media (max-width: 1260px) {
-  html body #selection #selectionCard02 #rightSelectCard02 h1 {
+  html body #selection .section-container #selectionCard02 #rightSelectCard02 h1 {
     font-size: 60px;
   }
 }
-html body #selection #selectionCard02 #rightSelectCard02 h2 {
+html body #selection .section-container #selectionCard02 #rightSelectCard02 h2 {
   color: rgb(255, 255, 255);
   font-size: 36px;
   font-weight: 400;
 }
 @media (max-width: 1260px) {
-  html body #selection #selectionCard02 #rightSelectCard02 h2 {
+  html body #selection .section-container #selectionCard02 #rightSelectCard02 h2 {
     font-size: 30px;
   }
 }
-html body #selection #selectionCard02 #rightSelectCard02 p {
+html body #selection .section-container #selectionCard02 #rightSelectCard02 p {
   color: rgba(255, 255, 255, 0.8);
   font-size: 18px;
   font-weight: 400;
 }
 @media (max-width: 1260px) {
-  html body #selection #selectionCard02 #rightSelectCard02 p {
+  html body #selection .section-container #selectionCard02 #rightSelectCard02 p {
     font-size: 16px;
   }
 }
-html body #selection #selectionCard02 #rightSelectCard02 #selectionTopic {
+html body #selection .section-container #selectionCard02 #rightSelectCard02 #selectionTopic {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   flex-direction: row;
@@ -694,11 +704,11 @@ html body #selection #selectionCard02 #rightSelectCard02 #selectionTopic {
   align-items: center;
 }
 @media (max-width: 1260px) {
-  html body #selection #selectionCard02 #rightSelectCard02 #selectionTopic {
+  html body #selection .section-container #selectionCard02 #rightSelectCard02 #selectionTopic {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-html body #selection #selectionCard02 #rightSelectCard02 #selectionTopic li {
+html body #selection .section-container #selectionCard02 #rightSelectCard02 #selectionTopic li {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -710,14 +720,14 @@ html body #selection #selectionCard02 #rightSelectCard02 #selectionTopic li {
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
 }
-html body #selection #selectionCard02 #rightSelectCard02 #selectionTopic li a {
+html body #selection .section-container #selectionCard02 #rightSelectCard02 #selectionTopic li a {
   font-size: 14px;
 }
-html body #selection #selectionCard02 #rightSelectCard02 #selectionMore {
+html body #selection .section-container #selectionCard02 #rightSelectCard02 #selectionMore {
   display: flex;
   gap: 16px;
 }
-html body #selection #selectionCard02 #rightSelectCard02 #selectionMore #selectionShowMore {
+html body #selection .section-container #selectionCard02 #rightSelectCard02 #selectionMore #selectionShowMore {
   display: flex;
   align-items: center;
   list-style: none;
@@ -728,10 +738,10 @@ html body #selection #selectionCard02 #rightSelectCard02 #selectionMore #selecti
   transition: all 300ms ease-out;
   gap: 7px;
 }
-html body #selection #selectionCard02 #rightSelectCard02 #selectionMore #selectionShowMore img {
+html body #selection .section-container #selectionCard02 #rightSelectCard02 #selectionMore #selectionShowMore img {
   transition: all 300ms ease-out;
 }
-html body #selection #selectionCard02 #rightSelectCard02 #selectionMore #selectionShowMore a {
+html body #selection .section-container #selectionCard02 #rightSelectCard02 #selectionMore #selectionShowMore a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -740,165 +750,15 @@ html body #selection #selectionCard02 #rightSelectCard02 #selectionMore #selecti
   font-size: 16px;
   gap: 7px;
 }
-html body #selection #selectionCard02 #rightSelectCard02 #selectionMore #selectionShowMore a:hover > img {
+html body #selection .section-container #selectionCard02 #rightSelectCard02 #selectionMore #selectionShowMore a:hover > img {
   transform: translateX(5px) translateY(-5px);
 }
-html body #selection #selectionCard02 #rightSelectCard02 #selectionMore #selectionShowMore:hover {
+html body #selection .section-container #selectionCard02 #rightSelectCard02 #selectionMore #selectionShowMore:hover {
   border: 1px solid rgba(81, 162, 255, 0.7);
   background: rgba(43, 127, 255, 0.4);
   cursor: pointer;
 }
-html body #selection #selectionCard02 #rightSelectCard02 #selectionMore #selectionGithub {
-  display: flex;
-  align-items: center;
-  padding: 0 24px;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  background: rgba(255, 255, 255, 0.1);
-  list-style: none;
-}
-html body #selection #selectionCard03 {
-  scroll-snap-align: start;
-  display: flex;
-  scroll-snap-stop: always;
-  gap: 33px;
-  width: 100%;
-  flex-shrink: 0;
-}
-@media (max-width: 1260px) {
-  html body #selection #selectionCard03 {
-    margin-top: 80px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 33px;
-  }
-}
-html body #selection #selectionCard03 #leftSelectCard03 {
-  display: flex;
-  flex-direction: column;
-}
-html body #selection #selectionCard03 #midSelectCard03 img {
-  border-radius: 24px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: all 300ms ease-out;
-}
-@media (max-width: 1260px) {
-  html body #selection #selectionCard03 #midSelectCard03 img {
-    display: flex;
-    width: 326px;
-    height: 204px;
-  }
-}
-html body #selection #selectionCard03 #midSelectCard03 img:hover {
-  transform: scale(1.02);
-}
-html body #selection #selectionCard03 #rightSelectCard03 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-@media (max-width: 1260px) {
-  html body #selection #selectionCard03 #rightSelectCard03 {
-    display: flex;
-    gap: 33px;
-    width: 328.66px;
-  }
-}
-html body #selection #selectionCard03 #rightSelectCard03 h1 {
-  color: rgba(81, 162, 255, 0.7);
-  font-size: 72px;
-  font-weight: 700;
-}
-@media (max-width: 1260px) {
-  html body #selection #selectionCard03 #rightSelectCard03 h1 {
-    font-size: 60px;
-  }
-}
-html body #selection #selectionCard03 #rightSelectCard03 h2 {
-  color: rgb(255, 255, 255);
-  font-size: 36px;
-  font-weight: 400;
-}
-@media (max-width: 1260px) {
-  html body #selection #selectionCard03 #rightSelectCard03 h2 {
-    font-size: 30px;
-  }
-}
-html body #selection #selectionCard03 #rightSelectCard03 p {
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 18px;
-  font-weight: 400;
-}
-@media (max-width: 1260px) {
-  html body #selection #selectionCard03 #rightSelectCard03 p {
-    font-size: 16px;
-  }
-}
-html body #selection #selectionCard03 #rightSelectCard03 #selectionTopic {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  flex-direction: row;
-  gap: 8px;
-  align-items: center;
-}
-@media (max-width: 1260px) {
-  html body #selection #selectionCard03 #rightSelectCard03 #selectionTopic {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-html body #selection #selectionCard03 #rightSelectCard03 #selectionTopic li {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  color: rgb(255, 255, 255);
-  padding: 9px 16px 9px 17px;
-  border-radius: 14px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.05);
-}
-html body #selection #selectionCard03 #rightSelectCard03 #selectionTopic li a {
-  font-size: 14px;
-}
-html body #selection #selectionCard03 #rightSelectCard03 #selectionMore {
-  display: flex;
-  gap: 16px;
-}
-html body #selection #selectionCard03 #rightSelectCard03 #selectionMore #selectionShowMore {
-  display: flex;
-  align-items: center;
-  list-style: none;
-  padding: 12px 25px 14px 25px;
-  border-radius: 14px;
-  border: 1px solid rgba(81, 162, 255, 0.5);
-  background: rgba(43, 127, 255, 0.2);
-  transition: all 300ms ease-out;
-  gap: 7px;
-}
-html body #selection #selectionCard03 #rightSelectCard03 #selectionMore #selectionShowMore img {
-  transition: all 300ms ease-out;
-}
-html body #selection #selectionCard03 #rightSelectCard03 #selectionMore #selectionShowMore a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: rgb(255, 255, 255);
-  font-size: 16px;
-  gap: 7px;
-}
-html body #selection #selectionCard03 #rightSelectCard03 #selectionMore #selectionShowMore a:hover > img {
-  transform: translateX(5px) translateY(-5px);
-}
-html body #selection #selectionCard03 #rightSelectCard03 #selectionMore #selectionShowMore:hover {
-  border: 1px solid rgba(81, 162, 255, 0.7);
-  background: rgba(43, 127, 255, 0.4);
-  cursor: pointer;
-}
-html body #selection #selectionCard03 #rightSelectCard03 #selectionMore #selectionGithub {
+html body #selection .section-container #selectionCard02 #rightSelectCard02 #selectionMore #selectionGithub {
   display: flex;
   align-items: center;
   padding: 0 24px;
@@ -1068,7 +928,12 @@ html body #interTitre3 a {
 html body #aboutSection {
   margin-top: 88px;
 }
-html body #aboutSection #aboutMeCard {
+html body #aboutSection .section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+html body #aboutSection .section-container #aboutMeCard {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1077,49 +942,49 @@ html body #aboutSection #aboutMeCard {
   border-radius: 24px;
   box-sizing: border-box;
   padding: 49px;
-  width: 1500px;
+  width: 100%;
   height: 316px;
   margin: 0 auto;
   gap: 32px;
 }
 @media (max-width: 1100px) {
-  html body #aboutSection #aboutMeCard {
+  html body #aboutSection .section-container #aboutMeCard {
     width: 338px;
     height: 416px;
   }
 }
-html body #aboutSection #aboutMeCard h1 {
+html body #aboutSection .section-container #aboutMeCard h1 {
   color: rgb(255, 255, 255);
   font-size: 36px;
 }
 @media (max-width: 1100px) {
-  html body #aboutSection #aboutMeCard h1 {
+  html body #aboutSection .section-container #aboutMeCard h1 {
     font-size: 30px;
   }
 }
-html body #aboutSection #aboutMeCard h1 span {
+html body #aboutSection .section-container #aboutMeCard h1 span {
   color: #2b7fff;
 }
-html body #aboutSection #aboutMeCard p {
+html body #aboutSection .section-container #aboutMeCard p {
   color: rgba(255, 255, 255, 0.8);
   font-size: 16px;
 }
 @media (max-width: 1100px) {
-  html body #aboutSection #aboutMeCard p {
+  html body #aboutSection .section-container #aboutMeCard p {
     font-size: 16px;
   }
 }
-html body #aboutSection #aboutMeCard h2 {
+html body #aboutSection .section-container #aboutMeCard h2 {
   color: rgba(255, 255, 255, 0.8);
   font-size: 14px;
   text-transform: uppercase;
 }
-html body #aboutSection #aboutMeCard #aboutMeCD {
+html body #aboutSection .section-container #aboutMeCard #aboutMeCD {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
-html body #aboutSection #aboutMeCard #aboutMeCD #aboutMeCDList {
+html body #aboutSection .section-container #aboutMeCard #aboutMeCD #aboutMeCDList {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   flex-direction: row;
@@ -1127,11 +992,11 @@ html body #aboutSection #aboutMeCard #aboutMeCD #aboutMeCDList {
   align-items: center;
 }
 @media (max-width: 1100px) {
-  html body #aboutSection #aboutMeCard #aboutMeCD #aboutMeCDList {
+  html body #aboutSection .section-container #aboutMeCard #aboutMeCD #aboutMeCDList {
     grid-template-columns: repeat(2, 1fr);
   }
 }
-html body #aboutSection #aboutMeCard #aboutMeCD #aboutMeCDList li {
+html body #aboutSection .section-container #aboutMeCard #aboutMeCD #aboutMeCDList li {
   display: flex;
   align-items: center;
   list-style: none;
@@ -1145,362 +1010,38 @@ html body #aboutSection #aboutMeCard #aboutMeCD #aboutMeCDList li {
   gap: 8px;
   transition: all 0.2s ease-out;
 }
-html body #aboutSection #aboutMeCard #aboutMeCD #aboutMeCDList li img {
+html body #aboutSection .section-container #aboutMeCard #aboutMeCD #aboutMeCDList li img {
   height: 24px;
   width: 24px;
 }
-html body #aboutSection #aboutMeCard #aboutMeCD #aboutMeCDList li:hover {
+html body #aboutSection .section-container #aboutMeCard #aboutMeCD #aboutMeCDList li:hover {
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.25);
 }
-html body #interInterTitre {
-  display: none;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  margin-top: 64px;
-  font-size: 30px;
-  color: rgb(255, 255, 255);
-  margin-bottom: 34px;
-}
-@media (max-width: 1100px) {
-  html body #interInterTitre {
-    display: flex;
-    font-size: 24px;
-  }
-}
-html body #aboutCoupOEil {
-  display: none;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-@media (max-width: 1100px) {
-  html body #aboutCoupOEil {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: 0 auto;
-  }
-}
-html body #aboutCoupOEil #sectionLeft {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-}
-html body #aboutCoupOEil #sectionLeft #infosEssential {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  color: rgb(255, 255, 255);
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-sizing: border-box;
-  border-radius: 24px;
-  height: 400px;
-  gap: 24px;
-}
-@media (max-width: 1100px) {
-  html body #aboutCoupOEil #sectionLeft #infosEssential {
-    width: 339px;
-    height: 400px;
-  }
-}
-html body #aboutCoupOEil #sectionLeft #infosEssential #infoCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 auto;
-  gap: 45px;
-}
-html body #aboutCoupOEil #sectionLeft #infosEssential #localisation,
-html body #aboutCoupOEil #sectionLeft #infosEssential #mobilité,
-html body #aboutCoupOEil #sectionLeft #infosEssential #disponibilité,
-html body #aboutCoupOEil #sectionLeft #infosEssential #status {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-html body #aboutCoupOEil #sectionLeft #infosEssential #localisation #infosTitle,
-html body #aboutCoupOEil #sectionLeft #infosEssential #mobilité #infosTitle,
-html body #aboutCoupOEil #sectionLeft #infosEssential #disponibilité #infosTitle,
-html body #aboutCoupOEil #sectionLeft #infosEssential #status #infosTitle {
-  display: flex;
-  gap: 12px;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-}
-html body #aboutCoupOEil #sectionLeft #sectionDownLeftCard {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-  color: rgb(255, 255, 255);
-}
-html body #aboutCoupOEil #sectionLeft #sectionDownLeftCard #progCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.05);
-  width: 246px;
-  height: 155px;
-  gap: 12px;
-}
-@media (max-width: 1100px) {
-  html body #aboutCoupOEil #sectionLeft #sectionDownLeftCard #progCard {
-    width: 156px;
-    height: 136px;
-  }
-}
-html body #aboutCoupOEil #sectionLeft #sectionDownLeftCard #progCard img {
-  height: 24px;
-  padding: 13px;
-  border-radius: 14px;
-  border: 1px solid rgba(0, 211, 242, 0.3);
-  background: rgba(0, 184, 219, 0.2);
-}
-html body #aboutCoupOEil #sectionLeft #sectionDownLeftCard #informaCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.05);
-  width: 246px;
-  height: 155px;
-  gap: 12px;
-}
-@media (max-width: 1100px) {
-  html body #aboutCoupOEil #sectionLeft #sectionDownLeftCard #informaCard {
-    width: 156px;
-    height: 136px;
-  }
-}
-html body #aboutCoupOEil #sectionLeft #sectionDownLeftCard #informaCard img {
-  height: 24px;
-  padding: 13px;
-  border-radius: 14px;
-  border: 1px solid rgba(251, 100, 182, 0.3);
-  background: rgba(246, 51, 154, 0.2);
-}
-html body #aboutCoupOEil #sectionRight {
-  margin-top: 17px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-}
-html body #aboutCoupOEil #sectionRight #upCard {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-  width: 100%;
-}
-html body #aboutCoupOEil #sectionRight #upCard #jvCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.05);
-  width: 246px;
-  height: 155px;
-  gap: 12px;
-}
-@media (max-width: 1100px) {
-  html body #aboutCoupOEil #sectionRight #upCard #jvCard {
-    width: 156px;
-    height: 136px;
-  }
-}
-html body #aboutCoupOEil #sectionRight #upCard #jvCard img {
-  height: 24px;
-  padding: 13px;
-  border-radius: 14px;
-  border: 1px solid rgba(81, 162, 255, 0.3);
-  background: rgba(43, 127, 255, 0.2);
-}
-html body #aboutCoupOEil #sectionRight #upCard #jvCard p {
-  color: rgb(255, 255, 255);
-}
-html body #aboutCoupOEil #sectionRight #upCard #graphCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background: rgba(255, 255, 255, 0.05);
-  width: 246px;
-  height: 155px;
-  gap: 12px;
-}
-@media (max-width: 1100px) {
-  html body #aboutCoupOEil #sectionRight #upCard #graphCard {
-    width: 156px;
-    height: 136px;
-  }
-}
-html body #aboutCoupOEil #sectionRight #upCard #graphCard img {
-  height: 24px;
-  padding: 13px;
-  border-radius: 14px;
-  border: 1px solid rgba(194, 122, 255, 0.3);
-  background: rgba(173, 70, 255, 0.2);
-}
-html body #aboutCoupOEil #sectionRight #upCard #graphCard p {
-  color: rgb(255, 255, 255);
-}
-html body #aboutCoupOEil #sectionRight #downCard {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  gap: 24px;
-}
-html body #aboutCoupOEil #sectionRight #downCard #yearCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 16px;
-  border: 1px solid rgba(0, 211, 242, 0.2);
-  background: linear-gradient(135deg, rgba(0, 184, 219, 0.1) 0%, rgba(43, 127, 255, 0.1) 100%);
-  width: 246px;
-  height: 199px;
-  gap: 9px;
-}
-@media (max-width: 1100px) {
-  html body #aboutCoupOEil #sectionRight #downCard #yearCard {
-    width: 156px;
-    height: 187px;
-  }
-}
-html body #aboutCoupOEil #sectionRight #downCard #yearCard img {
-  height: 24px;
-}
-html body #aboutCoupOEil #sectionRight #downCard #yearCard h1 {
-  color: #00D3F2;
-  font-size: 60px;
-  font-weight: 400;
-}
-html body #aboutCoupOEil #sectionRight #downCard #yearCard p {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 14px;
-  text-transform: uppercase;
-}
-html body #aboutCoupOEil #sectionRight #downCard #yearCard p {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.4);
-}
-html body #aboutCoupOEil #sectionRight #downCard #nbrFormationCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  border-radius: 16px;
-  border: 1px solid rgba(194, 122, 255, 0.2);
-  background: linear-gradient(135deg, rgba(173, 70, 255, 0.1) 0%, rgba(246, 51, 154, 0.1) 100%);
-  width: 246px;
-  height: 199px;
-  gap: 9px;
-}
-@media (max-width: 1100px) {
-  html body #aboutCoupOEil #sectionRight #downCard #nbrFormationCard {
-    width: 156px;
-    height: 187px;
-  }
-}
-html body #aboutCoupOEil #sectionRight #downCard #nbrFormationCard img {
-  height: 24px;
-}
-html body #aboutCoupOEil #sectionRight #downCard #nbrFormationCard h1 {
-  color: #C27AFF;
-  font-size: 60px;
-  font-weight: 400;
-}
-html body #aboutCoupOEil #sectionRight #downCard #nbrFormationCard p {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 14px;
-  text-transform: uppercase;
-}
-html body #aboutCoupOEil #sectionRight #downCard #nbrFormationCard p {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.4);
-}
-html body #aboutCoupOEil #sectionRight #logiCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 520px;
-  height: 157px;
-  border-radius: 16px;
-  border: 1px solid rgba(5, 223, 114, 0.2);
-  background: linear-gradient(135deg, rgba(0, 201, 80, 0.1) 0%, rgba(0, 188, 125, 0.1) 100%);
-  color: rgb(255, 255, 255);
-  gap: 16px;
-}
-@media (max-width: 1100px) {
-  html body #aboutCoupOEil #sectionRight #logiCard {
-    display: flex;
-    width: 338px;
-    height: 186.572px;
-  }
-}
-html body #aboutCoupOEil #sectionRight #logiCard h1 {
-  color: #05DF72;
-  font-size: 36px;
-}
-html body #aboutCoupOEil #sectionRight #logiCard p {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 14px;
-  text-transform: uppercase;
-}
-html body #aboutCoupOEil #sectionRight #logiCard #tag {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-  gap: 8px;
-}
-html body #aboutCoupOEil #sectionRight #logiCard #tag li {
-  display: flex;
-  align-items: center;
-  height: 26px;
-  padding: 4px 12px;
-  border-radius: 10px;
-  border: 1px solid rgba(5, 223, 114, 0.2);
-  background: rgba(0, 201, 80, 0.1);
-  list-style: none;
-}
 html body #competenceTitle {
-  margin: 63px 127px 32px 127px;
+  display: flex;
+  margin: 63px 0 32px 0;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 1100px) {
   html body #competenceTitle {
-    margin: 63px 0 32px 0;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+    display: flex;
   }
 }
 html body #competenceTitle h1 {
   color: rgb(255, 255, 255);
   font-size: 30px;
+}
+@media (max-width: 1100px) {
+  html body #competenceTitle h1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+  }
 }
 html body #aboutCompetences {
   display: flex;
@@ -1508,13 +1049,18 @@ html body #aboutCompetences {
   align-items: center;
   margin: 0 auto;
 }
-html body #aboutCompetences #aboutinterCompetences {
+html body #aboutCompetences .section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+html body #aboutCompetences .section-container #aboutinterCompetences {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(2, auto);
-  grid-row-gap: 24px;
-  grid-column-gap: 48px;
+  gap: 24px;
   width: 100%;
+  box-sizing: border-box;
   max-width: 1200px;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -1522,42 +1068,45 @@ html body #aboutCompetences #aboutinterCompetences {
   justify-content: center;
 }
 @media (max-width: 1100px) {
-  html body #aboutCompetences #aboutinterCompetences {
+  html body #aboutCompetences .section-container #aboutinterCompetences {
     grid-template-columns: repeat(2, minmax(0, 350px));
     justify-content: center;
     width: fit-content;
   }
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence1,
-html body #aboutCompetences #aboutinterCompetences #cardCompetence2,
-html body #aboutCompetences #aboutinterCompetences #cardCompetence3,
-html body #aboutCompetences #aboutinterCompetences #cardCompetence4,
-html body #aboutCompetences #aboutinterCompetences #cardCompetence5,
-html body #aboutCompetences #aboutinterCompetences #cardCompetence6 {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence1,
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence2,
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence3,
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence4,
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence5,
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence6 {
   width: 100%;
   height: 172px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
   padding-left: 25px;
   border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
+  transition: all 0.2s ease;
 }
 @media (max-width: 1100px) {
-  html body #aboutCompetences #aboutinterCompetences #cardCompetence1,
-  html body #aboutCompetences #aboutinterCompetences #cardCompetence2,
-  html body #aboutCompetences #aboutinterCompetences #cardCompetence3,
-  html body #aboutCompetences #aboutinterCompetences #cardCompetence4,
-  html body #aboutCompetences #aboutinterCompetences #cardCompetence5,
-  html body #aboutCompetences #aboutinterCompetences #cardCompetence6 {
-    width: 315.72px;
+  html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence1,
+  html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence2,
+  html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence3,
+  html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence4,
+  html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence5,
+  html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence6 {
+    width: 100%;
     border-radius: 16px;
     border: 0.8px solid rgba(255, 255, 255, 0.1);
     background: rgba(255, 255, 255, 0.05);
   }
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence1 {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence1 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1565,11 +1114,11 @@ html body #aboutCompetences #aboutinterCompetences #cardCompetence1 {
   padding-left: 25px;
 }
 @media (max-width: 1100px) {
-  html body #aboutCompetences #aboutinterCompetences #cardCompetence1 {
+  html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence1 {
     padding-left: 20px;
   }
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence1 img {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence1 img {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1581,29 +1130,29 @@ html body #aboutCompetences #aboutinterCompetences #cardCompetence1 img {
   border: 1px solid rgba(81, 162, 255, 0.3);
   background: rgba(43, 127, 255, 0.2);
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence1 h1 {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence1 h1 {
   color: rgb(255, 255, 255);
   font-size: 20px;
   margin-bottom: 8px;
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence1 #liCompetence {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence1 #liCompetence {
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
   display: flex;
   flex-direction: row;
   list-style: none;
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence1 #liCompetence #first {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence1 #liCompetence #first {
   list-style: none;
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence1 #liCompetence li {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence1 #liCompetence li {
   list-style: circle;
   margin-right: 25px;
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence1:hover {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence1:hover {
   border: 1px solid rgba(81, 162, 255, 0.5);
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence2 {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence2 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1611,11 +1160,11 @@ html body #aboutCompetences #aboutinterCompetences #cardCompetence2 {
   padding-left: 25px;
 }
 @media (max-width: 1100px) {
-  html body #aboutCompetences #aboutinterCompetences #cardCompetence2 {
+  html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence2 {
     padding-left: 20px;
   }
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence2 img {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence2 img {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1627,29 +1176,29 @@ html body #aboutCompetences #aboutinterCompetences #cardCompetence2 img {
   border: 1px solid rgba(194, 122, 255, 0.3);
   background: rgba(173, 70, 255, 0.2);
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence2 h1 {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence2 h1 {
   color: rgb(255, 255, 255);
   font-size: 20px;
   margin-bottom: 8px;
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence2 #liCompetence {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence2 #liCompetence {
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
   display: flex;
   flex-direction: row;
   list-style: none;
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence2 #liCompetence #first {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence2 #liCompetence #first {
   list-style: none;
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence2 #liCompetence li {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence2 #liCompetence li {
   list-style: circle;
   margin-right: 25px;
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence2:hover {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence2:hover {
   border: 1px solid rgba(194, 122, 255, 0.5);
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence3 {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence3 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1657,11 +1206,11 @@ html body #aboutCompetences #aboutinterCompetences #cardCompetence3 {
   padding-left: 25px;
 }
 @media (max-width: 1100px) {
-  html body #aboutCompetences #aboutinterCompetences #cardCompetence3 {
+  html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence3 {
     padding-left: 20px;
   }
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence3 img {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence3 img {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1673,29 +1222,29 @@ html body #aboutCompetences #aboutinterCompetences #cardCompetence3 img {
   border: 1px solid rgba(0, 211, 242, 0.3);
   background: rgba(0, 184, 219, 0.2);
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence3 h1 {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence3 h1 {
   color: rgb(255, 255, 255);
   font-size: 20px;
   margin-bottom: 8px;
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence3 #liCompetence {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence3 #liCompetence {
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
   display: flex;
   flex-direction: row;
   list-style: none;
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence3 #liCompetence #first {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence3 #liCompetence #first {
   list-style: none;
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence3 #liCompetence li {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence3 #liCompetence li {
   list-style: circle;
   margin-right: 25px;
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence3:hover {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence3:hover {
   border: 1px solid rgba(0, 211, 242, 0.5);
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence4 {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence4 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1703,11 +1252,11 @@ html body #aboutCompetences #aboutinterCompetences #cardCompetence4 {
   padding-left: 25px;
 }
 @media (max-width: 1100px) {
-  html body #aboutCompetences #aboutinterCompetences #cardCompetence4 {
+  html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence4 {
     padding-left: 20px;
   }
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence4 img {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence4 img {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1719,29 +1268,29 @@ html body #aboutCompetences #aboutinterCompetences #cardCompetence4 img {
   border: 1px solid rgba(5, 223, 114, 0.3);
   background: rgba(0, 201, 80, 0.2);
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence4 h1 {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence4 h1 {
   color: rgb(255, 255, 255);
   font-size: 20px;
   margin-bottom: 8px;
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence4 #liCompetence {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence4 #liCompetence {
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
   display: flex;
   flex-direction: row;
   list-style: none;
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence4 #liCompetence #first {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence4 #liCompetence #first {
   list-style: none;
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence4 #liCompetence li {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence4 #liCompetence li {
   list-style: circle;
   margin-right: 25px;
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence4:hover {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence4:hover {
   border: 1px solid rgba(5, 223, 114, 0.5);
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence5 {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence5 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1749,11 +1298,11 @@ html body #aboutCompetences #aboutinterCompetences #cardCompetence5 {
   padding-left: 25px;
 }
 @media (max-width: 1100px) {
-  html body #aboutCompetences #aboutinterCompetences #cardCompetence5 {
+  html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence5 {
     padding-left: 20px;
   }
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence5 img {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence5 img {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1765,29 +1314,29 @@ html body #aboutCompetences #aboutinterCompetences #cardCompetence5 img {
   border: 1px solid rgba(255, 137, 4, 0.3);
   background: rgba(255, 105, 0, 0.2);
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence5 h1 {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence5 h1 {
   color: rgb(255, 255, 255);
   font-size: 20px;
   margin-bottom: 8px;
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence5 #liCompetence {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence5 #liCompetence {
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
   display: flex;
   flex-direction: row;
   list-style: none;
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence5 #liCompetence #first {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence5 #liCompetence #first {
   list-style: none;
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence5 #liCompetence li {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence5 #liCompetence li {
   list-style: circle;
   margin-right: 25px;
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence5:hover {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence5:hover {
   border: 1px solid rgba(255, 137, 4, 0.5);
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence6 {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence6 {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -1795,11 +1344,11 @@ html body #aboutCompetences #aboutinterCompetences #cardCompetence6 {
   padding-left: 25px;
 }
 @media (max-width: 1100px) {
-  html body #aboutCompetences #aboutinterCompetences #cardCompetence6 {
+  html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence6 {
     padding-left: 20px;
   }
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence6 img {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence6 img {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1811,26 +1360,26 @@ html body #aboutCompetences #aboutinterCompetences #cardCompetence6 img {
   border: 1px solid rgba(251, 100, 182, 0.3);
   background: rgba(246, 51, 154, 0.2);
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence6 h1 {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence6 h1 {
   color: rgb(255, 255, 255);
   font-size: 20px;
   margin-bottom: 8px;
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence6 #liCompetence {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence6 #liCompetence {
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
   display: flex;
   flex-direction: row;
   list-style: none;
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence6 #liCompetence #first {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence6 #liCompetence #first {
   list-style: none;
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence6 #liCompetence li {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence6 #liCompetence li {
   list-style: circle;
   margin-right: 25px;
 }
-html body #aboutCompetences #aboutinterCompetences #cardCompetence6:hover {
+html body #aboutCompetences .section-container #aboutinterCompetences #cardCompetence6:hover {
   border: 1px solid rgba(251, 100, 182, 0.6);
 }
 html body #ExpTitle {
@@ -1864,7 +1413,6 @@ html body #aboutExpProffesionnelles {
   align-items: center;
   justify-content: center;
   margin: 0 auto;
-  gap: 24px;
 }
 @media (max-width: 1100px) {
   html body #aboutExpProffesionnelles {
@@ -1873,41 +1421,49 @@ html body #aboutExpProffesionnelles {
     align-items: center;
     justify-content: center;
     margin: 0 auto;
-    gap: 24px;
   }
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles1,
-html body #aboutExpProffesionnelles #cardExpProffesionnelles2,
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 {
-  width: 1500px;
+html body #aboutExpProffesionnelles .section-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  gap: 24px;
+}
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1,
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles2,
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 {
+  width: 100%;
   border-radius: 16px;
+  box-sizing: border-box;
   border: 0.8px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
   margin: 0 auto;
 }
 @media (max-width: 1100px) {
-  html body #aboutExpProffesionnelles #cardExpProffesionnelles1,
-  html body #aboutExpProffesionnelles #cardExpProffesionnelles2,
-  html body #aboutExpProffesionnelles #cardExpProffesionnelles3 {
+  html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1,
+  html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles2,
+  html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 {
     width: 300px;
     border-radius: 16px;
     border: 0.8px solid rgba(255, 255, 255, 0.1);
     background: rgba(255, 255, 255, 0.05);
   }
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles1 {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1 {
   display: flex;
   flex-direction: row;
   gap: 16px;
   padding: 32.8px;
 }
 @media (max-width: 1100px) {
-  html body #aboutExpProffesionnelles #cardExpProffesionnelles1 {
+  html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1 {
     padding: 30px;
     gap: 0;
   }
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpLeft #bagGreenColorIcon {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1 #cardExpLeft #bagGreenColorIcon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1919,27 +1475,27 @@ html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpLeft #bagG
   background: rgba(0, 201, 80, 0.2);
 }
 @media (max-width: 1100px) {
-  html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpLeft #bagGreenColorIcon {
+  html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1 #cardExpLeft #bagGreenColorIcon {
     display: none;
   }
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpRight {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1 #cardExpRight {
   gap: 16px;
 }
 @media (max-width: 1100px) {
-  html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpRight {
+  html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1 #cardExpRight {
     display: flex;
     flex-direction: column;
     width: 378.65px;
     gap: 5px;
   }
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpRight #cardTitle {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1 #cardExpRight #cardTitle {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpRight #cardTitle h1 {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1 #cardExpRight #cardTitle h1 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -1948,14 +1504,14 @@ html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpRight #car
   gap: 10px;
 }
 @media (max-width: 1100px) {
-  html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpRight #cardTitle h1 {
+  html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1 #cardExpRight #cardTitle h1 {
     display: flex;
     flex-direction: row;
     align-items: start;
     gap: 0;
   }
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpRight #cardTitle h1 #statusEmplois {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1 #cardExpRight #cardTitle h1 #statusEmplois {
   display: flex;
   width: 6%;
   padding: 7px 12px;
@@ -1969,76 +1525,76 @@ html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpRight #car
   border: 0.8px solid rgba(5, 223, 114, 0.3);
   background: rgba(0, 201, 80, 0.2);
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpRight h2 {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1 #cardExpRight h2 {
   color: #05DF72;
   font-size: 16px;
   font-weight: 400;
   margin-top: 8px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpRight #infoExpProffesionnelles {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1 #cardExpRight #infoExpProffesionnelles {
   display: flex;
   flex-direction: row;
   gap: 4px;
   margin-top: 16px;
 }
 @media (max-width: 1100px) {
-  html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpRight #infoExpProffesionnelles {
+  html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1 #cardExpRight #infoExpProffesionnelles {
     flex-direction: column;
   }
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpRight #infoExpProffesionnelles #ExpproDate {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1 #cardExpRight #infoExpProffesionnelles #ExpproDate {
   display: flex;
   flex-direction: row;
   gap: 4px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpRight #infoExpProffesionnelles #ExpproDate img {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1 #cardExpRight #infoExpProffesionnelles #ExpproDate img {
   width: 14px;
   height: 14px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpRight #infoExpProffesionnelles #ExpproDate p {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1 #cardExpRight #infoExpProffesionnelles #ExpproDate p {
   color: rgba(255, 255, 255, 0.5);
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpRight #infoExpProffesionnelles #ExpproLocalisation {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1 #cardExpRight #infoExpProffesionnelles #ExpproLocalisation {
   display: flex;
   flex-direction: row;
   gap: 4px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpRight #infoExpProffesionnelles #ExpproLocalisation img {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1 #cardExpRight #infoExpProffesionnelles #ExpproLocalisation img {
   width: 14px;
   height: 14px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpRight #infoExpProffesionnelles #ExpproLocalisation p {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1 #cardExpRight #infoExpProffesionnelles #ExpproLocalisation p {
   color: rgba(255, 255, 255, 0.5);
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpRight p {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1 #cardExpRight p {
   color: rgba(255, 255, 255, 0.6);
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpRight #ExpTache {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1 #cardExpRight #ExpTache {
   display: flex;
   flex-direction: column;
   gap: 4px;
   margin-top: 23.5px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpRight #ExpTache li {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1 #cardExpRight #ExpTache li {
   display: flex;
   color: rgba(255, 255, 255, 0.6);
   line-height: 22.75px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpRight #ExpSkill {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1 #cardExpRight #ExpSkill {
   display: flex;
   flex-direction: row;
   gap: 8px;
   margin-top: 12px;
 }
 @media (max-width: 1100px) {
-  html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpRight #ExpSkill {
+  html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1 #cardExpRight #ExpSkill {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 5px;
   }
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpRight #ExpSkill li {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1 #cardExpRight #ExpSkill li {
   border-radius: 10px;
   border: 0.8px solid rgba(5, 223, 114, 0.2);
   background: rgba(0, 201, 80, 0.1);
@@ -2049,24 +1605,24 @@ html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpRight #Exp
   list-style: none;
 }
 @media (max-width: 1100px) {
-  html body #aboutExpProffesionnelles #cardExpProffesionnelles1 #cardExpRight #ExpSkill li {
+  html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles1 #cardExpRight #ExpSkill li {
     padding: 10px 5px;
     font-size: 15px;
   }
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles2 {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles2 {
   display: flex;
   flex-direction: row;
   gap: 16px;
   padding: 32.8px;
 }
 @media (max-width: 1100px) {
-  html body #aboutExpProffesionnelles #cardExpProffesionnelles2 {
+  html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles2 {
     padding: 30px;
     gap: 0;
   }
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles2 #cardExpLeft #bagBlueColorIcon {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles2 #cardExpLeft #bagBlueColorIcon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2078,105 +1634,105 @@ html body #aboutExpProffesionnelles #cardExpProffesionnelles2 #cardExpLeft #bagB
   background: rgba(43, 127, 255, 0.2);
 }
 @media (max-width: 1100px) {
-  html body #aboutExpProffesionnelles #cardExpProffesionnelles2 #cardExpLeft #bagBlueColorIcon {
+  html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles2 #cardExpLeft #bagBlueColorIcon {
     display: none;
   }
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles2 #cardExpRight {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles2 #cardExpRight {
   gap: 16px;
 }
 @media (max-width: 1100px) {
-  html body #aboutExpProffesionnelles #cardExpProffesionnelles2 #cardExpRight {
+  html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles2 #cardExpRight {
     display: flex;
     flex-direction: column;
     width: 378.65px;
     gap: 5px;
   }
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles2 #cardExpRight #cardTitle {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles2 #cardExpRight #cardTitle {
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles2 #cardExpRight #cardTitle h1 {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles2 #cardExpRight #cardTitle h1 {
   font-size: 24px;
   color: rgb(255, 255, 255);
 }
 @media (max-width: 1100px) {
-  html body #aboutExpProffesionnelles #cardExpProffesionnelles2 #cardExpRight #cardTitle h1 {
+  html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles2 #cardExpRight #cardTitle h1 {
     display: flex;
     flex-direction: row;
     align-items: start;
     gap: 0;
   }
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles2 #cardExpRight h2 {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles2 #cardExpRight h2 {
   color: #51A2FF;
   font-size: 16px;
   font-weight: 400;
   margin-top: 12px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles2 #cardExpRight #infoExpProffesionnelles {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles2 #cardExpRight #infoExpProffesionnelles {
   display: flex;
   flex-direction: row;
   gap: 4px;
   margin-top: 16px;
 }
 @media (max-width: 1100px) {
-  html body #aboutExpProffesionnelles #cardExpProffesionnelles2 #cardExpRight #infoExpProffesionnelles {
+  html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles2 #cardExpRight #infoExpProffesionnelles {
     flex-direction: column;
   }
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles2 #cardExpRight #infoExpProffesionnelles #ExpproDate {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles2 #cardExpRight #infoExpProffesionnelles #ExpproDate {
   display: flex;
   flex-direction: row;
   gap: 4px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles2 #cardExpRight #infoExpProffesionnelles #ExpproDate img {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles2 #cardExpRight #infoExpProffesionnelles #ExpproDate img {
   width: 14px;
   height: 14px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles2 #cardExpRight #infoExpProffesionnelles #ExpproDate p {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles2 #cardExpRight #infoExpProffesionnelles #ExpproDate p {
   color: rgba(255, 255, 255, 0.5);
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles2 #cardExpRight #infoExpProffesionnelles #ExpproLocalisation {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles2 #cardExpRight #infoExpProffesionnelles #ExpproLocalisation {
   display: flex;
   flex-direction: row;
   gap: 4px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles2 #cardExpRight #infoExpProffesionnelles #ExpproLocalisation img {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles2 #cardExpRight #infoExpProffesionnelles #ExpproLocalisation img {
   width: 14px;
   height: 14px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles2 #cardExpRight #infoExpProffesionnelles #ExpproLocalisation p {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles2 #cardExpRight #infoExpProffesionnelles #ExpproLocalisation p {
   color: rgba(255, 255, 255, 0.5);
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles2 #cardExpRight #ExpTache {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles2 #cardExpRight #ExpTache {
   display: flex;
   flex-direction: column;
   gap: 4px;
   margin-top: 23.5px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles2 #cardExpRight #ExpTache li {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles2 #cardExpRight #ExpTache li {
   display: flex;
   color: rgba(255, 255, 255, 0.6);
   line-height: 22.75px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles2 #cardExpRight #ExpSkill {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles2 #cardExpRight #ExpSkill {
   display: flex;
   flex-direction: row;
   gap: 8px;
   margin-top: 12px;
 }
 @media (max-width: 1100px) {
-  html body #aboutExpProffesionnelles #cardExpProffesionnelles2 #cardExpRight #ExpSkill {
+  html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles2 #cardExpRight #ExpSkill {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 5px;
   }
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles2 #cardExpRight #ExpSkill li {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles2 #cardExpRight #ExpSkill li {
   border-radius: 10px;
   border: 0.8px solid rgba(81, 162, 255, 0.2);
   background: rgba(43, 127, 255, 0.1);
@@ -2187,24 +1743,24 @@ html body #aboutExpProffesionnelles #cardExpProffesionnelles2 #cardExpRight #Exp
   list-style: none;
 }
 @media (max-width: 1100px) {
-  html body #aboutExpProffesionnelles #cardExpProffesionnelles2 #cardExpRight #ExpSkill li {
+  html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles2 #cardExpRight #ExpSkill li {
     padding: 10px 5px;
     font-size: 15px;
   }
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 {
   display: flex;
   flex-direction: row;
   gap: 16px;
   padding: 32.8px;
 }
 @media (max-width: 1100px) {
-  html body #aboutExpProffesionnelles #cardExpProffesionnelles3 {
+  html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 {
     padding: 30px;
     gap: 0;
   }
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #cardExpLeft #bagPurpleColorIcon {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #cardExpLeft #bagPurpleColorIcon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2216,27 +1772,27 @@ html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #cardExpLeft #bagP
   background: rgba(173, 70, 255, 0.2);
 }
 @media (max-width: 1100px) {
-  html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #cardExpLeft #bagPurpleColorIcon {
+  html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #cardExpLeft #bagPurpleColorIcon {
     display: none;
   }
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #cardExpRight {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #cardExpRight {
   gap: 16px;
 }
 @media (max-width: 1100px) {
-  html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #cardExpRight {
+  html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #cardExpRight {
     display: flex;
     flex-direction: column;
     width: 378.65px;
     gap: 5px;
   }
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #cardExpRight #cardTitle {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #cardExpRight #cardTitle {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #cardExpRight #cardTitle h1 {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #cardExpRight #cardTitle h1 {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -2245,66 +1801,66 @@ html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #cardExpRight #car
   gap: 10px;
 }
 @media (max-width: 1100px) {
-  html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #cardExpRight #cardTitle h1 {
+  html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #cardExpRight #cardTitle h1 {
     display: flex;
     flex-direction: row;
     align-items: start;
     gap: 0;
   }
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #cardExpRight h2 {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #cardExpRight h2 {
   color: #C27AFF;
   font-size: 16px;
   font-weight: 400;
   margin-top: 12px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #cardExpRight #infoExpProffesionnelles {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #cardExpRight #infoExpProffesionnelles {
   display: flex;
   flex-direction: row;
   gap: 4px;
   margin-top: 16px;
 }
 @media (max-width: 1100px) {
-  html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #cardExpRight #infoExpProffesionnelles {
+  html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #cardExpRight #infoExpProffesionnelles {
     flex-direction: column;
   }
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #cardExpRight #infoExpProffesionnelles #ExpproDate {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #cardExpRight #infoExpProffesionnelles #ExpproDate {
   display: flex;
   flex-direction: row;
   gap: 4px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #cardExpRight #infoExpProffesionnelles #ExpproDate img {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #cardExpRight #infoExpProffesionnelles #ExpproDate img {
   width: 14px;
   height: 14px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #cardExpRight #infoExpProffesionnelles #ExpproDate p {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #cardExpRight #infoExpProffesionnelles #ExpproDate p {
   color: rgba(255, 255, 255, 0.5);
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #cardExpRight #infoExpProffesionnelles #ExpproLocalisation {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #cardExpRight #infoExpProffesionnelles #ExpproLocalisation {
   display: flex;
   flex-direction: row;
   gap: 4px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #cardExpRight #infoExpProffesionnelles #ExpproLocalisation img {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #cardExpRight #infoExpProffesionnelles #ExpproLocalisation img {
   width: 14px;
   height: 14px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #cardExpRight #infoExpProffesionnelles #ExpproLocalisation p {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #cardExpRight #infoExpProffesionnelles #ExpproLocalisation p {
   color: rgba(255, 255, 255, 0.5);
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #cardExpRight #ExpTache {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #cardExpRight #ExpTache {
   display: flex;
   flex-direction: column;
   gap: 4px;
   margin-top: 23.5px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #cardExpRight #ExpTache li {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #cardExpRight #ExpTache li {
   display: flex;
   color: rgba(255, 255, 255, 0.6);
   line-height: 22.75px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #cardExpRight #ExpSkill {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #cardExpRight #ExpSkill {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -2312,13 +1868,13 @@ html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #cardExpRight #Exp
   margin-top: 12px;
 }
 @media (max-width: 1100px) {
-  html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #cardExpRight #ExpSkill {
+  html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #cardExpRight #ExpSkill {
     display: flex;
     flex-direction: row;
     gap: 5px;
   }
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #cardExpRight #ExpSkill li {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #cardExpRight #ExpSkill li {
   border-radius: 10px;
   border: 0.8px solid rgba(194, 122, 255, 0.2);
   background: rgba(173, 70, 255, 0.1);
@@ -2329,66 +1885,66 @@ html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #cardExpRight #Exp
   list-style: none;
 }
 @media (max-width: 1100px) {
-  html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #cardExpRight #ExpSkill li {
+  html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #cardExpRight #ExpSkill li {
     padding: 10px 5px;
     font-size: 15px;
   }
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #FormTitle {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #FormTitle {
   margin: 63px 127px 32px 127px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #FormTitle h1 {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #FormTitle h1 {
   color: rgb(255, 255, 255);
   font-size: 30px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 footer {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 footer {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   padding: 40px 0;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 footer p {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 footer p {
   color: rgba(255, 255, 255, 0.8);
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 footer p a {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 footer p a {
   color: rgb(255, 255, 255);
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #loginAmbiance {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #loginAmbiance {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #loginAmbiance #sphere1,
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #loginAmbiance #sphere2,
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #loginAmbiance #sphere3 {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #loginAmbiance #sphere1,
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #loginAmbiance #sphere2,
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #loginAmbiance #sphere3 {
   position: absolute;
   filter: blur(150px);
   border-radius: 999px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #loginAmbiance #sphere1 {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #loginAmbiance #sphere1 {
   width: 600px;
   height: 600px;
   top: 1%;
   left: 20%;
   background-color: rgba(43, 127, 255, 0.2);
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #loginAmbiance #sphere2 {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #loginAmbiance #sphere2 {
   width: 600px;
   height: 600px;
   right: 33%;
   top: 25%;
   background-color: rgba(0, 184, 219, 0.1);
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #loginAmbiance #sphere3 {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #loginAmbiance #sphere3 {
   width: 600px;
   height: 600px;
   top: 45%;
   right: 20%;
   background-color: rgba(173, 70, 255, 0.15);
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #indexBtn {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #indexBtn {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -2405,20 +1961,20 @@ html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #indexBtn {
   cursor: pointer;
   transition: all 0.2s ease-out;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #indexBtn img {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #indexBtn img {
   height: 24px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #indexBtn:hover {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #indexBtn:hover {
   background-color: rgba(255, 255, 255, 0.13);
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #loginSection {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #loginSection {
   height: 100vh;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #loginSection #loginCard {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #loginSection #loginCard {
   height: 700px;
   width: 27%;
   display: flex;
@@ -2432,31 +1988,31 @@ html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #loginSection #log
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.2);
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #loginSection #loginCard #loginLogo {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #loginSection #loginCard #loginLogo {
   margin-bottom: 32px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #loginSection #loginCard #loginLogo img {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #loginSection #loginCard #loginLogo img {
   width: 64px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #loginSection #loginCard h1 {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #loginSection #loginCard h1 {
   font-size: 36px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #loginSection #loginCard p {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #loginSection #loginCard p {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.8);
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #loginSection #loginCard #loginForm {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #loginSection #loginCard #loginForm {
   margin-top: 32px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 24px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #loginSection #loginCard #loginForm label {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #loginSection #loginCard #loginForm label {
   font-size: 14px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #loginSection #loginCard #loginForm #loginEmail,
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #loginSection #loginCard #loginForm #loginPassword {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #loginSection #loginCard #loginForm #loginEmail,
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #loginSection #loginCard #loginForm #loginPassword {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -2467,15 +2023,15 @@ html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #loginSection #log
   border-radius: 16px;
   padding-left: 16px;
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #loginSection #loginCard #loginForm #loginEmail input,
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #loginSection #loginCard #loginForm #loginPassword input {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #loginSection #loginCard #loginForm #loginEmail input,
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #loginSection #loginCard #loginForm #loginPassword input {
   font-size: 16px;
   border: none;
   background: transparent;
   padding: 16px 48px;
   color: rgb(255, 255, 255);
 }
-html body #aboutExpProffesionnelles #cardExpProffesionnelles3 #loginSection #loginCard #loginForm #loginButton {
+html body #aboutExpProffesionnelles .section-container #cardExpProffesionnelles3 #loginSection #loginCard #loginForm #loginButton {
   color: rgb(255, 255, 255);
   font-size: 16px;
   cursor: pointer;
@@ -2513,42 +2069,51 @@ html body #aboutFormations {
     display: flex;
   }
 }
-html body #aboutFormations #cardFormations1,
-html body #aboutFormations #cardFormations2,
-html body #aboutFormations #cardFormations3,
-html body #aboutFormations #cardFormations4,
-html body #aboutFormations #cardFormations5 {
-  width: 1500px;
+html body #aboutFormations .section-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  gap: 24px;
+}
+html body #aboutFormations .section-container #cardFormations1,
+html body #aboutFormations .section-container #cardFormations2,
+html body #aboutFormations .section-container #cardFormations3,
+html body #aboutFormations .section-container #cardFormations4,
+html body #aboutFormations .section-container #cardFormations5 {
+  width: 100%;
   border-radius: 16px;
+  box-sizing: border-box;
   border: 0.8px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
   margin: 0 auto;
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations1,
-  html body #aboutFormations #cardFormations2,
-  html body #aboutFormations #cardFormations3,
-  html body #aboutFormations #cardFormations4,
-  html body #aboutFormations #cardFormations5 {
+  html body #aboutFormations .section-container #cardFormations1,
+  html body #aboutFormations .section-container #cardFormations2,
+  html body #aboutFormations .section-container #cardFormations3,
+  html body #aboutFormations .section-container #cardFormations4,
+  html body #aboutFormations .section-container #cardFormations5 {
     width: 300px;
     border-radius: 16px;
     border: 0.8px solid rgba(255, 255, 255, 0.1);
     background: rgba(255, 255, 255, 0.05);
   }
 }
-html body #aboutFormations #cardFormations1 {
+html body #aboutFormations .section-container #cardFormations1 {
   display: flex;
   flex-direction: row;
   gap: 16px;
   padding: 32.8px;
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations1 {
+  html body #aboutFormations .section-container #cardFormations1 {
     padding: 30px;
     gap: 0;
   }
 }
-html body #aboutFormations #cardFormations1 #cardFormationsLeft #certificationBlueIcon {
+html body #aboutFormations .section-container #cardFormations1 #cardFormationsLeft #certificationBlueIcon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2560,40 +2125,40 @@ html body #aboutFormations #cardFormations1 #cardFormationsLeft #certificationBl
   background: rgba(43, 127, 255, 0.2);
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations1 #cardFormationsLeft #certificationBlueIcon {
+  html body #aboutFormations .section-container #cardFormations1 #cardFormationsLeft #certificationBlueIcon {
     display: none;
   }
 }
-html body #aboutFormations #cardFormations1 #cardFormationsRight {
+html body #aboutFormations .section-container #cardFormations1 #cardFormationsRight {
   gap: 16px;
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations1 #cardFormationsRight {
+  html body #aboutFormations .section-container #cardFormations1 #cardFormationsRight {
     display: flex;
     flex-direction: column;
     width: 378.65px;
     gap: 5px;
   }
 }
-html body #aboutFormations #cardFormations1 #cardFormationsRight #cardTitle {
+html body #aboutFormations .section-container #cardFormations1 #cardFormationsRight #cardTitle {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
 }
-html body #aboutFormations #cardFormations1 #cardFormationsRight #cardTitle h1 {
+html body #aboutFormations .section-container #cardFormations1 #cardFormationsRight #cardTitle h1 {
   font-size: 24px;
   color: rgb(255, 255, 255);
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations1 #cardFormationsRight #cardTitle h1 {
+  html body #aboutFormations .section-container #cardFormations1 #cardFormationsRight #cardTitle h1 {
     display: flex;
     flex-direction: row;
     align-items: start;
     gap: 0;
   }
 }
-html body #aboutFormations #cardFormations1 #cardFormationsRight #cardTitle li {
+html body #aboutFormations .section-container #cardFormations1 #cardFormationsRight #cardTitle li {
   display: flex;
   width: 17%;
   padding: 7px 12px;
@@ -2607,77 +2172,77 @@ html body #aboutFormations #cardFormations1 #cardFormationsRight #cardTitle li {
   border: 0.8px solid rgba(81, 162, 255, 0.3);
   background: rgba(43, 127, 255, 0.2);
 }
-html body #aboutFormations #cardFormations1 #cardFormationsRight h2 {
+html body #aboutFormations .section-container #cardFormations1 #cardFormationsRight h2 {
   color: #51A2FF;
   font-size: 16px;
   font-weight: 400;
   margin-top: 8px;
 }
-html body #aboutFormations #cardFormations1 #cardFormationsRight #infoFormations {
+html body #aboutFormations .section-container #cardFormations1 #cardFormationsRight #infoFormations {
   display: flex;
   flex-direction: row;
   gap: 4px;
   margin-top: 16px;
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations1 #cardFormationsRight #infoFormations {
+  html body #aboutFormations .section-container #cardFormations1 #cardFormationsRight #infoFormations {
     flex-direction: column;
   }
 }
-html body #aboutFormations #cardFormations1 #cardFormationsRight #infoFormations #FormationsDate {
+html body #aboutFormations .section-container #cardFormations1 #cardFormationsRight #infoFormations #FormationsDate {
   display: flex;
   flex-direction: row;
   gap: 4px;
 }
-html body #aboutFormations #cardFormations1 #cardFormationsRight #infoFormations #FormationsDate img {
+html body #aboutFormations .section-container #cardFormations1 #cardFormationsRight #infoFormations #FormationsDate img {
   width: 14px;
   height: 14px;
 }
-html body #aboutFormations #cardFormations1 #cardFormationsRight #infoFormations #FormationsDate p {
+html body #aboutFormations .section-container #cardFormations1 #cardFormationsRight #infoFormations #FormationsDate p {
   color: rgba(255, 255, 255, 0.5);
 }
-html body #aboutFormations #cardFormations1 #cardFormationsRight #infoFormations #FormationsLocalisation {
+html body #aboutFormations .section-container #cardFormations1 #cardFormationsRight #infoFormations #FormationsLocalisation {
   display: flex;
   flex-direction: row;
   gap: 4px;
 }
-html body #aboutFormations #cardFormations1 #cardFormationsRight #infoFormations #FormationsLocalisation img {
+html body #aboutFormations .section-container #cardFormations1 #cardFormationsRight #infoFormations #FormationsLocalisation img {
   width: 14px;
   height: 14px;
 }
-html body #aboutFormations #cardFormations1 #cardFormationsRight #infoFormations #FormationsLocalisation p {
+html body #aboutFormations .section-container #cardFormations1 #cardFormationsRight #infoFormations #FormationsLocalisation p {
   color: rgba(255, 255, 255, 0.5);
 }
-html body #aboutFormations #cardFormations1 #cardFormationsRight #FormationsDescription {
+html body #aboutFormations .section-container #cardFormations1 #cardFormationsRight #FormationsDescription {
   margin-top: 8px;
   color: rgba(255, 255, 255, 0.6);
 }
-html body #aboutFormations #cardFormations1 #cardFormationsRight #FormationsTache {
+html body #aboutFormations .section-container #cardFormations1 #cardFormationsRight #FormationsTache {
   display: flex;
   flex-direction: column;
   gap: 4px;
   margin-top: 23.5px;
 }
-html body #aboutFormations #cardFormations1 #cardFormationsRight #FormationsTache li {
+html body #aboutFormations .section-container #cardFormations1 #cardFormationsRight #FormationsTache li {
   display: flex;
   color: rgba(255, 255, 255, 0.6);
   line-height: 22.75px;
 }
-html body #aboutFormations #cardFormations1 #cardFormationsRight #FormationsSkill {
+html body #aboutFormations .section-container #cardFormations1 #cardFormationsRight #FormationsSkill {
   display: flex;
   flex-direction: row;
   gap: 8px;
   margin-top: 12px;
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations1 #cardFormationsRight #FormationsSkill {
+  html body #aboutFormations .section-container #cardFormations1 #cardFormationsRight #FormationsSkill {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 5px;
   }
 }
-html body #aboutFormations #cardFormations1 #cardFormationsRight #FormationsSkill li {
+html body #aboutFormations .section-container #cardFormations1 #cardFormationsRight #FormationsSkill li {
   border-radius: 10px;
   border: 0.8px solid rgba(81, 162, 255, 0.2);
   background: rgba(43, 127, 255, 0.1);
@@ -2688,24 +2253,24 @@ html body #aboutFormations #cardFormations1 #cardFormationsRight #FormationsSkil
   list-style: none;
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations1 #cardFormationsRight #FormationsSkill li {
+  html body #aboutFormations .section-container #cardFormations1 #cardFormationsRight #FormationsSkill li {
     padding: 10px 5px;
     font-size: 15px;
   }
 }
-html body #aboutFormations #cardFormations2 {
+html body #aboutFormations .section-container #cardFormations2 {
   display: flex;
   flex-direction: row;
   gap: 16px;
   padding: 32.8px;
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations2 {
+  html body #aboutFormations .section-container #cardFormations2 {
     padding: 30px;
     gap: 0;
   }
 }
-html body #aboutFormations #cardFormations2 #cardFormationsLeft #certificationCyanIcon {
+html body #aboutFormations .section-container #cardFormations2 #cardFormationsLeft #certificationCyanIcon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2717,110 +2282,110 @@ html body #aboutFormations #cardFormations2 #cardFormationsLeft #certificationCy
   background: rgba(43, 127, 255, 0.2);
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations2 #cardFormationsLeft #certificationCyanIcon {
+  html body #aboutFormations .section-container #cardFormations2 #cardFormationsLeft #certificationCyanIcon {
     display: none;
   }
 }
-html body #aboutFormations #cardFormations2 #cardFormationsRight {
+html body #aboutFormations .section-container #cardFormations2 #cardFormationsRight {
   gap: 16px;
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations2 #cardFormationsRight {
+  html body #aboutFormations .section-container #cardFormations2 #cardFormationsRight {
     display: flex;
     flex-direction: column;
     width: 378.65px;
     gap: 5px;
   }
 }
-html body #aboutFormations #cardFormations2 #cardFormationsRight #cardTitle {
+html body #aboutFormations .section-container #cardFormations2 #cardFormationsRight #cardTitle {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
 }
-html body #aboutFormations #cardFormations2 #cardFormationsRight #cardTitle h1 {
+html body #aboutFormations .section-container #cardFormations2 #cardFormationsRight #cardTitle h1 {
   font-size: 24px;
   color: rgb(255, 255, 255);
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations2 #cardFormationsRight #cardTitle h1 {
+  html body #aboutFormations .section-container #cardFormations2 #cardFormationsRight #cardTitle h1 {
     display: flex;
     flex-direction: row;
     align-items: start;
     gap: 0;
   }
 }
-html body #aboutFormations #cardFormations2 #cardFormationsRight h2 {
+html body #aboutFormations .section-container #cardFormations2 #cardFormationsRight h2 {
   color: #00D3F2;
   font-size: 16px;
   font-weight: 400;
   margin-top: 8px;
 }
-html body #aboutFormations #cardFormations2 #cardFormationsRight #infoFormations {
+html body #aboutFormations .section-container #cardFormations2 #cardFormationsRight #infoFormations {
   display: flex;
   flex-direction: row;
   gap: 4px;
   margin-top: 16px;
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations2 #cardFormationsRight #infoFormations {
+  html body #aboutFormations .section-container #cardFormations2 #cardFormationsRight #infoFormations {
     flex-direction: column;
   }
 }
-html body #aboutFormations #cardFormations2 #cardFormationsRight #infoFormations #FormationsDate {
+html body #aboutFormations .section-container #cardFormations2 #cardFormationsRight #infoFormations #FormationsDate {
   display: flex;
   flex-direction: row;
   gap: 4px;
 }
-html body #aboutFormations #cardFormations2 #cardFormationsRight #infoFormations #FormationsDate img {
+html body #aboutFormations .section-container #cardFormations2 #cardFormationsRight #infoFormations #FormationsDate img {
   width: 14px;
   height: 14px;
 }
-html body #aboutFormations #cardFormations2 #cardFormationsRight #infoFormations #FormationsDate p {
+html body #aboutFormations .section-container #cardFormations2 #cardFormationsRight #infoFormations #FormationsDate p {
   color: rgba(255, 255, 255, 0.5);
 }
-html body #aboutFormations #cardFormations2 #cardFormationsRight #infoFormations #FormationsLocalisation {
+html body #aboutFormations .section-container #cardFormations2 #cardFormationsRight #infoFormations #FormationsLocalisation {
   display: flex;
   flex-direction: row;
   gap: 4px;
 }
-html body #aboutFormations #cardFormations2 #cardFormationsRight #infoFormations #FormationsLocalisation img {
+html body #aboutFormations .section-container #cardFormations2 #cardFormationsRight #infoFormations #FormationsLocalisation img {
   width: 14px;
   height: 14px;
 }
-html body #aboutFormations #cardFormations2 #cardFormationsRight #infoFormations #FormationsLocalisation p {
+html body #aboutFormations .section-container #cardFormations2 #cardFormationsRight #infoFormations #FormationsLocalisation p {
   color: rgba(255, 255, 255, 0.5);
 }
-html body #aboutFormations #cardFormations2 #cardFormationsRight #FormationsDescription {
+html body #aboutFormations .section-container #cardFormations2 #cardFormationsRight #FormationsDescription {
   margin-top: 8px;
   color: rgba(255, 255, 255, 0.6);
 }
-html body #aboutFormations #cardFormations2 #cardFormationsRight #FormationsTache {
+html body #aboutFormations .section-container #cardFormations2 #cardFormationsRight #FormationsTache {
   display: flex;
   flex-direction: column;
   gap: 4px;
   margin-top: 23.5px;
 }
-html body #aboutFormations #cardFormations2 #cardFormationsRight #FormationsTache li {
+html body #aboutFormations .section-container #cardFormations2 #cardFormationsRight #FormationsTache li {
   display: flex;
   color: rgba(255, 255, 255, 0.6);
   line-height: 22.75px;
 }
-html body #aboutFormations #cardFormations2 #cardFormationsRight #FormationsSkill {
+html body #aboutFormations .section-container #cardFormations2 #cardFormationsRight #FormationsSkill {
   display: flex;
   flex-direction: row;
   gap: 8px;
   margin-top: 12px;
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations2 #cardFormationsRight #FormationsSkill {
+  html body #aboutFormations .section-container #cardFormations2 #cardFormationsRight #FormationsSkill {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 5px;
   }
 }
-html body #aboutFormations #cardFormations2 #cardFormationsRight #FormationsSkill li {
+html body #aboutFormations .section-container #cardFormations2 #cardFormationsRight #FormationsSkill li {
   border-radius: 10px;
   border: 0.8px solid rgba(0, 211, 242, 0.2);
   background: rgba(0, 184, 219, 0.1);
@@ -2831,24 +2396,24 @@ html body #aboutFormations #cardFormations2 #cardFormationsRight #FormationsSkil
   list-style: none;
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations2 #cardFormationsRight #FormationsSkill li {
+  html body #aboutFormations .section-container #cardFormations2 #cardFormationsRight #FormationsSkill li {
     padding: 10px 5px;
     font-size: 15px;
   }
 }
-html body #aboutFormations #cardFormations3 {
+html body #aboutFormations .section-container #cardFormations3 {
   display: flex;
   flex-direction: row;
   gap: 16px;
   padding: 32.8px;
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations3 {
+  html body #aboutFormations .section-container #cardFormations3 {
     padding: 30px;
     gap: 0;
   }
 }
-html body #aboutFormations #cardFormations3 #cardFormationsLeft #certificationLimeGreenIcon {
+html body #aboutFormations .section-container #cardFormations3 #cardFormationsLeft #certificationLimeGreenIcon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2860,108 +2425,108 @@ html body #aboutFormations #cardFormations3 #cardFormationsLeft #certificationLi
   background: rgba(0, 201, 80, 0.2);
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations3 #cardFormationsLeft #certificationLimeGreenIcon {
+  html body #aboutFormations .section-container #cardFormations3 #cardFormationsLeft #certificationLimeGreenIcon {
     display: none;
   }
 }
-html body #aboutFormations #cardFormations3 #cardFormationsRight {
+html body #aboutFormations .section-container #cardFormations3 #cardFormationsRight {
   gap: 16px;
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations3 #cardFormationsRight {
+  html body #aboutFormations .section-container #cardFormations3 #cardFormationsRight {
     display: flex;
     flex-direction: column;
     width: 378.65px;
     gap: 5px;
   }
 }
-html body #aboutFormations #cardFormations3 #cardFormationsRight #cardTitle {
+html body #aboutFormations .section-container #cardFormations3 #cardFormationsRight #cardTitle {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
-html body #aboutFormations #cardFormations3 #cardFormationsRight #cardTitle h1 {
+html body #aboutFormations .section-container #cardFormations3 #cardFormationsRight #cardTitle h1 {
   font-size: 24px;
   color: rgb(255, 255, 255);
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations3 #cardFormationsRight #cardTitle h1 {
+  html body #aboutFormations .section-container #cardFormations3 #cardFormationsRight #cardTitle h1 {
     display: flex;
     flex-direction: row;
     align-items: start;
     gap: 0;
   }
 }
-html body #aboutFormations #cardFormations3 #cardFormationsRight h2 {
+html body #aboutFormations .section-container #cardFormations3 #cardFormationsRight h2 {
   color: #05DF72;
   font-size: 16px;
   font-weight: 400;
   margin-top: 8px;
 }
-html body #aboutFormations #cardFormations3 #cardFormationsRight #infoFormations {
+html body #aboutFormations .section-container #cardFormations3 #cardFormationsRight #infoFormations {
   display: flex;
   flex-direction: row;
   gap: 4px;
   margin-top: 16px;
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations3 #cardFormationsRight #infoFormations {
+  html body #aboutFormations .section-container #cardFormations3 #cardFormationsRight #infoFormations {
     flex-direction: column;
   }
 }
-html body #aboutFormations #cardFormations3 #cardFormationsRight #infoFormations #FormationsDate {
+html body #aboutFormations .section-container #cardFormations3 #cardFormationsRight #infoFormations #FormationsDate {
   display: flex;
   flex-direction: row;
   gap: 4px;
 }
-html body #aboutFormations #cardFormations3 #cardFormationsRight #infoFormations #FormationsDate img {
+html body #aboutFormations .section-container #cardFormations3 #cardFormationsRight #infoFormations #FormationsDate img {
   width: 14px;
   height: 14px;
 }
-html body #aboutFormations #cardFormations3 #cardFormationsRight #infoFormations #FormationsDate p {
+html body #aboutFormations .section-container #cardFormations3 #cardFormationsRight #infoFormations #FormationsDate p {
   color: rgba(255, 255, 255, 0.5);
 }
-html body #aboutFormations #cardFormations3 #cardFormationsRight #infoFormations #FormationsLocalisation {
+html body #aboutFormations .section-container #cardFormations3 #cardFormationsRight #infoFormations #FormationsLocalisation {
   display: flex;
   flex-direction: row;
   gap: 4px;
 }
-html body #aboutFormations #cardFormations3 #cardFormationsRight #infoFormations #FormationsLocalisation img {
+html body #aboutFormations .section-container #cardFormations3 #cardFormationsRight #infoFormations #FormationsLocalisation img {
   width: 14px;
   height: 14px;
 }
-html body #aboutFormations #cardFormations3 #cardFormationsRight #infoFormations #FormationsLocalisation p {
+html body #aboutFormations .section-container #cardFormations3 #cardFormationsRight #infoFormations #FormationsLocalisation p {
   color: rgba(255, 255, 255, 0.5);
 }
-html body #aboutFormations #cardFormations3 #cardFormationsRight #FormationsDescription {
+html body #aboutFormations .section-container #cardFormations3 #cardFormationsRight #FormationsDescription {
   color: rgba(255, 255, 255, 0.6);
 }
-html body #aboutFormations #cardFormations3 #cardFormationsRight #FormationsTache {
+html body #aboutFormations .section-container #cardFormations3 #cardFormationsRight #FormationsTache {
   display: flex;
   flex-direction: column;
   gap: 4px;
   margin-top: 23.5px;
 }
-html body #aboutFormations #cardFormations3 #cardFormationsRight #FormationsTache li {
+html body #aboutFormations .section-container #cardFormations3 #cardFormationsRight #FormationsTache li {
   display: flex;
   color: rgba(255, 255, 255, 0.6);
   line-height: 22.75px;
 }
-html body #aboutFormations #cardFormations3 #cardFormationsRight #FormationsSkill {
+html body #aboutFormations .section-container #cardFormations3 #cardFormationsRight #FormationsSkill {
   display: flex;
   flex-direction: row;
   gap: 8px;
   margin-top: 12px;
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations3 #cardFormationsRight #FormationsSkill {
+  html body #aboutFormations .section-container #cardFormations3 #cardFormationsRight #FormationsSkill {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 5px;
   }
 }
-html body #aboutFormations #cardFormations3 #cardFormationsRight #FormationsSkill li {
+html body #aboutFormations .section-container #cardFormations3 #cardFormationsRight #FormationsSkill li {
   border-radius: 10px;
   border: 0.8px solid rgba(5, 223, 114, 0.2);
   background: rgba(0, 201, 80, 0.1);
@@ -2972,24 +2537,24 @@ html body #aboutFormations #cardFormations3 #cardFormationsRight #FormationsSkil
   list-style: none;
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations3 #cardFormationsRight #FormationsSkill li {
+  html body #aboutFormations .section-container #cardFormations3 #cardFormationsRight #FormationsSkill li {
     padding: 10px 5px;
     font-size: 15px;
   }
 }
-html body #aboutFormations #cardFormations4 {
+html body #aboutFormations .section-container #cardFormations4 {
   display: flex;
   flex-direction: row;
   gap: 16px;
   padding: 32.8px;
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations4 {
+  html body #aboutFormations .section-container #cardFormations4 {
     padding: 30px;
     gap: 0;
   }
 }
-html body #aboutFormations #cardFormations4 #cardFormationsLeft #certificationOrangeIcon {
+html body #aboutFormations .section-container #cardFormations4 #cardFormationsLeft #certificationOrangeIcon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3001,32 +2566,32 @@ html body #aboutFormations #cardFormations4 #cardFormationsLeft #certificationOr
   background: rgba(255, 105, 0, 0.2);
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations4 #cardFormationsLeft #certificationOrangeIcon {
+  html body #aboutFormations .section-container #cardFormations4 #cardFormationsLeft #certificationOrangeIcon {
     display: none;
   }
 }
-html body #aboutFormations #cardFormations4 #cardFormationsRight {
+html body #aboutFormations .section-container #cardFormations4 #cardFormationsRight {
   gap: 16px;
 }
-html body #aboutFormations #cardFormations4 #cardFormationsRight #cardTitle {
+html body #aboutFormations .section-container #cardFormations4 #cardFormationsRight #cardTitle {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
 }
-html body #aboutFormations #cardFormations4 #cardFormationsRight #cardTitle h1 {
+html body #aboutFormations .section-container #cardFormations4 #cardFormationsRight #cardTitle h1 {
   font-size: 24px;
   color: rgb(255, 255, 255);
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations4 #cardFormationsRight #cardTitle h1 {
+  html body #aboutFormations .section-container #cardFormations4 #cardFormationsRight #cardTitle h1 {
     display: flex;
     flex-direction: row;
     align-items: start;
     gap: 0;
   }
 }
-html body #aboutFormations #cardFormations4 #cardFormationsRight #cardTitle li {
+html body #aboutFormations .section-container #cardFormations4 #cardFormationsRight #cardTitle li {
   display: flex;
   flex-direction: row;
   width: 25%;
@@ -3042,7 +2607,7 @@ html body #aboutFormations #cardFormations4 #cardFormationsRight #cardTitle li {
   background: rgba(255, 105, 0, 0.2);
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations4 #cardFormationsRight #cardTitle li {
+  html body #aboutFormations .section-container #cardFormations4 #cardFormationsRight #cardTitle li {
     display: flex;
     flex-direction: row;
     width: 100%;
@@ -3058,76 +2623,76 @@ html body #aboutFormations #cardFormations4 #cardFormationsRight #cardTitle li {
     background: rgba(255, 105, 0, 0.2);
   }
 }
-html body #aboutFormations #cardFormations4 #cardFormationsRight h2 {
+html body #aboutFormations .section-container #cardFormations4 #cardFormationsRight h2 {
   color: #FF8904;
   font-size: 16px;
   font-weight: 400;
   margin-top: 8px;
 }
-html body #aboutFormations #cardFormations4 #cardFormationsRight #infoFormations {
+html body #aboutFormations .section-container #cardFormations4 #cardFormationsRight #infoFormations {
   display: flex;
   flex-direction: row;
   gap: 4px;
   margin-top: 16px;
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations4 #cardFormationsRight #infoFormations {
+  html body #aboutFormations .section-container #cardFormations4 #cardFormationsRight #infoFormations {
     flex-direction: column;
   }
 }
-html body #aboutFormations #cardFormations4 #cardFormationsRight #infoFormations #FormationsDate {
+html body #aboutFormations .section-container #cardFormations4 #cardFormationsRight #infoFormations #FormationsDate {
   display: flex;
   flex-direction: row;
   gap: 4px;
 }
-html body #aboutFormations #cardFormations4 #cardFormationsRight #infoFormations #FormationsDate img {
+html body #aboutFormations .section-container #cardFormations4 #cardFormationsRight #infoFormations #FormationsDate img {
   width: 14px;
   height: 14px;
 }
-html body #aboutFormations #cardFormations4 #cardFormationsRight #infoFormations #FormationsDate p {
+html body #aboutFormations .section-container #cardFormations4 #cardFormationsRight #infoFormations #FormationsDate p {
   color: rgba(255, 255, 255, 0.5);
 }
-html body #aboutFormations #cardFormations4 #cardFormationsRight #infoFormations #FormationsLocalisation {
+html body #aboutFormations .section-container #cardFormations4 #cardFormationsRight #infoFormations #FormationsLocalisation {
   display: flex;
   flex-direction: row;
   gap: 4px;
 }
-html body #aboutFormations #cardFormations4 #cardFormationsRight #infoFormations #FormationsLocalisation img {
+html body #aboutFormations .section-container #cardFormations4 #cardFormationsRight #infoFormations #FormationsLocalisation img {
   width: 14px;
   height: 14px;
 }
-html body #aboutFormations #cardFormations4 #cardFormationsRight #infoFormations #FormationsLocalisation p {
+html body #aboutFormations .section-container #cardFormations4 #cardFormationsRight #infoFormations #FormationsLocalisation p {
   color: rgba(255, 255, 255, 0.5);
 }
-html body #aboutFormations #cardFormations4 #cardFormationsRight #FormationsDescription {
+html body #aboutFormations .section-container #cardFormations4 #cardFormationsRight #FormationsDescription {
   color: rgba(255, 255, 255, 0.6);
 }
-html body #aboutFormations #cardFormations4 #cardFormationsRight #FormationsTache {
+html body #aboutFormations .section-container #cardFormations4 #cardFormationsRight #FormationsTache {
   display: flex;
   flex-direction: column;
   gap: 4px;
   margin-top: 23.5px;
 }
-html body #aboutFormations #cardFormations4 #cardFormationsRight #FormationsTache li {
+html body #aboutFormations .section-container #cardFormations4 #cardFormationsRight #FormationsTache li {
   display: flex;
   color: rgba(255, 255, 255, 0.6);
   line-height: 22.75px;
 }
-html body #aboutFormations #cardFormations4 #cardFormationsRight #FormationsSkill {
+html body #aboutFormations .section-container #cardFormations4 #cardFormationsRight #FormationsSkill {
   display: flex;
   flex-direction: row;
   gap: 8px;
   margin-top: 12px;
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations4 #cardFormationsRight #FormationsSkill {
+  html body #aboutFormations .section-container #cardFormations4 #cardFormationsRight #FormationsSkill {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 5px;
   }
 }
-html body #aboutFormations #cardFormations4 #cardFormationsRight #FormationsSkill li {
+html body #aboutFormations .section-container #cardFormations4 #cardFormationsRight #FormationsSkill li {
   border-radius: 10px;
   border: 0.8px solid rgba(255, 137, 4, 0.2);
   background: rgba(255, 105, 0, 0.1);
@@ -3138,24 +2703,24 @@ html body #aboutFormations #cardFormations4 #cardFormationsRight #FormationsSkil
   list-style: none;
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations4 #cardFormationsRight #FormationsSkill li {
+  html body #aboutFormations .section-container #cardFormations4 #cardFormationsRight #FormationsSkill li {
     padding: 10px 5px;
     font-size: 15px;
   }
 }
-html body #aboutFormations #cardFormations5 {
+html body #aboutFormations .section-container #cardFormations5 {
   display: flex;
   flex-direction: row;
   gap: 16px;
   padding: 32.8px;
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations5 {
+  html body #aboutFormations .section-container #cardFormations5 {
     padding: 30px;
     gap: 0;
   }
 }
-html body #aboutFormations #cardFormations5 #cardFormationsLeft #certificatRoseIcon {
+html body #aboutFormations .section-container #cardFormations5 #cardFormationsLeft #certificatRoseIcon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3167,108 +2732,108 @@ html body #aboutFormations #cardFormations5 #cardFormationsLeft #certificatRoseI
   background: rgba(246, 51, 154, 0.2);
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations5 #cardFormationsLeft #certificatRoseIcon {
+  html body #aboutFormations .section-container #cardFormations5 #cardFormationsLeft #certificatRoseIcon {
     display: none;
   }
 }
-html body #aboutFormations #cardFormations5 #cardFormationsRight {
+html body #aboutFormations .section-container #cardFormations5 #cardFormationsRight {
   gap: 16px;
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations5 #cardFormationsRight {
+  html body #aboutFormations .section-container #cardFormations5 #cardFormationsRight {
     display: flex;
     flex-direction: column;
     width: 378.65px;
     gap: 5px;
   }
 }
-html body #aboutFormations #cardFormations5 #cardFormationsRight #cardTitle {
+html body #aboutFormations .section-container #cardFormations5 #cardFormationsRight #cardTitle {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
-html body #aboutFormations #cardFormations5 #cardFormationsRight #cardTitle h1 {
+html body #aboutFormations .section-container #cardFormations5 #cardFormationsRight #cardTitle h1 {
   font-size: 24px;
   color: rgb(255, 255, 255);
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations5 #cardFormationsRight #cardTitle h1 {
+  html body #aboutFormations .section-container #cardFormations5 #cardFormationsRight #cardTitle h1 {
     display: flex;
     flex-direction: row;
     align-items: start;
     gap: 0;
   }
 }
-html body #aboutFormations #cardFormations5 #cardFormationsRight h2 {
+html body #aboutFormations .section-container #cardFormations5 #cardFormationsRight h2 {
   color: #FB64B6;
   font-size: 16px;
   font-weight: 400;
   margin-top: 8px;
 }
-html body #aboutFormations #cardFormations5 #cardFormationsRight #infoFormations {
+html body #aboutFormations .section-container #cardFormations5 #cardFormationsRight #infoFormations {
   display: flex;
   flex-direction: row;
   gap: 4px;
   margin-top: 16px;
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations5 #cardFormationsRight #infoFormations {
+  html body #aboutFormations .section-container #cardFormations5 #cardFormationsRight #infoFormations {
     flex-direction: column;
   }
 }
-html body #aboutFormations #cardFormations5 #cardFormationsRight #infoFormations #FormationsDate {
+html body #aboutFormations .section-container #cardFormations5 #cardFormationsRight #infoFormations #FormationsDate {
   display: flex;
   flex-direction: row;
   gap: 4px;
 }
-html body #aboutFormations #cardFormations5 #cardFormationsRight #infoFormations #FormationsDate img {
+html body #aboutFormations .section-container #cardFormations5 #cardFormationsRight #infoFormations #FormationsDate img {
   width: 14px;
   height: 14px;
 }
-html body #aboutFormations #cardFormations5 #cardFormationsRight #infoFormations #FormationsDate p {
+html body #aboutFormations .section-container #cardFormations5 #cardFormationsRight #infoFormations #FormationsDate p {
   color: rgba(255, 255, 255, 0.5);
 }
-html body #aboutFormations #cardFormations5 #cardFormationsRight #infoFormations #FormationsLocalisation {
+html body #aboutFormations .section-container #cardFormations5 #cardFormationsRight #infoFormations #FormationsLocalisation {
   display: flex;
   flex-direction: row;
   gap: 4px;
 }
-html body #aboutFormations #cardFormations5 #cardFormationsRight #infoFormations #FormationsLocalisation img {
+html body #aboutFormations .section-container #cardFormations5 #cardFormationsRight #infoFormations #FormationsLocalisation img {
   width: 14px;
   height: 14px;
 }
-html body #aboutFormations #cardFormations5 #cardFormationsRight #infoFormations #FormationsLocalisation p {
+html body #aboutFormations .section-container #cardFormations5 #cardFormationsRight #infoFormations #FormationsLocalisation p {
   color: rgba(255, 255, 255, 0.5);
 }
-html body #aboutFormations #cardFormations5 #cardFormationsRight #FormationsDescription {
+html body #aboutFormations .section-container #cardFormations5 #cardFormationsRight #FormationsDescription {
   color: rgba(255, 255, 255, 0.6);
 }
-html body #aboutFormations #cardFormations5 #cardFormationsRight #FormationsTache {
+html body #aboutFormations .section-container #cardFormations5 #cardFormationsRight #FormationsTache {
   display: flex;
   flex-direction: column;
   gap: 4px;
   margin-top: 23.5px;
 }
-html body #aboutFormations #cardFormations5 #cardFormationsRight #FormationsTache li {
+html body #aboutFormations .section-container #cardFormations5 #cardFormationsRight #FormationsTache li {
   display: flex;
   color: rgba(255, 255, 255, 0.6);
   line-height: 22.75px;
 }
-html body #aboutFormations #cardFormations5 #cardFormationsRight #FormationsSkill {
+html body #aboutFormations .section-container #cardFormations5 #cardFormationsRight #FormationsSkill {
   display: flex;
   flex-direction: row;
   gap: 8px;
   margin-top: 12px;
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations5 #cardFormationsRight #FormationsSkill {
+  html body #aboutFormations .section-container #cardFormations5 #cardFormationsRight #FormationsSkill {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     gap: 5px;
   }
 }
-html body #aboutFormations #cardFormations5 #cardFormationsRight #FormationsSkill li {
+html body #aboutFormations .section-container #cardFormations5 #cardFormationsRight #FormationsSkill li {
   border-radius: 10px;
   border: 0.8px solid rgba(251, 100, 182, 0.2);
   background: rgba(246, 51, 154, 0.1);
@@ -3279,7 +2844,7 @@ html body #aboutFormations #cardFormations5 #cardFormationsRight #FormationsSkil
   list-style: none;
 }
 @media (max-width: 1100px) {
-  html body #aboutFormations #cardFormations5 #cardFormationsRight #FormationsSkill li {
+  html body #aboutFormations .section-container #cardFormations5 #cardFormationsRight #FormationsSkill li {
     padding: 10px 5px;
     font-size: 15px;
   }
@@ -3289,9 +2854,11 @@ html body #phraseDeFin {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin: 64px auto 0 auto;
-  width: 1500px;
+  width: 100%;
+  margin: 64px auto;
   height: 97px;
+  max-width: 1200px;
+  box-sizing: border-box;
   gap: 16px;
   border-radius: 24px;
   border: 0.8px solid rgba(251, 100, 182, 0.2);
@@ -3311,6 +2878,9 @@ html body #phraseDeFin p #dynamic {
 }
 html body #phraseDeFin p #investi {
   color: #C27AFF;
+}
+html body #phraseDeFin:hover {
+  border: 0.8px solid rgba(251, 100, 182, 0.75);
 }
 html body #contactTitle {
   display: flex;

@@ -24,6 +24,8 @@ $heigh-card-topic: 14px;
 
 $font-default: 'Space Grotesk';
 
+$default-max-width: 1200px;
+
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -483,500 +485,351 @@ html {
     #selection {
       display: flex;
       flex-direction: column;
-      margin: 80px 300px 0 300px;
-      gap: 130px;
       justify-content: center;
       align-items: center;
       scroll-behavior: smooth;
-      scroll-snap-type: x mandatory;
+      width: 100%;
+      max-width: 1200px;
+      margin: 75px auto;
+
       @media (max-width: 1260px) {
-        display: flex;
-        gap: 50px;
-        justify-content: start;
         flex-direction: row;
-        margin: 0 20px 0 20px;
-        overflow-x: scroll;
+        gap: 50px;
+        justify-content: flex-start;
+        margin: 0 auto;
+        padding: 0 20px;
+        overflow-x: auto;
         scrollbar-width: none;
+        scroll-snap-type: x mandatory;
+        width: 100%;
       }
 
-      #selectionCard01 {
-        scroll-snap-align: start;
+      .section-container {
         display: flex;
-        justify-content: center;
-        align-items: center;
-        scroll-snap-stop: always;
-        gap: 33px;
+        flex-direction: column;
+        gap: 130px;
+        max-width: $default-max-width;
+        margin: 0 auto;
         width: 100%;
-        flex-shrink: 0;
-        @media (max-width: 1260px) {
-          margin-top: 80px;
+
+        #selectionCard01 {
+          scroll-snap-align: start;
           display: flex;
-          flex-direction: column;
-          gap: 33px;
+          justify-content: left;
           align-items: center;
-        }
-
-        #leftSelectCard01 {
-          display: flex;
-          flex-direction: column;
-        }
-
-        #midSelectCard01 {
-
-          img {
-            border-radius: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.10);
-            transition: all 300ms ease-out;
-            @media (max-width: 1260px) {
-              display: flex;
-              width: 326px;
-              height: 204px;
-            }
-          }
-
-          img:hover {
-            transform: scale(1.02);
-          }
-        }
-
-        #rightSelectCard01 {
-          display: flex;
-          flex-direction: column;
-          gap: 38px;
+          scroll-snap-stop: always;
+          gap: 33px;
+          width: 100%;
+          flex-shrink: 0;
           @media (max-width: 1260px) {
+            margin-top: 80px;
             display: flex;
+            flex-direction: column;
             gap: 33px;
-            width: 328.66px;
-          }
-
-          h1 {
-            color: rgba(81, 162, 255, 0.7);
-            font-size: 72px;
-            font-weight: 700;
-            @media (max-width: 1260px) {
-              font-size: 60px;
-            }
-          }
-
-          h2 {
-            color: $text-default;
-            font-size: 36px;
-            font-weight: 400;
-            @media (max-width: 1260px) {
-              font-size: 30px;
-            }
-          }
-
-          p {
-            color: $text-navbar-color;
-            font-size: 18px;
-            font-weight: 400;
-            @media (max-width: 1260px) {
-              font-size: 16px;
-            }
-          }
-
-          #selectionTopic {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            flex-direction: row;
-            gap: 8px;
             align-items: center;
+          }
 
-            @media (max-width: 1260px) {
-              grid-template-columns: repeat(2, 1fr);
+          #leftSelectCard01 {
+            display: flex;
+            flex-direction: column;
+          }
+
+          #midSelectCard01 {
+
+            img {
+              border-radius: 24px;
+              border: 1px solid rgba(255, 255, 255, 0.10);
+              transition: all 300ms ease-out;
+              @media (max-width: 1260px) {
+                display: flex;
+                width: 326px;
+                height: 204px;
+              }
             }
 
-            li {
-              display: flex;
-              flex-direction: row;
-              justify-content: center;
-              align-items: center;
-              list-style: none;
-              color: $text-default;
-              padding: 9px 16px 9px 17px;
-              border-radius: 14px;
-              border: 1px solid rgba(255, 255, 255, 0.10);
-              background: rgba(255, 255, 255, 0.05);
-
-              a {
-                font-size: 14px;
-              }
+            img:hover {
+              transform: scale(1.02);
             }
           }
 
-          #selectionMore {
+          #rightSelectCard01 {
             display: flex;
-            gap: 16px;
-
-            #selectionShowMore {
+            flex-direction: column;
+            gap: 38px;
+            @media (max-width: 1260px) {
               display: flex;
-              align-items: center;
-              list-style: none;
-              padding: 12px 25px 14px 25px;
-              border-radius: 14px;
-              border: 1px solid rgba(81, 162, 255, 0.50);
-              background: rgba(43, 127, 255, 0.20);
-              transition: all 300ms ease-out;
-              gap: 7px;
+              gap: 33px;
+              width: 328.66px;
+            }
 
-              img {
-                transition: all 300ms ease-out;
+            h1 {
+              color: rgba(81, 162, 255, 0.7);
+              font-size: 72px;
+              font-weight: 700;
+              @media (max-width: 1260px) {
+                font-size: 60px;
+              }
+            }
+
+            h2 {
+              color: $text-default;
+              font-size: 36px;
+              font-weight: 400;
+              @media (max-width: 1260px) {
+                font-size: 30px;
+              }
+            }
+
+            p {
+              color: $text-navbar-color;
+              font-size: 18px;
+              font-weight: 400;
+              @media (max-width: 1260px) {
+                font-size: 16px;
+              }
+            }
+
+            #selectionTopic {
+              display: grid;
+              grid-template-columns: repeat(4, 1fr);
+              flex-direction: row;
+              gap: 8px;
+              align-items: center;
+
+              @media (max-width: 1260px) {
+                grid-template-columns: repeat(2, 1fr);
               }
 
-              a {
+              li {
                 display: flex;
+                flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                text-decoration: none;
+                list-style: none;
                 color: $text-default;
-                font-size: 16px;
+                padding: 9px 16px 9px 17px;
+                border-radius: 14px;
+                border: 1px solid rgba(255, 255, 255, 0.10);
+                background: rgba(255, 255, 255, 0.05);
+
+                a {
+                  font-size: 14px;
+                }
+              }
+            }
+
+            #selectionMore {
+              display: flex;
+              gap: 16px;
+
+              #selectionShowMore {
+                display: flex;
+                align-items: center;
+                list-style: none;
+                padding: 12px 25px 14px 25px;
+                border-radius: 14px;
+                border: 1px solid rgba(81, 162, 255, 0.50);
+                background: rgba(43, 127, 255, 0.20);
+                transition: all 300ms ease-out;
                 gap: 7px;
 
+                img {
+                  transition: all 300ms ease-out;
+                }
+
+                a {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  text-decoration: none;
+                  color: $text-default;
+                  font-size: 16px;
+                  gap: 7px;
+
+                }
+
+                a:hover > img {
+                  transform: translateX(5px) translateY(-5px);
+                }
               }
 
-              a:hover > img {
-                transform: translateX(5px) translateY(-5px);
+              #selectionShowMore:hover {
+                border: 1px solid rgba(81, 162, 255, 0.7);
+                background: rgba(43, 127, 255, 0.4);
+                cursor: pointer;
               }
-            }
-
-            #selectionShowMore:hover {
-              border: 1px solid rgba(81, 162, 255, 0.7);
-              background: rgba(43, 127, 255, 0.4);
-              cursor: pointer;
-            }
 
 
-            #selectionGithub {
-              display: flex;
-              align-items: center;
-              padding: 0 24px;
-              border-radius: 14px;
-              border: 1px solid rgba(255, 255, 255, 0.20);
-              background: rgba(255, 255, 255, 0.10);
-              list-style: none;
+              #selectionGithub {
+                display: flex;
+                align-items: center;
+                padding: 0 24px;
+                border-radius: 14px;
+                border: 1px solid rgba(255, 255, 255, 0.20);
+                background: rgba(255, 255, 255, 0.10);
+                list-style: none;
+              }
             }
           }
+
         }
 
-      }
-
-      #selectionCard02 {
-        scroll-snap-align: start;
-        display: flex;
-        scroll-snap-stop: always;
-        gap: 33px;
-        width: 100%;
-        flex-shrink: 0;
-        @media (max-width: 1260px) {
+        #selectionCard02 {
+          scroll-snap-align: start;
           display: flex;
-          flex-direction: column-reverse;
+          scroll-snap-stop: always;
           gap: 33px;
-          margin-top: 80px;
-          justify-content: center;
-          align-items: center;
-        }
-
-        #leftSelectCard02 {
-          display: flex;
-          flex-direction: column;
-        }
-
-        #midSelectCard02 {
-
-          img {
-            border-radius: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.10);
-            transition: all 300ms ease-out;
-            @media (max-width: 1260px) {
-              display: flex;
-              width: 326px;
-              height: 204px;
-            }
-          }
-
-          img:hover {
-            transform: scale(1.02);
-          }
-        }
-
-        #rightSelectCard02 {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
+          width: 100%;
+          flex-shrink: 0;
           @media (max-width: 1260px) {
             display: flex;
+            flex-direction: column-reverse;
             gap: 33px;
-            width: 328.66px;
-          }
-
-          h1 {
-            color: rgba(81, 162, 255, 0.7);
-            font-size: 72px;
-            font-weight: 700;
-            @media (max-width: 1260px) {
-              font-size: 60px;
-            }
-          }
-
-          h2 {
-            color: $text-default;
-            font-size: 36px;
-            font-weight: 400;
-            @media (max-width: 1260px) {
-              font-size: 30px;
-            }
-          }
-
-          p {
-            color: $text-navbar-color;
-            font-size: 18px;
-            font-weight: 400;
-            @media (max-width: 1260px) {
-              font-size: 16px;
-            }
-          }
-
-          #selectionTopic {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            flex-direction: row;
-            gap: 8px;
+            margin-top: 80px;
+            justify-content: center;
             align-items: center;
+          }
 
-            @media (max-width: 1260px) {
-              grid-template-columns: repeat(2, 1fr);
+          #leftSelectCard02 {
+            display: flex;
+            flex-direction: column;
+          }
+
+          #midSelectCard02 {
+
+            img {
+              border-radius: 24px;
+              border: 1px solid rgba(255, 255, 255, 0.10);
+              transition: all 300ms ease-out;
+              @media (max-width: 1260px) {
+                display: flex;
+                width: 326px;
+                height: 204px;
+              }
             }
 
-            li {
-              display: flex;
-              flex-direction: row;
-              justify-content: center;
-              align-items: center;
-              list-style: none;
-              color: $text-default;
-              padding: 9px 16px 9px 17px;
-              border-radius: 14px;
-              border: 1px solid rgba(255, 255, 255, 0.10);
-              background: rgba(255, 255, 255, 0.05);
-
-              a {
-                font-size: 14px;
-              }
+            img:hover {
+              transform: scale(1.02);
             }
           }
 
-          #selectionMore {
+          #rightSelectCard02 {
             display: flex;
-            gap: 16px;
-
-            #selectionShowMore {
+            flex-direction: column;
+            justify-content: space-between;
+            @media (max-width: 1260px) {
               display: flex;
-              align-items: center;
-              list-style: none;
-              padding: 12px 25px 14px 25px;
-              border-radius: 14px;
-              border: 1px solid rgba(81, 162, 255, 0.50);
-              background: rgba(43, 127, 255, 0.20);
-              transition: all 300ms ease-out;
-              gap: 7px;
+              gap: 33px;
+              width: 328.66px;
+            }
 
-              img {
-                transition: all 300ms ease-out;
+            h1 {
+              color: rgba(81, 162, 255, 0.7);
+              font-size: 72px;
+              font-weight: 700;
+              @media (max-width: 1260px) {
+                font-size: 60px;
+              }
+            }
+
+            h2 {
+              color: $text-default;
+              font-size: 36px;
+              font-weight: 400;
+              @media (max-width: 1260px) {
+                font-size: 30px;
+              }
+            }
+
+            p {
+              color: $text-navbar-color;
+              font-size: 18px;
+              font-weight: 400;
+              @media (max-width: 1260px) {
+                font-size: 16px;
+              }
+            }
+
+            #selectionTopic {
+              display: grid;
+              grid-template-columns: repeat(4, 1fr);
+              flex-direction: row;
+              gap: 8px;
+              align-items: center;
+
+              @media (max-width: 1260px) {
+                grid-template-columns: repeat(2, 1fr);
               }
 
-              a {
+              li {
                 display: flex;
+                flex-direction: row;
                 justify-content: center;
                 align-items: center;
-                text-decoration: none;
+                list-style: none;
                 color: $text-default;
-                font-size: 16px;
-                gap: 7px;
+                padding: 9px 16px 9px 17px;
+                border-radius: 14px;
+                border: 1px solid rgba(255, 255, 255, 0.10);
+                background: rgba(255, 255, 255, 0.05);
 
-              }
-
-              a:hover > img {
-                transform: translateX(5px) translateY(-5px);
-              }
-            }
-
-            #selectionShowMore:hover {
-              border: 1px solid rgba(81, 162, 255, 0.7);
-              background: rgba(43, 127, 255, 0.4);
-              cursor: pointer;
-            }
-
-
-            #selectionGithub {
-              display: flex;
-              align-items: center;
-              padding: 0 24px;
-              border-radius: 14px;
-              border: 1px solid rgba(255, 255, 255, 0.20);
-              background: rgba(255, 255, 255, 0.10);
-              list-style: none;
-            }
-          }
-        }
-      }
-
-      #selectionCard03 {
-        scroll-snap-align: start;
-        display: flex;
-        scroll-snap-stop: always;
-        gap: 33px;
-        width: 100%;
-        flex-shrink: 0;
-        @media (max-width: 1260px) {
-          margin-top: 80px;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          gap: 33px;
-
-        }
-
-        #leftSelectCard03 {
-          display: flex;
-          flex-direction: column;
-        }
-
-        #midSelectCard03 {
-
-          img {
-            border-radius: 24px;
-            border: 1px solid rgba(255, 255, 255, 0.10);
-            transition: all 300ms ease-out;
-            @media (max-width: 1260px) {
-              display: flex;
-              width: 326px;
-              height: 204px;
-            }
-          }
-
-          img:hover {
-            transform: scale(1.02);
-          }
-        }
-
-        #rightSelectCard03 {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          @media (max-width: 1260px) {
-            display: flex;
-            gap: 33px;
-            width: 328.66px;
-          }
-
-          h1 {
-            color: rgba(81, 162, 255, 0.7);
-            font-size: 72px;
-            font-weight: 700;
-            @media (max-width: 1260px) {
-              font-size: 60px;
-            }
-          }
-
-          h2 {
-            color: $text-default;
-            font-size: 36px;
-            font-weight: 400;
-            @media (max-width: 1260px) {
-              font-size: 30px;
-            }
-          }
-
-          p {
-            color: $text-navbar-color;
-            font-size: 18px;
-            font-weight: 400;
-            @media (max-width: 1260px) {
-              font-size: 16px;
-            }
-          }
-
-          #selectionTopic {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            flex-direction: row;
-            gap: 8px;
-            align-items: center;
-
-            @media (max-width: 1260px) {
-              grid-template-columns: repeat(2, 1fr);
-            }
-
-            li {
-              display: flex;
-              flex-direction: row;
-              justify-content: center;
-              align-items: center;
-              list-style: none;
-              color: $text-default;
-              padding: 9px 16px 9px 17px;
-              border-radius: 14px;
-              border: 1px solid rgba(255, 255, 255, 0.10);
-              background: rgba(255, 255, 255, 0.05);
-
-              a {
-                font-size: 14px;
+                a {
+                  font-size: 14px;
+                }
               }
             }
-          }
 
-          #selectionMore {
-            display: flex;
-            gap: 16px;
-
-            #selectionShowMore {
+            #selectionMore {
               display: flex;
-              align-items: center;
-              list-style: none;
-              padding: 12px 25px 14px 25px;
-              border-radius: 14px;
-              border: 1px solid rgba(81, 162, 255, 0.50);
-              background: rgba(43, 127, 255, 0.20);
-              transition: all 300ms ease-out;
-              gap: 7px;
+              gap: 16px;
 
-              img {
-                transition: all 300ms ease-out;
-              }
-
-              a {
+              #selectionShowMore {
                 display: flex;
-                justify-content: center;
                 align-items: center;
-                text-decoration: none;
-                color: $text-default;
-                font-size: 16px;
+                list-style: none;
+                padding: 12px 25px 14px 25px;
+                border-radius: 14px;
+                border: 1px solid rgba(81, 162, 255, 0.50);
+                background: rgba(43, 127, 255, 0.20);
+                transition: all 300ms ease-out;
                 gap: 7px;
 
+                img {
+                  transition: all 300ms ease-out;
+                }
+
+                a {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  text-decoration: none;
+                  color: $text-default;
+                  font-size: 16px;
+                  gap: 7px;
+
+                }
+
+                a:hover > img {
+                  transform: translateX(5px) translateY(-5px);
+                }
               }
 
-              a:hover > img {
-                transform: translateX(5px) translateY(-5px);
+              #selectionShowMore:hover {
+                border: 1px solid rgba(81, 162, 255, 0.7);
+                background: rgba(43, 127, 255, 0.4);
+                cursor: pointer;
               }
-            }
-
-            #selectionShowMore:hover {
-              border: 1px solid rgba(81, 162, 255, 0.7);
-              background: rgba(43, 127, 255, 0.4);
-              cursor: pointer;
-            }
 
 
-            #selectionGithub {
-              display: flex;
-              align-items: center;
-              padding: 0 24px;
-              border-radius: 14px;
-              border: 1px solid rgba(255, 255, 255, 0.20);
-              background: rgba(255, 255, 255, 0.10);
-              list-style: none;
+              #selectionGithub {
+                display: flex;
+                align-items: center;
+                padding: 0 24px;
+                border-radius: 14px;
+                border: 1px solid rgba(255, 255, 255, 0.20);
+                background: rgba(255, 255, 255, 0.10);
+                list-style: none;
+              }
             }
           }
         }
@@ -1167,476 +1020,130 @@ html {
     #aboutSection {
       margin-top: 88px;
 
-      #aboutMeCard {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        background-color: rgba(255, 255, 255, 0.05);
-        border: 1px solid rgba(255, 255, 255, 0.1);
-        border-radius: 24px;
-        box-sizing: border-box;
-        padding: 49px;
-        width: 1500px;
-        height: 316px;
+      .section-container {
+        max-width: $default-max-width;
         margin: 0 auto;
-        gap: 32px;
-        @media (max-width: 1100px) {
-          width: 338px;
-          height: 416px;
-        }
+        width: 100%;
 
-        h1 {
-          color: $text-default;
-          font-size: 36px;
-          @media (max-width: 1100px) {
-            font-size: 30px;
-          }
-
-          span {
-            color: #2b7fff;
-          }
-        }
-
-        p {
-          color: $text-navbar-color;
-          font-size: 16px;
-          @media (max-width: 1100px) {
-            font-size: 16px;
-          }
-        }
-
-        h2 {
-          color: $text-navbar-color;
-          font-size: 14px;
-          text-transform: uppercase;
-        }
-
-        #aboutMeCD {
-          display: flex;
-          flex-direction: column;
-          gap: 16px;
-
-          #aboutMeCDList {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            flex-direction: row;
-            gap: 8px;
-            align-items: center;
-            @media (max-width: 1100px) {
-              grid-template-columns: repeat(2, 1fr);
-            }
-
-            li {
-              display: flex;
-              align-items: center;
-              list-style: none;
-              color: $text-default;
-              border-radius: 14px;
-              background-color: rgba(255, 255, 255, 0.05);
-              border: 1px solid rgba(255, 255, 255, 0.1);
-              padding: 0 16px;
-              font-size: 14px;
-              height: 46px;
-              gap: 8px;
-              transition: all 0.2s ease-out;
-              @media (max-width: 1100px) {
-              }
-
-              img {
-                height: 24px;
-                width: 24px;
-                @media (max-width: 1100px) {
-                }
-              }
-            }
-
-            li:hover {
-              background-color: rgba(255, 255, 255, 0.1);
-              border: 1px solid rgba(255, 255, 255, 0.25);
-              @media (max-width: 1100px) {
-              }
-            }
-
-          }
-
-        }
-
-      }
-    }
-
-    #interInterTitre {
-      display: none;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      margin-top: 64px;
-      font-size: 30px;
-      color: $text-default;
-      margin-bottom: 34px;
-      @media (max-width: 1100px) {
-        display: flex;
-        font-size: 24px;
-      }
-    }
-
-    #aboutCoupOEil {
-      //background: #4f5e5e;
-      display: none;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      @media (max-width: 1100px) {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        margin: 0 auto;
-      }
-
-      #sectionLeft {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 24px;
-        //background: #912323;
-        @media (max-width: 1100px) {
-        }
-
-        #infosEssential {
+        #aboutMeCard {
           display: flex;
           flex-direction: column;
           justify-content: center;
-          color: $text-default;
           background-color: rgba(255, 255, 255, 0.05);
           border: 1px solid rgba(255, 255, 255, 0.1);
-          box-sizing: border-box;
-
           border-radius: 24px;
-          height: 400px;
-          gap: 24px;
-          @media (max-width: 1100px) {
-            width: 339px;
-            height: 400px;
-          }
-
-          #infoCard {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            margin: 0 auto;
-            gap: 45px;
-          }
-
-          #localisation,
-          #mobilité,
-          #disponibilité,
-          #status {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            #infosTitle {
-              display: flex;
-              gap: 12px;
-              flex-direction: row;
-              justify-content: start;
-              align-items: center;
-            }
-          }
-        }
-
-        #sectionDownLeftCard {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          gap: 24px;
-          color: $text-default;
-
-          #progCard {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-radius: 1rem;
-            border: 1px solid rgba(255, 255, 255, 0.10);
-            background: rgba(255, 255, 255, 0.05);
-            width: 246px;
-            height: 155px;
-            gap: 12px;
-
-            @media (max-width: 1100px) {
-              width: 156px;
-              height: 136px;
-            }
-
-            img {
-              height: 24px;
-              padding: 13px;
-              border-radius: 14px;
-              border: 1px solid rgba(0, 211, 242, 0.30);
-              background: rgba(0, 184, 219, 0.20);
-            }
-
-          }
-
-          #informaCard {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-radius: 1rem;
-            border: 1px solid rgba(255, 255, 255, 0.10);
-            background: rgba(255, 255, 255, 0.05);
-            width: 246px;
-            height: 155px;
-            gap: 12px;
-            @media (max-width: 1100px) {
-              width: 156px;
-              height: 136px;
-            }
-
-            img {
-              height: 24px;
-              padding: 13px;
-              border-radius: 14px;
-              border: 1px solid rgba(251, 100, 182, 0.30);
-              background: rgba(246, 51, 154, 0.20);
-            }
-
-          }
-        }
-      }
-
-      #sectionRight {
-        margin-top: 17px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 24px;
-        //background: red;
-        @media (max-width: 1100px) {
-        }
-
-        #upCard {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          gap: 24px;
+          box-sizing: border-box;
+          padding: 49px;
           width: 100%;
-
-          #jvCard {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-radius: 1rem;
-            border: 1px solid rgba(255, 255, 255, 0.10);
-            background: rgba(255, 255, 255, 0.05);
-            width: 246px;
-            height: 155px;
-            gap: 12px;
-            @media (max-width: 1100px) {
-              width: 156px;
-              height: 136px;
-            }
-
-            img {
-              height: 24px;
-              padding: 13px;
-              border-radius: 14px;
-              border: 1px solid rgba(81, 162, 255, 0.30);
-              background: rgba(43, 127, 255, 0.20);
-            }
-
-            p {
-              color: $text-default;
-            }
-
-          }
-
-          #graphCard {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-radius: 1rem;
-            border: 1px solid rgba(255, 255, 255, 0.10);
-            background: rgba(255, 255, 255, 0.05);
-            width: 246px;
-            height: 155px;
-            gap: 12px;
-            @media (max-width: 1100px) {
-              width: 156px;
-              height: 136px
-            }
-
-            img {
-              height: 24px;
-              padding: 13px;
-              border-radius: 14px;
-              border: 1px solid rgba(194, 122, 255, 0.30);
-              background: rgba(173, 70, 255, 0.20);
-            }
-
-            p {
-              color: $text-default;
-            }
-          }
-        }
-
-        #downCard {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          gap: 24px;
-
-          #yearCard {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-radius: 16px;
-            border: 1px solid rgba(0, 211, 242, 0.20);
-            background: linear-gradient(135deg, rgba(0, 184, 219, 0.10) 0%, rgba(43, 127, 255, 0.10) 100%);
-            width: 246px;
-            height: 199px;
-            gap: 9px;
-            @media (max-width: 1100px) {
-              width: 156px;
-              height: 187px;
-            }
-
-            img {
-              height: 24px;
-            }
-
-            h1 {
-              color: #00D3F2;
-              font-size: 60px;
-              font-weight: 400;
-            }
-
-            p {
-              color: rgba(255, 255, 255, 0.60);
-              font-size: 14px;
-              text-transform: uppercase;
-            }
-
-            p {
-              font-size: 12px;
-              color: rgba(255, 255, 255, 0.40);
-            }
-          }
-
-          #nbrFormationCard {
-
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            border-radius: 16px;
-            border: 1px solid rgba(194, 122, 255, 0.20);
-            background: linear-gradient(135deg, rgba(173, 70, 255, 0.10) 0%, rgba(246, 51, 154, 0.10) 100%);
-            width: 246px;
-            height: 199px;
-            gap: 9px;
-            @media (max-width: 1100px) {
-              width: 156px;
-              height: 187px;
-            }
-
-            img {
-              height: 24px;
-            }
-
-            h1 {
-              color: #C27AFF;
-              font-size: 60px;
-              font-weight: 400;
-            }
-
-            p {
-              color: rgba(255, 255, 255, 0.60);
-              font-size: 14px;
-              text-transform: uppercase;
-            }
-
-            p {
-              font-size: 12px;
-              color: rgba(255, 255, 255, 0.40);
-            }
-          }
-        }
-
-        #logiCard {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          width: 520px;
-          height: 157px;
-          border-radius: 16px;
-          border: 1px solid rgba(5, 223, 114, 0.20);
-          background: linear-gradient(135deg, rgba(0, 201, 80, 0.10) 0%, rgba(0, 188, 125, 0.10) 100%);
-          color: $text-default;
-          gap: 16px;
+          height: 316px;
+          margin: 0 auto;
+          gap: 32px;
           @media (max-width: 1100px) {
-            display: flex;
             width: 338px;
-            height: 186.572px;
+            height: 416px;
           }
 
           h1 {
-            color: #05DF72;
+            color: $text-default;
             font-size: 36px;
+            @media (max-width: 1100px) {
+              font-size: 30px;
+            }
+
+            span {
+              color: #2b7fff;
+            }
           }
 
           p {
-            color: rgba(255, 255, 255, 0.60);
+            color: $text-navbar-color;
+            font-size: 16px;
+            @media (max-width: 1100px) {
+              font-size: 16px;
+            }
+          }
+
+          h2 {
+            color: $text-navbar-color;
             font-size: 14px;
             text-transform: uppercase;
           }
 
-          #tag {
+          #aboutMeCD {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            flex-direction: row;
-            gap: 8px;
+            flex-direction: column;
+            gap: 16px;
 
-            li {
-              display: flex;
+            #aboutMeCDList {
+              display: grid;
+              grid-template-columns: repeat(4, 1fr);
+              flex-direction: row;
+              gap: 8px;
               align-items: center;
-              height: 26px;
-              padding: 4px 12px;
-              border-radius: 10px;
-              border: 1px solid rgba(5, 223, 114, 0.20);
-              background: rgba(0, 201, 80, 0.10);
-              list-style: none;
-            }
-          }
-        }
+              @media (max-width: 1100px) {
+                grid-template-columns: repeat(2, 1fr);
+              }
 
+              li {
+                display: flex;
+                align-items: center;
+                list-style: none;
+                color: $text-default;
+                border-radius: 14px;
+                background-color: rgba(255, 255, 255, 0.05);
+                border: 1px solid rgba(255, 255, 255, 0.1);
+                padding: 0 16px;
+                font-size: 14px;
+                height: 46px;
+                gap: 8px;
+                transition: all 0.2s ease-out;
+                @media (max-width: 1100px) {
+                }
+
+                img {
+                  height: 24px;
+                  width: 24px;
+                  @media (max-width: 1100px) {
+                  }
+                }
+              }
+
+              li:hover {
+                background-color: rgba(255, 255, 255, 0.1);
+                border: 1px solid rgba(255, 255, 255, 0.25);
+                @media (max-width: 1100px) {
+                }
+              }
+
+            }
+
+          }
+
+        }
       }
     }
 
     #competenceTitle {
-      margin: 63px 127px 32px 127px;
+      display: flex;
+      margin: 63px 0 32px 0;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
       @media (max-width: 1100px) {
-        margin: 63px 0 32px 0;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
+        display: flex;
       }
 
       h1 {
         color: $text-default;
         font-size: 30px;
+        @media (max-width: 1100px) {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          font-size: 24px;
+        }
       }
     }
 
@@ -1646,372 +1153,380 @@ html {
       align-items: center;
       margin: 0 auto;
 
-      #aboutinterCompetences {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2, auto);
-        grid-row-gap: 24px;
-        grid-column-gap: 48px;
-        width: 100%;
-        max-width: 1200px;
+      .section-container {
+        max-width: $default-max-width;
         margin: 0 auto;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        @media (max-width: 1100px) {
-          grid-template-columns: repeat(2, minmax(0, 350px));
-          justify-content: center;
-          width: fit-content;
-        }
+        width: 100%;
 
-        #cardCompetence1,
-        #cardCompetence2,
-        #cardCompetence3,
-        #cardCompetence4,
-        #cardCompetence5,
-        #cardCompetence6 {
+        #aboutinterCompetences {
+          display: grid;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, auto);
+          gap: 24px;
           width: 100%;
-          height: 172px;
-          display: flex;
-          flex-direction: column;
+          box-sizing: border-box;
+          max-width: 1200px;
+          margin: 0 auto;
+          flex-wrap: wrap;
+          align-items: center;
           justify-content: center;
-          align-items: flex-start;
-          padding-left: 25px;
-          border-radius: 16px;
-          background: rgba(255, 255, 255, 0.05);
           @media (max-width: 1100px) {
-            width: 315.72px;
+            grid-template-columns: repeat(2, minmax(0, 350px));
+            justify-content: center;
+            width: fit-content;
+          }
+
+          #cardCompetence1,
+          #cardCompetence2,
+          #cardCompetence3,
+          #cardCompetence4,
+          #cardCompetence5,
+          #cardCompetence6 {
+            width: 100%;
+            height: 172px;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            padding-left: 25px;
             border-radius: 16px;
-            border: 0.8px solid rgba(255, 255, 255, 0.10);
+            border: 1px solid rgba(255, 255, 255, 0.10);
             background: rgba(255, 255, 255, 0.05);
-          }
-        }
-
-        #cardCompetence1 {
-          //background: red;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: start;
-          padding-left: 25px;
-          @media (max-width: 1100px) {
-            padding-left: 20px;
+            transition: all 0.2s ease;
+            @media (max-width: 1100px) {
+              width: 100%;
+              border-radius: 16px;
+              border: 0.8px solid rgba(255, 255, 255, 0.10);
+              background: rgba(255, 255, 255, 0.05);
+            }
           }
 
-          img {
+          #cardCompetence1 {
             display: flex;
-            align-items: center;
+            flex-direction: column;
             justify-content: center;
-            width: 24px;
-            height: 24px;
-            padding: 13px;
-            margin-bottom: 16px;
-            border-radius: 14px;
-            border: 1px solid rgba(81, 162, 255, 0.30);
-            background: rgba(43, 127, 255, 0.20);
-          }
+            align-items: start;
+            padding-left: 25px;
+            @media (max-width: 1100px) {
+              padding-left: 20px;
+            }
 
-          h1 {
-            color: $text-default;
-            font-size: 20px;
-            margin-bottom: 8px;
-          }
+            img {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 24px;
+              height: 24px;
+              padding: 13px;
+              margin-bottom: 16px;
+              border-radius: 14px;
+              border: 1px solid rgba(81, 162, 255, 0.30);
+              background: rgba(43, 127, 255, 0.20);
+            }
 
-          #liCompetence {
-            color: rgba(255, 255, 255, 0.60);
-            font-size: 14px;
-            display: flex;
-            flex-direction: row;
-            list-style: none;
+            h1 {
+              color: $text-default;
+              font-size: 20px;
+              margin-bottom: 8px;
+            }
 
-            #first {
+            #liCompetence {
+              color: rgba(255, 255, 255, 0.60);
+              font-size: 14px;
+              display: flex;
+              flex-direction: row;
               list-style: none;
-            }
 
-            li {
-              list-style: circle;
-              margin-right: 25px
+              #first {
+                list-style: none;
+              }
+
+              li {
+                list-style: circle;
+                margin-right: 25px
+              }
             }
           }
-        }
 
-        #cardCompetence1:hover {
-          border: 1px solid rgba(81, 162, 255, 0.5);
-        }
-
-        #cardCompetence2 {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: start;
-          padding-left: 25px;
-          @media (max-width: 1100px) {
-            padding-left: 20px;
+          #cardCompetence1:hover {
+            border: 1px solid rgba(81, 162, 255, 0.5);
           }
 
-          img {
+          #cardCompetence2 {
             display: flex;
-            align-items: center;
+            flex-direction: column;
             justify-content: center;
-            width: 24px;
-            height: 24px;
-            padding: 13px;
-            margin-bottom: 16px;
-            border-radius: 14px;
-            border: 1px solid rgba(194, 122, 255, 0.30);
-            background: rgba(173, 70, 255, 0.20);
-          }
+            align-items: start;
+            padding-left: 25px;
+            @media (max-width: 1100px) {
+              padding-left: 20px;
+            }
 
-          img:hover {
+            img {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 24px;
+              height: 24px;
+              padding: 13px;
+              margin-bottom: 16px;
+              border-radius: 14px;
+              border: 1px solid rgba(194, 122, 255, 0.30);
+              background: rgba(173, 70, 255, 0.20);
+            }
 
-          }
+            img:hover {
 
-          h1 {
-            color: $text-default;
-            font-size: 20px;
-            margin-bottom: 8px;
-          }
+            }
 
-          #liCompetence {
-            color: rgba(255, 255, 255, 0.60);
-            font-size: 14px;
-            display: flex;
-            flex-direction: row;
-            list-style: none;
+            h1 {
+              color: $text-default;
+              font-size: 20px;
+              margin-bottom: 8px;
+            }
 
-            #first {
+            #liCompetence {
+              color: rgba(255, 255, 255, 0.60);
+              font-size: 14px;
+              display: flex;
+              flex-direction: row;
               list-style: none;
-            }
 
-            li {
-              list-style: circle;
-              margin-right: 25px
+              #first {
+                list-style: none;
+              }
+
+              li {
+                list-style: circle;
+                margin-right: 25px
+              }
             }
           }
-        }
 
-        #cardCompetence2:hover {
-          border: 1px solid rgba(194, 122, 255, 0.5);
-        }
-
-        #cardCompetence3 {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: start;
-          padding-left: 25px;
-          @media (max-width: 1100px) {
-            padding-left: 20px;
+          #cardCompetence2:hover {
+            border: 1px solid rgba(194, 122, 255, 0.5);
           }
 
-          img {
+          #cardCompetence3 {
             display: flex;
-            align-items: center;
+            flex-direction: column;
             justify-content: center;
-            width: 24px;
-            height: 24px;
-            padding: 13px;
-            margin-bottom: 16px;
-            border-radius: 14px;
-            border: 1px solid rgba(0, 211, 242, 0.30);
-            background: rgba(0, 184, 219, 0.20);
-          }
+            align-items: start;
+            padding-left: 25px;
+            @media (max-width: 1100px) {
+              padding-left: 20px;
+            }
 
-          img:hover {
+            img {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 24px;
+              height: 24px;
+              padding: 13px;
+              margin-bottom: 16px;
+              border-radius: 14px;
+              border: 1px solid rgba(0, 211, 242, 0.30);
+              background: rgba(0, 184, 219, 0.20);
+            }
 
-          }
+            img:hover {
 
-          h1 {
-            color: $text-default;
-            font-size: 20px;
-            margin-bottom: 8px;
-          }
+            }
 
-          #liCompetence {
-            color: rgba(255, 255, 255, 0.60);
-            font-size: 14px;
-            display: flex;
-            flex-direction: row;
-            list-style: none;
+            h1 {
+              color: $text-default;
+              font-size: 20px;
+              margin-bottom: 8px;
+            }
 
-            #first {
+            #liCompetence {
+              color: rgba(255, 255, 255, 0.60);
+              font-size: 14px;
+              display: flex;
+              flex-direction: row;
               list-style: none;
-            }
 
-            li {
-              list-style: circle;
-              margin-right: 25px
+              #first {
+                list-style: none;
+              }
+
+              li {
+                list-style: circle;
+                margin-right: 25px
+              }
             }
           }
-        }
 
-        #cardCompetence3:hover {
-          border: 1px solid rgba(0, 211, 242, 0.5);
-        }
-
-        #cardCompetence4 {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: start;
-          padding-left: 25px;
-          @media (max-width: 1100px) {
-            padding-left: 20px;
+          #cardCompetence3:hover {
+            border: 1px solid rgba(0, 211, 242, 0.5);
           }
 
-          img {
+          #cardCompetence4 {
             display: flex;
-            align-items: center;
+            flex-direction: column;
             justify-content: center;
-            width: 24px;
-            height: 24px;
-            padding: 13px;
-            margin-bottom: 16px;
-            border-radius: 14px;
-            border: 1px solid rgba(5, 223, 114, 0.30);
-            background: rgba(0, 201, 80, 0.20);
-          }
+            align-items: start;
+            padding-left: 25px;
+            @media (max-width: 1100px) {
+              padding-left: 20px;
+            }
 
-          img:hover {
+            img {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 24px;
+              height: 24px;
+              padding: 13px;
+              margin-bottom: 16px;
+              border-radius: 14px;
+              border: 1px solid rgba(5, 223, 114, 0.30);
+              background: rgba(0, 201, 80, 0.20);
+            }
 
-          }
+            img:hover {
 
-          h1 {
-            color: $text-default;
-            font-size: 20px;
-            margin-bottom: 8px;
-          }
+            }
 
-          #liCompetence {
-            color: rgba(255, 255, 255, 0.60);
-            font-size: 14px;
-            display: flex;
-            flex-direction: row;
-            list-style: none;
+            h1 {
+              color: $text-default;
+              font-size: 20px;
+              margin-bottom: 8px;
+            }
 
-            #first {
+            #liCompetence {
+              color: rgba(255, 255, 255, 0.60);
+              font-size: 14px;
+              display: flex;
+              flex-direction: row;
               list-style: none;
-            }
 
-            li {
-              list-style: circle;
-              margin-right: 25px
+              #first {
+                list-style: none;
+              }
+
+              li {
+                list-style: circle;
+                margin-right: 25px
+              }
             }
           }
-        }
 
-        #cardCompetence4:hover {
-          border: 1px solid rgba(5, 223, 114, 0.5);
-        }
-
-        #cardCompetence5 {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: start;
-          padding-left: 25px;
-          @media (max-width: 1100px) {
-            padding-left: 20px;
+          #cardCompetence4:hover {
+            border: 1px solid rgba(5, 223, 114, 0.5);
           }
 
-          img {
+          #cardCompetence5 {
             display: flex;
-            align-items: center;
+            flex-direction: column;
             justify-content: center;
-            width: 24px;
-            height: 24px;
-            padding: 13px;
-            margin-bottom: 16px;
-            border-radius: 14px;
-            border: 1px solid rgba(255, 137, 4, 0.30);
-            background: rgba(255, 105, 0, 0.20);
-          }
+            align-items: start;
+            padding-left: 25px;
+            @media (max-width: 1100px) {
+              padding-left: 20px;
+            }
 
-          img:hover {
+            img {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 24px;
+              height: 24px;
+              padding: 13px;
+              margin-bottom: 16px;
+              border-radius: 14px;
+              border: 1px solid rgba(255, 137, 4, 0.30);
+              background: rgba(255, 105, 0, 0.20);
+            }
 
-          }
+            img:hover {
 
-          h1 {
-            color: $text-default;
-            font-size: 20px;
-            margin-bottom: 8px;
-          }
+            }
 
-          #liCompetence {
-            color: rgba(255, 255, 255, 0.60);
-            font-size: 14px;
-            display: flex;
-            flex-direction: row;
-            list-style: none;
+            h1 {
+              color: $text-default;
+              font-size: 20px;
+              margin-bottom: 8px;
+            }
 
-            #first {
+            #liCompetence {
+              color: rgba(255, 255, 255, 0.60);
+              font-size: 14px;
+              display: flex;
+              flex-direction: row;
               list-style: none;
-            }
 
-            li {
-              list-style: circle;
-              margin-right: 25px
+              #first {
+                list-style: none;
+              }
+
+              li {
+                list-style: circle;
+                margin-right: 25px
+              }
             }
           }
-        }
 
-        #cardCompetence5:hover {
-          border: 1px solid rgba(255, 137, 4, 0.5);
-        }
-
-        #cardCompetence6 {
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: start;
-          padding-left: 25px;
-          @media (max-width: 1100px) {
-            padding-left: 20px;
+          #cardCompetence5:hover {
+            border: 1px solid rgba(255, 137, 4, 0.5);
           }
 
-          img {
+          #cardCompetence6 {
             display: flex;
-            align-items: center;
+            flex-direction: column;
             justify-content: center;
-            width: 24px;
-            height: 24px;
-            padding: 13px;
-            margin-bottom: 16px;
-            border-radius: 14px;
-            border: 1px solid rgba(251, 100, 182, 0.30);
-            background: rgba(246, 51, 154, 0.20);
-          }
+            align-items: start;
+            padding-left: 25px;
+            @media (max-width: 1100px) {
+              padding-left: 20px;
+            }
 
-          img:hover {
+            img {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 24px;
+              height: 24px;
+              padding: 13px;
+              margin-bottom: 16px;
+              border-radius: 14px;
+              border: 1px solid rgba(251, 100, 182, 0.30);
+              background: rgba(246, 51, 154, 0.20);
+            }
 
-          }
+            img:hover {
 
-          h1 {
-            color: $text-default;
-            font-size: 20px;
-            margin-bottom: 8px;
-          }
+            }
 
-          #liCompetence {
-            color: rgba(255, 255, 255, 0.60);
-            font-size: 14px;
-            display: flex;
-            flex-direction: row;
-            list-style: none;
+            h1 {
+              color: $text-default;
+              font-size: 20px;
+              margin-bottom: 8px;
+            }
 
-            #first {
+            #liCompetence {
+              color: rgba(255, 255, 255, 0.60);
+              font-size: 14px;
+              display: flex;
+              flex-direction: row;
               list-style: none;
-            }
 
-            li {
-              list-style: circle;
-              margin-right: 25px
+              #first {
+                list-style: none;
+              }
+
+              li {
+                list-style: circle;
+                margin-right: 25px
+              }
             }
           }
-        }
 
-        #cardCompetence6:hover {
-          border: 1px solid rgba(251, 100, 182, 0.6);
+          #cardCompetence6:hover {
+            border: 1px solid rgba(251, 100, 182, 0.6);
+          }
         }
       }
     }
@@ -2046,683 +1561,691 @@ html {
       align-items: center;
       justify-content: center;
       margin: 0 auto;
-      gap: 24px;
       @media (max-width: 1100px) {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         margin: 0 auto;
-        gap: 24px;
       }
 
-      #cardExpProffesionnelles1,
-      #cardExpProffesionnelles2,
-      #cardExpProffesionnelles3 {
-        width: 1500px;
-        border-radius: 16px;
-        border: 0.8px solid rgba(255, 255, 255, 0.10);
-        background: rgba(255, 255, 255, 0.05);
+      .section-container {
+        display: flex;
+        flex-direction: column;
+        max-width: $default-max-width;
         margin: 0 auto;
-        @media (max-width: 1100px) {
-          width: 300px;
+        width: 100%;
+        gap: 24px;
+
+        #cardExpProffesionnelles1,
+        #cardExpProffesionnelles2,
+        #cardExpProffesionnelles3 {
+          width: 100%;
           border-radius: 16px;
+          box-sizing: border-box;
           border: 0.8px solid rgba(255, 255, 255, 0.10);
           background: rgba(255, 255, 255, 0.05);
-        }
-      }
-
-      #cardExpProffesionnelles1 {
-        display: flex;
-        flex-direction: row;
-        gap: 16px;
-        padding: 32.8px;
-        @media (max-width: 1100px) {
-          padding: 30px;
-          gap: 0;
-        }
-
-        #cardExpLeft {
-          #bagGreenColorIcon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 24px;
-            height: 24px;
-            padding: 13px;
-            border-radius: 14px;
-            border: 0.8px solid rgba(5, 223, 114, 0.30);
-            background: rgba(0, 201, 80, 0.20);
-            @media (max-width: 1100px) {
-              display: none;
-            }
-          }
-        }
-
-        #cardExpRight {
-          gap: 16px;
-          @media (max-width: 1100px) {
-            display: flex;
-            flex-direction: column;
-            width: 378.65px;
-            gap: 5px;
-          }
-
-          #cardTitle {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-
-            h1 {
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              font-size: 24px;
-              color: $text-default;
-              gap: 10px;
-              @media (max-width: 1100px) {
-                display: flex;
-                flex-direction: row;
-                align-items: start;
-                gap: 0;
-              }
-
-              #statusEmplois {
-                display: flex;
-                width: 6%;
-                padding: 7px 12px;
-                justify-content: center;
-                align-items: center;
-                list-style: none;
-                color: #05DF72;
-                font-weight: normal;
-                font-size: 12px;
-                border-radius: 999px;
-                border: 0.8px solid rgba(5, 223, 114, 0.30);
-                background: rgba(0, 201, 80, 0.20);
-              }
-            }
-          }
-
-          h2 {
-            color: #05DF72;
-            font-size: 16px;
-            font-weight: 400;
-            margin-top: 8px;
-          }
-
-          #infoExpProffesionnelles {
-            display: flex;
-            flex-direction: row;
-            gap: 4px;
-            margin-top: 16px;
-            @media (max-width: 1100px) {
-              flex-direction: column;
-            }
-
-            #ExpproDate {
-              display: flex;
-              flex-direction: row;
-              gap: 4px;
-
-              img {
-                width: 14px;
-                height: 14px;
-              }
-
-              p {
-                color: rgba(255, 255, 255, 0.50);
-              }
-            }
-
-            #ExpproLocalisation {
-              display: flex;
-              flex-direction: row;
-              gap: 4px;
-
-              img {
-                width: 14px;
-                height: 14px;
-              }
-
-              p {
-                color: rgba(255, 255, 255, 0.50);
-              }
-            }
-          }
-
-          p {
-            color: rgba(255, 255, 255, 0.60);
-          }
-
-          #ExpTache {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            margin-top: 23.5px;
-            @media (max-width: 1100px) {
-            }
-
-            li {
-              display: flex;
-              color: rgba(255, 255, 255, 0.60);
-              line-height: 22.75px;
-              @media (max-width: 1100px) {
-              }
-            }
-          }
-
-          #ExpSkill {
-            display: flex;
-            flex-direction: row;
-            gap: 8px;
-            margin-top: 12px;
-            @media (max-width: 1100px) {
-              display: flex;
-              flex-wrap: wrap;
-              flex-direction: row;
-              gap: 5px;
-            }
-
-            li {
-              border-radius: 10px;
-              border: 0.8px solid rgba(5, 223, 114, 0.20);
-              background: rgba(0, 201, 80, 0.10);
-              padding: 4.8px 8px;
-              color: $text-default;
-              justify-content: center;
-              align-items: center;
-              list-style: none;
-              @media (max-width: 1100px) {
-                padding: 10px 5px;
-                font-size: 15px;
-              }
-            }
-          }
-        }
-      }
-
-      #cardExpProffesionnelles2 {
-        display: flex;
-        flex-direction: row;
-        gap: 16px;
-        padding: 32.8px;
-        @media (max-width: 1100px) {
-          padding: 30px;
-          gap: 0;
-        }
-
-        #cardExpLeft {
-          #bagBlueColorIcon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 24px;
-            height: 24px;
-            padding: 13px;
-            border-radius: 14px;
-            border: 0.8px solid rgba(81, 162, 255, 0.30);
-            background: rgba(43, 127, 255, 0.20);
-            @media (max-width: 1100px) {
-              display: none;
-            }
-          }
-        }
-
-        #cardExpRight {
-          gap: 16px;
-          @media (max-width: 1100px) {
-            display: flex;
-            flex-direction: column;
-            width: 378.65px;
-            gap: 5px;
-          }
-
-          #cardTitle {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-
-            h1 {
-              font-size: 24px;
-              color: $text-default;
-              @media (max-width: 1100px) {
-                display: flex;
-                flex-direction: row;
-                align-items: start;
-                gap: 0;
-              }
-            }
-          }
-
-          h2 {
-            color: #51A2FF;
-            font-size: 16px;
-            font-weight: 400;
-            margin-top: 12px;
-          }
-
-          #infoExpProffesionnelles {
-            display: flex;
-            flex-direction: row;
-            gap: 4px;
-            margin-top: 16px;
-            @media (max-width: 1100px) {
-              flex-direction: column;
-            }
-
-            #ExpproDate {
-              display: flex;
-              flex-direction: row;
-              gap: 4px;
-
-              img {
-                width: 14px;
-                height: 14px;
-              }
-
-              p {
-                color: rgba(255, 255, 255, 0.50);
-              }
-            }
-
-            #ExpproLocalisation {
-              display: flex;
-              flex-direction: row;
-              gap: 4px;
-
-              img {
-                width: 14px;
-                height: 14px;
-              }
-
-              p {
-                color: rgba(255, 255, 255, 0.50);
-              }
-            }
-          }
-
-          #ExpTache {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            margin-top: 23.5px;
-            @media (max-width: 1100px) {
-            }
-
-            li {
-              display: flex;
-              color: rgba(255, 255, 255, 0.60);
-              line-height: 22.75px;
-              @media (max-width: 1100px) {
-              }
-            }
-          }
-
-
-          #ExpSkill {
-            display: flex;
-            flex-direction: row;
-            gap: 8px;
-            margin-top: 12px;
-            @media (max-width: 1100px) {
-              display: flex;
-              flex-direction: row;
-              flex-wrap: wrap;
-              gap: 5px;
-            }
-
-            li {
-              border-radius: 10px;
-              border: 0.8px solid rgba(81, 162, 255, 0.20);
-              background: rgba(43, 127, 255, 0.10);
-              padding: 4.8px 8px;
-              color: $text-default;
-              justify-content: center;
-              align-items: center;
-              list-style: none;
-              @media (max-width: 1100px) {
-                padding: 10px 5px;
-                font-size: 15px;
-              }
-            }
-          }
-        }
-      }
-
-      #cardExpProffesionnelles3 {
-        display: flex;
-        flex-direction: row;
-        gap: 16px;
-        padding: 32.8px;
-        @media (max-width: 1100px) {
-          padding: 30px;
-          gap: 0;
-        }
-
-        #cardExpLeft {
-          #bagPurpleColorIcon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 24px;
-            height: 24px;
-            padding: 13px;
-            border-radius: 14px;
-            border: 0.8px solid rgba(194, 122, 255, 0.30);
-            background: rgba(173, 70, 255, 0.20);
-            @media (max-width: 1100px) {
-              display: none;
-            }
-          }
-        }
-
-        #cardExpRight {
-          gap: 16px;
-          @media (max-width: 1100px) {
-            display: flex;
-            flex-direction: column;
-            width: 378.65px;
-            gap: 5px;
-          }
-
-          #cardTitle {
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-
-            h1 {
-              display: flex;
-              flex-direction: row;
-              align-items: center;
-              font-size: 24px;
-              color: $text-default;
-              gap: 10px;
-              @media (max-width: 1100px) {
-                display: flex;
-                flex-direction: row;
-                align-items: start;
-                gap: 0;
-              }
-            }
-          }
-
-          h2 {
-            color: #C27AFF;
-            font-size: 16px;
-            font-weight: 400;
-            margin-top: 12px;
-          }
-
-          #infoExpProffesionnelles {
-            display: flex;
-            flex-direction: row;
-            gap: 4px;
-            margin-top: 16px;
-            @media (max-width: 1100px) {
-              flex-direction: column;
-            }
-
-            #ExpproDate {
-              display: flex;
-              flex-direction: row;
-              gap: 4px;
-
-              img {
-                width: 14px;
-                height: 14px;
-              }
-
-              p {
-                color: rgba(255, 255, 255, 0.50);
-              }
-            }
-
-            #ExpproLocalisation {
-              display: flex;
-              flex-direction: row;
-              gap: 4px;
-
-              img {
-                width: 14px;
-                height: 14px;
-              }
-
-              p {
-                color: rgba(255, 255, 255, 0.50);
-              }
-            }
-          }
-
-          #ExpTache {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            margin-top: 23.5px;
-            @media (max-width: 1100px) {
-            }
-
-            li {
-              display: flex;
-              color: rgba(255, 255, 255, 0.60);
-              line-height: 22.75px;
-              @media (max-width: 1100px) {
-              }
-            }
-          }
-
-          #ExpSkill {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-top: 12px;
-            @media (max-width: 1100px) {
-              display: flex;
-              flex-direction: row;
-              gap: 5px;
-            }
-
-            li {
-              border-radius: 10px;
-              border: 0.8px solid rgba(194, 122, 255, 0.20);
-              background: rgba(173, 70, 255, 0.10);
-              padding: 4.8px 8px;
-              color: $text-default;
-              justify-content: center;
-              align-items: center;
-              list-style: none;
-              @media (max-width: 1100px) {
-                padding: 10px 5px;
-                font-size: 15px;
-              }
-            }
-          }
-        }
-
-
-        #FormTitle {
-          margin: 63px 127px 32px 127px;
-
-          h1 {
-            color: $text-default;
-            font-size: 30px;
-          }
-        }
-
-        #aboutFormations {
-          #cardFormations {
-
-          }
-        }
-
-        footer {
-          display: flex;
-          flex-direction: row;
-          justify-content: center;
-          align-items: center;
-          padding: 40px 0;
-
-          p {
-            color: $text-navbar-color;
-
-            a {
-              color: $text-default;
-            }
-          }
-
-        }
-
-        // login.html
-
-
-        #loginAmbiance {
-          display: flex;
-          justify-content: center;
-          align-items: center;
           margin: 0 auto;
-
-          #sphere1,
-          #sphere2,
-          #sphere3 {
-            position: absolute;
-            filter: blur(150px);
-            border-radius: 999px;
-          }
-
-          #sphere1 {
-            width: 600px;
-            height: 600px;
-            top: 1%;
-            left: 20%;
-            background-color: rgba(43, 127, 255, 0.2);
-          }
-
-          #sphere2 {
-            width: 600px;
-            height: 600px;
-            right: 33%;
-            top: 25%;
-            background-color: rgba(0, 184, 219, 0.1);
-          }
-
-          #sphere3 {
-            width: 600px;
-            height: 600px;
-            top: 45%;
-            right: 20%;
-            background-color: rgba(173, 70, 255, 0.15);
+          @media (max-width: 1100px) {
+            width: 300px;
+            border-radius: 16px;
+            border: 0.8px solid rgba(255, 255, 255, 0.10);
+            background: rgba(255, 255, 255, 0.05);
           }
         }
 
-        #indexBtn {
+        #cardExpProffesionnelles1 {
           display: flex;
           flex-direction: row;
-          justify-content: center;
-          align-items: center;
-
-          position: absolute;
-          top: 0;
-          left: 0;
-          transform: rotate(90deg);
-          margin: 24px;
-          padding: 13px;
-          background-color: rgba(255, 255, 255, 0.1);
-          border: 1px solid rgba(255, 255, 255, 0.2);
-          border-radius: 999px;
-
-          cursor: pointer;
-          transition: all 0.2s ease-out;
-
-          img {
-            height: 24px;
+          gap: 16px;
+          padding: 32.8px;
+          @media (max-width: 1100px) {
+            padding: 30px;
+            gap: 0;
           }
-        }
 
-        #indexBtn:hover {
-          background-color: rgba(255, 255, 255, 0.13);
-        }
-
-        #loginSection {
-          height: 100vh;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          justify-content: center;
-
-          #loginCard {
-            height: 700px;
-            width: 27%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-
-            align-items: center;
-            margin: auto 0;
-            color: $text-default;
-            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-            border-radius: 24px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-
-            #loginLogo {
-              margin-bottom: 32px;
-
-              img {
-                width: 64px;
+          #cardExpLeft {
+            #bagGreenColorIcon {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 24px;
+              height: 24px;
+              padding: 13px;
+              border-radius: 14px;
+              border: 0.8px solid rgba(5, 223, 114, 0.30);
+              background: rgba(0, 201, 80, 0.20);
+              @media (max-width: 1100px) {
+                display: none;
               }
             }
+          }
 
-            h1 {
-              font-size: 36px;
-
-            }
-
-            p {
-              font-size: 16px;
-              color: $text-navbar-color;
-            }
-
-            #loginForm {
-              margin-top: 32px;
+          #cardExpRight {
+            gap: 16px;
+            @media (max-width: 1100px) {
               display: flex;
               flex-direction: column;
-              justify-content: space-between;
-              gap: 24px;
+              width: 378.65px;
+              gap: 5px;
+            }
 
-              label {
-                font-size: 14px;
-              }
+            #cardTitle {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
 
-              #loginEmail,
-              #loginPassword {
+              h1 {
                 display: flex;
                 flex-direction: row;
-                justify-content: center;
                 align-items: center;
-                background-color: rgba(255, 255, 255, 0.05);
-                border: 1px solid rgba(255, 255, 255, 0.2);
-                box-sizing: border-box;
-                border-radius: 16px;
-                padding-left: 16px;
+                font-size: 24px;
+                color: $text-default;
+                gap: 10px;
+                @media (max-width: 1100px) {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: start;
+                  gap: 0;
+                }
 
-                input {
-                  font-size: 16px;
-                  border: none;
-                  background: transparent;
-                  padding: 16px 48px;
-                  color: $text-default;
+                #statusEmplois {
+                  display: flex;
+                  width: 6%;
+                  padding: 7px 12px;
+                  justify-content: center;
+                  align-items: center;
+                  list-style: none;
+                  color: #05DF72;
+                  font-weight: normal;
+                  font-size: 12px;
+                  border-radius: 999px;
+                  border: 0.8px solid rgba(5, 223, 114, 0.30);
+                  background: rgba(0, 201, 80, 0.20);
+                }
+              }
+            }
+
+            h2 {
+              color: #05DF72;
+              font-size: 16px;
+              font-weight: 400;
+              margin-top: 8px;
+            }
+
+            #infoExpProffesionnelles {
+              display: flex;
+              flex-direction: row;
+              gap: 4px;
+              margin-top: 16px;
+              @media (max-width: 1100px) {
+                flex-direction: column;
+              }
+
+              #ExpproDate {
+                display: flex;
+                flex-direction: row;
+                gap: 4px;
+
+                img {
+                  width: 14px;
+                  height: 14px;
+                }
+
+                p {
+                  color: rgba(255, 255, 255, 0.50);
                 }
               }
 
-              #loginButton {
+              #ExpproLocalisation {
+                display: flex;
+                flex-direction: row;
+                gap: 4px;
+
+                img {
+                  width: 14px;
+                  height: 14px;
+                }
+
+                p {
+                  color: rgba(255, 255, 255, 0.50);
+                }
+              }
+            }
+
+            p {
+              color: rgba(255, 255, 255, 0.60);
+            }
+
+            #ExpTache {
+              display: flex;
+              flex-direction: column;
+              gap: 4px;
+              margin-top: 23.5px;
+              @media (max-width: 1100px) {
+              }
+
+              li {
+                display: flex;
+                color: rgba(255, 255, 255, 0.60);
+                line-height: 22.75px;
+                @media (max-width: 1100px) {
+                }
+              }
+            }
+
+            #ExpSkill {
+              display: flex;
+              flex-direction: row;
+              gap: 8px;
+              margin-top: 12px;
+              @media (max-width: 1100px) {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                gap: 5px;
+              }
+
+              li {
+                border-radius: 10px;
+                border: 0.8px solid rgba(5, 223, 114, 0.20);
+                background: rgba(0, 201, 80, 0.10);
+                padding: 4.8px 8px;
                 color: $text-default;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+                @media (max-width: 1100px) {
+                  padding: 10px 5px;
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+        }
+
+        #cardExpProffesionnelles2 {
+          display: flex;
+          flex-direction: row;
+          gap: 16px;
+          padding: 32.8px;
+          @media (max-width: 1100px) {
+            padding: 30px;
+            gap: 0;
+          }
+
+          #cardExpLeft {
+            #bagBlueColorIcon {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 24px;
+              height: 24px;
+              padding: 13px;
+              border-radius: 14px;
+              border: 0.8px solid rgba(81, 162, 255, 0.30);
+              background: rgba(43, 127, 255, 0.20);
+              @media (max-width: 1100px) {
+                display: none;
+              }
+            }
+          }
+
+          #cardExpRight {
+            gap: 16px;
+            @media (max-width: 1100px) {
+              display: flex;
+              flex-direction: column;
+              width: 378.65px;
+              gap: 5px;
+            }
+
+            #cardTitle {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+
+              h1 {
+                font-size: 24px;
+                color: $text-default;
+                @media (max-width: 1100px) {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: start;
+                  gap: 0;
+                }
+              }
+            }
+
+            h2 {
+              color: #51A2FF;
+              font-size: 16px;
+              font-weight: 400;
+              margin-top: 12px;
+            }
+
+            #infoExpProffesionnelles {
+              display: flex;
+              flex-direction: row;
+              gap: 4px;
+              margin-top: 16px;
+              @media (max-width: 1100px) {
+                flex-direction: column;
+              }
+
+              #ExpproDate {
+                display: flex;
+                flex-direction: row;
+                gap: 4px;
+
+                img {
+                  width: 14px;
+                  height: 14px;
+                }
+
+                p {
+                  color: rgba(255, 255, 255, 0.50);
+                }
+              }
+
+              #ExpproLocalisation {
+                display: flex;
+                flex-direction: row;
+                gap: 4px;
+
+                img {
+                  width: 14px;
+                  height: 14px;
+                }
+
+                p {
+                  color: rgba(255, 255, 255, 0.50);
+                }
+              }
+            }
+
+            #ExpTache {
+              display: flex;
+              flex-direction: column;
+              gap: 4px;
+              margin-top: 23.5px;
+              @media (max-width: 1100px) {
+              }
+
+              li {
+                display: flex;
+                color: rgba(255, 255, 255, 0.60);
+                line-height: 22.75px;
+                @media (max-width: 1100px) {
+                }
+              }
+            }
+
+
+            #ExpSkill {
+              display: flex;
+              flex-direction: row;
+              gap: 8px;
+              margin-top: 12px;
+              @media (max-width: 1100px) {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 5px;
+              }
+
+              li {
+                border-radius: 10px;
+                border: 0.8px solid rgba(81, 162, 255, 0.20);
+                background: rgba(43, 127, 255, 0.10);
+                padding: 4.8px 8px;
+                color: $text-default;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+                @media (max-width: 1100px) {
+                  padding: 10px 5px;
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+        }
+
+        #cardExpProffesionnelles3 {
+          display: flex;
+          flex-direction: row;
+          gap: 16px;
+          padding: 32.8px;
+          @media (max-width: 1100px) {
+            padding: 30px;
+            gap: 0;
+          }
+
+          #cardExpLeft {
+            #bagPurpleColorIcon {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 24px;
+              height: 24px;
+              padding: 13px;
+              border-radius: 14px;
+              border: 0.8px solid rgba(194, 122, 255, 0.30);
+              background: rgba(173, 70, 255, 0.20);
+              @media (max-width: 1100px) {
+                display: none;
+              }
+            }
+          }
+
+          #cardExpRight {
+            gap: 16px;
+            @media (max-width: 1100px) {
+              display: flex;
+              flex-direction: column;
+              width: 378.65px;
+              gap: 5px;
+            }
+
+            #cardTitle {
+              display: flex;
+              flex-direction: row;
+              gap: 10px;
+
+              h1 {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                font-size: 24px;
+                color: $text-default;
+                gap: 10px;
+                @media (max-width: 1100px) {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: start;
+                  gap: 0;
+                }
+              }
+            }
+
+            h2 {
+              color: #C27AFF;
+              font-size: 16px;
+              font-weight: 400;
+              margin-top: 12px;
+            }
+
+            #infoExpProffesionnelles {
+              display: flex;
+              flex-direction: row;
+              gap: 4px;
+              margin-top: 16px;
+              @media (max-width: 1100px) {
+                flex-direction: column;
+              }
+
+              #ExpproDate {
+                display: flex;
+                flex-direction: row;
+                gap: 4px;
+
+                img {
+                  width: 14px;
+                  height: 14px;
+                }
+
+                p {
+                  color: rgba(255, 255, 255, 0.50);
+                }
+              }
+
+              #ExpproLocalisation {
+                display: flex;
+                flex-direction: row;
+                gap: 4px;
+
+                img {
+                  width: 14px;
+                  height: 14px;
+                }
+
+                p {
+                  color: rgba(255, 255, 255, 0.50);
+                }
+              }
+            }
+
+            #ExpTache {
+              display: flex;
+              flex-direction: column;
+              gap: 4px;
+              margin-top: 23.5px;
+              @media (max-width: 1100px) {
+              }
+
+              li {
+                display: flex;
+                color: rgba(255, 255, 255, 0.60);
+                line-height: 22.75px;
+                @media (max-width: 1100px) {
+                }
+              }
+            }
+
+            #ExpSkill {
+              display: flex;
+              flex-direction: row;
+              flex-wrap: wrap;
+              gap: 8px;
+              margin-top: 12px;
+              @media (max-width: 1100px) {
+                display: flex;
+                flex-direction: row;
+                gap: 5px;
+              }
+
+              li {
+                border-radius: 10px;
+                border: 0.8px solid rgba(194, 122, 255, 0.20);
+                background: rgba(173, 70, 255, 0.10);
+                padding: 4.8px 8px;
+                color: $text-default;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+                @media (max-width: 1100px) {
+                  padding: 10px 5px;
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+
+
+          #FormTitle {
+            margin: 63px 127px 32px 127px;
+
+            h1 {
+              color: $text-default;
+              font-size: 30px;
+            }
+          }
+
+          #aboutFormations {
+            #cardFormations {
+
+            }
+          }
+
+          footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            padding: 40px 0;
+
+            p {
+              color: $text-navbar-color;
+
+              a {
+                color: $text-default;
+              }
+            }
+
+          }
+
+          // login.html
+
+
+          #loginAmbiance {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+
+            #sphere1,
+            #sphere2,
+            #sphere3 {
+              position: absolute;
+              filter: blur(150px);
+              border-radius: 999px;
+            }
+
+            #sphere1 {
+              width: 600px;
+              height: 600px;
+              top: 1%;
+              left: 20%;
+              background-color: rgba(43, 127, 255, 0.2);
+            }
+
+            #sphere2 {
+              width: 600px;
+              height: 600px;
+              right: 33%;
+              top: 25%;
+              background-color: rgba(0, 184, 219, 0.1);
+            }
+
+            #sphere3 {
+              width: 600px;
+              height: 600px;
+              top: 45%;
+              right: 20%;
+              background-color: rgba(173, 70, 255, 0.15);
+            }
+          }
+
+          #indexBtn {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(90deg);
+            margin: 24px;
+            padding: 13px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 999px;
+
+            cursor: pointer;
+            transition: all 0.2s ease-out;
+
+            img {
+              height: 24px;
+            }
+          }
+
+          #indexBtn:hover {
+            background-color: rgba(255, 255, 255, 0.13);
+          }
+
+          #loginSection {
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+
+            #loginCard {
+              height: 700px;
+              width: 27%;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+
+              align-items: center;
+              margin: auto 0;
+              color: $text-default;
+              box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+              border-radius: 24px;
+              background-color: rgba(255, 255, 255, 0.1);
+              border: 1px solid rgba(255, 255, 255, 0.2);
+
+              #loginLogo {
+                margin-bottom: 32px;
+
+                img {
+                  width: 64px;
+                }
+              }
+
+              h1 {
+                font-size: 36px;
+
+              }
+
+              p {
                 font-size: 16px;
-                cursor: pointer;
-                border-radius: 16px;
-                background-color: rgba(43, 127, 255, 0.2);
-                border: 1px solid rgba(81, 162, 255, 0.5);
-                padding: 16px 48px;
+                color: $text-navbar-color;
+              }
+
+              #loginForm {
+                margin-top: 32px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 24px;
+
+                label {
+                  font-size: 14px;
+                }
+
+                #loginEmail,
+                #loginPassword {
+                  display: flex;
+                  flex-direction: row;
+                  justify-content: center;
+                  align-items: center;
+                  background-color: rgba(255, 255, 255, 0.05);
+                  border: 1px solid rgba(255, 255, 255, 0.2);
+                  box-sizing: border-box;
+                  border-radius: 16px;
+                  padding-left: 16px;
+
+                  input {
+                    font-size: 16px;
+                    border: none;
+                    background: transparent;
+                    padding: 16px 48px;
+                    color: $text-default;
+                  }
+                }
+
+                #loginButton {
+                  color: $text-default;
+                  font-size: 16px;
+                  cursor: pointer;
+                  border-radius: 16px;
+                  background-color: rgba(43, 127, 255, 0.2);
+                  border: 1px solid rgba(81, 162, 255, 0.5);
+                  padding: 16px 48px;
+                }
               }
             }
           }
@@ -2758,563 +2281,558 @@ html {
         display: flex;
       }
 
-      #cardFormations1,
-      #cardFormations2,
-      #cardFormations3,
-      #cardFormations4,
-      #cardFormations5, {
-        width: 1500px;
-        border-radius: 16px;
-        border: 0.8px solid rgba(255, 255, 255, 0.10);
-        background: rgba(255, 255, 255, 0.05);
+      .section-container {
+        display: flex;
+        flex-direction: column;
+        max-width: $default-max-width;
         margin: 0 auto;
-        @media (max-width: 1100px) {
-          width: 300px;
+        width: 100%;
+        gap: 24px;
+
+        #cardFormations1,
+        #cardFormations2,
+        #cardFormations3,
+        #cardFormations4,
+        #cardFormations5, {
+          width: 100%;
           border-radius: 16px;
+          box-sizing: border-box;
           border: 0.8px solid rgba(255, 255, 255, 0.10);
           background: rgba(255, 255, 255, 0.05);
-        }
-      }
-
-      #cardFormations1 {
-        display: flex;
-        flex-direction: row;
-        gap: 16px;
-        padding: 32.8px;
-        @media (max-width: 1100px) {
-          padding: 30px;
-          gap: 0;
-        }
-
-        #cardFormationsLeft {
-          #certificationBlueIcon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 24px;
-            height: 24px;
-            padding: 13px;
-            border-radius: 14px;
-            border: 0.8px solid rgba(81, 162, 255, 0.30);
-            background: rgba(43, 127, 255, 0.20);
-            @media (max-width: 1100px) {
-              display: none;
-            }
-          }
-        }
-
-        #cardFormationsRight {
-          gap: 16px;
+          margin: 0 auto;
           @media (max-width: 1100px) {
-            display: flex;
-            flex-direction: column;
-            width: 378.65px;
-            gap: 5px;
+            width: 300px;
+            border-radius: 16px;
+            border: 0.8px solid rgba(255, 255, 255, 0.10);
+            background: rgba(255, 255, 255, 0.05);
+          }
+        }
+
+        #cardFormations1 {
+          display: flex;
+          flex-direction: row;
+          gap: 16px;
+          padding: 32.8px;
+          @media (max-width: 1100px) {
+            padding: 30px;
+            gap: 0;
           }
 
-          #cardTitle {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 10px;
-
-            h1 {
-              font-size: 24px;
-              color: $text-default;
-              @media (max-width: 1100px) {
-                display: flex;
-                flex-direction: row;
-                align-items: start;
-                gap: 0;
-              }
-            }
-
-            li {
+          #cardFormationsLeft {
+            #certificationBlueIcon {
               display: flex;
-              width: 17%;
-              padding: 7px 12px;
-              justify-content: center;
               align-items: center;
-              list-style: none;
-              color: #51A2FF;
-              font-weight: normal;
-              font-size: 12px;
-              border-radius: 999px;
+              justify-content: center;
+              width: 24px;
+              height: 24px;
+              padding: 13px;
+              border-radius: 14px;
               border: 0.8px solid rgba(81, 162, 255, 0.30);
               background: rgba(43, 127, 255, 0.20);
-            }
-          }
-
-          h2 {
-            color: #51A2FF;
-            font-size: 16px;
-            font-weight: 400;
-            margin-top: 8px;
-          }
-
-          #infoFormations {
-            display: flex;
-            flex-direction: row;
-            gap: 4px;
-            margin-top: 16px;
-            @media (max-width: 1100px) {
-              flex-direction: column;
-            }
-
-            #FormationsDate {
-              display: flex;
-              flex-direction: row;
-              gap: 4px;
-
-              img {
-                width: 14px;
-                height: 14px;
-              }
-
-              p {
-                color: rgba(255, 255, 255, 0.50);
-              }
-            }
-
-            #FormationsLocalisation {
-              display: flex;
-              flex-direction: row;
-              gap: 4px;
-
-              img {
-                width: 14px;
-                height: 14px;
-              }
-
-              p {
-                color: rgba(255, 255, 255, 0.50);
-              }
-            }
-          }
-
-          #FormationsDescription {
-            margin-top: 8px;
-            color: rgba(255, 255, 255, 0.60);
-          }
-
-          #FormationsTache {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            margin-top: 23.5px;
-            @media (max-width: 1100px) {
-            }
-
-            li {
-              display: flex;
-              color: rgba(255, 255, 255, 0.60);
-              line-height: 22.75px;
               @media (max-width: 1100px) {
+                display: none;
               }
             }
           }
 
-          #FormationsSkill {
-            display: flex;
-            flex-direction: row;
-            gap: 8px;
-            margin-top: 12px;
+          #cardFormationsRight {
+            gap: 16px;
             @media (max-width: 1100px) {
               display: flex;
-              flex-wrap: wrap;
-              flex-direction: row;
+              flex-direction: column;
+              width: 378.65px;
               gap: 5px;
             }
 
-            li {
-              border-radius: 10px;
-              border: 0.8px solid rgba(81, 162, 255, 0.20);
-              background: rgba(43, 127, 255, 0.10);
-              padding: 4.8px 8px;
-              color: $text-default;
-              justify-content: center;
+            #cardTitle {
+              display: flex;
+              flex-direction: row;
               align-items: center;
-              list-style: none;
+              gap: 10px;
+
+              h1 {
+                font-size: 24px;
+                color: $text-default;
+                @media (max-width: 1100px) {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: start;
+                  gap: 0;
+                }
+              }
+
+              li {
+                display: flex;
+                width: 17%;
+                padding: 7px 12px;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+                color: #51A2FF;
+                font-weight: normal;
+                font-size: 12px;
+                border-radius: 999px;
+                border: 0.8px solid rgba(81, 162, 255, 0.30);
+                background: rgba(43, 127, 255, 0.20);
+              }
+            }
+
+            h2 {
+              color: #51A2FF;
+              font-size: 16px;
+              font-weight: 400;
+              margin-top: 8px;
+            }
+
+            #infoFormations {
+              display: flex;
+              flex-direction: row;
+              gap: 4px;
+              margin-top: 16px;
               @media (max-width: 1100px) {
-                padding: 10px 5px;
-                font-size: 15px;
+                flex-direction: column;
+              }
+
+              #FormationsDate {
+                display: flex;
+                flex-direction: row;
+                gap: 4px;
+
+                img {
+                  width: 14px;
+                  height: 14px;
+                }
+
+                p {
+                  color: rgba(255, 255, 255, 0.50);
+                }
+              }
+
+              #FormationsLocalisation {
+                display: flex;
+                flex-direction: row;
+                gap: 4px;
+
+                img {
+                  width: 14px;
+                  height: 14px;
+                }
+
+                p {
+                  color: rgba(255, 255, 255, 0.50);
+                }
+              }
+            }
+
+            #FormationsDescription {
+              margin-top: 8px;
+              color: rgba(255, 255, 255, 0.60);
+            }
+
+            #FormationsTache {
+              display: flex;
+              flex-direction: column;
+              gap: 4px;
+              margin-top: 23.5px;
+              @media (max-width: 1100px) {
+              }
+
+              li {
+                display: flex;
+                color: rgba(255, 255, 255, 0.60);
+                line-height: 22.75px;
+                @media (max-width: 1100px) {
+                }
+              }
+            }
+
+            #FormationsSkill {
+              display: flex;
+              flex-direction: row;
+              gap: 8px;
+              margin-top: 12px;
+              @media (max-width: 1100px) {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                gap: 5px;
+              }
+
+              li {
+                border-radius: 10px;
+                border: 0.8px solid rgba(81, 162, 255, 0.20);
+                background: rgba(43, 127, 255, 0.10);
+                padding: 4.8px 8px;
+                color: $text-default;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+                @media (max-width: 1100px) {
+                  padding: 10px 5px;
+                  font-size: 15px;
+                }
               }
             }
           }
         }
-      }
 
-      #cardFormations2 {
-        display: flex;
-        flex-direction: row;
-        gap: 16px;
-        padding: 32.8px;
-        @media (max-width: 1100px) {
-          padding: 30px;
-          gap: 0;
-        }
-
-        #cardFormationsLeft {
-          #certificationCyanIcon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 24px;
-            height: 24px;
-            padding: 13px;
-            border-radius: 14px;
-            border: 0.8px solid rgba(81, 162, 255, 0.30);
-            background: rgba(43, 127, 255, 0.20);
-            @media (max-width: 1100px) {
-              display: none;
-            }
-          }
-        }
-
-        #cardFormationsRight {
+        #cardFormations2 {
+          display: flex;
+          flex-direction: row;
           gap: 16px;
+          padding: 32.8px;
           @media (max-width: 1100px) {
-            display: flex;
-            flex-direction: column;
-            width: 378.65px;
-            gap: 5px;
+            padding: 30px;
+            gap: 0;
           }
 
-          #cardTitle {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 10px;
-
-            h1 {
-              font-size: 24px;
-              color: $text-default;
+          #cardFormationsLeft {
+            #certificationCyanIcon {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 24px;
+              height: 24px;
+              padding: 13px;
+              border-radius: 14px;
+              border: 0.8px solid rgba(81, 162, 255, 0.30);
+              background: rgba(43, 127, 255, 0.20);
               @media (max-width: 1100px) {
-                display: flex;
-                flex-direction: row;
-                align-items: start;
-                gap: 0;
+                display: none;
               }
             }
           }
 
-          h2 {
-            color: #00D3F2;
-            font-size: 16px;
-            font-weight: 400;
-            margin-top: 8px;
-          }
-
-          #infoFormations {
-            display: flex;
-            flex-direction: row;
-            gap: 4px;
-            margin-top: 16px;
+          #cardFormationsRight {
+            gap: 16px;
             @media (max-width: 1100px) {
+              display: flex;
               flex-direction: column;
-            }
-
-            #FormationsDate {
-              display: flex;
-              flex-direction: row;
-              gap: 4px;
-
-              img {
-                width: 14px;
-                height: 14px;
-              }
-
-              p {
-                color: rgba(255, 255, 255, 0.50);
-              }
-            }
-
-            #FormationsLocalisation {
-              display: flex;
-              flex-direction: row;
-              gap: 4px;
-
-              img {
-                width: 14px;
-                height: 14px;
-              }
-
-              p {
-                color: rgba(255, 255, 255, 0.50);
-              }
-            }
-          }
-
-          #FormationsDescription {
-            margin-top: 8px;
-            color: rgba(255, 255, 255, 0.60);
-          }
-
-          #FormationsTache {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            margin-top: 23.5px;
-            @media (max-width: 1100px) {
-            }
-
-            li {
-              display: flex;
-              color: rgba(255, 255, 255, 0.60);
-              line-height: 22.75px;
-              @media (max-width: 1100px) {
-              }
-            }
-          }
-
-          #FormationsSkill {
-            display: flex;
-            flex-direction: row;
-            gap: 8px;
-            margin-top: 12px;
-            @media (max-width: 1100px) {
-              display: flex;
-              flex-wrap: wrap;
-              flex-direction: row;
+              width: 378.65px;
               gap: 5px;
             }
 
-            li {
-              border-radius: 10px;
-              border: 0.8px solid rgba(0, 211, 242, 0.20);
-              background: rgba(0, 184, 219, 0.10);
-              padding: 4.8px 8px;
-              color: $text-default;
-              justify-content: center;
+            #cardTitle {
+              display: flex;
+              flex-direction: row;
               align-items: center;
-              list-style: none;
+              gap: 10px;
+
+              h1 {
+                font-size: 24px;
+                color: $text-default;
+                @media (max-width: 1100px) {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: start;
+                  gap: 0;
+                }
+              }
+            }
+
+            h2 {
+              color: #00D3F2;
+              font-size: 16px;
+              font-weight: 400;
+              margin-top: 8px;
+            }
+
+            #infoFormations {
+              display: flex;
+              flex-direction: row;
+              gap: 4px;
+              margin-top: 16px;
               @media (max-width: 1100px) {
-                padding: 10px 5px;
-                font-size: 15px;
+                flex-direction: column;
+              }
+
+              #FormationsDate {
+                display: flex;
+                flex-direction: row;
+                gap: 4px;
+
+                img {
+                  width: 14px;
+                  height: 14px;
+                }
+
+                p {
+                  color: rgba(255, 255, 255, 0.50);
+                }
+              }
+
+              #FormationsLocalisation {
+                display: flex;
+                flex-direction: row;
+                gap: 4px;
+
+                img {
+                  width: 14px;
+                  height: 14px;
+                }
+
+                p {
+                  color: rgba(255, 255, 255, 0.50);
+                }
+              }
+            }
+
+            #FormationsDescription {
+              margin-top: 8px;
+              color: rgba(255, 255, 255, 0.60);
+            }
+
+            #FormationsTache {
+              display: flex;
+              flex-direction: column;
+              gap: 4px;
+              margin-top: 23.5px;
+              @media (max-width: 1100px) {
+              }
+
+              li {
+                display: flex;
+                color: rgba(255, 255, 255, 0.60);
+                line-height: 22.75px;
+                @media (max-width: 1100px) {
+                }
+              }
+            }
+
+            #FormationsSkill {
+              display: flex;
+              flex-direction: row;
+              gap: 8px;
+              margin-top: 12px;
+              @media (max-width: 1100px) {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                gap: 5px;
+              }
+
+              li {
+                border-radius: 10px;
+                border: 0.8px solid rgba(0, 211, 242, 0.20);
+                background: rgba(0, 184, 219, 0.10);
+                padding: 4.8px 8px;
+                color: $text-default;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+                @media (max-width: 1100px) {
+                  padding: 10px 5px;
+                  font-size: 15px;
+                }
               }
             }
           }
         }
-      }
 
-      #cardFormations3 {
-        display: flex;
-        flex-direction: row;
-        gap: 16px;
-        padding: 32.8px;
-        @media (max-width: 1100px) {
-          padding: 30px;
-          gap: 0;
-        }
-
-        #cardFormationsLeft {
-          #certificationLimeGreenIcon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 24px;
-            height: 24px;
-            padding: 13px;
-            border-radius: 14px;
-            border: 0.8px solid rgba(5, 223, 114, 0.30);
-            background: rgba(0, 201, 80, 0.20);
-            @media (max-width: 1100px) {
-              display: none;
-            }
-          }
-        }
-
-        #cardFormationsRight {
+        #cardFormations3 {
+          display: flex;
+          flex-direction: row;
           gap: 16px;
+          padding: 32.8px;
           @media (max-width: 1100px) {
-            display: flex;
-            flex-direction: column;
-            width: 378.65px;
-            gap: 5px;
+            padding: 30px;
+            gap: 0;
           }
 
-
-          #cardTitle {
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-
-            h1 {
-              font-size: 24px;
-              color: $text-default;
+          #cardFormationsLeft {
+            #certificationLimeGreenIcon {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 24px;
+              height: 24px;
+              padding: 13px;
+              border-radius: 14px;
+              border: 0.8px solid rgba(5, 223, 114, 0.30);
+              background: rgba(0, 201, 80, 0.20);
               @media (max-width: 1100px) {
-                display: flex;
-                flex-direction: row;
-                align-items: start;
-                gap: 0;
+                display: none;
               }
             }
           }
 
-          h2 {
-            color: #05DF72;
-            font-size: 16px;
-            font-weight: 400;
-            margin-top: 8px;
-          }
-
-          #infoFormations {
-            display: flex;
-            flex-direction: row;
-            gap: 4px;
-            margin-top: 16px;
+          #cardFormationsRight {
+            gap: 16px;
             @media (max-width: 1100px) {
+              display: flex;
               flex-direction: column;
-            }
-
-            #FormationsDate {
-              display: flex;
-              flex-direction: row;
-              gap: 4px;
-
-              img {
-                width: 14px;
-                height: 14px;
-              }
-
-              p {
-                color: rgba(255, 255, 255, 0.50);
-              }
-            }
-
-            #FormationsLocalisation {
-              display: flex;
-              flex-direction: row;
-              gap: 4px;
-
-              img {
-                width: 14px;
-                height: 14px;
-              }
-
-              p {
-                color: rgba(255, 255, 255, 0.50);
-              }
-            }
-          }
-
-          #FormationsDescription {
-            color: rgba(255, 255, 255, 0.60);
-          }
-
-          #FormationsTache {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            margin-top: 23.5px;
-            @media (max-width: 1100px) {
-            }
-
-            li {
-              display: flex;
-              color: rgba(255, 255, 255, 0.60);
-              line-height: 22.75px;
-              @media (max-width: 1100px) {
-              }
-            }
-          }
-
-          #FormationsSkill {
-            display: flex;
-            flex-direction: row;
-            gap: 8px;
-            margin-top: 12px;
-            @media (max-width: 1100px) {
-              display: flex;
-              flex-wrap: wrap;
-              flex-direction: row;
+              width: 378.65px;
               gap: 5px;
             }
 
-            li {
-              border-radius: 10px;
-              border: 0.8px solid rgba(5, 223, 114, 0.20);
-              background: rgba(0, 201, 80, 0.10);
-              padding: 4.8px 8px;
-              color: $text-default;
-              justify-content: center;
-              align-items: center;
-              list-style: none;
-              @media (max-width: 1100px) {
-                padding: 10px 5px;
-                font-size: 15px;
-              }
-            }
-          }
-        }
-      }
 
-      #cardFormations4 {
-        display: flex;
-        flex-direction: row;
-        gap: 16px;
-        padding: 32.8px;
-        @media (max-width: 1100px) {
-          padding: 30px;
-          gap: 0;
-        }
-
-        #cardFormationsLeft {
-          #certificationOrangeIcon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 24px;
-            height: 24px;
-            padding: 13px;
-            border-radius: 14px;
-            border: 0.8px solid rgba(255, 137, 4, 0.30);
-            background: rgba(255, 105, 0, 0.20);
-            @media (max-width: 1100px) {
-              display: none;
-            }
-          }
-        }
-
-        #cardFormationsRight {
-          gap: 16px;
-
-          #cardTitle {
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            gap: 10px;
-
-            h1 {
-              font-size: 24px;
-              color: $text-default;
-              @media (max-width: 1100px) {
-                display: flex;
-                flex-direction: row;
-                align-items: start;
-                gap: 0;
-              }
-            }
-
-            li {
+            #cardTitle {
               display: flex;
               flex-direction: row;
-              width: 25%;
-              padding: 7px 12px;
-              justify-content: center;
+              gap: 10px;
+
+              h1 {
+                font-size: 24px;
+                color: $text-default;
+                @media (max-width: 1100px) {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: start;
+                  gap: 0;
+                }
+              }
+            }
+
+            h2 {
+              color: #05DF72;
+              font-size: 16px;
+              font-weight: 400;
+              margin-top: 8px;
+            }
+
+            #infoFormations {
+              display: flex;
+              flex-direction: row;
+              gap: 4px;
+              margin-top: 16px;
+              @media (max-width: 1100px) {
+                flex-direction: column;
+              }
+
+              #FormationsDate {
+                display: flex;
+                flex-direction: row;
+                gap: 4px;
+
+                img {
+                  width: 14px;
+                  height: 14px;
+                }
+
+                p {
+                  color: rgba(255, 255, 255, 0.50);
+                }
+              }
+
+              #FormationsLocalisation {
+                display: flex;
+                flex-direction: row;
+                gap: 4px;
+
+                img {
+                  width: 14px;
+                  height: 14px;
+                }
+
+                p {
+                  color: rgba(255, 255, 255, 0.50);
+                }
+              }
+            }
+
+            #FormationsDescription {
+              color: rgba(255, 255, 255, 0.60);
+            }
+
+            #FormationsTache {
+              display: flex;
+              flex-direction: column;
+              gap: 4px;
+              margin-top: 23.5px;
+              @media (max-width: 1100px) {
+              }
+
+              li {
+                display: flex;
+                color: rgba(255, 255, 255, 0.60);
+                line-height: 22.75px;
+                @media (max-width: 1100px) {
+                }
+              }
+            }
+
+            #FormationsSkill {
+              display: flex;
+              flex-direction: row;
+              gap: 8px;
+              margin-top: 12px;
+              @media (max-width: 1100px) {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                gap: 5px;
+              }
+
+              li {
+                border-radius: 10px;
+                border: 0.8px solid rgba(5, 223, 114, 0.20);
+                background: rgba(0, 201, 80, 0.10);
+                padding: 4.8px 8px;
+                color: $text-default;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+                @media (max-width: 1100px) {
+                  padding: 10px 5px;
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+        }
+
+        #cardFormations4 {
+          display: flex;
+          flex-direction: row;
+          gap: 16px;
+          padding: 32.8px;
+          @media (max-width: 1100px) {
+            padding: 30px;
+            gap: 0;
+          }
+
+          #cardFormationsLeft {
+            #certificationOrangeIcon {
+              display: flex;
               align-items: center;
-              list-style: none;
-              color: #FF8904;
-              font-weight: normal;
-              font-size: 12px;
-              border-radius: 999px;
+              justify-content: center;
+              width: 24px;
+              height: 24px;
+              padding: 13px;
+              border-radius: 14px;
               border: 0.8px solid rgba(255, 137, 4, 0.30);
               background: rgba(255, 105, 0, 0.20);
               @media (max-width: 1100px) {
+                display: none;
+              }
+            }
+          }
+
+          #cardFormationsRight {
+            gap: 16px;
+
+            #cardTitle {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              gap: 10px;
+
+              h1 {
+                font-size: 24px;
+                color: $text-default;
+                @media (max-width: 1100px) {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: start;
+                  gap: 0;
+                }
+              }
+
+              li {
                 display: flex;
                 flex-direction: row;
-                width: 100%;
-                padding: 7px 1px;
+                width: 25%;
+                padding: 7px 12px;
                 justify-content: center;
                 align-items: center;
                 list-style: none;
@@ -3324,259 +2842,273 @@ html {
                 border-radius: 999px;
                 border: 0.8px solid rgba(255, 137, 4, 0.30);
                 background: rgba(255, 105, 0, 0.20);
+                @media (max-width: 1100px) {
+                  display: flex;
+                  flex-direction: row;
+                  width: 100%;
+                  padding: 7px 1px;
+                  justify-content: center;
+                  align-items: center;
+                  list-style: none;
+                  color: #FF8904;
+                  font-weight: normal;
+                  font-size: 12px;
+                  border-radius: 999px;
+                  border: 0.8px solid rgba(255, 137, 4, 0.30);
+                  background: rgba(255, 105, 0, 0.20);
+                }
               }
             }
-          }
 
-          h2 {
-            color: #FF8904;
-            font-size: 16px;
-            font-weight: 400;
-            margin-top: 8px;
-          }
-
-          #infoFormations {
-            display: flex;
-            flex-direction: row;
-            gap: 4px;
-            margin-top: 16px;
-            @media (max-width: 1100px) {
-              flex-direction: column;
+            h2 {
+              color: #FF8904;
+              font-size: 16px;
+              font-weight: 400;
+              margin-top: 8px;
             }
 
-            #FormationsDate {
+            #infoFormations {
               display: flex;
               flex-direction: row;
               gap: 4px;
-
-              img {
-                width: 14px;
-                height: 14px;
-              }
-
-              p {
-                color: rgba(255, 255, 255, 0.50);
-              }
-            }
-
-            #FormationsLocalisation {
-              display: flex;
-              flex-direction: row;
-              gap: 4px;
-
-              img {
-                width: 14px;
-                height: 14px;
-              }
-
-              p {
-                color: rgba(255, 255, 255, 0.50);
-              }
-            }
-          }
-
-          #FormationsDescription {
-            color: rgba(255, 255, 255, 0.60);
-          }
-
-          #FormationsTache {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            margin-top: 23.5px;
-            @media (max-width: 1100px) {
-            }
-
-            li {
-              display: flex;
-              color: rgba(255, 255, 255, 0.60);
-              line-height: 22.75px;
+              margin-top: 16px;
               @media (max-width: 1100px) {
+                flex-direction: column;
               }
-            }
-          }
 
-          #FormationsSkill {
-            display: flex;
-            flex-direction: row;
-            gap: 8px;
-            margin-top: 12px;
-            @media (max-width: 1100px) {
-              display: flex;
-              flex-wrap: wrap;
-              flex-direction: row;
-              gap: 5px;
-            }
-
-            li {
-              border-radius: 10px;
-              border: 0.8px solid rgba(255, 137, 4, 0.20);
-              background: rgba(255, 105, 0, 0.10);
-              padding: 4.8px 8px;
-              color: $text-default;
-              justify-content: center;
-              align-items: center;
-              list-style: none;
-              @media (max-width: 1100px) {
-                padding: 10px 5px;
-                font-size: 15px;
-              }
-            }
-          }
-        }
-      }
-
-      #cardFormations5 {
-        display: flex;
-        flex-direction: row;
-        gap: 16px;
-        padding: 32.8px;
-        @media (max-width: 1100px) {
-          padding: 30px;
-          gap: 0;
-        }
-
-        #cardFormationsLeft {
-          #certificatRoseIcon {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 24px;
-            height: 24px;
-            padding: 13px;
-            border-radius: 14px;
-            border: 0.8px solid rgba(251, 100, 182, 0.30);
-            background: rgba(246, 51, 154, 0.20);
-            @media (max-width: 1100px) {
-              display: none;
-            }
-          }
-        }
-
-        #cardFormationsRight {
-          gap: 16px;
-          @media (max-width: 1100px) {
-            display: flex;
-            flex-direction: column;
-            width: 378.65px;
-            gap: 5px;
-          }
-
-          #cardTitle {
-            display: flex;
-            flex-direction: row;
-            gap: 10px;
-
-            h1 {
-              font-size: 24px;
-              color: $text-default;
-              @media (max-width: 1100px) {
+              #FormationsDate {
                 display: flex;
                 flex-direction: row;
-                align-items: start;
-                gap: 0;
-              }
-            }
-          }
+                gap: 4px;
 
-          h2 {
-            color: #FB64B6;
-            font-size: 16px;
-            font-weight: 400;
-            margin-top: 8px;
-          }
+                img {
+                  width: 14px;
+                  height: 14px;
+                }
 
-          #infoFormations {
-            display: flex;
-            flex-direction: row;
-            gap: 4px;
-            margin-top: 16px;
-            @media (max-width: 1100px) {
-              flex-direction: column;
-            }
-
-            #FormationsDate {
-              display: flex;
-              flex-direction: row;
-              gap: 4px;
-
-              img {
-                width: 14px;
-                height: 14px;
+                p {
+                  color: rgba(255, 255, 255, 0.50);
+                }
               }
 
-              p {
-                color: rgba(255, 255, 255, 0.50);
+              #FormationsLocalisation {
+                display: flex;
+                flex-direction: row;
+                gap: 4px;
+
+                img {
+                  width: 14px;
+                  height: 14px;
+                }
+
+                p {
+                  color: rgba(255, 255, 255, 0.50);
+                }
               }
             }
 
-            #FormationsLocalisation {
-              display: flex;
-              flex-direction: row;
-              gap: 4px;
-
-              img {
-                width: 14px;
-                height: 14px;
-              }
-
-              p {
-                color: rgba(255, 255, 255, 0.50);
-              }
-            }
-          }
-
-          #FormationsDescription {
-            color: rgba(255, 255, 255, 0.60);
-          }
-
-          #FormationsTache {
-            display: flex;
-            flex-direction: column;
-            gap: 4px;
-            margin-top: 23.5px;
-            @media (max-width: 1100px) {
-            }
-
-            li {
-              display: flex;
+            #FormationsDescription {
               color: rgba(255, 255, 255, 0.60);
-              line-height: 22.75px;
+            }
+
+            #FormationsTache {
+              display: flex;
+              flex-direction: column;
+              gap: 4px;
+              margin-top: 23.5px;
               @media (max-width: 1100px) {
               }
+
+              li {
+                display: flex;
+                color: rgba(255, 255, 255, 0.60);
+                line-height: 22.75px;
+                @media (max-width: 1100px) {
+                }
+              }
+            }
+
+            #FormationsSkill {
+              display: flex;
+              flex-direction: row;
+              gap: 8px;
+              margin-top: 12px;
+              @media (max-width: 1100px) {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                gap: 5px;
+              }
+
+              li {
+                border-radius: 10px;
+                border: 0.8px solid rgba(255, 137, 4, 0.20);
+                background: rgba(255, 105, 0, 0.10);
+                padding: 4.8px 8px;
+                color: $text-default;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+                @media (max-width: 1100px) {
+                  padding: 10px 5px;
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+        }
+
+        #cardFormations5 {
+          display: flex;
+          flex-direction: row;
+          gap: 16px;
+          padding: 32.8px;
+          @media (max-width: 1100px) {
+            padding: 30px;
+            gap: 0;
+          }
+
+          #cardFormationsLeft {
+            #certificatRoseIcon {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 24px;
+              height: 24px;
+              padding: 13px;
+              border-radius: 14px;
+              border: 0.8px solid rgba(251, 100, 182, 0.30);
+              background: rgba(246, 51, 154, 0.20);
+              @media (max-width: 1100px) {
+                display: none;
+              }
             }
           }
 
-          #FormationsSkill {
-            display: flex;
-            flex-direction: row;
-            gap: 8px;
-            margin-top: 12px;
+          #cardFormationsRight {
+            gap: 16px;
             @media (max-width: 1100px) {
               display: flex;
-              flex-wrap: wrap;
-              flex-direction: row;
+              flex-direction: column;
+              width: 378.65px;
               gap: 5px;
             }
 
-            li {
-              border-radius: 10px;
-              border: 0.8px solid rgba(251, 100, 182, 0.20);
-              background: rgba(246, 51, 154, 0.10);
-              padding: 4.8px 8px;
-              color: $text-default;
-              justify-content: center;
-              align-items: center;
-              list-style: none;
+            #cardTitle {
+              display: flex;
+              flex-direction: row;
+              gap: 10px;
+
+              h1 {
+                font-size: 24px;
+                color: $text-default;
+                @media (max-width: 1100px) {
+                  display: flex;
+                  flex-direction: row;
+                  align-items: start;
+                  gap: 0;
+                }
+              }
+            }
+
+            h2 {
+              color: #FB64B6;
+              font-size: 16px;
+              font-weight: 400;
+              margin-top: 8px;
+            }
+
+            #infoFormations {
+              display: flex;
+              flex-direction: row;
+              gap: 4px;
+              margin-top: 16px;
               @media (max-width: 1100px) {
-                padding: 10px 5px;
-                font-size: 15px;
+                flex-direction: column;
+              }
+
+              #FormationsDate {
+                display: flex;
+                flex-direction: row;
+                gap: 4px;
+
+                img {
+                  width: 14px;
+                  height: 14px;
+                }
+
+                p {
+                  color: rgba(255, 255, 255, 0.50);
+                }
+              }
+
+              #FormationsLocalisation {
+                display: flex;
+                flex-direction: row;
+                gap: 4px;
+
+                img {
+                  width: 14px;
+                  height: 14px;
+                }
+
+                p {
+                  color: rgba(255, 255, 255, 0.50);
+                }
+              }
+            }
+
+            #FormationsDescription {
+              color: rgba(255, 255, 255, 0.60);
+            }
+
+            #FormationsTache {
+              display: flex;
+              flex-direction: column;
+              gap: 4px;
+              margin-top: 23.5px;
+              @media (max-width: 1100px) {
+              }
+
+              li {
+                display: flex;
+                color: rgba(255, 255, 255, 0.60);
+                line-height: 22.75px;
+                @media (max-width: 1100px) {
+                }
+              }
+            }
+
+            #FormationsSkill {
+              display: flex;
+              flex-direction: row;
+              gap: 8px;
+              margin-top: 12px;
+              @media (max-width: 1100px) {
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: row;
+                gap: 5px;
+              }
+
+              li {
+                border-radius: 10px;
+                border: 0.8px solid rgba(251, 100, 182, 0.20);
+                background: rgba(246, 51, 154, 0.10);
+                padding: 4.8px 8px;
+                color: $text-default;
+                justify-content: center;
+                align-items: center;
+                list-style: none;
+                @media (max-width: 1100px) {
+                  padding: 10px 5px;
+                  font-size: 15px;
+                }
               }
             }
           }
         }
       }
-
     }
 
     #phraseDeFin {
@@ -3584,13 +3116,16 @@ html {
       flex-direction: row;
       align-items: center;
       justify-content: center;
-      margin: 64px auto 0 auto;
-      width: 1500px;
+      width: 100%;
+      margin: 64px auto;
       height: 97px;
+      max-width: 1200px;
+      box-sizing: border-box;
       gap: 16px;
       border-radius: 24px;
       border: 0.8px solid rgba(251, 100, 182, 0.20);
       background: linear-gradient(90deg, rgba(246, 51, 154, 0.10) 0%, rgba(173, 70, 255, 0.10) 100%);
+
       @media (max-width: 1100px) {
         width: 296px;
         padding: 0 32px 0 32px;
@@ -3610,6 +3145,10 @@ html {
           color: #C27AFF;
         }
       }
+    }
+
+    #phraseDeFin:hover {
+      border: 0.8px solid rgba(251, 100, 182, 0.75);
     }
 
     #contactTitle {
