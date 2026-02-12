@@ -3924,7 +3924,7 @@ html body #dashboard-body #messages-container #messages-container-titre #message
   font-size: 16px;
   line-height: 24px;
 }
-html body #dashboard-body #messages-container #messages {
+html body #dashboard-body #messages-container .messages {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -3938,16 +3938,27 @@ html body #dashboard-body #messages-container #messages {
   border: 1px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
 }
-html body #dashboard-body #messages-container #messages.has-messages {
-  display: flex;
-  flex-direction: row;
+html body #dashboard-body #messages-container .messages #messages-icon {
+  height: 48px;
+  width: 48px;
+}
+html body #dashboard-body #messages-container .messages #messages-notfound {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 16px;
+  line-height: 24px;
+}
+html body #dashboard-body #messages-container .has-messages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, auto);
   width: 100%;
+  flex-direction: row;
   gap: 16px;
   justify-content: center;
   border-radius: 16px;
   box-sizing: border-box;
 }
-html body #dashboard-body #messages-container #messages.has-messages .messages-card {
+html body #dashboard-body #messages-container .has-messages .messages-card {
   display: flex;
   width: 100%;
   height: 112px;
@@ -3960,20 +3971,20 @@ html body #dashboard-body #messages-container #messages.has-messages .messages-c
   border: 1px solid rgba(81, 162, 255, 0.3);
   background: rgba(43, 127, 255, 0.1);
 }
-html body #dashboard-body #messages-container #messages.has-messages .messages-card .messages-titre {
+html body #dashboard-body #messages-container .has-messages .messages-card .messages-titre {
   display: flex;
   flex-direction: row;
   align-items: center;
   border-radius: 16px;
   gap: 8px;
 }
-html body #dashboard-body #messages-container #messages.has-messages .messages-card .messages-titre .messages-nom {
+html body #dashboard-body #messages-container .has-messages .messages-card .messages-titre .messages-nom {
   color: rgb(255, 255, 255);
   font-size: 16px;
   font-style: normal;
   line-height: 24px; /* 150% */
 }
-html body #dashboard-body #messages-container #messages.has-messages .messages-card .messages-titre .messages-new {
+html body #dashboard-body #messages-container .has-messages .messages-card .messages-titre .messages-new {
   display: flex;
   width: 42.453px;
   height: 18px;
@@ -3985,38 +3996,29 @@ html body #dashboard-body #messages-container #messages.has-messages .messages-c
   background: #D4183D;
   color: rgb(255, 255, 255);
 }
-html body #dashboard-body #messages-container #messages.has-messages .messages-card .messages-content {
+html body #dashboard-body #messages-container .has-messages .messages-card .messages-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 8px;
 }
-html body #dashboard-body #messages-container #messages.has-messages .messages-card .messages-content .messages-sujet {
+html body #dashboard-body #messages-container .has-messages .messages-card .messages-content .messages-sujet {
   color: #51A2FF;
   font-size: 16px;
   font-style: normal;
   line-height: 24px;
 }
-html body #dashboard-body #messages-container #messages.has-messages .messages-card .messages-content .messages-contenu {
+html body #dashboard-body #messages-container .has-messages .messages-card .messages-content .messages-contenu {
   color: rgba(255, 255, 255, 0.5);
   font-size: 14px;
   font-style: normal;
   line-height: 20px;
 }
-html body #dashboard-body #messages-container #messages.has-messages .messages-card .messages-content .messages-temps {
+html body #dashboard-body #messages-container .has-messages .messages-card .messages-content .messages-temps {
   color: rgba(255, 255, 255, 0.4);
   font-size: 12px;
   font-style: normal;
   line-height: 16px;
-}
-html body #dashboard-body #messages-container #messages #messages-icon {
-  height: 48px;
-  width: 48px;
-}
-html body #dashboard-body #messages-container #messages #messages-notfound {
-  color: rgba(255, 255, 255, 0.6);
-  font-size: 16px;
-  line-height: 24px;
 }
 html body #dashboard-body #messages-container #messages-details {
   display: none;
