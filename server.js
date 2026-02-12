@@ -3,7 +3,7 @@ const path = require('path');
 const db = require('./database');
 const app = express();
 
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
 app.use(express.static(path.join(__dirname, 'public')));
@@ -19,7 +19,7 @@ app.post('/login', (req, res) => {
         db.query('SELECT * FROM users WHERE username = ? AND password = ?', [username, password], (error, results) => {
             if (error) {
                 console.error("Détail de l'erreur SQL :", error);
-                res.send('Erreur serveu');
+                res.send('Erreur serveur');
                 return;
             }
             if (results.length > 0) {
@@ -34,6 +34,39 @@ app.post('/login', (req, res) => {
         res.redirect('/login.html?error=1');
     }
 });
+app.post('/contact', (req, res) => {
+    const {nom, email, sujet, contenu} = req.body;
+
+    if (nom && email && sujet && contenu) {
+        db.query('INSERT INTO messages (nom, email, sujet, contenu) VALUES (?, ?, ?, ?)', [nom, email, sujet, contenu], (error, results) => {
+            if (error) {
+                console.error("Détail de l'erreur SQL :", error);
+                return res.send('Erreur serveur');
+            }
+            if (results.affectedRows > 0) {
+                console.log(error + "sent true");
+                res.redirect('index.html?sent=true');
+            } else {
+                console.log(error + "else if error");
+                res.redirect('index.html?error=1');
+            }
+        });
+    } else {
+        console.log("else error");
+        res.redirect('index.html?error=1');
+    }
+});
+
+app.get('/api/messages', (req, res) => {
+    db.query('SELECT * FROM messages ORDER BY date_envoi DESC', (error, results) => {
+        if (error) {
+            console.error("Erreur lors de la récupération :", error);
+            return res.status(500).json({error: "Erreur serveur"});
+        }
+
+        res.json(results);
+    })
+})
 
 const PORT = 3000;
 app.listen(PORT, () => {
