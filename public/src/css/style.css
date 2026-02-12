@@ -2907,22 +2907,39 @@ html body #contactTitle p {
 html body #contactSection {
   display: flex;
   flex-direction: row;
-  gap: 85px;
   align-items: start;
   justify-content: center;
-  margin: 80px 0;
+  gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
+  margin: 80px auto;
 }
 @media (max-width: 1100px) {
   html body #contactSection {
-    display: none;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin: 0px 0;
+    box-sizing: border-box;
   }
 }
-html body #contactSection #contactLeftMainContent {
+html body #contactSection .section-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 auto;
+  width: 100%;
+  gap: 87px;
+  box-sizing: border-box;
+}
+html body #contactSection .section-container #contactLeftMainContent {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
-html body #contactSection #contactLeftMainContent #talkWithYouContent {
+html body #contactSection .section-container #contactLeftMainContent #talkWithYouContent {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -2932,27 +2949,46 @@ html body #contactSection #contactLeftMainContent #talkWithYouContent {
   border: 0.8px solid rgba(255, 255, 255, 0.1);
   background: linear-gradient(135deg, rgba(43, 127, 255, 0.1) 0%, rgba(173, 70, 255, 0.1) 100%);
 }
-html body #contactSection #contactLeftMainContent #talkWithYouContent #talkWithYou {
+html body #contactSection .section-container #contactLeftMainContent #talkWithYouContent #talkWithYou {
   display: flex;
   flex-direction: column;
   gap: 8px;
   justify-content: start;
 }
-html body #contactSection #contactLeftMainContent #talkWithYouContent #talkWithYou h1 {
+@media (max-width: 1100px) {
+  html body #contactSection .section-container #contactLeftMainContent #talkWithYouContent #talkWithYou {
+    display: flex;
+    width: 100%;
+    background: red;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+}
+html body #contactSection .section-container #contactLeftMainContent #talkWithYouContent #talkWithYou h1 {
   color: rgb(255, 255, 255);
   font-size: 30px;
 }
-html body #contactSection #contactLeftMainContent #talkWithYouContent #talkWithYou p {
+html body #contactSection .section-container #contactLeftMainContent #talkWithYouContent #talkWithYou p {
   color: rgba(255, 255, 255, 0.6);
   font-size: 16px;
 }
-html body #contactSection #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo {
+html body #contactSection .section-container #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo {
   display: flex;
   flex-direction: column;
   gap: 16px;
   margin-top: 24px;
 }
-html body #contactSection #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #mail {
+@media (max-width: 1100px) {
+  html body #contactSection .section-container #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo {
+    display: flex;
+    width: 100%;
+    background: cyan;
+    justify-content: center;
+    box-sizing: border-box;
+  }
+}
+html body #contactSection .section-container #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #mail {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -2962,7 +2998,7 @@ html body #contactSection #contactLeftMainContent #talkWithYouContent #talkWithY
   background: rgba(255, 255, 255, 0.05);
   padding: 16px;
 }
-html body #contactSection #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #mail img {
+html body #contactSection .section-container #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #mail img {
   display: flex;
   width: 24px;
   height: 24px;
@@ -2971,21 +3007,21 @@ html body #contactSection #contactLeftMainContent #talkWithYouContent #talkWithY
   border: 0.8px solid rgba(81, 162, 255, 0.3);
   background: rgba(43, 127, 255, 0.2);
 }
-html body #contactSection #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #mail #mailText {
+html body #contactSection .section-container #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #mail #mailText {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-html body #contactSection #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #mail #mailText h1 {
+html body #contactSection .section-container #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #mail #mailText h1 {
   font-size: 12px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.5);
 }
-html body #contactSection #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #mail #mailText p {
+html body #contactSection .section-container #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #mail #mailText p {
   font-size: 14px;
   color: rgb(255, 255, 255);
 }
-html body #contactSection #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #telephone {
+html body #contactSection .section-container #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #telephone {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -2995,7 +3031,7 @@ html body #contactSection #contactLeftMainContent #talkWithYouContent #talkWithY
   background: rgba(255, 255, 255, 0.05);
   padding: 16px;
 }
-html body #contactSection #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #telephone img {
+html body #contactSection .section-container #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #telephone img {
   display: flex;
   width: 24px;
   height: 24px;
@@ -3004,21 +3040,21 @@ html body #contactSection #contactLeftMainContent #talkWithYouContent #talkWithY
   border: 0.8px solid rgba(194, 122, 255, 0.3);
   background: rgba(173, 70, 255, 0.2);
 }
-html body #contactSection #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #telephone #telephoneText {
+html body #contactSection .section-container #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #telephone #telephoneText {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-html body #contactSection #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #telephone #telephoneText h1 {
+html body #contactSection .section-container #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #telephone #telephoneText h1 {
   font-size: 12px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.5);
 }
-html body #contactSection #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #telephone #telephoneText p {
+html body #contactSection .section-container #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #telephone #telephoneText p {
   font-size: 14px;
   color: rgb(255, 255, 255);
 }
-html body #contactSection #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #localisation {
+html body #contactSection .section-container #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #localisation {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -3028,7 +3064,7 @@ html body #contactSection #contactLeftMainContent #talkWithYouContent #talkWithY
   background: rgba(255, 255, 255, 0.05);
   padding: 16px;
 }
-html body #contactSection #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #localisation img {
+html body #contactSection .section-container #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #localisation img {
   display: flex;
   width: 24px;
   height: 24px;
@@ -3037,43 +3073,43 @@ html body #contactSection #contactLeftMainContent #talkWithYouContent #talkWithY
   border: 0.8px solid rgba(0, 211, 242, 0.3);
   background: rgba(0, 184, 219, 0.2);
 }
-html body #contactSection #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #localisation #localisationText {
+html body #contactSection .section-container #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #localisation #localisationText {
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-html body #contactSection #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #localisation #localisationText h1 {
+html body #contactSection .section-container #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #localisation #localisationText h1 {
   font-size: 12px;
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.5);
 }
-html body #contactSection #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #localisation #localisationText p {
+html body #contactSection .section-container #contactLeftMainContent #talkWithYouContent #talkWithYou #contactInfo #localisation #localisationText p {
   font-size: 14px;
   color: rgb(255, 255, 255);
 }
-html body #contactSection #contactLeftMainContent #myLinkContent {
+html body #contactSection .section-container #contactLeftMainContent #myLinkContent {
   border-radius: 24px;
   border: 0.8px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
   padding: 24px;
   width: 100%;
 }
-html body #contactSection #contactLeftMainContent #myLinkContent #myLink {
+html body #contactSection .section-container #contactLeftMainContent #myLinkContent #myLink {
   display: flex;
   flex-direction: column;
   padding: 25px;
   gap: 16px;
 }
-html body #contactSection #contactLeftMainContent #myLinkContent #myLink p {
+html body #contactSection .section-container #contactLeftMainContent #myLinkContent #myLink p {
   color: rgb(255, 255, 255);
   font-size: 18px;
 }
-html body #contactSection #contactLeftMainContent #myLinkContent #myLink #links {
+html body #contactSection .section-container #contactLeftMainContent #myLinkContent #myLink #links {
   display: flex;
   flex-direction: row;
   gap: 12px;
 }
-html body #contactSection #contactLeftMainContent #myLinkContent #myLink #links li {
+html body #contactSection .section-container #contactLeftMainContent #myLinkContent #myLink #links li {
   display: flex;
   align-items: center;
   padding: 16px 42px;
@@ -3081,7 +3117,7 @@ html body #contactSection #contactLeftMainContent #myLinkContent #myLink #links 
   border: 0.8px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
 }
-html body #contactSection #contactLeftMainContent #myStatusContent {
+html body #contactSection .section-container #contactLeftMainContent #myStatusContent {
   display: flex;
   flex-direction: column;
   padding: 24px;
@@ -3090,13 +3126,13 @@ html body #contactSection #contactLeftMainContent #myStatusContent {
   border: 0.8px solid rgba(255, 137, 4, 0.2);
   background: linear-gradient(135deg, rgba(255, 105, 0, 0.1) 0%, rgba(254, 154, 0, 0.1) 100%);
 }
-html body #contactSection #contactLeftMainContent #myStatusContent #myStatus {
+html body #contactSection .section-container #contactLeftMainContent #myStatusContent #myStatus {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 16px;
 }
-html body #contactSection #contactLeftMainContent #myStatusContent #myStatus #messageOrangeIcon {
+html body #contactSection .section-container #contactLeftMainContent #myStatusContent #myStatus #messageOrangeIcon {
   display: flex;
   width: 24px;
   height: 24px;
@@ -3105,12 +3141,12 @@ html body #contactSection #contactLeftMainContent #myStatusContent #myStatus #me
   border: 0.8px solid rgba(255, 137, 4, 0.3);
   background: rgba(255, 105, 0, 0.2);
 }
-html body #contactSection #contactLeftMainContent #myStatusContent #myStatus #myStatusText {
+html body #contactSection .section-container #contactLeftMainContent #myStatusContent #myStatus #myStatusText {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-html body #contactSection #contactLeftMainContent #myStatusContent #myStatus #myStatusText li {
+html body #contactSection .section-container #contactLeftMainContent #myStatusContent #myStatus #myStatusText li {
   display: flex;
   align-items: center;
   list-style: none;
@@ -3118,7 +3154,7 @@ html body #contactSection #contactLeftMainContent #myStatusContent #myStatus #my
   font-size: 16px;
   gap: 8px;
 }
-html body #contactSection #contactLeftMainContent #myStatusContent #myStatus #myStatusText li #circlePointOrageIcon {
+html body #contactSection .section-container #contactLeftMainContent #myStatusContent #myStatus #myStatusText li #circlePointOrageIcon {
   width: 8px;
   height: 8px;
   animation: bounce 2s ease-in-out infinite;
@@ -3134,52 +3170,53 @@ html body #contactSection #contactLeftMainContent #myStatusContent #myStatus #my
     transform: scale(1);
   }
 }
-html body #contactSection #contactLeftMainContent #myStatusContent #myStatus #myStatusText p {
+html body #contactSection .section-container #contactLeftMainContent #myStatusContent #myStatus #myStatusText p {
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
 }
-html body #contactSection #contactRightMainContent {
+html body #contactSection .section-container #contactRightMainContent {
   display: flex;
   flex-direction: column;
-  justify-content: end;
+  justify-content: center;
   align-items: center;
   border-radius: 24px;
   padding: 40px;
+  gap: 50px;
   border: 0.8px solid rgba(255, 255, 255, 0.1);
   background: rgba(255, 255, 255, 0.05);
 }
-html body #contactSection #contactRightMainContent #contactPart {
+html body #contactSection .section-container #contactRightMainContent #contactPart {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-html body #contactSection #contactRightMainContent #contactPart h1 {
+html body #contactSection .section-container #contactRightMainContent #contactPart h1 {
   color: rgb(255, 255, 255);
   font-size: 30px;
 }
-html body #contactSection #contactRightMainContent #contactPart p {
+html body #contactSection .section-container #contactRightMainContent #contactPart p {
   color: rgba(255, 255, 255, 0.6);
   font-size: 16px;
   margin-bottom: 24px;
 }
-html body #contactSection #contactRightMainContent #contactPart #contactForm {
+html body #contactSection .section-container #contactRightMainContent #contactPart #contactForm {
   display: flex;
   flex-direction: column;
   gap: 24px;
 }
-html body #contactSection #contactRightMainContent #contactPart #contactForm #contactFormName {
+html body #contactSection .section-container #contactRightMainContent #contactPart #contactForm #contactFormName {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-html body #contactSection #contactRightMainContent #contactPart #contactForm #contactFormName label {
+html body #contactSection .section-container #contactRightMainContent #contactPart #contactForm #contactFormName label {
   color: rgb(255, 255, 255);
 }
-html body #contactSection #contactRightMainContent #contactPart #contactForm #contactFormName label #contactFormRequired {
+html body #contactSection .section-container #contactRightMainContent #contactPart #contactForm #contactFormName label #contactFormRequired {
   color: #FF6467;
   font-weight: bolder;
 }
-html body #contactSection #contactRightMainContent #contactPart #contactForm #contactFormName #name {
+html body #contactSection .section-container #contactRightMainContent #contactPart #contactForm #contactFormName #name {
   border-radius: 14px;
   border: 0.8px solid rgba(255, 255, 255, 0.2);
   background: rgba(255, 255, 255, 0.05);
@@ -3188,23 +3225,23 @@ html body #contactSection #contactRightMainContent #contactPart #contactForm #co
   color: rgb(255, 255, 255);
   transition: all 0.15s ease-in-out;
 }
-html body #contactSection #contactRightMainContent #contactPart #contactForm #contactFormName #name:focus {
+html body #contactSection .section-container #contactRightMainContent #contactPart #contactForm #contactFormName #name:focus {
   border-color: rgb(255, 255, 255);
   box-shadow: rgb(255, 255, 255) outset;
 }
-html body #contactSection #contactRightMainContent #contactPart #contactForm #contactFormEmail {
+html body #contactSection .section-container #contactRightMainContent #contactPart #contactForm #contactFormEmail {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-html body #contactSection #contactRightMainContent #contactPart #contactForm #contactFormEmail label {
+html body #contactSection .section-container #contactRightMainContent #contactPart #contactForm #contactFormEmail label {
   color: rgb(255, 255, 255);
 }
-html body #contactSection #contactRightMainContent #contactPart #contactForm #contactFormEmail label #contactFormRequired {
+html body #contactSection .section-container #contactRightMainContent #contactPart #contactForm #contactFormEmail label #contactFormRequired {
   color: #FF6467;
   font-weight: bolder;
 }
-html body #contactSection #contactRightMainContent #contactPart #contactForm #contactFormEmail #email {
+html body #contactSection .section-container #contactRightMainContent #contactPart #contactForm #contactFormEmail #email {
   border-radius: 14px;
   border: 0.8px solid rgba(255, 255, 255, 0.2);
   background: rgba(255, 255, 255, 0.05);
@@ -3213,23 +3250,23 @@ html body #contactSection #contactRightMainContent #contactPart #contactForm #co
   color: rgb(255, 255, 255);
   transition: all 0.15s ease-in-out;
 }
-html body #contactSection #contactRightMainContent #contactPart #contactForm #contactFormEmail #email:focus {
+html body #contactSection .section-container #contactRightMainContent #contactPart #contactForm #contactFormEmail #email:focus {
   border-color: rgb(255, 255, 255);
   box-shadow: rgb(255, 255, 255) outset;
 }
-html body #contactSection #contactRightMainContent #contactPart #contactForm #contactFormTopic {
+html body #contactSection .section-container #contactRightMainContent #contactPart #contactForm #contactFormTopic {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-html body #contactSection #contactRightMainContent #contactPart #contactForm #contactFormTopic label {
+html body #contactSection .section-container #contactRightMainContent #contactPart #contactForm #contactFormTopic label {
   color: rgb(255, 255, 255);
 }
-html body #contactSection #contactRightMainContent #contactPart #contactForm #contactFormTopic label #contactFormRequired {
+html body #contactSection .section-container #contactRightMainContent #contactPart #contactForm #contactFormTopic label #contactFormRequired {
   color: #FF6467;
   font-weight: bolder;
 }
-html body #contactSection #contactRightMainContent #contactPart #contactForm #contactFormTopic #topic {
+html body #contactSection .section-container #contactRightMainContent #contactPart #contactForm #contactFormTopic #topic {
   border-radius: 14px;
   border: 0.8px solid rgba(255, 255, 255, 0.2);
   background: rgba(255, 255, 255, 0.05);
@@ -3238,23 +3275,23 @@ html body #contactSection #contactRightMainContent #contactPart #contactForm #co
   color: rgb(255, 255, 255);
   transition: all 0.15s ease-in-out;
 }
-html body #contactSection #contactRightMainContent #contactPart #contactForm #contactFormTopic #topic:focus {
+html body #contactSection .section-container #contactRightMainContent #contactPart #contactForm #contactFormTopic #topic:focus {
   border-color: rgb(255, 255, 255);
   box-shadow: rgb(255, 255, 255) outset;
 }
-html body #contactSection #contactRightMainContent #contactPart #contactForm #contactFormMessage {
+html body #contactSection .section-container #contactRightMainContent #contactPart #contactForm #contactFormMessage {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-html body #contactSection #contactRightMainContent #contactPart #contactForm #contactFormMessage label {
+html body #contactSection .section-container #contactRightMainContent #contactPart #contactForm #contactFormMessage label {
   color: rgb(255, 255, 255);
 }
-html body #contactSection #contactRightMainContent #contactPart #contactForm #contactFormMessage label #contactFormRequired {
+html body #contactSection .section-container #contactRightMainContent #contactPart #contactForm #contactFormMessage label #contactFormRequired {
   color: #FF6467;
   font-weight: bolder;
 }
-html body #contactSection #contactRightMainContent #contactPart #contactForm #contactFormMessage #message {
+html body #contactSection .section-container #contactRightMainContent #contactPart #contactForm #contactFormMessage #message {
   border-radius: 14px;
   border: 0.8px solid rgba(255, 255, 255, 0.2);
   background: rgba(255, 255, 255, 0.05);
@@ -3263,11 +3300,11 @@ html body #contactSection #contactRightMainContent #contactPart #contactForm #co
   color: rgb(255, 255, 255);
   transition: all 0.15s ease-in-out;
 }
-html body #contactSection #contactRightMainContent #contactPart #contactForm #contactFormMessage #message:focus {
+html body #contactSection .section-container #contactRightMainContent #contactPart #contactForm #contactFormMessage #message:focus {
   border-color: rgb(255, 255, 255);
   box-shadow: rgb(255, 255, 255) outset;
 }
-html body #contactSection #contactRightMainContent #contactPart #contactForm #contactFormButtons {
+html body #contactSection .section-container #contactRightMainContent #contactPart #contactForm #contactFormButtons {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -3277,7 +3314,7 @@ html body #contactSection #contactRightMainContent #contactPart #contactForm #co
   background: linear-gradient(90deg, #2B7FFF 0%, #AD46FF 100%);
   box-shadow: 0 10px 15px -3px rgba(43, 127, 255, 0.2), 0 4px 6px -4px rgba(43, 127, 255, 0.2);
 }
-html body #contactSection #contactRightMainContent #contactPart #contactForm #contactFormButtons button {
+html body #contactSection .section-container #contactRightMainContent #contactPart #contactForm #contactFormButtons button {
   cursor: pointer;
   padding: 11px 200px;
   display: flex;
@@ -3288,11 +3325,11 @@ html body #contactSection #contactRightMainContent #contactPart #contactForm #co
   gap: 16px;
   font-size: 16px;
 }
-html body #contactSection #contactRightMainContent #contactPart #contactForm #contactFormButtons button img {
+html body #contactSection .section-container #contactRightMainContent #contactPart #contactForm #contactFormButtons button img {
   height: 16px;
   width: 16px;
 }
-html body #contactSection #contactRightMainContent #contactPart #contactForm #message-envoyé-p {
+html body #contactSection .section-container #contactRightMainContent #contactPart #contactForm #message-envoyé-p {
   display: none;
   flex-direction: row;
   align-items: center;
@@ -3304,7 +3341,7 @@ html body #contactSection #contactRightMainContent #contactPart #contactForm #me
   border: 0.8px solid rgba(85, 255, 0, 0.1);
   background: rgba(85, 255, 0, 0.1);
 }
-html body #contactSection #contactRightMainContent #contactPart #contactForm #message-no-envoyé-p {
+html body #contactSection .section-container #contactRightMainContent #contactPart #contactForm #message-no-envoyé-p {
   display: none;
   flex-direction: row;
   align-items: center;
@@ -3316,7 +3353,7 @@ html body #contactSection #contactRightMainContent #contactPart #contactForm #me
   border: 0.8px solid rgba(255, 0, 0, 0.1);
   background: rgba(255, 0, 0, 0.1);
 }
-html body #contactSection #contactRightMainContent #contactPart p {
+html body #contactSection .section-container #contactRightMainContent #contactPart p {
   color: rgba(255, 255, 255, 0.4);
   font-size: 12px;
   padding: 10px;

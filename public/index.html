@@ -622,89 +622,90 @@
 </div>
 
 <div id="contactSection">
-    <div id="contactLeftMainContent">
-        <div id="talkWithYouContent">
-            <div id="talkWithYou">
-                <h1>Parlons ensemble</h1>
-                <p>Je suis disponible pour discuter de vos projets et opportunités.</p>
-                <div id="contactInfo">
-                    <div id="mail">
-                        <img src="src/images/icons/mailBueIcon.svg">
-                        <div id="mailText">
-                            <h1>mail</h1>
-                            <p>sacha.laville.pro@gmail.com</p>
+    <div class="section-container">
+        <div id="contactLeftMainContent">
+            <div id="talkWithYouContent">
+                <div id="talkWithYou">
+                    <h1>Parlons ensemble</h1>
+                    <p>Je suis disponible pour discuter de vos projets et opportunités.</p>
+                    <div id="contactInfo">
+                        <div id="mail">
+                            <img src="src/images/icons/mailBueIcon.svg">
+                            <div id="mailText">
+                                <h1>mail</h1>
+                                <p>sacha.laville.pro@gmail.com</p>
+                            </div>
                         </div>
-                    </div>
-                    <div id="telephone">
-                        <img src="src/images/icons/phonePurpleIcon.svg">
-                        <div id="telephoneText">
-                            <h1>telephone</h1>
-                            <p>+33 777235070</p>
+                        <div id="telephone">
+                            <img src="src/images/icons/phonePurpleIcon.svg">
+                            <div id="telephoneText">
+                                <h1>telephone</h1>
+                                <p>+33 777235070</p>
+                            </div>
                         </div>
-                    </div>
-                    <div id="localisation">
-                        <img src="src/images/icons/localisationCyanIcon.svg">
-                        <div id="localisationText">
-                            <h1>localisation</h1>
-                            <p>Lacroix-Saint-Ouen, France</p>
+                        <div id="localisation">
+                            <img src="src/images/icons/localisationCyanIcon.svg">
+                            <div id="localisationText">
+                                <h1>localisation</h1>
+                                <p>Lacroix-Saint-Ouen, France</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="myLinkContent">
-            <div id="myLink">
-                <p>Retrouver-moi sur</p>
-                <div id="links">
-                    <li><a href="https://github.com/0Sacha"><img src="src/images/icons/github-light-icon.svg"></a>
-                    </li>
-                    <li><a href="https://www.linkedin.com/in/sachalaville/"><img
-                            src="src/images/icons/linkedin-light-icon.svg"></a></li>
-                    <li><a href="mailto:sacha_laville_promeo@outlook.com"><img
-                            src="src/images/icons/mailto-light-icon.svg"></a></li>
+            <div id="myLinkContent">
+                <div id="myLink">
+                    <p>Retrouver-moi sur</p>
+                    <div id="links">
+                        <li><a href="https://github.com/0Sacha"><img src="src/images/icons/github-light-icon.svg"></a>
+                        </li>
+                        <li><a href="https://www.linkedin.com/in/sachalaville/"><img
+                                src="src/images/icons/linkedin-light-icon.svg"></a></li>
+                        <li><a href="mailto:sacha_laville_promeo@outlook.com"><img
+                                src="src/images/icons/mailto-light-icon.svg"></a></li>
+                    </div>
+                </div>
+            </div>
+            <div id="myStatusContent">
+                <div id="myStatus">
+                    <img id="messageOrangeIcon" src="src/images/icons/messageOrangeIcon.svg">
+                    <div id="myStatusText">
+                        <li><img id="circlePointOrageIcon" src="src/images/icons/circleOrangeIcon.svg">En poste</li>
+                        <p>Acctuellement en Alternace. Disponible pour des projet freelance ou collaborations</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div id="myStatusContent">
-            <div id="myStatus">
-                <img id="messageOrangeIcon" src="src/images/icons/messageOrangeIcon.svg">
-                <div id="myStatusText">
-                    <li><img id="circlePointOrageIcon" src="src/images/icons/circleOrangeIcon.svg">En poste</li>
-                    <p>Acctuellement en Alternace. Disponible pour des projet freelance ou collaborations</p>
-                </div>
+        <div id="contactRightMainContent">
+            <div id="contactPart">
+                <h1>Envoyez-moi un message</h1>
+                <p>Remplissez le formulaire ci-dessous et je vous repondrai dans le splus brefs délais.</p>
+                <form id="contactForm" method="POST" action="/contact">
+                    <div id="contactFormName">
+                        <label for="nom">Nom complet <span id="contactFormRequired">*</span></label>
+                        <input type="text" name="nom" id="name" required placeholder="Votre nom">
+                    </div>
+                    <div id="contactFormEmail">
+                        <label for="email">Adresse email <span id="contactFormRequired">*</span></label>
+                        <input type="email" name="email" id="email" required placeholder="votre.email@exemple.com">
+                    </div>
+                    <div id="contactFormTopic">
+                        <label for="message">Sujet <span id="contactFormRequired">*</span></label>
+                        <textarea name="sujet" id="topic" required
+                                  placeholder="De quoi souhaitez-vous parler ?"></textarea>
+                    </div>
+                    <div id="contactFormMessage">
+                        <label for="contenu">Message <span id="contactFormRequired">*</span></label>
+                        <textarea name="contenu" id="message" required placeholder="Votre message..."></textarea>
+                    </div>
+                    <div id="contactFormButtons">
+                        <button type="submit"><img src="src/images/icons/paperPlaneIcon.svg">Envoyez le message</button>
+                    </div>
+                    <p id="message-envoyé-p">Votre message a bien été envoyé</p>
+                    <p id="message-no-envoyé-p">Votre message n'a pas pu être envoyé</p>
+                </form>
+                <p>En envoyant ce formulaire, vous acceptez que vos donnée soient utilisées pour vous recontacter.</p>
             </div>
-        </div>
-
-    </div>
-    <div id="contactRightMainContent">
-        <div id="contactPart">
-            <h1>Envoyez-moi un message</h1>
-            <p>Remplissez le formulaire ci-dessous et je vous repondrai dans le splus brefs délais.</p>
-            <form id="contactForm" method="POST" action="/contact">
-                <div id="contactFormName">
-                    <label for="nom">Nom complet <span id="contactFormRequired">*</span></label>
-                    <input type="text" name="nom" id="name" required placeholder="Votre nom">
-                </div>
-                <div id="contactFormEmail">
-                    <label for="email">Adresse email <span id="contactFormRequired">*</span></label>
-                    <input type="email" name="email" id="email" required placeholder="votre.email@exemple.com">
-                </div>
-                <div id="contactFormTopic">
-                    <label for="message">Sujet <span id="contactFormRequired">*</span></label>
-                    <textarea name="sujet" id="topic" required
-                              placeholder="De quoi souhaitez-vous parler ?"></textarea>
-                </div>
-                <div id="contactFormMessage">
-                    <label for="contenu">Message <span id="contactFormRequired">*</span></label>
-                    <textarea name="contenu" id="message" required placeholder="Votre message..."></textarea>
-                </div>
-                <div id="contactFormButtons">
-                    <button type="submit"><img src="src/images/icons/paperPlaneIcon.svg">Envoyez le message</button>
-                </div>
-                <p id="message-envoyé-p">Votre message a bien été envoyé</p>
-                <p id="message-no-envoyé-p">Votre message n'a pas pu être envoyé</p>
-            </form>
-            <p>En envoyant ce formulaire, vous acceptez que vos donnée soient utilisées pour vous recontacter.</p>
         </div>
     </div>
 </div>
