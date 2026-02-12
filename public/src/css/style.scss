@@ -3234,6 +3234,7 @@ html {
                 justify-content: center;
                 box-sizing: border-box;
               }
+
               h1 {
                 color: $text-default;
                 font-size: 30px;
@@ -3256,6 +3257,7 @@ html {
                   justify-content: center;
                   box-sizing: border-box;
                 }
+
                 #mail {
                   display: flex;
                   flex-direction: row;
@@ -3489,6 +3491,7 @@ html {
           gap: 50px;
           border: 0.8px solid rgba(255, 255, 255, 0.10);
           background: rgba(255, 255, 255, 0.05);
+
           #contactPart {
             display: flex;
             flex-direction: column;
@@ -4460,12 +4463,14 @@ html {
             font-size: 16px;
             line-height: 24px;
           }
+
+          .messages-details {
+            display: none;
+          }
         }
 
         .has-messages {
-          display: grid;
-          grid-template-columns: repeat(3, 1fr);
-          grid-template-rows: repeat(2, auto);
+          display: flex;
           width: 100%;
           flex-direction: row;
           gap: 16px;
@@ -4473,104 +4478,272 @@ html {
           border-radius: 16px;
           box-sizing: border-box;
 
-          .messages-card {
+          #messages-icon, #messages-notfound {
+            display: none;
+          }
+
+          .messages-card-section {
             display: flex;
-            width: 100%;
-            height: 112px;
-            padding: 25px;
             flex-direction: column;
-            align-items: flex-start;
-            justify-content: center;
-            border-radius: 16px;
-            gap: 8px;
-            border: 1px solid rgba(81, 162, 255, 0.30);
-            background: rgba(43, 127, 255, 0.10);
+            align-items: center;
+            gap: 16px;
 
-            .messages-titre {
+            .messages-card {
               display: flex;
-              flex-direction: row;
-              align-items: center;
+              width: 510px;
+              height: 150px;
+              padding: 25px;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: center;
               border-radius: 16px;
+              box-sizing: border-box;
               gap: 8px;
+              border: 1px solid rgba(81, 162, 255, 0.30);
+              background: rgba(43, 127, 255, 0.10);
+              transition: border 0.2s ease-in;
 
-              .messages-nom {
-                color: $text-default;
-                font-size: 16px;
-                font-style: normal;
-                line-height: 24px; /* 150% */
+              .messages-titre {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                border-radius: 16px;
+                gap: 8px;
+
+                .messages-nom {
+                  color: $text-default;
+                  font-size: 16px;
+                  font-style: normal;
+                  line-height: 24px;
+                }
+
+                .messages-new {
+                  display: flex;
+                  width: 42.453px;
+                  height: 18px;
+                  padding: 0 8px;
+                  justify-content: center;
+                  align-items: center;
+                  border-radius: 8px;
+                  border: 1px solid rgba(0, 0, 0, 0.00);
+                  background: #D4183D;
+                  color: $text-default;
+                }
               }
 
-              .messages-new {
+              .messages-content {
                 display: flex;
-                width: 42.453px;
-                height: 18px;
-                padding: 0 8px;
+                flex-direction: column;
                 justify-content: center;
-                align-items: center;
-                border-radius: 8px;
-                border: 1px solid rgba(0, 0, 0, 0.00);
-                background: #D4183D;
-                color: $text-default;
+                gap: 8px;
+
+                .messages-sujet {
+                  color: #51A2FF;
+                  font-size: 16px;
+                  font-style: normal;
+                  line-height: 24px;
+                }
+
+                .messages-contenu {
+                  color: rgba(255, 255, 255, 0.50);
+                  font-size: 14px;
+                  font-style: normal;
+                  line-height: 20px;
+                }
+
+                .messages-temps {
+                  color: rgba(255, 255, 255, 0.40);
+                  font-size: 12px;
+                  font-style: normal;
+                  line-height: 16px;
+                }
               }
             }
+
+            .messages-card:hover {
+              border: 1px solid rgba(81, 162, 255, 0.75);
+              cursor: pointer;
+            }
+
+          }
+
+          .messages-details {
+            width: 100%;
+            padding: 33px;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 16px;
+            gap: 21px;
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            background: rgba(255, 255, 255, 0.05);
+
+            .messages-icon {
+              height: 48px;
+              width: 48px;
+            }
+
+            .messages-notfound {
+              color: rgba(255, 255, 255, 0.60);
+              font-size: 16px;
+              line-height: 24px;
+            }
+          }
+
+          .messages-details-remplis {
+            width: 100%;
+            padding: 33px;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+            border-radius: 16px;
+            gap: 21px;
+            border: 1px solid rgba(255, 255, 255, 0.10);
+            background: rgba(255, 255, 255, 0.05);
 
             .messages-content {
               display: flex;
               flex-direction: column;
               justify-content: center;
-              gap: 8px;
-
+              align-items: start;
+              width: 100%;
+              color: $text-default;
+              gap: 16px;
               .messages-sujet {
-                color: #51A2FF;
-                font-size: 16px;
+                color: #FFF;
+                font-size: 24px;
                 font-style: normal;
-                line-height: 24px;
+                line-height: 32px;
               }
+
+              .messages-nom-content {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 8px;
+
+                svg {
+                  path {
+                    stroke: white;
+                    stroke-opacity: 0.6;
+                  }
+                }
+
+                .messages-nom-p {
+                  color: rgba(255, 255, 255, 0.70);
+                  font-size: 14px;
+                  font-style: normal;
+                  line-height: 20px;
+                }
+              }
+
+              .messages-email-content {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 8px;
+
+                svg {
+                  path {
+                    stroke: white;
+                    stroke-opacity: 0.6;
+                  }
+                }
+
+                .messages-email {
+                  color: #51A2FF;
+                  font-size: 14px;
+                  font-style: normal;
+                  line-height: 20px;
+                }
+              }
+
+              .messages-time-content {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 8px;
+                svg {
+                  path {
+                    stroke: white;
+                    stroke-opacity: 0.4;
+                  }
+                }
+                .messages-temps {
+                  color: rgba(255, 255, 255, 0.40);
+                  font-size: 12px;
+                  font-style: normal;
+                  line-height: 16px;
+                }
+              }
+
 
               .messages-contenu {
-                color: rgba(255, 255, 255, 0.50);
-                font-size: 14px;
-                font-style: normal;
-                line-height: 20px;
-              }
-
-              .messages-temps {
-                color: rgba(255, 255, 255, 0.40);
-                font-size: 12px;
-                font-style: normal;
-                line-height: 16px;
+                display: flex;
+                height: 100%;
+                padding: 17px;
+                flex-direction: row;
+                justify-content: start;
+                align-items: start;
+                border-radius: 14px;
+                border: 1px solid rgba(255, 255, 255, 0.10);
+                background: rgba(255, 255, 255, 0.05);
+                .messages-contenu-p {
+                  color: rgba(255, 255, 255, 0.80);
+                  font-size: 16px;
+                  font-style: normal;
+                  line-height: 24px;
+                }
               }
             }
-          }
-        }
 
+            .messages-actions {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+              width: 100%;
+              gap: 12px;
 
-        #messages-details {
-          display: none;
-          width: 100%;
-          height: 250px;
-          padding: 33px;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          border-radius: 16px;
-          gap: 21px;
-          border: 1px solid rgba(255, 255, 255, 0.10);
-          background: rgba(255, 255, 255, 0.05);
+              .messages-reponse {
+                display: flex;
+                padding: 8px 0;
+                justify-content: center;
+                align-items: center;
+                flex-direction: row;
+                gap: 16px;
+                width: 100%;
+                border-radius: 8px;
+                border: 1px solid rgba(81, 162, 255, 0.50);
+                background: rgba(43, 127, 255, 0.20);
+                svg {
+                  path {
+                    stroke: white;
+                    stroke-opacity: 1;
+                  }
+                }
 
-          #messages-container.has-messages & {
-            display: flex;
-          }
+                .messages-reponse-p {
+                  color: $text-default;
+                }
 
-          #messages-icon {
-            height: 48px;
-            width: 48px;
-          }
+              }
+              .messages-supprimer {
+                display: flex;
+                width: 40px;
+                height: 36px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 8px;
+                background: #D4183D;
+                svg {
+                  path {
+                    stroke: white;
+                    stroke-opacity: 1;
+                  }
+                }
+              }
 
-          #messages-notfound {
-            color: rgba(255, 255, 255, 0.60);
-            font-size: 16px;
-            line-height: 24px;
+            }
           }
         }
       }
