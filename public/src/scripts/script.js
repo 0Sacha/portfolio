@@ -1,3 +1,47 @@
+
+// navbar du dashboard
+
+document.addEventListener('DOMContentLoaded', () => {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const container = document.getElementById('monitoring-container');
+
+    async function loadPage(url) {
+        try {
+            const response = await fetch(url);
+            if (!response.ok) throw new Error("Erreur de chargement");
+            const html = await response.text();
+            container.innerHTML = html;
+            if (url.includes('messages.html')) {
+                setTimeout(() => {
+                    chargerMessages();
+                }, 10);
+            }
+        } catch (error) {
+            console.error(error);
+            container.innerHTML = "<p style='color:white;'>Erreur : Impossible de charger la vue.</p>";
+        }
+    }
+
+
+    navLinks.forEach(link => {
+
+
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            navLinks.forEach(l => l.removeAttribute('id'));
+            link.setAttribute('id', 'dashboard-active-page');
+            navLinks.forEach(l => l.removeAttribute('id'));
+            link.setAttribute('id', 'dashboard-active-page');
+
+            const pageToLoad = link.getAttribute('data-page');
+            loadPage(pageToLoad);
+        });
+    });
+    loadPage('views/monitoring.html');
+});
+
+
+
 // affichage des messages reçus dans le dashboard
 
 function chargerMessages() {
@@ -15,7 +59,7 @@ function chargerMessages() {
 
                 data.forEach(msg => {
                     messagesSection.innerHTML += `
-                    <div class="messages-card">
+                    <div class="messages-card" data-id="${msg.id}">
                         <div class="messages-titre">
                             <svg width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M15.8332 17.5V15.8333C15.8332 14.9493 15.482 14.1014 14.8569 13.4763C14.2317 12.8512 13.3839 12.5 12.4998 12.5H7.49984C6.61578 12.5 5.76794 12.8512 5.14281 13.4763C4.51769 14.1014 4.1665 14.9493 4.1665 15.8333V17.5"
@@ -24,7 +68,7 @@ function chargerMessages() {
                                  stroke="white" stroke-opacity="1" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
                             </svg>
                             <p class="messages-nom">${msg.nom}</p>
-                            <span class="messages-new">New</span>
+                            ${msg.is_new === 1 ? '<span class="messages-new">New</span>' : ''}
                         </div>
                         <div class="messages-content">
                             <p class="messages-sujet">${msg.sujet}</p>
@@ -34,29 +78,62 @@ function chargerMessages() {
                     </div>
                 `;
                 });
+
+                messagesSection.addEventListener('click', (e) => {
+                    const card = e.target.closest('.messages-card');
+
+                    if (card) {
+                        const messageId = card.dataset.id;
+                        const newBadge = card.querySelector('.messages-new');
+
+                        if (newBadge && newBadge.style.display !== 'none') {
+
+                            newBadge.style.display = 'none';
+                            console.log("ID du message cliqué :", messageId);
+
+                            fetch(`/api/messages/${messageId}`, {
+                                method: 'PATCH',
+                                headers: {
+                                    'Content-Type': 'application/json'
+                                },
+                                body: JSON.stringify({is_new: 0})
+                            })
+                                .then(response => {
+                                    if (!response.ok) {
+                                        newBadge.style.display = 'block';
+                                        console.error("Erreur lors de la mise à jour");
+                                    } else {
+                                        console.log(`Message ${messageId} marqué comme lu en BDD !`);
+                                    }
+                                })
+                                .catch(err => {
+                                    newBadge.style.display = 'block';
+                                    console.error("Erreur réseau :", err);
+                                });
+                        }
+                    }
+                });
             }
         });
     console.log('Zone Message:', messagesZone);
 }
 
-function readMessage() {
-    const messagesZone = document.querySelector('.messages');
+async function readMessage(messageId) {
     const messagesDetails = document.querySelector('.messages-details');
     const messagesDetailsRemplis = document.querySelector('.messages-details-remplis');
-    if (!messagesZone) return;
+    const detailsContainer = document.querySelector('.messages-details') || document.querySelector('.messages-details-remplis');
 
-    if (!messagesZone) return;
-    fetch('/api/messages')
-        .then(response => response.json())
-        .then(data => {
+    if (!detailsContainer) return;
 
-            if (data.length > 0) {
+    try {
+        const response = await fetch(`/api/messages/${messageId}`);
+        if (!response.ok) throw new Error("Erreur lors de la récupération du message");
 
-                messagesDetails.classList.replace('messages-details', 'messages-details-remplis');
-                messagesDetails.style.display = 'flex';
-                messagesDetailsRemplis.innerHTML = '';
+        const msg = await response.json();
 
-                messagesDetails.innerHTML += `
+        detailsContainer.innerHTML = '';
+
+        messagesDetailsRemplis.innerHTML = `
                 <div class="messages-content">
                 <p class="messages-sujet">${msg.sujet}</p>
                 <div class="messages-nom-content">
@@ -116,48 +193,45 @@ function readMessage() {
                 </div>
             </div>
                 `;
-            }
-        })
+
+        if (detailsContainer.classList.contains('messages-details')) {
+            detailsContainer.classList.replace('messages-details', 'messages-details-remplis');
+        }
+        messagesDetails.style.display = 'none';
+        messagesDetailsRemplis.style.display = 'flex';
+
+    } catch (error) {
+        console.error("Erreur:", error);
+    }
 }
 
-// navbar du dashboard
+const messagesSection = document.querySelector('.messages-card-section');
+console.log(messagesSection)
 
-document.addEventListener('DOMContentLoaded', () => {
-    const navLinks = document.querySelectorAll('.nav-link');
-    const container = document.getElementById('monitoring-container');
-    async function loadPage(url) {
-        try {
-            const response = await fetch(url);
-            if (!response.ok) throw new Error("Erreur de chargement");
-            const html = await response.text();
-            container.innerHTML = html;
-            if (url.includes('messages.html')) {
-                setTimeout(() => {
-                    chargerMessages();
-                }, 10);
+if (messagesSection) {
+    messagesSection.addEventListener('click', (e) => {
+        const card = e.target.closest('.messages-card');
+
+        if (card) {
+            const messageId = card.dataset.id;
+
+            const newBadge = card.querySelector('.messages-new');
+            if (newBadge && newBadge.style.display !== 'none') {
+                newBadge.style.display = 'none';
+
+                fetch(`/api/messages/${messageId}`, {
+                    method: 'PATCH',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify({is_new: 0})
+                }).catch(err => console.error("Erreur badge:", err));
             }
-        } catch (error) {
-            console.error(error);
-            container.innerHTML = "<p style='color:white;'>Erreur : Impossible de charger la vue.</p>";
+
+            readMessage(messageId);
         }
-    }
-
-
-
-    navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-            e.preventDefault();
-            navLinks.forEach(l => l.removeAttribute('id'));
-            link.setAttribute('id', 'dashboard-active-page');
-            navLinks.forEach(l => l.removeAttribute('id'));
-            link.setAttribute('id', 'dashboard-active-page');
-
-            const pageToLoad = link.getAttribute('data-page');
-            loadPage(pageToLoad);
-        });
     });
-    loadPage('views/monitoring.html');
-});
+}
+
+chargerMessages();
 
 
 // navbar re-sizing to scroll

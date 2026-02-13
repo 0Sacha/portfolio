@@ -34,6 +34,7 @@ app.post('/login', (req, res) => {
         res.redirect('/login.html?error=1');
     }
 });
+
 app.post('/contact', (req, res) => {
     const {nom, email, sujet, contenu} = req.body;
 
@@ -67,6 +68,39 @@ app.get('/api/messages', (req, res) => {
         res.json(results);
     })
 })
+
+app.get('/api/messages/:id', (req, res) => {
+    const messageId = req.params.id;
+    const sql = "SELECT * FROM messages WHERE id = ?";
+
+    db.query(sql, [messageId], (err, result) => {
+        if (err) {
+            console.error("Erreur SQL :", err);
+            return res.status(500).json({ error: "Erreur serveur" });
+        }
+        if (result.length === 0) {
+            return res.status(404).json({ error: "Message introuvable" });
+        }
+        res.json(result[0]);
+    });
+});
+
+app.patch('/api/messages/:id', (req, res) => {
+    console.log("Requête reçue pour l'ID :", req.params.id);
+    console.log("Corps de la requête :", req.body);
+
+    const messageId = req.params.id;
+
+    // On exécute la mise à jour
+    db.query("UPDATE messages SET is_new = 0 WHERE id = ?", [messageId], (err, result) => {
+        if (err) {
+            console.error(err);
+            return res.status(500).json({ error: "Erreur lors de la mise à jour" });
+        }
+
+        res.json({ message: "Statut mis à jour avec succès" });
+    });
+});
 
 const PORT = 3000;
 app.listen(PORT, () => {
