@@ -3577,6 +3577,7 @@ html body #dashboard-body #dashboard-nav {
 html body #dashboard-body #dashboard-nav #dashboard-navbar-container {
   display: flex;
   color: rgb(255, 255, 255);
+  transition: stroke 0.3s ease;
 }
 html body #dashboard-body #dashboard-nav #dashboard-navbar-container li {
   display: flex;
@@ -3589,19 +3590,31 @@ html body #dashboard-body #dashboard-nav #dashboard-navbar-container li {
 html body #dashboard-body #dashboard-nav #dashboard-navbar-container li #dashboard-active-page {
   color: #51A2FF;
 }
+html body #dashboard-body #dashboard-nav #dashboard-navbar-container li #dashboard-active-page svg path {
+  stroke: #51A2FF;
+}
 html body #dashboard-body #dashboard-nav #dashboard-navbar-container li a {
   display: flex;
   gap: 8px;
   text-decoration: none;
   align-items: center;
-  color: rgb(255, 255, 255);
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 150ms ease-in-out;
 }
 html body #dashboard-body #dashboard-nav #dashboard-navbar-container li a .nav-link svg path {
   stroke: gray;
-  transition: stroke 0.3s ease;
+  transition: stroke 150ms ease-in-out;
 }
-html body #dashboard-body #dashboard-nav #dashboard-navbar-container li a .nav-link #dashboard-active-svg svg path {
-  stroke: #51A2FF;
+html body #dashboard-body #dashboard-nav #dashboard-navbar-container li a:hover {
+  display: flex;
+  gap: 8px;
+  text-decoration: none;
+  align-items: center;
+  color: #346aa8;
+}
+html body #dashboard-body #dashboard-nav #dashboard-navbar-container li a:hover svg path {
+  stroke: #346aa8;
+  transition: stroke 0.3s ease;
 }
 html body #dashboard-body #monitoring-container {
   display: flex;

@@ -3954,6 +3954,7 @@ html {
         #dashboard-navbar-container {
           display: flex;
           color: $text-default;
+          transition: stroke 0.3s ease;
 
           li {
             display: flex;
@@ -3965,6 +3966,12 @@ html {
 
             #dashboard-active-page {
               color: #51A2FF;
+
+              svg {
+                path {
+                  stroke: #51A2FF;
+                }
+              }
             }
 
             a {
@@ -3972,27 +3979,33 @@ html {
               gap: 8px;
               text-decoration: none;
               align-items: center;
-              color: $text-default;
+              color: #FFFFFF99;
+              transition: color 150ms ease-in-out;
 
               .nav-link {
                 svg {
                   path {
                     stroke: gray;
-                    transition: stroke 0.3s ease;
+                    transition: stroke 150ms ease-in-out;
                   }
-                }
-
-                #dashboard-active-svg {
-                  svg path {
-                    stroke: #51A2FF;
-                  }
-                }
-
-                span {
-
                 }
               }
 
+            }
+
+            a:hover {
+              display: flex;
+              gap: 8px;
+              text-decoration: none;
+              align-items: center;
+              color: #346aa8;
+
+              svg {
+                path {
+                  stroke: #346aa8;
+                  transition: stroke 0.3s ease;
+                }
+              }
             }
 
 
@@ -4609,6 +4622,7 @@ html {
               width: 100%;
               color: $text-default;
               gap: 16px;
+
               .messages-sujet {
                 color: #FFF;
                 font-size: 24px;
@@ -4663,12 +4677,14 @@ html {
                 flex-direction: row;
                 align-items: center;
                 gap: 8px;
+
                 svg {
                   path {
                     stroke: white;
                     stroke-opacity: 0.4;
                   }
                 }
+
                 .messages-temps {
                   color: rgba(255, 255, 255, 0.40);
                   font-size: 12px;
@@ -4688,6 +4704,7 @@ html {
                 border-radius: 14px;
                 border: 1px solid rgba(255, 255, 255, 0.10);
                 background: rgba(255, 255, 255, 0.05);
+
                 .messages-contenu-p {
                   color: rgba(255, 255, 255, 0.80);
                   font-size: 16px;
@@ -4715,6 +4732,7 @@ html {
                 border-radius: 8px;
                 border: 1px solid rgba(81, 162, 255, 0.50);
                 background: rgba(43, 127, 255, 0.20);
+
                 svg {
                   path {
                     stroke: white;
@@ -4727,6 +4745,7 @@ html {
                 }
 
               }
+
               .messages-supprimer {
                 display: flex;
                 width: 40px;
@@ -4735,6 +4754,7 @@ html {
                 align-items: center;
                 border-radius: 8px;
                 background: #D4183D;
+
                 svg {
                   path {
                     stroke: white;
@@ -4747,6 +4767,7 @@ html {
           }
         }
       }
+
     }
 
     footer {
@@ -4768,4 +4789,5 @@ html {
     }
 
   }
+
 }

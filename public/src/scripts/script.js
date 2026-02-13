@@ -134,7 +134,6 @@ document.addEventListener('DOMContentLoaded', () => {
             if (url.includes('messages.html')) {
                 setTimeout(() => {
                     chargerMessages();
-                    // readMessage()
                 }, 10);
             }
         } catch (error) {
@@ -142,6 +141,8 @@ document.addEventListener('DOMContentLoaded', () => {
             container.innerHTML = "<p style='color:white;'>Erreur : Impossible de charger la vue.</p>";
         }
     }
+
+
 
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
