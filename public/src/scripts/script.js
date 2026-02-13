@@ -1,4 +1,3 @@
-
 // navbar du dashboard
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -30,16 +29,24 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
             navLinks.forEach(l => l.removeAttribute('id'));
             link.setAttribute('id', 'dashboard-active-page');
-            navLinks.forEach(l => l.removeAttribute('id'));
-            link.setAttribute('id', 'dashboard-active-page');
 
             const pageToLoad = link.getAttribute('data-page');
+            const pageName = pageToLoad.split('/')[1].replace('.html', '');
+            window.location.hash = pageName;
             loadPage(pageToLoad);
+
         });
     });
-    loadPage('views/monitoring.html');
-});
+    const hash = window.location.hash.replace('#', ''); // Enlève le # pour avoir juste "messages"
 
+    if (hash) {
+        // Si un hash existe, construis le chemin : "views/messages.html"
+        loadPage(`views/${hash}.html`);
+    } else {
+        // Sinon, charge monitoring par défaut
+        loadPage('views/monitoring.html');
+    }
+});
 
 
 // affichage des messages reçus dans le dashboard
@@ -111,6 +118,7 @@ function chargerMessages() {
                                     console.error("Erreur réseau :", err);
                                 });
                         }
+                        readMessage(messageId)
                     }
                 });
             }
@@ -119,8 +127,6 @@ function chargerMessages() {
 }
 
 async function readMessage(messageId) {
-    const messagesDetails = document.querySelector('.messages-details');
-    const messagesDetailsRemplis = document.querySelector('.messages-details-remplis');
     const detailsContainer = document.querySelector('.messages-details') || document.querySelector('.messages-details-remplis');
 
     if (!detailsContainer) return;
@@ -131,9 +137,7 @@ async function readMessage(messageId) {
 
         const msg = await response.json();
 
-        detailsContainer.innerHTML = '';
-
-        messagesDetailsRemplis.innerHTML = `
+        detailsContainer.innerHTML = `
                 <div class="messages-content">
                 <p class="messages-sujet">${msg.sujet}</p>
                 <div class="messages-nom-content">
@@ -197,42 +201,13 @@ async function readMessage(messageId) {
         if (detailsContainer.classList.contains('messages-details')) {
             detailsContainer.classList.replace('messages-details', 'messages-details-remplis');
         }
-        messagesDetails.style.display = 'none';
-        messagesDetailsRemplis.style.display = 'flex';
+
+        detailsContainer.style.display = 'flex';
 
     } catch (error) {
         console.error("Erreur:", error);
     }
 }
-
-const messagesSection = document.querySelector('.messages-card-section');
-console.log(messagesSection)
-
-if (messagesSection) {
-    messagesSection.addEventListener('click', (e) => {
-        const card = e.target.closest('.messages-card');
-
-        if (card) {
-            const messageId = card.dataset.id;
-
-            const newBadge = card.querySelector('.messages-new');
-            if (newBadge && newBadge.style.display !== 'none') {
-                newBadge.style.display = 'none';
-
-                fetch(`/api/messages/${messageId}`, {
-                    method: 'PATCH',
-                    headers: {'Content-Type': 'application/json'},
-                    body: JSON.stringify({is_new: 0})
-                }).catch(err => console.error("Erreur badge:", err));
-            }
-
-            readMessage(messageId);
-        }
-    });
-}
-
-chargerMessages();
-
 
 // navbar re-sizing to scroll
 
