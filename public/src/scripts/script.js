@@ -37,14 +37,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
         });
     });
-    const hash = window.location.hash.replace('#', ''); // Enlève le # pour avoir juste "messages"
+    const hash = window.location.hash.replace('#', '');
 
     if (hash) {
-        // Si un hash existe, construis le chemin : "views/messages.html"
         loadPage(`views/${hash}.html`);
+
+        const activeLink = document.querySelector(`[data-page="views/${hash}.html"]`);
+        if (activeLink) {
+            navLinks.forEach(l => l.removeAttribute('id'));
+            activeLink.setAttribute('id', 'dashboard-active-page');
+        }
     } else {
-        // Sinon, charge monitoring par défaut
         loadPage('views/monitoring.html');
+
+        const monitoringLink = document.querySelector('[data-page="views/monitoring.html"]');
+        if (monitoringLink) {
+            monitoringLink.setAttribute('id', 'dashboard-active-page');
+        }
     }
 });
 
@@ -63,6 +72,11 @@ function chargerMessages() {
             if (data.length > 0) {
                 messagesZone.classList.replace('messages', 'has-messages');
                 messagesSection.innerHTML = '';
+
+                const messagesDetails = document.querySelector('.messages-details');
+                if (messagesDetails) {
+                    messagesDetails.style.display = 'flex';
+                }
 
                 data.forEach(msg => {
                     messagesSection.innerHTML += `
@@ -207,6 +221,41 @@ async function readMessage(messageId) {
     } catch (error) {
         console.error("Erreur:", error);
     }
+
+    deleteMessage(messageId)
+}
+
+async function deleteMessage(messageId) {
+    const deleteMessage = document.querySelector('.messages-supprimer');
+    const messagesZone = document.querySelector('.messages');
+    const messagesSection = document.querySelector('.messages-card-section');
+    const detailsContainer = document.querySelector('.messages-details') || document.querySelector('.messages-details-remplis');
+
+    if (!deleteMessage) return;
+
+    deleteMessage.addEventListener('click', async () => {
+        try {
+            const response = await fetch(`/api/messages/${messageId}`, {
+                method: 'DELETE'
+            });
+
+            if (!response.ok) throw new Error("Erreur suppression");
+
+            window.location.reload();
+
+            if (detailsContainer.classList.contains('messages-details-remplis')) {
+                detailsContainer.classList.replace('messages-details-remplis', 'messages-details');
+            }
+
+            detailsContainer.innerHTML = `
+            <img class="messages-icon" src="./src/images/icons/dashboard/message.svg" alt="">
+            <p class="messages-notfound">Sélectionnez un message pour voir les détails</p>
+            `;
+
+        } catch (error) {
+            console.error("Erreur:", error);
+        }
+    });
 }
 
 // navbar re-sizing to scroll

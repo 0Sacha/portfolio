@@ -58,6 +58,17 @@ app.post('/contact', (req, res) => {
     }
 });
 
+app.delete('/api/messages/:id', (req, res) => {
+    db.query('DELETE FROM messages WHERE `messages`.`id` = ?', [req.params.id], (error, results) => {
+        if (error) {
+            console.error("Erreur lors de la suppression :", error);
+            return res.status(500).json({error: "Erreur serveur"});
+        }
+
+        res.json(results);
+    })
+})
+
 app.get('/api/messages', (req, res) => {
     db.query('SELECT * FROM messages ORDER BY date_envoi DESC', (error, results) => {
         if (error) {
