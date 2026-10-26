@@ -375,6 +375,7 @@ html body #hero #hero-links #hero-links-contact {
   text-decoration: none;
   padding: 16px 33px 18px 33px;
   gap: 8px;
+  cursor: not-allowed;
   transition: all 300ms ease-in-out;
 }
 html body #hero #hero-links #hero-links-contact .trait {
@@ -839,6 +840,99 @@ html body #experienceSection {
   gap: 24px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+html body #experienceSection #card-deskit {
+  position: relative;
+  border-radius: 16px;
+  border: 1px solid rgba(177, 0, 201, 0.2);
+  background: linear-gradient(135deg, rgba(0, 137, 201, 0.2) 0%, rgba(201, 0, 201, 0.15) 100%);
+  width: 30%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 300ms ease-in-out;
+}
+html body #experienceSection #card-deskit .annee {
+  position: absolute;
+  z-index: 0;
+  right: 16px;
+  top: 16px;
+  display: flex;
+}
+html body #experienceSection #card-deskit .annee p {
+  color: rgba(255, 255, 255, 0.05);
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+}
+html body #experienceSection #card-deskit .icon {
+  color: #ffffff;
+  display: flex;
+  width: 48px;
+  height: 48px;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+}
+html body #experienceSection #card-deskit .icon .fa-code {
+  color: #ffffff;
+}
+html body #experienceSection #card-deskit .titre {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+}
+html body #experienceSection #card-deskit .titre p {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 28px;
+}
+html body #experienceSection #card-deskit .titre span {
+  display: flex;
+  padding: 4px 9.516px 4px 10px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 33554400px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  font-family: "Space Grotesk";
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 15px;
+}
+html body #experienceSection #card-deskit .lieu {
+  display: flex;
+  width: 328px;
+  padding-right: 282px;
+  align-items: center;
+}
+html body #experienceSection #card-deskit .lieu p {
+  color: #ffffff;
+}
+html body #experienceSection #card-deskit .date p {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 12px;
+  line-height: 16px;
+}
+html body #experienceSection #card-deskit .description {
+  height: 40px;
+  padding-right: 45.5px;
+  align-items: center;
+}
+html body #experienceSection #card-deskit .description p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  line-height: 20px;
+}
+html body #experienceSection #card-deskit:hover {
+  border: 1px solid rgba(201, 0, 174, 0.5);
+}
 html body #experienceSection #card-presoa {
   position: relative;
   border-radius: 16px;
@@ -1215,6 +1309,26 @@ html body #experience-link .liste-et-lien #list-tag .tag-4 p {
 }
 html body #experience-link .liste-et-lien #list-tag .tag-4:hover {
   border: 1px solid rgba(81, 162, 255, 0.5);
+  cursor: default;
+}
+html body #experience-link .liste-et-lien #list-tag .tag-5 {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 122, 81, 0.3);
+  background: rgba(255, 122, 81, 0.1);
+  padding: 7px 13px 6.5px 13px;
+  transition: all 250ms ease-in-out;
+}
+html body #experience-link .liste-et-lien #list-tag .tag-5 .fa-claude {
+  color: #fcfcfc;
+}
+html body #experience-link .liste-et-lien #list-tag .tag-5 p {
+  color: #ff7a51;
+}
+html body #experience-link .liste-et-lien #list-tag .tag-5:hover {
+  border: 1px solid rgba(255, 122, 81, 0.5);
   cursor: default;
 }
 html body #experience-link .liste-et-lien #liens-experience {

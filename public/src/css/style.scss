@@ -454,7 +454,7 @@ html {
           text-decoration: none;
           padding: 16px 33px 18px 33px;
           gap: 8px;
-
+          cursor: not-allowed;
           transition: all 300ms ease-in-out;
 
           .trait {
@@ -965,6 +965,116 @@ html {
       gap: 24px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
+       #card-deskit {
+        position: relative;
+        border-radius: 16px;
+        border: 1px solid rgba(177, 0, 201, 0.2);
+        background: linear-gradient(135deg, rgba(0, 137, 201, 0.2) 0%, rgba(201, 0, 201, 0.15) 100%);
+        width: 30%;
+        padding: 25px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all 300ms ease-in-out;
+
+        .annee {
+          position: absolute;
+          z-index: 0;
+          right: 16px;
+          top: 16px;
+          display: flex;
+
+          p {
+            color: rgba(255, 255, 255, 0.05);
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 48px;
+          }
+        }
+
+        .icon {
+          color: #ffffff;
+          display: flex;
+          width: 48px;
+          height: 48px;
+          justify-content: center;
+          align-items: center;
+          flex-shrink: 0;
+          border-radius: 14px;
+          border: 1px solid rgba(255, 255, 255, 0.2);
+          background: rgba(255, 255, 255, 0.1);
+
+          .fa-code {
+            color: #ffffff;
+          }
+        }
+
+        .titre {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 8px;
+
+          p {
+            color: #fff;
+            font-size: 18px;
+            font-weight: 700;
+            line-height: 28px;
+          }
+
+          span {
+            display: flex;
+            padding: 4px 9.516px 4px 10px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 33554400px;
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            font-family: "Space Grotesk";
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 15px;
+          }
+        }
+
+        .lieu {
+          display: flex;
+          width: 328px;
+          padding-right: 282px;
+          align-items: center;
+
+          p {
+            color: #ffffff;
+          }
+        }
+
+        .date {
+          p {
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 12px;
+            line-height: 16px;
+          }
+        }
+
+        .description {
+          height: 40px;
+          padding-right: 45.5px;
+          align-items: center;
+
+          p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+      }
+
+      #card-deskit:hover {
+        border: 1px solid rgba(201, 0, 174, 0.5);
+      }
+
+
       #card-presoa {
         position: relative;
         border-radius: 16px;
@@ -1407,6 +1517,30 @@ html {
 
           .tag-4:hover {
             border: 1px solid rgba(81, 162, 255, 0.5);
+            cursor: default;
+          }
+
+          .tag-5 {
+            display: flex;
+            flex-direction: row;
+            gap: 6px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 122, 81, 0.3);
+            background: rgba(255, 122, 81, 0.1);
+            padding: 7px 13px 6.5px 13px;
+            transition: all 250ms ease-in-out;
+
+            .fa-claude {
+              color: #fcfcfc;
+            }
+
+            p {
+              color: #ff7a51;
+            }
+          }
+
+          .tag-5:hover {
+            border: 1px solid rgba(255, 122, 81, 0.5);
             cursor: default;
           }
         }
