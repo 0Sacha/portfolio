@@ -198,6 +198,12 @@ html {
               text-decoration: none;
               font-size: 16px;
               padding: 5px 12px;
+              white-space: nowrap;
+
+              @media (max-width: 768px) {
+                font-size: 14px;
+                padding: 5px 8px;
+              }
             }
 
             a:hover {
@@ -269,6 +275,21 @@ html {
         text-align: center;
         font-size: 256px;
         line-height: 128px;
+
+        @media (max-width: 1260px) {
+          font-size: 200px;
+          line-height: 100px;
+        }
+
+        @media (max-width: 1100px) {
+          font-size: 160px;
+          line-height: 80px;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 110px;
+          line-height: 90px;
+        }
       }
 
       #hero-subtitle {
@@ -280,6 +301,11 @@ html {
         font-size: 24px;
         font-style: normal;
         line-height: 32px;
+
+        @media (max-width: 768px) {
+          margin-top: 20px;
+          font-size: 20px;
+        }
       }
 
       #hero-description {
@@ -291,6 +317,12 @@ html {
         text-align: center;
         font-size: 18px;
         line-height: 28px;
+
+        @media (max-width: 768px) {
+          width: 85%;
+          font-size: 16px;
+          line-height: 24px;
+        }
       }
 
       #hero-icon {
@@ -422,7 +454,8 @@ html {
       padding-top: 170px;
 
       @media (max-width: 1100px) {
-        display: none;
+        margin-top: 80px;
+        padding-top: 80px;
       }
 
       h1 {
@@ -456,17 +489,18 @@ html {
       margin: 75px auto;
 
       @media (max-width: 1100px) {
-        display: none;
+        display: flex;
         flex-direction: row;
         align-items: center;
         gap: 50px;
         justify-content: flex-start;
         margin: 0 auto;
-        padding: 0 20px;
+        padding: 0;
         overflow-x: auto;
         scrollbar-width: none;
         scroll-snap-type: x mandatory;
         width: 100%;
+        box-sizing: border-box;
       }
 
       .section-container {
@@ -476,6 +510,11 @@ html {
         max-width: $default-max-width;
         margin: 0 auto;
         width: 100%;
+
+        @media (max-width: 1100px) {
+          flex-direction: row;
+          gap: 50px;
+        }
 
         #selectionCard01 {
           scroll-snap-align: start;
@@ -829,7 +868,7 @@ html {
       }
 
       @media (max-width: 1100px) {
-        display: none;
+        display: flex;
       }
 
       .fa-arrow-left {
@@ -852,17 +891,27 @@ html {
 
       @media (max-width: 1100px) {
         display: flex;
+        padding-top: 120px;
       }
 
       h1 {
         font-size: 60px;
         color: $text-default;
         text-transform: uppercase;
+
+        @media (max-width: 1100px) {
+          font-size: 36px;
+        }
       }
 
       p {
         font-size: 20px;
         color: $text-navbar-color;
+
+        @media (max-width: 1100px) {
+          font-size: 18px;
+          padding: 0 20px;
+        }
       }
     }
 
@@ -878,6 +927,16 @@ html {
       gap: 24px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
+      @media (max-width: 1540px) {
+        padding: 48px 20px;
+      }
+
+      @media (max-width: 1100px) {
+        flex-direction: column;
+        align-items: center;
+        padding: 48px 20px;
+      }
+
        #card-deskit {
         position: relative;
         border-radius: 16px;
@@ -889,6 +948,13 @@ html {
         flex-direction: column;
         justify-content: space-between;
         transition: all 300ms ease-in-out;
+
+        @media (max-width: 1100px) {
+          width: 100%;
+          max-width: 500px;
+          box-sizing: border-box;
+          gap: 18px;
+        }
 
         .annee {
           position: absolute;
@@ -928,6 +994,11 @@ html {
           align-items: center;
           gap: 8px;
 
+          @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
           p {
             color: #fff;
             font-size: 18px;
@@ -937,6 +1008,7 @@ html {
 
           span {
             display: flex;
+            white-space: nowrap;
             padding: 4px 9.516px 4px 10px;
             justify-content: center;
             align-items: center;
@@ -998,6 +1070,13 @@ html {
         justify-content: space-between;
         transition: all 300ms ease-in-out;
 
+        @media (max-width: 1100px) {
+          width: 100%;
+          max-width: 500px;
+          box-sizing: border-box;
+          gap: 18px;
+        }
+
         .annee {
           position: absolute;
           z-index: 0;
@@ -1036,6 +1115,11 @@ html {
           align-items: center;
           gap: 8px;
 
+          @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
           p {
             color: #fff;
             font-size: 18px;
@@ -1045,6 +1129,7 @@ html {
 
           span {
             display: flex;
+            white-space: nowrap;
             padding: 4px 9.516px 4px 10px;
             justify-content: center;
             align-items: center;
@@ -1106,6 +1191,13 @@ html {
         gap: 18px;
         transition: all 300ms ease-in-out;
 
+        @media (max-width: 1100px) {
+          width: 100%;
+          max-width: 500px;
+          box-sizing: border-box;
+          gap: 18px;
+        }
+
         .annee {
           position: absolute;
           z-index: 0;
@@ -1143,6 +1235,11 @@ html {
           align-items: start;
           gap: 8px;
 
+          @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
           p {
             color: #fff;
             font-size: 18px;
@@ -1151,6 +1248,7 @@ html {
 
           span {
             display: flex;
+            white-space: nowrap;
             padding: 4px 9.75px 4px 10px;
             justify-content: center;
             align-items: center;
@@ -1213,6 +1311,13 @@ html {
         justify-content: space-between;
         transition: all 300ms ease-in-out;
 
+        @media (max-width: 1100px) {
+          width: 100%;
+          max-width: 500px;
+          box-sizing: border-box;
+          gap: 18px;
+        }
+
         .annee {
           position: absolute;
           z-index: 0;
@@ -1250,6 +1355,11 @@ html {
           align-items: center;
           gap: 8px;
 
+          @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
           p {
             color: #fff;
             font-size: 18px;
@@ -1259,6 +1369,7 @@ html {
 
           span {
             display: flex;
+            white-space: nowrap;
             padding: 4px 9.5px 4px 10px;
             justify-content: center;
             align-items: center;
@@ -1324,10 +1435,25 @@ html {
         width: 100%;
         max-width: 1500px;
 
+        @media (max-width: 1540px) {
+          padding: 0 20px;
+          box-sizing: border-box;
+        }
+
+        @media (max-width: 1100px) {
+          flex-direction: column;
+          gap: 24px;
+        }
+
         #list-tag {
           display: flex;
           flex-direction: row;
           gap: 8px;
+
+          @media (max-width: 1100px) {
+            flex-wrap: wrap;
+            justify-content: center;
+          }
 
           .tag-1 {
             display: flex;

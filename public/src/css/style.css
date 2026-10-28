@@ -163,6 +163,13 @@ html body #nav #navbar ul li a {
   text-decoration: none;
   font-size: 16px;
   padding: 5px 12px;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  html body #nav #navbar ul li a {
+    font-size: 14px;
+    padding: 5px 8px;
+  }
 }
 html body #nav #navbar ul li a:hover {
   color: #ffffff;
@@ -221,6 +228,24 @@ html body #hero #hero-title {
   font-size: 256px;
   line-height: 128px;
 }
+@media (max-width: 1260px) {
+  html body #hero #hero-title {
+    font-size: 200px;
+    line-height: 100px;
+  }
+}
+@media (max-width: 1100px) {
+  html body #hero #hero-title {
+    font-size: 160px;
+    line-height: 80px;
+  }
+}
+@media (max-width: 768px) {
+  html body #hero #hero-title {
+    font-size: 110px;
+    line-height: 90px;
+  }
+}
 html body #hero #hero-subtitle {
   position: relative;
   z-index: 3;
@@ -231,6 +256,12 @@ html body #hero #hero-subtitle {
   font-style: normal;
   line-height: 32px;
 }
+@media (max-width: 768px) {
+  html body #hero #hero-subtitle {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+}
 html body #hero #hero-description {
   position: relative;
   z-index: 3;
@@ -240,6 +271,13 @@ html body #hero #hero-description {
   text-align: center;
   font-size: 18px;
   line-height: 28px;
+}
+@media (max-width: 768px) {
+  html body #hero #hero-description {
+    width: 85%;
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 html body #hero #hero-icon {
   position: relative;
@@ -352,7 +390,8 @@ html body #section-projet {
 }
 @media (max-width: 1100px) {
   html body #section-projet {
-    display: none;
+    margin-top: 80px;
+    padding-top: 80px;
   }
 }
 html body #section-projet h1 {
@@ -386,17 +425,18 @@ html body #selection {
 }
 @media (max-width: 1100px) {
   html body #selection {
-    display: none;
+    display: flex;
     flex-direction: row;
     align-items: center;
     gap: 50px;
     justify-content: flex-start;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0;
     overflow-x: auto;
     scrollbar-width: none;
     scroll-snap-type: x mandatory;
     width: 100%;
+    box-sizing: border-box;
   }
 }
 html body #selection .section-container {
@@ -406,6 +446,12 @@ html body #selection .section-container {
   max-width: 1200px;
   margin: 0 auto;
   width: 100%;
+}
+@media (max-width: 1100px) {
+  html body #selection .section-container {
+    flex-direction: row;
+    gap: 50px;
+  }
 }
 html body #selection .section-container #selectionCard01 {
   scroll-snap-align: start;
@@ -729,7 +775,7 @@ html body #swipe {
 }
 @media (max-width: 1100px) {
   html body #swipe {
-    display: none;
+    display: flex;
   }
 }
 html body #swipe .fa-arrow-left {
@@ -750,6 +796,7 @@ html body #experienceTitle {
 @media (max-width: 1100px) {
   html body #experienceTitle {
     display: flex;
+    padding-top: 120px;
   }
 }
 html body #experienceTitle h1 {
@@ -757,9 +804,20 @@ html body #experienceTitle h1 {
   color: rgb(255, 255, 255);
   text-transform: uppercase;
 }
+@media (max-width: 1100px) {
+  html body #experienceTitle h1 {
+    font-size: 36px;
+  }
+}
 html body #experienceTitle p {
   font-size: 20px;
   color: rgba(255, 255, 255, 0.8);
+}
+@media (max-width: 1100px) {
+  html body #experienceTitle p {
+    font-size: 18px;
+    padding: 0 20px;
+  }
 }
 html body #experienceSection {
   display: flex;
@@ -773,6 +831,18 @@ html body #experienceSection {
   gap: 24px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
+@media (max-width: 1540px) {
+  html body #experienceSection {
+    padding: 48px 20px;
+  }
+}
+@media (max-width: 1100px) {
+  html body #experienceSection {
+    flex-direction: column;
+    align-items: center;
+    padding: 48px 20px;
+  }
+}
 html body #experienceSection #card-deskit {
   position: relative;
   border-radius: 16px;
@@ -784,6 +854,14 @@ html body #experienceSection #card-deskit {
   flex-direction: column;
   justify-content: space-between;
   transition: all 300ms ease-in-out;
+}
+@media (max-width: 1100px) {
+  html body #experienceSection #card-deskit {
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    gap: 18px;
+  }
 }
 html body #experienceSection #card-deskit .annee {
   position: absolute;
@@ -819,6 +897,12 @@ html body #experienceSection #card-deskit .titre {
   align-items: center;
   gap: 8px;
 }
+@media (max-width: 768px) {
+  html body #experienceSection #card-deskit .titre {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 html body #experienceSection #card-deskit .titre p {
   color: #fff;
   font-size: 18px;
@@ -827,6 +911,7 @@ html body #experienceSection #card-deskit .titre p {
 }
 html body #experienceSection #card-deskit .titre span {
   display: flex;
+  white-space: nowrap;
   padding: 4px 9.516px 4px 10px;
   justify-content: center;
   align-items: center;
@@ -876,6 +961,14 @@ html body #experienceSection #card-presoa {
   justify-content: space-between;
   transition: all 300ms ease-in-out;
 }
+@media (max-width: 1100px) {
+  html body #experienceSection #card-presoa {
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    gap: 18px;
+  }
+}
 html body #experienceSection #card-presoa .annee {
   position: absolute;
   z-index: 0;
@@ -910,6 +1003,12 @@ html body #experienceSection #card-presoa .titre {
   align-items: center;
   gap: 8px;
 }
+@media (max-width: 768px) {
+  html body #experienceSection #card-presoa .titre {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 html body #experienceSection #card-presoa .titre p {
   color: #fff;
   font-size: 18px;
@@ -918,6 +1017,7 @@ html body #experienceSection #card-presoa .titre p {
 }
 html body #experienceSection #card-presoa .titre span {
   display: flex;
+  white-space: nowrap;
   padding: 4px 9.516px 4px 10px;
   justify-content: center;
   align-items: center;
@@ -968,6 +1068,14 @@ html body #experienceSection #card-promeo {
   gap: 18px;
   transition: all 300ms ease-in-out;
 }
+@media (max-width: 1100px) {
+  html body #experienceSection #card-promeo {
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    gap: 18px;
+  }
+}
 html body #experienceSection #card-promeo .annee {
   position: absolute;
   z-index: 0;
@@ -1001,6 +1109,12 @@ html body #experienceSection #card-promeo .titre {
   align-items: start;
   gap: 8px;
 }
+@media (max-width: 768px) {
+  html body #experienceSection #card-promeo .titre {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 html body #experienceSection #card-promeo .titre p {
   color: #fff;
   font-size: 18px;
@@ -1008,6 +1122,7 @@ html body #experienceSection #card-promeo .titre p {
 }
 html body #experienceSection #card-promeo .titre span {
   display: flex;
+  white-space: nowrap;
   padding: 4px 9.75px 4px 10px;
   justify-content: center;
   align-items: center;
@@ -1057,6 +1172,14 @@ html body #experienceSection #card-grenet {
   justify-content: space-between;
   transition: all 300ms ease-in-out;
 }
+@media (max-width: 1100px) {
+  html body #experienceSection #card-grenet {
+    width: 100%;
+    max-width: 500px;
+    box-sizing: border-box;
+    gap: 18px;
+  }
+}
 html body #experienceSection #card-grenet .annee {
   position: absolute;
   z-index: 0;
@@ -1090,6 +1213,12 @@ html body #experienceSection #card-grenet .titre {
   align-items: center;
   gap: 8px;
 }
+@media (max-width: 768px) {
+  html body #experienceSection #card-grenet .titre {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
 html body #experienceSection #card-grenet .titre p {
   color: #fff;
   font-size: 18px;
@@ -1098,6 +1227,7 @@ html body #experienceSection #card-grenet .titre p {
 }
 html body #experienceSection #card-grenet .titre span {
   display: flex;
+  white-space: nowrap;
   padding: 4px 9.5px 4px 10px;
   justify-content: center;
   align-items: center;
@@ -1151,10 +1281,28 @@ html body #experience-link .liste-et-lien {
   width: 100%;
   max-width: 1500px;
 }
+@media (max-width: 1540px) {
+  html body #experience-link .liste-et-lien {
+    padding: 0 20px;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 1100px) {
+  html body #experience-link .liste-et-lien {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
 html body #experience-link .liste-et-lien #list-tag {
   display: flex;
   flex-direction: row;
   gap: 8px;
+}
+@media (max-width: 1100px) {
+  html body #experience-link .liste-et-lien #list-tag {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
 }
 html body #experience-link .liste-et-lien #list-tag .tag-1 {
   display: flex;
