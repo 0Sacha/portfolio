@@ -129,6 +129,20 @@ html body #nav #navbar {
     width: 85%;
   }
 }
+@media (max-width: 768px) {
+  html body #nav #navbar {
+    top: 50%;
+    bottom: auto;
+    left: auto;
+    right: 10px;
+    transform: translateY(-50%);
+    margin: 0;
+    padding: 6px;
+    width: auto;
+    height: auto;
+    border-radius: 999px;
+  }
+}
 html body #nav #navbar ul {
   position: relative;
   display: flex;
@@ -145,6 +159,12 @@ html body #nav #navbar ul {
     align-items: center;
   }
 }
+@media (max-width: 768px) {
+  html body #nav #navbar ul {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
 html body #nav #navbar ul #active {
   position: absolute;
   border-radius: 13px;
@@ -152,6 +172,12 @@ html body #nav #navbar ul #active {
   z-index: 0;
   background: rgba(255, 255, 255, 0.1);
   transition: left 150ms ease-in-out, width 150ms ease-in-out;
+}
+@media (max-width: 768px) {
+  html body #nav #navbar ul #active {
+    border-radius: 999px;
+    transition: top 150ms ease-in-out, height 150ms ease-in-out;
+  }
 }
 html body #nav #navbar ul li {
   display: flex;
@@ -167,8 +193,25 @@ html body #nav #navbar ul li a {
 }
 @media (max-width: 768px) {
   html body #nav #navbar ul li a {
-    font-size: 14px;
-    padding: 5px 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+  }
+}
+html body #nav #navbar ul li a i {
+  display: none;
+}
+@media (max-width: 768px) {
+  html body #nav #navbar ul li a i {
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  html body #nav #navbar ul li a span {
+    display: none;
   }
 }
 html body #nav #navbar ul li a:hover {

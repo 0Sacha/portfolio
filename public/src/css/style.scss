@@ -162,6 +162,19 @@ html {
           width: 85%;
         }
 
+        @media (max-width: 768px) {
+          top: 50%;
+          bottom: auto;
+          left: auto;
+          right: 10px;
+          transform: translateY(-50%);
+          margin: 0;
+          padding: 6px;
+          width: auto;
+          height: auto;
+          border-radius: 999px;
+        }
+
         ul {
           position: relative;
           display: flex;
@@ -177,6 +190,11 @@ html {
             align-items: center;
           }
 
+          @media (max-width: 768px) {
+            flex-direction: column;
+            gap: 6px;
+          }
+
           #active {
             position: absolute;
             border-radius: 13px;
@@ -186,6 +204,13 @@ html {
             transition:
               left 150ms ease-in-out,
               width 150ms ease-in-out;
+
+            @media (max-width: 768px) {
+              border-radius: 999px;
+              transition:
+                top 150ms ease-in-out,
+                height 150ms ease-in-out;
+            }
           }
 
           li {
@@ -201,8 +226,26 @@ html {
               white-space: nowrap;
 
               @media (max-width: 768px) {
-                font-size: 14px;
-                padding: 5px 8px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+                height: 40px;
+                padding: 0;
+              }
+
+              i {
+                display: none;
+
+                @media (max-width: 768px) {
+                  display: flex;
+                }
+              }
+
+              span {
+                @media (max-width: 768px) {
+                  display: none;
+                }
               }
             }
 

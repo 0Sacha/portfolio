@@ -262,6 +262,14 @@ if (aActive) {
     function moveIndicator(element) {
         aActive.style.left = element.offsetLeft + 'px'
         aActive.style.width = element.offsetWidth + 'px'
+
+        if (window.innerWidth <= 768) {
+            aActive.style.top = element.offsetTop + 'px'
+            aActive.style.height = element.offsetHeight + 'px'
+        } else {
+            aActive.style.top = ''
+            aActive.style.height = ''
+        }
     }
 
     moveIndicator(navLi[0])
@@ -286,6 +294,10 @@ if (aActive) {
     })
 
     window.addEventListener('scrollend', finDuClic)
+
+    window.addEventListener('resize', () => {
+        window.dispatchEvent(new Event('scroll'))
+    })
 
     const sectionHeros = document.querySelector('#nav')
     const sectionProjet = document.querySelector('#section-projet')
