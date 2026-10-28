@@ -266,7 +266,8 @@ if (aActive) {
 
     moveIndicator(navLi[0])
 
-
+    // au clic : la pilule va directement sur le lien cliqué
+    // et on bloque le scroll le temps que la page finisse de défiler
     let clicEnCours = false
     let minuteur
 
@@ -280,7 +281,7 @@ if (aActive) {
             moveIndicator(e.currentTarget)
             clicEnCours = true
             clearTimeout(minuteur)
-            minuteur = setTimeout(finDuClic, 1500)
+            minuteur = setTimeout(finDuClic, 1500) // sécurité si 'scrollend' n'arrive jamais
         })
     })
 

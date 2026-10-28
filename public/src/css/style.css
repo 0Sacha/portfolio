@@ -908,8 +908,6 @@ html body #experienceSection #card-deskit .titre span {
 }
 html body #experienceSection #card-deskit .lieu {
   display: flex;
-  width: 328px;
-  padding-right: 282px;
   align-items: center;
 }
 html body #experienceSection #card-deskit .lieu p {
@@ -1001,8 +999,6 @@ html body #experienceSection #card-presoa .titre span {
 }
 html body #experienceSection #card-presoa .lieu {
   display: flex;
-  width: 328px;
-  padding-right: 282px;
   align-items: center;
 }
 html body #experienceSection #card-presoa .lieu p {
@@ -1093,8 +1089,6 @@ html body #experienceSection #card-promeo .titre span {
 }
 html body #experienceSection #card-promeo .lieu {
   display: flex;
-  width: 328px;
-  padding-right: 282px;
   align-items: center;
 }
 html body #experienceSection #card-promeo .lieu p {
@@ -1185,8 +1179,6 @@ html body #experienceSection #card-grenet .titre span {
 }
 html body #experienceSection #card-grenet .lieu {
   display: flex;
-  width: 328px;
-  padding-right: 282px;
   align-items: center;
 }
 html body #experienceSection #card-grenet .lieu p {
