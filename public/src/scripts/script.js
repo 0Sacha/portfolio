@@ -264,19 +264,27 @@ if (aActive) {
         aActive.style.width = element.offsetWidth + 'px'
     }
 
+    moveIndicator(navLi[0])
+
+
+    let clicEnCours = false
+    let minuteur
+
+    function finDuClic() {
+        clicEnCours = false
+        clearTimeout(minuteur)
+    }
+
     navLi.forEach(lien => {
         lien.addEventListener('click', (e) => {
             moveIndicator(e.currentTarget)
-            liActif = e.currentTarget
-        })
-        lien.addEventListener('mouseenter', () => {
-        })
-
-        lien.addEventListener('mouseleave', () => {
+            clicEnCours = true
+            clearTimeout(minuteur)
+            minuteur = setTimeout(finDuClic, 1500)
         })
     })
 
-    moveIndicator(navLi[0])
+    window.addEventListener('scrollend', finDuClic)
 
     const sectionHeros = document.querySelector('#nav')
     const sectionProjet = document.querySelector('#section-projet')
@@ -284,9 +292,20 @@ if (aActive) {
     const contactTitle = document.querySelector('#contactTitle')
 
 
-    window.addEventListener('scroll', (element) => {
-        if (window.scrollY >= offsetTop) {
+    window.addEventListener('scroll', () => {
+        if (clicEnCours) return
 
+        if (window.scrollY >= sectionHeros.offsetTop) {
+            moveIndicator(navLi[0])
+        }
+        if (window.scrollY + window.innerHeight / 2 >= sectionProjet.offsetTop - 200) {
+            moveIndicator(navLi[1])
+        }
+        if (window.scrollY + window.innerHeight / 2 >= experienceTitle.offsetTop - 200 || window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 5 ) {
+            moveIndicator(navLi[2])
+        }
+        if (window.scrollY <= 5) {
+            moveIndicator(navLi[0])
         }
     })
 
