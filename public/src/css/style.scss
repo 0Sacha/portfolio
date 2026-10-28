@@ -55,10 +55,6 @@ html {
       align-items: center;
       margin: 0 auto;
 
-      @media (max-width: 1100px) {
-        display: none;
-      }
-
       #sphere1Home,
       #sphere2Home,
       #sphere3Home {
@@ -66,6 +62,10 @@ html {
         filter: blur(150px);
         border-radius: 999px;
         z-index: -1;
+
+        @media (max-width: 1100px) {
+          filter: blur(100px);
+        }
       }
 
       #sphere1Home {
@@ -75,6 +75,11 @@ html {
         left: 7%;
         animation: sphere1Bounce 6s ease-in-out infinite;
         background-color: rgba(43, 127, 255, 0.4);
+
+        @media (max-width: 1100px) {
+          width: 300px;
+          height: 300px;
+        }
 
         @keyframes sphere1Bounce {
           0% {
@@ -98,6 +103,11 @@ html {
         right: 5%;
         background-color: rgba(173, 70, 255, 0.4);
         animation: sphere2Bounce 8s ease-in-out infinite;
+
+        @media (max-width: 1100px) {
+          width: 300px;
+          height: 300px;
+        }
 
         @keyframes sphere2Bounce {
           0% {
@@ -330,8 +340,8 @@ html {
         }
 
         @media (max-width: 768px) {
-          font-size: 110px;
-          line-height: 90px;
+          font-size: 96px;
+          line-height: 80px;
         }
       }
 
@@ -914,7 +924,7 @@ html {
         display: flex;
       }
 
-      .fa-arrow-left {
+      .fa-arrow-right {
         color: white;
       }
 
@@ -934,7 +944,8 @@ html {
 
       @media (max-width: 1100px) {
         display: flex;
-        padding-top: 120px;
+        padding-top: 40px;
+        margin-top: 80px;
       }
 
       h1 {

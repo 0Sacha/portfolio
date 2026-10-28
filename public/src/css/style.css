@@ -30,11 +30,6 @@ html body #homeAmbiance {
   align-items: center;
   margin: 0 auto;
 }
-@media (max-width: 1100px) {
-  html body #homeAmbiance {
-    display: none;
-  }
-}
 html body #homeAmbiance #sphere1Home,
 html body #homeAmbiance #sphere2Home,
 html body #homeAmbiance #sphere3Home {
@@ -43,6 +38,13 @@ html body #homeAmbiance #sphere3Home {
   border-radius: 999px;
   z-index: -1;
 }
+@media (max-width: 1100px) {
+  html body #homeAmbiance #sphere1Home,
+  html body #homeAmbiance #sphere2Home,
+  html body #homeAmbiance #sphere3Home {
+    filter: blur(100px);
+  }
+}
 html body #homeAmbiance #sphere1Home {
   width: 600px;
   height: 600px;
@@ -50,6 +52,12 @@ html body #homeAmbiance #sphere1Home {
   left: 7%;
   animation: sphere1Bounce 6s ease-in-out infinite;
   background-color: rgba(43, 127, 255, 0.4);
+}
+@media (max-width: 1100px) {
+  html body #homeAmbiance #sphere1Home {
+    width: 300px;
+    height: 300px;
+  }
 }
 @keyframes sphere1Bounce {
   0% {
@@ -69,6 +77,12 @@ html body #homeAmbiance #sphere2Home {
   right: 5%;
   background-color: rgba(173, 70, 255, 0.4);
   animation: sphere2Bounce 8s ease-in-out infinite;
+}
+@media (max-width: 1100px) {
+  html body #homeAmbiance #sphere2Home {
+    width: 300px;
+    height: 300px;
+  }
 }
 @keyframes sphere2Bounce {
   0% {
@@ -285,8 +299,8 @@ html body #hero #hero-title {
 }
 @media (max-width: 768px) {
   html body #hero #hero-title {
-    font-size: 110px;
-    line-height: 90px;
+    font-size: 96px;
+    line-height: 80px;
   }
 }
 html body #hero #hero-subtitle {
@@ -821,7 +835,7 @@ html body #swipe {
     display: flex;
   }
 }
-html body #swipe .fa-arrow-left {
+html body #swipe .fa-arrow-right {
   color: white;
 }
 html body #swipe p {
@@ -839,7 +853,8 @@ html body #experienceTitle {
 @media (max-width: 1100px) {
   html body #experienceTitle {
     display: flex;
-    padding-top: 120px;
+    padding-top: 40px;
+    margin-top: 80px;
   }
 }
 html body #experienceTitle h1 {
