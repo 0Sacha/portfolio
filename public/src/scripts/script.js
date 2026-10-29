@@ -321,14 +321,42 @@ if (aActive) {
             const navbar = document.querySelector('#navbar')
             navbar.style.transition = 'none'
             placerNav(localStorage.getItem('navCote') === 'gauche')
+            if (localStorage.getItem('navCote')) {
+                navSide.classList.add('discret')
+            }
             requestAnimationFrame(() => {
                 navbar.style.transition = ''
             })
         } catch (e) {}
 
+        let minuteurDiscret
+
         navSide.addEventListener('click', () => {
             const gauche = !navBloc.classList.contains('gauche')
-            placerNav(gauche)
+            const etaitDiscret = navSide.classList.contains('discret')
+            clearTimeout(minuteurDiscret)
+            navSide.classList.remove('discret')
+
+            setTimeout(() => {
+                navSide.classList.add('cache')
+
+                setTimeout(() => {
+                    navSide.style.transition = 'none'
+                    placerNav(gauche)
+
+                    requestAnimationFrame(() => {
+                        requestAnimationFrame(() => {
+                            navSide.style.transition = ''
+                            navSide.classList.remove('cache')
+
+                            minuteurDiscret = setTimeout(() => {
+                                navSide.classList.add('discret')
+                            }, 1500)
+                        })
+                    })
+                }, 200)
+            }, etaitDiscret ? 150 : 0)
+
             try {
                 localStorage.setItem('navCote', gauche ? 'gauche' : 'droite')
             } catch (e) {}

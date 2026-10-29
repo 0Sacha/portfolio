@@ -141,6 +141,7 @@ html body #nav #nav-side {
     backdrop-filter: blur(8px) saturate(170%);
     z-index: 9999;
     cursor: pointer;
+    transition: translate 0.2s ease-in-out, width 0.15s ease-in-out, opacity 0.15s ease-in-out;
   }
   html body #nav #nav-side::after {
     content: "";
@@ -150,9 +151,23 @@ html body #nav #nav-side {
     left: 0;
     right: -28px;
   }
+  html body #nav #nav-side.cache {
+    translate: -100% 0;
+  }
+  html body #nav #nav-side.discret {
+    width: 6px;
+    opacity: 0.5;
+  }
+  html body #nav #nav-side.discret::after {
+    right: -38px;
+  }
+  html body #nav #nav-side.discret i {
+    opacity: 0;
+  }
 }
 html body #nav #nav-side i {
   font-size: 10px;
+  transition: opacity 0.15s ease-in-out;
 }
 @media (max-width: 768px) {
   html body #nav.gauche #navbar {
@@ -169,6 +184,13 @@ html body #nav #nav-side i {
   }
   html body #nav.gauche #nav-side::after {
     left: -28px;
+    right: 0;
+  }
+  html body #nav.gauche #nav-side.cache {
+    translate: 100% 0;
+  }
+  html body #nav.gauche #nav-side.discret::after {
+    left: -38px;
     right: 0;
   }
 }
