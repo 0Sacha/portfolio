@@ -299,6 +299,29 @@ if (aActive) {
         window.dispatchEvent(new Event('scroll'))
     })
 
+    const navBloc = document.querySelector('#nav')
+    const navSide = document.querySelector('#nav-side')
+
+    function placerNav(gauche) {
+        navBloc.classList.toggle('gauche', gauche)
+        navSide.querySelector('i').className = gauche ? 'fa-solid fa-chevron-right' : 'fa-solid fa-chevron-left'
+        navSide.setAttribute('aria-label', gauche ? 'Placer la navigation à droite' : 'Placer la navigation à gauche')
+    }
+
+    if (navSide) {
+        try {
+            placerNav(localStorage.getItem('navCote') === 'gauche')
+        } catch (e) {}
+
+        navSide.addEventListener('click', () => {
+            const gauche = !navBloc.classList.contains('gauche')
+            placerNav(gauche)
+            try {
+                localStorage.setItem('navCote', gauche ? 'gauche' : 'droite')
+            } catch (e) {}
+        })
+    }
+
     const sectionHeros = document.querySelector('#nav')
     const sectionProjet = document.querySelector('#section-projet')
     const experienceTitle = document.querySelector('#experienceTitle')
@@ -400,4 +423,4 @@ function getLevel(count) {
     }
 }
 
-fetchGitHubContributions();
+// fetchGitHubContributions();
