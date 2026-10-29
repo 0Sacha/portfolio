@@ -116,6 +116,11 @@ html body #nav {
     margin-right: 20px;
   }
 }
+@media (max-width: 768px) {
+  html body #nav {
+    margin-top: 0;
+  }
+}
 html body #nav #nav-side {
   display: none;
 }
@@ -313,6 +318,11 @@ html body #nav #navbar ul li a i {
 html body #nav #navbar ul li a:hover {
   color: #ffffff;
 }
+@media (max-width: 768px) {
+  html body #nav #navbar ul .li-projets {
+    display: none;
+  }
+}
 @media (max-width: 1100px) {
   html body #nav #navbar ul .li-login-btn {
     display: none;
@@ -339,6 +349,11 @@ html body #hero {
   height: 100vh;
   color: rgba(255, 255, 255, 0.8);
   gap: 32px;
+}
+@media (max-width: 768px) {
+  html body #hero {
+    height: 100svh;
+  }
 }
 html body #hero::after {
   display: none;
@@ -458,7 +473,8 @@ html body #hero #hero-links {
     flex-direction: column;
   }
 }
-html body #hero #hero-links #hero-links-project {
+html body #hero #hero-links #hero-links-project,
+html body #hero #hero-links #hero-links-parcours {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -472,7 +488,21 @@ html body #hero #hero-links #hero-links-project {
   box-shadow: 0 10px 15px -3px rgba(43, 127, 255, 0.3), 0 4px 6px -4px rgba(43, 127, 255, 0.3);
   transition: all 300ms ease-in-out;
 }
-html body #hero #hero-links #hero-links-project:hover {
+@media (max-width: 768px) {
+  html body #hero #hero-links #hero-links-project {
+    display: none;
+  }
+}
+html body #hero #hero-links #hero-links-parcours {
+  display: none;
+}
+@media (max-width: 768px) {
+  html body #hero #hero-links #hero-links-parcours {
+    display: flex;
+  }
+}
+html body #hero #hero-links #hero-links-project:hover,
+html body #hero #hero-links #hero-links-parcours:hover {
   transform: scale(1.1);
   border: 1px solid rgba(81, 162, 255, 0.3);
   background: #3a5af9;
@@ -487,6 +517,11 @@ html body #hero #hero-links #hero-links-contact {
   gap: 8px;
   cursor: not-allowed;
   transition: all 300ms ease-in-out;
+}
+@media (max-width: 768px) {
+  html body #hero #hero-links #hero-links-contact {
+    display: none;
+  }
 }
 html body #hero #hero-links #hero-links-contact .trait {
   background: #fff;
@@ -533,6 +568,11 @@ html body #section-projet {
     padding-top: 80px;
   }
 }
+@media (max-width: 768px) {
+  html body #section-projet {
+    display: none;
+  }
+}
 html body #section-projet h1 {
   font-size: 60px;
   color: rgb(255, 255, 255);
@@ -576,6 +616,11 @@ html body #selection {
     scroll-snap-type: x mandatory;
     width: 100%;
     box-sizing: border-box;
+  }
+}
+@media (max-width: 768px) {
+  html body #selection {
+    display: none;
   }
 }
 html body #selection .section-container {
@@ -915,6 +960,11 @@ html body #swipe {
 @media (max-width: 1100px) {
   html body #swipe {
     display: flex;
+  }
+}
+@media (max-width: 768px) {
+  html body #swipe {
+    display: none;
   }
 }
 html body #swipe .fa-arrow-right {
@@ -1438,11 +1488,19 @@ html body #experience-link .liste-et-lien #list-tag {
   flex-direction: row;
   gap: 8px;
 }
+@media (max-width: 1540px) {
+  html body #experience-link .liste-et-lien #list-tag {
+    flex-wrap: wrap;
+  }
+}
 @media (max-width: 1100px) {
   html body #experience-link .liste-et-lien #list-tag {
     flex-wrap: wrap;
     justify-content: center;
   }
+}
+html body #experience-link .liste-et-lien #list-tag p {
+  white-space: nowrap;
 }
 html body #experience-link .liste-et-lien #list-tag .tag-1 {
   display: flex;
@@ -1454,7 +1512,7 @@ html body #experience-link .liste-et-lien #list-tag .tag-1 {
   padding: 7px 13px 6.5px 13px;
   transition: all 250ms ease-in-out;
 }
-html body #experience-link .liste-et-lien #list-tag .tag-1 .fa-code {
+html body #experience-link .liste-et-lien #list-tag .tag-1 i {
   color: #00d3f3;
 }
 html body #experience-link .liste-et-lien #list-tag .tag-1 p {
@@ -1474,7 +1532,7 @@ html body #experience-link .liste-et-lien #list-tag .tag-2 {
   padding: 7px 13px 6.5px 13px;
   transition: all 250ms ease-in-out;
 }
-html body #experience-link .liste-et-lien #list-tag .tag-2 .fa-wrench {
+html body #experience-link .liste-et-lien #list-tag .tag-2 i {
   color: #05df72;
 }
 html body #experience-link .liste-et-lien #list-tag .tag-2 p {
@@ -1494,7 +1552,7 @@ html body #experience-link .liste-et-lien #list-tag .tag-3 {
   padding: 7px 13px 6.5px 13px;
   transition: all 250ms ease-in-out;
 }
-html body #experience-link .liste-et-lien #list-tag .tag-3 .fa-swatchbook {
+html body #experience-link .liste-et-lien #list-tag .tag-3 i {
   color: #c27aff;
 }
 html body #experience-link .liste-et-lien #list-tag .tag-3 p {
@@ -1514,7 +1572,7 @@ html body #experience-link .liste-et-lien #list-tag .tag-4 {
   padding: 7px 13px 6.5px 13px;
   transition: all 250ms ease-in-out;
 }
-html body #experience-link .liste-et-lien #list-tag .tag-4 .fa-graduation-cap {
+html body #experience-link .liste-et-lien #list-tag .tag-4 i {
   color: #51a2ff;
 }
 html body #experience-link .liste-et-lien #list-tag .tag-4 p {
@@ -1577,6 +1635,7 @@ html body #experience-link .liste-et-lien #liens-experience .telecharger-le-cv {
   display: flex;
   flex-direction: row;
   align-items: center;
+  white-space: nowrap;
   padding: 9px 16px;
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.1);

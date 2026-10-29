@@ -146,6 +146,10 @@ html {
         margin-right: 20px;
       }
 
+      @media (max-width: 768px) {
+        margin-top: 0;
+      }
+
       #nav-side {
         display: none;
 
@@ -377,6 +381,12 @@ html {
             }
           }
 
+          .li-projets {
+            @media (max-width: 768px) {
+              display: none;
+            }
+          }
+
           .li-login-btn {
             @media (max-width: 1100px) {
               display: none;
@@ -411,6 +421,10 @@ html {
       height: 100vh;
       color: $text-navbar-color;
       gap: 32px;
+
+      @media (max-width: 768px) {
+        height: 100svh;
+      }
 
       &::after {
         display: none;
@@ -534,7 +548,8 @@ html {
           flex-direction: column;
         }
 
-        #hero-links-project {
+        #hero-links-project,
+        #hero-links-parcours {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -551,7 +566,22 @@ html {
           transition: all 300ms ease-in-out;
         }
 
-        #hero-links-project:hover {
+        #hero-links-project {
+          @media (max-width: 768px) {
+            display: none;
+          }
+        }
+
+        #hero-links-parcours {
+          display: none;
+
+          @media (max-width: 768px) {
+            display: flex;
+          }
+        }
+
+        #hero-links-project:hover,
+        #hero-links-parcours:hover {
           transform: scale(1.1);
           border: 1px solid rgba(81, 162, 255, 0.3);
           background: #3a5af9;
@@ -567,6 +597,10 @@ html {
           gap: 8px;
           cursor: not-allowed;
           transition: all 300ms ease-in-out;
+
+          @media (max-width: 768px) {
+            display: none;
+          }
 
           .trait {
             background: #fff;
@@ -624,6 +658,10 @@ html {
         padding-top: 80px;
       }
 
+      @media (max-width: 768px) {
+        display: none;
+      }
+
       h1 {
         font-size: 60px;
         color: $text-default;
@@ -667,6 +705,10 @@ html {
         scroll-snap-type: x mandatory;
         width: 100%;
         box-sizing: border-box;
+      }
+
+      @media (max-width: 768px) {
+        display: none;
       }
 
       .section-container {
@@ -1035,6 +1077,10 @@ html {
 
       @media (max-width: 1100px) {
         display: flex;
+      }
+
+      @media (max-width: 768px) {
+        display: none;
       }
 
       .fa-arrow-right {
@@ -1617,9 +1663,17 @@ html {
           flex-direction: row;
           gap: 8px;
 
+          @media (max-width: 1540px) {
+            flex-wrap: wrap;
+          }
+
           @media (max-width: 1100px) {
             flex-wrap: wrap;
             justify-content: center;
+          }
+
+          p {
+            white-space: nowrap;
           }
 
           .tag-1 {
@@ -1632,7 +1686,7 @@ html {
             padding: 7px 13px 6.5px 13px;
             transition: all 250ms ease-in-out;
 
-            .fa-code {
+            i {
               color: #00d3f3;
             }
 
@@ -1656,7 +1710,7 @@ html {
             padding: 7px 13px 6.5px 13px;
             transition: all 250ms ease-in-out;
 
-            .fa-wrench {
+            i {
               color: #05df72;
             }
 
@@ -1680,7 +1734,7 @@ html {
             padding: 7px 13px 6.5px 13px;
             transition: all 250ms ease-in-out;
 
-            .fa-swatchbook {
+            i {
               color: #c27aff;
             }
 
@@ -1704,7 +1758,7 @@ html {
             padding: 7px 13px 6.5px 13px;
             transition: all 250ms ease-in-out;
 
-            .fa-graduation-cap {
+            i {
               color: #51a2ff;
             }
 
@@ -1782,6 +1836,7 @@ html {
             display: flex;
             flex-direction: row;
             align-items: center;
+            white-space: nowrap;
             padding: 9px 16px;
             border-radius: 999px;
             border: 1px solid rgba(255, 255, 255, 0.1);

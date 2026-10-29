@@ -375,7 +375,7 @@ if (aActive) {
         if (window.scrollY >= sectionHeros.offsetTop) {
             moveIndicator(navLi[0])
         }
-        if (window.scrollY + window.innerHeight / 2 >= sectionProjet.offsetTop - 200) {
+        if (sectionProjet.offsetParent && window.scrollY + window.innerHeight / 2 >= sectionProjet.offsetTop - 200) {
             moveIndicator(navLi[1])
         }
         if (window.scrollY + window.innerHeight / 2 >= experienceTitle.offsetTop - 200 || window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 5 ) {
