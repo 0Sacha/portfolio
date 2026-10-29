@@ -146,6 +146,73 @@ html {
         margin-right: 20px;
       }
 
+      #nav-side {
+        display: none;
+
+        @media (max-width: 768px) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: fixed;
+          top: 78%;
+          left: 0;
+          transform: translateY(-50%);
+          width: 16px;
+          height: 44px;
+          padding: 0;
+          color: $text-navbar-color;
+          background:
+            linear-gradient(135deg, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0.02) 50%, rgba(255, 255, 255, 0.08) 100%),
+            rgba(15, 15, 25, 0.4);
+          border: 1px solid rgba(255, 255, 255, 0.25);
+          border-left: none;
+          border-radius: 0 12px 12px 0;
+          box-shadow:
+            0 4px 16px 0 rgba(0, 0, 0, 0.3),
+            inset 0 1px 0 0 rgba(255, 255, 255, 0.4);
+          -webkit-backdrop-filter: blur(8px) saturate(170%);
+          backdrop-filter: blur(8px) saturate(170%);
+          z-index: 9999;
+          cursor: pointer;
+
+          &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: -28px;
+          }
+        }
+
+        i {
+          font-size: 10px;
+        }
+      }
+
+      &.gauche {
+        #navbar {
+          @media (max-width: 768px) {
+            translate: calc(-100vw + 100% + 20px) 0;
+          }
+        }
+
+        #nav-side {
+          @media (max-width: 768px) {
+            left: auto;
+            right: 0;
+            border-left: 1px solid rgba(255, 255, 255, 0.25);
+            border-right: none;
+            border-radius: 12px 0 0 12px;
+
+            &::after {
+              left: -28px;
+              right: 0;
+            }
+          }
+        }
+      }
+
       #navbar {
         display: flex;
         color: $text-navbar-color;
@@ -184,12 +251,15 @@ html {
           bottom: auto;
           left: auto;
           right: 10px;
-          transform: translateY(-50%);
+          transform: translate(0, -50%);
           margin: 0;
           padding: 6px;
           width: auto;
           height: auto;
           border-radius: 999px;
+          transition:
+            scale 0.2s ease-out,
+            translate 0.4s ease-in-out;
         }
 
         ul {
