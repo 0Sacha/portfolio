@@ -146,7 +146,7 @@ html body #nav #navbar {
 }
 @media (max-width: 768px) {
   html body #nav #navbar {
-    top: 50%;
+    top: 78%;
     bottom: auto;
     left: auto;
     right: 10px;
