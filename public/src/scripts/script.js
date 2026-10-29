@@ -299,6 +299,14 @@ if (aActive) {
         window.dispatchEvent(new Event('scroll'))
     })
 
+    window.addEventListener('load', () => {
+        window.dispatchEvent(new Event('scroll'))
+    })
+
+    document.fonts.ready.then(() => {
+        window.dispatchEvent(new Event('scroll'))
+    })
+
     const navBloc = document.querySelector('#nav')
     const navSide = document.querySelector('#nav-side')
 
@@ -310,7 +318,12 @@ if (aActive) {
 
     if (navSide) {
         try {
+            const navbar = document.querySelector('#navbar')
+            navbar.style.transition = 'none'
             placerNav(localStorage.getItem('navCote') === 'gauche')
+            requestAnimationFrame(() => {
+                navbar.style.transition = ''
+            })
         } catch (e) {}
 
         navSide.addEventListener('click', () => {
