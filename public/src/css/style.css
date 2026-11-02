@@ -759,6 +759,13 @@ html body #section-projet {
     padding-top: 80px;
   }
 }
+@media (max-width: 768px) {
+  html body #section-projet {
+    margin-top: 40px;
+    padding-top: 40px;
+    gap: 8px;
+  }
+}
 html body #section-projet h1 {
   font-size: 60px;
   color: rgb(var(--blanc));
@@ -767,6 +774,11 @@ html body #section-projet h1 {
 @media (max-width: 1100px) {
   html body #section-projet h1 {
     font-size: 36px;
+  }
+}
+@media (max-width: 768px) {
+  html body #section-projet h1 {
+    font-size: 30px;
   }
 }
 html body #section-projet p {
@@ -837,6 +849,12 @@ html body #selection .section-container #selectionCard01 {
     align-items: center;
   }
 }
+@media (max-width: 768px) {
+  html body #selection .section-container #selectionCard01 {
+    margin-top: 24px;
+    gap: 20px;
+  }
+}
 html body #selection .section-container #selectionCard01 #leftSelectCard01 {
   display: flex;
   flex-direction: column;
@@ -875,6 +893,11 @@ html body #selection .section-container #selectionCard01 #rightSelectCard01 {
     width: 328.66px;
   }
 }
+@media (max-width: 768px) {
+  html body #selection .section-container #selectionCard01 #rightSelectCard01 {
+    gap: 14px;
+  }
+}
 html body #selection .section-container #selectionCard01 #rightSelectCard01 h1 {
   color: rgba(var(--bleu), 0.7);
   font-size: 72px;
@@ -883,6 +906,11 @@ html body #selection .section-container #selectionCard01 #rightSelectCard01 h1 {
 @media (max-width: 1260px) {
   html body #selection .section-container #selectionCard01 #rightSelectCard01 h1 {
     font-size: 60px;
+  }
+}
+@media (max-width: 768px) {
+  html body #selection .section-container #selectionCard01 #rightSelectCard01 h1 {
+    font-size: 40px;
   }
 }
 html body #selection .section-container #selectionCard01 #rightSelectCard01 h2 {
@@ -895,6 +923,11 @@ html body #selection .section-container #selectionCard01 #rightSelectCard01 h2 {
     font-size: 30px;
   }
 }
+@media (max-width: 768px) {
+  html body #selection .section-container #selectionCard01 #rightSelectCard01 h2 {
+    font-size: 24px;
+  }
+}
 html body #selection .section-container #selectionCard01 #rightSelectCard01 p {
   color: rgba(var(--blanc), 0.8);
   font-size: 18px;
@@ -903,6 +936,11 @@ html body #selection .section-container #selectionCard01 #rightSelectCard01 p {
 @media (max-width: 1260px) {
   html body #selection .section-container #selectionCard01 #rightSelectCard01 p {
     font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  html body #selection .section-container #selectionCard01 #rightSelectCard01 p {
+    font-size: 15px;
   }
 }
 html body #selection .section-container #selectionCard01 #rightSelectCard01 #selectionTopic {
@@ -960,6 +998,11 @@ html body #selection .section-container #selectionCard01 #rightSelectCard01 #sel
   box-shadow: 0 10px 15px -3px rgba(var(--bleu-vif), 0.3), 0 4px 6px -4px rgba(var(--bleu-vif), 0.3);
   transition: all 300ms ease-in-out;
 }
+@media (max-width: 768px) {
+  html body #selection .section-container #selectionCard01 #rightSelectCard01 #selectionMore #selectionShowMore {
+    padding: 12px 24px 13px 24px;
+  }
+}
 html body #selection .section-container #selectionCard01 #rightSelectCard01 #selectionMore #selectionShowMore img {
   transition: all 300ms ease-out;
 }
@@ -1007,6 +1050,12 @@ html body #selection .section-container #selectionCard02 {
     align-items: center;
   }
 }
+@media (max-width: 768px) {
+  html body #selection .section-container #selectionCard02 {
+    margin-top: 24px;
+    gap: 20px;
+  }
+}
 html body #selection .section-container #selectionCard02 #leftSelectCard02 {
   display: flex;
   flex-direction: column;
@@ -1045,6 +1094,11 @@ html body #selection .section-container #selectionCard02 #rightSelectCard02 {
     width: 328.66px;
   }
 }
+@media (max-width: 768px) {
+  html body #selection .section-container #selectionCard02 #rightSelectCard02 {
+    gap: 14px;
+  }
+}
 html body #selection .section-container #selectionCard02 #rightSelectCard02 h1 {
   color: rgba(var(--bleu), 0.7);
   font-size: 72px;
@@ -1053,6 +1107,11 @@ html body #selection .section-container #selectionCard02 #rightSelectCard02 h1 {
 @media (max-width: 1260px) {
   html body #selection .section-container #selectionCard02 #rightSelectCard02 h1 {
     font-size: 60px;
+  }
+}
+@media (max-width: 768px) {
+  html body #selection .section-container #selectionCard02 #rightSelectCard02 h1 {
+    font-size: 40px;
   }
 }
 html body #selection .section-container #selectionCard02 #rightSelectCard02 h2 {
@@ -1065,6 +1124,11 @@ html body #selection .section-container #selectionCard02 #rightSelectCard02 h2 {
     font-size: 30px;
   }
 }
+@media (max-width: 768px) {
+  html body #selection .section-container #selectionCard02 #rightSelectCard02 h2 {
+    font-size: 24px;
+  }
+}
 html body #selection .section-container #selectionCard02 #rightSelectCard02 p {
   color: rgba(var(--blanc), 0.8);
   font-size: 18px;
@@ -1073,6 +1137,11 @@ html body #selection .section-container #selectionCard02 #rightSelectCard02 p {
 @media (max-width: 1260px) {
   html body #selection .section-container #selectionCard02 #rightSelectCard02 p {
     font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  html body #selection .section-container #selectionCard02 #rightSelectCard02 p {
+    font-size: 15px;
   }
 }
 html body #selection .section-container #selectionCard02 #rightSelectCard02 #selectionTopic {
@@ -1130,6 +1199,11 @@ html body #selection .section-container #selectionCard02 #rightSelectCard02 #sel
   box-shadow: 0 10px 15px -3px rgba(var(--bleu-vif), 0.3), 0 4px 6px -4px rgba(var(--bleu-vif), 0.3);
   transition: all 300ms ease-in-out;
 }
+@media (max-width: 768px) {
+  html body #selection .section-container #selectionCard02 #rightSelectCard02 #selectionMore #selectionShowMore {
+    padding: 12px 24px 13px 24px;
+  }
+}
 html body #selection .section-container #selectionCard02 #rightSelectCard02 #selectionMore #selectionShowMore img {
   transition: all 300ms ease-out;
 }
@@ -1177,6 +1251,11 @@ html body #swipe {
     display: flex;
   }
 }
+@media (max-width: 768px) {
+  html body #swipe {
+    margin-top: 16px;
+  }
+}
 html body #swipe p {
   color: rgba(var(--blanc), 0.5);
   font-size: 14px;
@@ -1204,6 +1283,11 @@ html body #experienceTitle h1 {
 @media (max-width: 1100px) {
   html body #experienceTitle h1 {
     font-size: 36px;
+  }
+}
+@media (max-width: 768px) {
+  html body #experienceTitle h1 {
+    font-size: 30px;
   }
 }
 html body #experienceTitle p {
