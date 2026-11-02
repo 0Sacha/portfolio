@@ -1783,7 +1783,7 @@ html {
             transition: all 250ms ease-in-out;
 
             .fa-claude {
-              color: #fcfcfc;
+              color: #d97757;
             }
 
             p {
@@ -1793,6 +1793,102 @@ html {
 
           .tag-5:hover {
             border: 1px solid rgba(255, 122, 81, 0.5);
+            cursor: default;
+          }
+
+          .tag-6 {
+            display: flex;
+            flex-direction: row;
+            gap: 6px;
+            border-radius: 999px;
+            border: 1px solid rgba(253, 199, 0, 0.3);
+            background: rgba(253, 199, 0, 0.1);
+            padding: 7px 13px 6.5px 13px;
+            transition: all 250ms ease-in-out;
+
+            i {
+              color: #fdc700;
+            }
+
+            p {
+              color: #fdc700;
+            }
+          }
+
+          .tag-6:hover {
+            border: 1px solid rgba(253, 199, 0, 0.5);
+            cursor: default;
+          }
+
+          .tag-7 {
+            display: flex;
+            flex-direction: row;
+            gap: 6px;
+            border-radius: 999px;
+            border: 1px solid rgba(251, 100, 182, 0.3);
+            background: rgba(251, 100, 182, 0.1);
+            padding: 7px 13px 6.5px 13px;
+            transition: all 250ms ease-in-out;
+
+            i {
+              color: #fb64b6;
+            }
+
+            p {
+              color: #fb64b6;
+            }
+          }
+
+          .tag-7:hover {
+            border: 1px solid rgba(251, 100, 182, 0.5);
+            cursor: default;
+          }
+
+          .tag-8 {
+            display: flex;
+            flex-direction: row;
+            gap: 6px;
+            border-radius: 999px;
+            border: 1px solid rgba(124, 134, 255, 0.3);
+            background: rgba(124, 134, 255, 0.1);
+            padding: 7px 13px 6.5px 13px;
+            transition: all 250ms ease-in-out;
+
+            i {
+              color: #7c86ff;
+            }
+
+            p {
+              color: #7c86ff;
+            }
+          }
+
+          .tag-8:hover {
+            border: 1px solid rgba(124, 134, 255, 0.5);
+            cursor: default;
+          }
+
+          .tag-9 {
+            display: flex;
+            flex-direction: row;
+            gap: 6px;
+            border-radius: 999px;
+            border: 1px solid rgba(154, 230, 0, 0.3);
+            background: rgba(154, 230, 0, 0.1);
+            padding: 7px 13px 6.5px 13px;
+            transition: all 250ms ease-in-out;
+
+            i {
+              color: #9ae600;
+            }
+
+            p {
+              color: #9ae600;
+            }
+          }
+
+          .tag-9:hover {
+            border: 1px solid rgba(154, 230, 0, 0.5);
             cursor: default;
           }
         }
