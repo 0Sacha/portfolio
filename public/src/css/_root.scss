@@ -1,0 +1,81 @@
+:root {
+  --blanc: 255, 255, 255;
+  --blanc-fixe: 255, 255, 255;
+  --bleu: 81, 162, 255;
+  --bleu-azur: 0, 137, 201;
+  --bleu-bouton: 31, 95, 190;
+  --bleu-ciel: 70, 206, 255;
+  --bleu-clair: 142, 197, 255;
+  --bleu-gris: 52, 106, 168;
+  --bleu-lien: 31, 91, 225;
+  --bleu-lien-survol: 29, 89, 179;
+  --bleu-nuit: 28, 57, 142;
+  --bleu-roi: 21, 93, 252;
+  --bleu-survol: 58, 90, 249;
+  --bleu-vif: 43, 127, 255;
+  --citron: 154, 230, 0;
+  --claude: 217, 119, 87;
+  --cyan: 0, 211, 243;
+  --cyan-2: 0, 211, 242;
+  --cyan-fonce: 0, 184, 219;
+  --gris: 163, 163, 163;
+  --gris-2: 158, 158, 158;
+  --indigo: 124, 134, 255;
+  --jaune: 253, 199, 0;
+  --magenta: 177, 0, 201;
+  --magenta-2: 201, 0, 201;
+  --magenta-3: 201, 0, 174;
+  --noir: 0, 0, 0;
+  --nuit: 15, 15, 25;
+  --or: 255, 215, 0;
+  --orange: 255, 122, 81;
+  --orange-2: 255, 137, 4;
+  --orange-3: 255, 105, 0;
+  --orange-4: 254, 154, 0;
+  --rose: 251, 100, 182;
+  --rose-vif: 246, 51, 154;
+  --rouge: 255, 100, 103;
+  --rouge-2: 255, 77, 77;
+  --rouge-3: 212, 24, 61;
+  --rouge-vif: 255, 0, 0;
+  --vert: 5, 223, 114;
+  --vert-fonce: 0, 201, 80;
+  --violet: 194, 122, 255;
+  --violet-fonce: 173, 70, 255;
+  --ombre: 0, 0, 0;
+  --reflet: 255, 255, 255;
+  --lien-ombre: 0 1px 3px rgba(0, 0, 0, 0.45);
+}
+
+@mixin theme-clair {
+  --blanc: 15, 23, 42;
+  --noir: 246, 247, 251;
+  --ombre: 15, 23, 42;
+  --carte-deskit: linear-gradient(135deg, rgba(var(--bleu-azur), 0.06) 0%, rgba(var(--magenta-2), 0.05) 100%), rgb(255, 255, 255);
+  --carte-presoa: linear-gradient(135deg, rgba(var(--vert-fonce), 0.07) 0%, rgba(var(--vert-fonce), 0.02) 100%), rgb(255, 255, 255);
+  --carte-promeo: linear-gradient(135deg, rgba(var(--bleu-vif), 0.07) 0%, rgba(var(--bleu-vif), 0.02) 100%), rgb(255, 255, 255);
+  --carte-grenet: linear-gradient(135deg, rgba(var(--violet-fonce), 0.07) 0%, rgba(var(--violet-fonce), 0.02) 100%), rgb(255, 255, 255);
+  --carte-ombre: 0 4px 24px rgba(15, 23, 42, 0.06), 0 1px 2px rgba(15, 23, 42, 0.04);
+  --bulles: 0.45;
+  --lien-ombre: none;
+  --nuit: 255, 255, 255;
+  --bleu: 37, 99, 235;
+  --vert: 22, 163, 74;
+  --violet: 147, 51, 234;
+  --cyan: 8, 145, 178;
+  --jaune: 202, 138, 4;
+  --citron: 101, 163, 13;
+  --rose: 219, 39, 119;
+  --indigo: 79, 70, 229;
+  --orange: 234, 88, 12;
+}
+
+:root[data-theme="light"]:has(> body:not([id])) {
+  @include theme-clair;
+}
+
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]):has(> body:not([id])) {
+    @include theme-clair;
+  }
+}

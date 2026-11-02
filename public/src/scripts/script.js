@@ -388,6 +388,43 @@ if (aActive) {
 
 }
 
+// switch du mode clair / sombre
+
+const themeSwitch = document.querySelector('#theme-switch')
+
+if (themeSwitch) {
+    const systemeClair = window.matchMedia('(prefers-color-scheme: light)')
+
+    function themeActuel() {
+        return document.documentElement.dataset.theme || (systemeClair.matches ? 'light' : 'dark')
+    }
+
+    function majSwitch() {
+        const clair = themeActuel() === 'light'
+        themeSwitch.classList.toggle('lune', clair)
+        themeSwitch.setAttribute('aria-label', clair ? 'Passer en mode sombre' : 'Passer en mode clair')
+    }
+
+    themeSwitch.addEventListener('click', () => {
+        const nouveau = themeActuel() === 'light' ? 'dark' : 'light'
+        document.documentElement.dataset.theme = nouveau
+        try {
+            localStorage.setItem('theme', nouveau)
+        } catch (e) {}
+        majSwitch()
+    })
+
+    systemeClair.addEventListener('change', majSwitch)
+
+    themeSwitch.classList.add('sans-anim')
+    majSwitch()
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            themeSwitch.classList.remove('sans-anim')
+        })
+    })
+}
+
 // API GITHUB
 
 
