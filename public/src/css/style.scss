@@ -506,12 +506,6 @@ html {
             }
           }
 
-          .li-projets {
-            @media (max-width: 768px) {
-              display: none;
-            }
-          }
-
           .li-login-btn {
             @media (max-width: 1100px) {
               display: none;
@@ -783,10 +777,6 @@ html {
         padding-top: 80px;
       }
 
-      @media (max-width: 768px) {
-        display: none;
-      }
-
       h1 {
         font-size: 60px;
         color: $text-default;
@@ -830,10 +820,6 @@ html {
         scroll-snap-type: x mandatory;
         width: 100%;
         box-sizing: border-box;
-      }
-
-      @media (max-width: 768px) {
-        display: none;
       }
 
       .section-container {
@@ -941,7 +927,7 @@ html {
               align-items: center;
 
               @media (max-width: 1260px) {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(4, 1fr);
               }
 
               li {
@@ -953,6 +939,12 @@ html {
                 color: $text-default;
                 padding: 9px 16px 9px 17px;
                 border-radius: 14px;
+                white-space: nowrap;
+
+                @media (max-width: 1260px) {
+                  padding: 9px 8px;
+                  font-size: 14px;
+                }
                 border: 1px solid rgba(var(--blanc), 0.1);
                 background: rgba(var(--blanc), 0.05);
 
@@ -1109,7 +1101,7 @@ html {
               align-items: center;
 
               @media (max-width: 1260px) {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: repeat(4, 1fr);
               }
 
               li {
@@ -1121,6 +1113,12 @@ html {
                 color: $text-default;
                 padding: 9px 16px 9px 17px;
                 border-radius: 14px;
+                white-space: nowrap;
+
+                @media (max-width: 1260px) {
+                  padding: 9px 8px;
+                  font-size: 14px;
+                }
                 border: 1px solid rgba(var(--blanc), 0.1);
                 background: rgba(var(--blanc), 0.05);
 
@@ -1202,14 +1200,6 @@ html {
 
       @media (max-width: 1100px) {
         display: flex;
-      }
-
-      @media (max-width: 768px) {
-        display: none;
-      }
-
-      .fa-arrow-right {
-        color: rgb(var(--blanc));
       }
 
       p {
