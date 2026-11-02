@@ -1262,6 +1262,50 @@ html {
       }
     }
 
+    #selection .section-container #selectionCard01,
+    #selection .section-container #selectionCard02 {
+      @media (max-width: 768px) {
+        align-items: flex-start;
+        padding: 0 74px 0 20px;
+        box-sizing: border-box;
+      }
+
+      #midSelectCard01,
+      #midSelectCard02 {
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+
+        img {
+          @media (max-width: 768px) {
+            width: 100%;
+            height: auto;
+            aspect-ratio: 1.6;
+          }
+        }
+      }
+
+      #rightSelectCard01,
+      #rightSelectCard02 {
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+
+        #selectionTopic li {
+          @media (max-width: 768px) {
+            padding: 9px 4px;
+          }
+        }
+      }
+    }
+
+    #nav.gauche ~ #selection .section-container #selectionCard01,
+    #nav.gauche ~ #selection .section-container #selectionCard02 {
+      @media (max-width: 768px) {
+        padding: 0 20px 0 74px;
+      }
+    }
+
     #swipe {
       display: flex;
       flex-direction: row;
@@ -5218,6 +5262,30 @@ html {
             }
           }
         }
+      }
+    }
+
+    #experienceSection {
+      @media (max-width: 768px) {
+        padding: 48px 74px 48px 20px;
+      }
+    }
+
+    #experience-link .liste-et-lien {
+      @media (max-width: 768px) {
+        padding: 0 74px 0 20px;
+      }
+    }
+
+    #nav.gauche ~ #experienceSection {
+      @media (max-width: 768px) {
+        padding: 48px 20px 48px 74px;
+      }
+    }
+
+    #nav.gauche ~ #experience-link .liste-et-lien {
+      @media (max-width: 768px) {
+        padding: 0 20px 0 74px;
       }
     }
 

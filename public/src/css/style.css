@@ -1233,6 +1233,54 @@ html body #selection .section-container #selectionCard02 #rightSelectCard02 #sel
   background: rgba(var(--blanc), 0.1);
   list-style: none;
 }
+@media (max-width: 768px) {
+  html body #selection .section-container #selectionCard01,
+  html body #selection .section-container #selectionCard02 {
+    align-items: flex-start;
+    padding: 0 74px 0 20px;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 768px) {
+  html body #selection .section-container #selectionCard01 #midSelectCard01,
+  html body #selection .section-container #selectionCard01 #midSelectCard02,
+  html body #selection .section-container #selectionCard02 #midSelectCard01,
+  html body #selection .section-container #selectionCard02 #midSelectCard02 {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  html body #selection .section-container #selectionCard01 #midSelectCard01 img,
+  html body #selection .section-container #selectionCard01 #midSelectCard02 img,
+  html body #selection .section-container #selectionCard02 #midSelectCard01 img,
+  html body #selection .section-container #selectionCard02 #midSelectCard02 img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1.6;
+  }
+}
+@media (max-width: 768px) {
+  html body #selection .section-container #selectionCard01 #rightSelectCard01,
+  html body #selection .section-container #selectionCard01 #rightSelectCard02,
+  html body #selection .section-container #selectionCard02 #rightSelectCard01,
+  html body #selection .section-container #selectionCard02 #rightSelectCard02 {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  html body #selection .section-container #selectionCard01 #rightSelectCard01 #selectionTopic li,
+  html body #selection .section-container #selectionCard01 #rightSelectCard02 #selectionTopic li,
+  html body #selection .section-container #selectionCard02 #rightSelectCard01 #selectionTopic li,
+  html body #selection .section-container #selectionCard02 #rightSelectCard02 #selectionTopic li {
+    padding: 9px 4px;
+  }
+}
+@media (max-width: 768px) {
+  html body #nav.gauche ~ #selection .section-container #selectionCard01,
+  html body #nav.gauche ~ #selection .section-container #selectionCard02 {
+    padding: 0 20px 0 74px;
+  }
+}
 html body #swipe {
   display: flex;
   flex-direction: row;
@@ -4653,6 +4701,26 @@ html body #formation-body .formation-content .formation-title .promeo-desc p {
   font-style: normal;
   font-weight: 400;
   line-height: 26px; /* 162.5% */
+}
+@media (max-width: 768px) {
+  html body #experienceSection {
+    padding: 48px 74px 48px 20px;
+  }
+}
+@media (max-width: 768px) {
+  html body #experience-link .liste-et-lien {
+    padding: 0 74px 0 20px;
+  }
+}
+@media (max-width: 768px) {
+  html body #nav.gauche ~ #experienceSection {
+    padding: 48px 20px 48px 74px;
+  }
+}
+@media (max-width: 768px) {
+  html body #nav.gauche ~ #experience-link .liste-et-lien {
+    padding: 0 20px 0 74px;
+  }
 }
 html body footer {
   display: flex;
