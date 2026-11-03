@@ -455,6 +455,7 @@ async function fetchGitHubContributions() {
 
             graphContainer.appendChild(weekEl);
         })
+        graphContainer.scrollLeft = graphContainer.scrollWidth
     } catch (erreur) {
         console.error(erreur.message);
     }
