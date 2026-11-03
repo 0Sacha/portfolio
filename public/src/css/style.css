@@ -127,6 +127,12 @@ html body #homeAmbiance {
   align-items: center;
   margin: 0 auto;
 }
+html body #homeAmbiance.fixe {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+}
 html body #homeAmbiance #sphere1Home,
 html body #homeAmbiance #sphere2Home,
 html body #homeAmbiance #sphere3Home {
@@ -3488,11 +3494,16 @@ html body #about-body {
   display: flex;
   flex-direction: column;
   gap: 88px;
-  max-width: 1180px;
+  max-width: 1500px;
   margin: 0 auto;
-  padding: 40px 32px 64px;
+  padding: 40px 0 64px;
   box-sizing: border-box;
   color: rgb(var(--blanc));
+}
+@media (max-width: 1540px) {
+  html body #about-body {
+    padding: 40px 20px 64px;
+  }
 }
 @media (max-width: 768px) {
   html body #about-body {
@@ -3644,26 +3655,6 @@ html body #about-body #moi-hero #moi-intro #moi-liens .principal {
 }
 html body #about-body #moi-hero #moi-intro #moi-liens .principal:hover {
   background: rgb(var(--bleu-survol));
-}
-html body #about-body #moi-hero #moi-avatar {
-  flex: 1 1 300px;
-  display: flex;
-  justify-content: center;
-}
-@media (max-width: 768px) {
-  html body #about-body #moi-hero #moi-avatar {
-    flex: none;
-    justify-content: flex-start;
-  }
-}
-html body #about-body #moi-hero #moi-avatar svg {
-  width: 280px;
-  height: auto;
-}
-@media (max-width: 768px) {
-  html body #about-body #moi-hero #moi-avatar svg {
-    width: 120px;
-  }
 }
 html body #about-body #moi-stats {
   display: grid;
@@ -3868,19 +3859,21 @@ html body #about-body #moi-activite .graph-container {
   }
 }
 html body #about-body #moi-activite .graph-container .week {
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
 @media (max-width: 768px) {
   html body #about-body #moi-activite .graph-container .week {
+    flex: none;
     gap: 3px;
   }
 }
 html body #about-body #moi-activite .graph-container .day {
   flex-shrink: 0;
-  width: 14px;
-  height: 14px;
+  width: 100%;
+  aspect-ratio: 1;
   border-radius: 4px;
 }
 @media (max-width: 768px) {
@@ -3889,6 +3882,10 @@ html body #about-body #moi-activite .graph-container .day {
     height: 9px;
     border-radius: 3px;
   }
+}
+html body #about-body #moi-activite .indisponible {
+  font-size: 14px;
+  color: rgba(var(--blanc), 0.55);
 }
 html body #about-body #moi-activite .day,
 html body #about-body #moi-activite .legende span {

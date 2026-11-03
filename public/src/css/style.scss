@@ -57,6 +57,13 @@ html {
       align-items: center;
       margin: 0 auto;
 
+      &.fixe {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+      }
+
       #sphere1Home,
       #sphere2Home,
       #sphere3Home {
@@ -3860,11 +3867,15 @@ html {
       display: flex;
       flex-direction: column;
       gap: 88px;
-      max-width: 1180px;
+      max-width: 1500px;
       margin: 0 auto;
-      padding: 40px 32px 64px;
+      padding: 40px 0 64px;
       box-sizing: border-box;
       color: rgb(var(--blanc));
+
+      @media (max-width: 1540px) {
+        padding: 40px 20px 64px;
+      }
 
       @media (max-width: 768px) {
         gap: 56px;
@@ -4029,26 +4040,6 @@ html {
 
             .principal:hover {
               background: rgb(var(--bleu-survol));
-            }
-          }
-        }
-
-        #moi-avatar {
-          flex: 1 1 300px;
-          display: flex;
-          justify-content: center;
-
-          @media (max-width: 768px) {
-            flex: none;
-            justify-content: flex-start;
-          }
-
-          svg {
-            width: 280px;
-            height: auto;
-
-            @media (max-width: 768px) {
-              width: 120px;
             }
           }
         }
@@ -4273,19 +4264,21 @@ html {
           }
 
           .week {
+            flex: 1;
             display: flex;
             flex-direction: column;
             gap: 4px;
 
             @media (max-width: 768px) {
+              flex: none;
               gap: 3px;
             }
           }
 
           .day {
             flex-shrink: 0;
-            width: 14px;
-            height: 14px;
+            width: 100%;
+            aspect-ratio: 1;
             border-radius: 4px;
 
             @media (max-width: 768px) {
@@ -4294,6 +4287,11 @@ html {
               border-radius: 3px;
             }
           }
+        }
+
+        .indisponible {
+          font-size: 14px;
+          color: rgba(var(--blanc), 0.55);
         }
 
         .day,
