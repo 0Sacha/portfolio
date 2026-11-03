@@ -429,59 +429,32 @@ if (themeSwitch) {
 
 
 async function fetchGitHubContributions() {
-    const url = "https://api.github.com/graphql";
+    const graphContainer = document.querySelector('.graph-container')
+    if (!graphContainer) return;
+
     try {
-        const query = `
-        {
-            user(login: "0Sacha") {
-            contributionsCollection {
-            contributionCalendar {
-            weeks {
-            contributionDays {
-                                date
-                                contributionCount
-                            }
-                        }
-                    }
-                }
-            }
-        }`
-        const reponse = await fetch(url, {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-                "Authorization": "Bearer " + GITHUB_TOKEN,
-            },
-            body: JSON.stringify({ query: query })
-        });
+        const reponse = await fetch('api/github.php');
         if (!reponse.ok) {
             throw new Error(`Statut de réponse : ${reponse.status}`);
         }
         const resultat = await reponse.json();
-        console.log(resultat);
-        const weeks = resultat.data.user.contributionsCollection.contributionCalendar.weeks;
-        const graphContainer = document.querySelector('.graph-container')
-        console.log(graphContainer)
-        if (!graphContainer) return;
+        const weeks = resultat.weeks;
+
         graphContainer.innerHTML = ""
         weeks.forEach(week => {
-
             const weekEl = document.createElement("div");
-
             weekEl.classList.add("week");
+
             week.contributionDays.forEach(day => {
                 const dayEl = document.createElement("div");
-
                 dayEl.classList.add("day");
-
-                weekEl.appendChild(dayEl);
-
                 dayEl.dataset.level = getLevel(day.contributionCount)
+                dayEl.title = `${day.contributionCount} contribution(s) le ${new Date(day.date).toLocaleDateString('fr-FR')}`
+                weekEl.appendChild(dayEl);
             })
-            graphContainer.appendChild(weekEl);
 
+            graphContainer.appendChild(weekEl);
         })
-        console.log(weeks);
     } catch (erreur) {
         console.error(erreur.message);
     }
@@ -501,4 +474,4 @@ function getLevel(count) {
     }
 }
 
-// fetchGitHubContributions();
+fetchGitHubContributions();

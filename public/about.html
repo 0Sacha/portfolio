@@ -4,30 +4,30 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
 
-    <title>Moi</title>
+    <title>Moi - Sacha Laville</title>
 
-    <!--    balises meta réseaux sociaux-->
-    <meta content="Porfolio 2025 - Sacha Laville" property="og:title" name="og:title">
-    <meta content="Étudiant en deuxième année du BTS SIO SLAM à Promeo Compiègne.
-    Ce portfolio servira de support pour un oral qui contribuera à l'obtention de mon diplôme.
-    Celui-ci sert entre autres à montrer mes compétences en matière de programmation." property="og:description"
-          name="og:description">
-    <meta content="https://sachalaville.fr/portfolio/public/src/img/meta_banner.png" property="og:image"
-          name="og:image">
+    <meta content="Moi - Sacha Laville" property="og:title" name="og:title">
+    <meta content="Sacha Laville, technicien support IT et intégrateur web. Mon parcours, mes compétences et mes projets." property="og:description"
+          name="description">
+    <meta content="https://sachalaville.fr/src/images/meta_banner.png" property="og:image" name="og:image">
     <meta content="1200" property="og:image:width" name="og:image:width">
     <meta content="630" property="og:image:height" name="og:image:height">
-    <meta content="https://sachalaville.fr/" property="og:url" name="og:url">
-    <meta content="Portfolio 2025 - Sacha Laville" property="og:site_name" name="og:site_name">
+    <meta content="https://sachalaville.fr/about.html" property="og:url" name="og:url">
+    <meta content="Portfolio 2026 - Sacha Laville" property="og:site_name" name="og:site_name">
     <meta content="website" property="og:type" name="og:type">
     <meta content="fr_FR" property="og:locale" name="og:locale">
-
     <link rel="icon" href="src/images/LogoPortfolio.png" type="image/x-icon">
-    <script src="src/scripts/config.js"></script>
-    <script src="src/scripts/script.js" defer></script>
-    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/style.css?v=34">
+    <script src="src/scripts/script.js?v=34" defer></script>
+    <script>
+        try {
+            const theme = localStorage.getItem('theme')
+            if (theme) document.documentElement.dataset.theme = theme
+        } catch (e) {}
+    </script>
 
 </head>
 
@@ -98,7 +98,7 @@
                     </svg>
                 </div>
                 <h1>Sacha Laville</h1>
-                <p>Apprenti Développeur & Technicien IT · Passionné par la tech, le design et le web</p>
+                <p>Technicien support IT · Intégrateur web · Passionné par la tech, le design et le web</p>
                 <div id="localisation">
                     <i class="fa-regular fa-compass"></i>
                     <p>Lacroix-Saint-Ouen, FR</p>
@@ -106,22 +106,17 @@
                 <div id="links">
                     <div id="github-links">
                         <i class="fa-brands fa-github"></i>
-                        <a href="https://github.com/0Sacha">github.com/0Sacha</a>
+                        <a href="https://github.com/0Sacha" target="_blank" rel="noopener">github.com/0Sacha</a>
                     </div>
                     <div id="linkedin-links">
                         <i class="fa-brands fa-linkedin-in"></i>
-                        <a href="https://www.linkedin.com/in/sachalaville/">linkedin.com/in/sachalaville/</a>
+                        <a href="https://www.linkedin.com/in/sachalaville/" target="_blank" rel="noopener">linkedin.com/in/sachalaville/</a>
                     </div>
                     <div id="contact-links">
                         <i class="fa-regular fa-envelope"></i>
                         <a href="mailto:sacha.laville.pro@gmail.com">sacha.laville.pro@gmail.com</a>
                     </div>
                 </div>
-                <div id="line"></div>
-                <a id="connexion-admin">
-                    <i class="fa-solid fa-lock"></i>
-                    <p>Connexion admin</p>
-                </a>
             </div>
             <div id="stat-left-container">
                 <h1>stats</h1>
@@ -147,6 +142,15 @@
             <div id="organisation-left-container">
                 <h1>Organisation</h1>
                 <div id="ecole-entreprise">
+                    <div id="deskit">
+                        <div id="left-deskit">
+                            <i class="fa-solid fa-headset"></i>
+                            <div id="subtitle-deskit">
+                                <p>Desk IT</p>
+                                <p>Support informatique</p>
+                            </div>
+                        </div>
+                    </div>
                     <div id="presoa">
                         <div id="left-presoa">
                             <i class="fa-solid fa-briefcase-medical"></i>
@@ -155,7 +159,7 @@
                                 <p>Médecine du travail</p>
                             </div>
                         </div>
-                        <a href="https://presoa.org/" target="_blank" id="link-presoa">
+                        <a href="https://presoa.org/" target="_blank" rel="noopener" id="link-presoa">
                             <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
                         </a>
                     </div>
@@ -167,7 +171,7 @@
                                 <p>CFA Compiègne</p>
                             </div>
                         </div>
-                        <a href="https://www.promeo-formation.fr/" target="_blank" id="link-promeo">
+                        <a href="https://www.promeo-formation.fr/" target="_blank" rel="noopener" id="link-promeo">
                             <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
                         </a>
                     </div>
@@ -193,22 +197,24 @@
                 </div>
                 <div id="content">
                     <p>
-                        👋 Salut, moi c'est <strong>Sacha Laville</strong> — développeur front-end basé à
-                        Lacroix-Saint-Ouen (60).
+                        👋 Salut, moi c'est <strong>Sacha Laville</strong> — technicien support IT et intégrateur web,
+                        basé à Lacroix-Saint-Ouen (60).
                     </p>
                     <p>
-                        🎓 Formé au <span style="color: #00D3F3">CFA Promeo de Compiègne</span> : BTS Service
-                        informatique aux Organisations option solution logiciels et application metier, en
-                        alternance.
+                        💼 Technicien support N1 chez <span style="color: rgb(var(--violet))">Desk IT</span> : prise
+                        d'appels clients, résolution d'incidents et administration Microsoft 365.
                     </p>
                     <p>
-                        💼 En alternance depuis <span style="color: #05DF72">1 ans et demi chez Presoa</span> en
-                        tant que
-                        technicien IT : support N1, helpdesk, administration AD et réseau.
+                        🏥 Avant ça, deux ans d'alternance chez <span style="color: rgb(var(--vert))">Presoa</span> en
+                        tant que technicien IT : support N1, Active Directory, tickets GLPI et déploiement de postes.
                     </p>
                     <p>
-                        🚀 Passionné par le <span style="color: #00D3F3">développement web</span>, le design
-                        graphique, et la création d'interfaces soignées.
+                        🎓 Formé au <span style="color: rgb(var(--cyan))">CFA Promeo de Compiègne</span> en BTS SIO
+                        option SLAM (Solutions Logicielles et Applications Métiers), en alternance.
+                    </p>
+                    <p>
+                        🚀 Passionné par l'<span style="color: rgb(var(--cyan))">intégration web</span>, le design
+                        graphique et la création d'interfaces soignées.
                     </p>
                 </div>
             </div>
@@ -224,7 +230,7 @@
             </div>
             <div id="activite-github-right-container">
                 <div id="title-activity">
-                    <p>Activité - 12 derière mois</p>
+                    <p>Activité - 12 derniers mois</p>
                     <p>contributions on my github</p>
                 </div>
                 <div class="graph-container">
@@ -727,30 +733,30 @@
                             <i class="fa-solid fa-server fa-sm"></i>
                             <p>perso <span>/ deltaOne</span></p>
                         </div>
-                        <a href="./project/deltaone.html" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></a>
+                        <a href="https://0sacha.github.io/DeltaOne-WebSite/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></a>
                     </div>
                     <div id="description">
-                        <p>Projet de fin d’année durant mon bacpro système numériques</p>
+                        <p>Mon tout premier site web, pour présenter notre projet d'éolienne du cahier des charges à sa conception théorique.</p>
                     </div>
                     <div id="language-used">
                         <div id="dot"></div>
-                        <p>html - css - js</p>
+                        <p>html - css - php - js</p>
                     </div>
                 </div>
                 <div id="card-project-2">
                     <div id="up-of-card">
                         <div id="title-card">
                             <i class="fa-solid fa-shield fa-sm"></i>
-                            <p><span>/ PROMEO</span></p>
+                            <p>formation <span>/ promeo</span></p>
                         </div>
                         <a href="./project/promeo.html"><i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></a>
                     </div>
                     <div id="description">
-                        <p>Épreuve professionnelle — Crréation d'une app web pour facilité la reservation de table dans un restaurant sans friction et ralentissement.</p>
+                        <p>BTS SIO option SLAM en alternance au CFA Promeo de Compiègne, de 2024 à 2026.</p>
                     </div>
                     <div id="language-used">
                         <div id="dot"></div>
-                        <p>html - scss - js</p>
+                        <p>BTS SIO SLAM</p>
                     </div>
                 </div>
                 <div id="card-project-3">
@@ -759,7 +765,7 @@
                             <i class="fa-solid fa-suitcase fa-sm"></i>
                             <p>presoa <span>/ alternance-presoa</span></p>
                         </div>
-                        <a href="./project/presoa.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://presoa.org/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></a>
                     </div>
                     <div id="description">
                         <p>Activités quotidiennes chez Presoa : helpdesk N1, déploiement postes, gestion AD, support
@@ -776,30 +782,29 @@
                             <i class="fa-solid fa-code fa-sm"></i>
                             <p>perso <span>/ mts photographie</span></p>
                         </div>
-                        <a href="./project/mts-photo.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                        <a href="https://mts-photographie.wstr.fr/" target="_blank" rel="noopener"><i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i></a>
                     </div>
                     <div id="description">
-                        <p>Projet de fin d’année durant mon bacpro système numériques</p>
+                        <p>Site vitrine pour un photographe nature et paysage, avec galerie et espace d'administration.</p>
                     </div>
                     <div id="language-used">
                         <div id="dot"></div>
-                        <p>html - css - js</p>
+                        <p>php - scss - js - mysql</p>
                     </div>
                 </div>
                 <div id="card-project-5">
                     <div id="up-of-card">
                         <div id="title-card">
                             <i class="fa-solid fa-microchip fa-sm"></i>
-                            <p>perso <span>/ reserve ta table</span></p>
+                            <p>bts <span>/ reserve ta table</span></p>
                         </div>
-                        <a href="./project/reserve-ta-table.html"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
                     </div>
                     <div id="description">
-                        <p>Projet de fin d’année durant mon bacpro système numériques</p>
+                        <p>Épreuve du BTS : une application web pour réserver une table au restaurant, simplement et sans attente.</p>
                     </div>
                     <div id="language-used">
                         <div id="dot"></div>
-                        <p>html - css - js</p>
+                        <p>html - scss - js</p>
                     </div>
                 </div>
             </div>

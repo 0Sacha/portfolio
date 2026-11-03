@@ -234,13 +234,13 @@ html body #nav #nav-side {
     height: 44px;
     padding: 0;
     color: rgba(var(--blanc), 0.8);
-    background: linear-gradient(135deg, rgba(var(--reflet), 0.14) 0%, rgba(var(--reflet), 0.02) 50%, rgba(var(--reflet), 0.08) 100%), rgba(var(--nuit), 0.4);
+    background: linear-gradient(135deg, rgba(var(--reflet), 0.12) 0%, rgba(var(--reflet), 0.02) 50%, rgba(var(--reflet), 0.06) 100%), rgba(var(--nuit), 0.12);
     border: 1px solid rgba(var(--blanc), 0.25);
     border-left: none;
     border-radius: 0 12px 12px 0;
     box-shadow: 0 4px 16px 0 rgba(var(--ombre), 0.3), inset 0 1px 0 0 rgba(var(--reflet), 0.4);
-    -webkit-backdrop-filter: blur(8px) saturate(170%);
-    backdrop-filter: blur(8px) saturate(170%);
+    -webkit-backdrop-filter: blur(3px) saturate(180%);
+    backdrop-filter: blur(3px) saturate(180%);
     z-index: 9999;
     cursor: pointer;
     transition: translate 0.2s ease-in-out, width 0.15s ease-in-out, opacity 0.15s ease-in-out;
@@ -339,6 +339,9 @@ html body #nav #navbar {
     height: auto;
     border-radius: 999px;
     transition: scale 0.2s ease-out, translate 0.4s ease-in-out;
+    background: linear-gradient(135deg, rgba(var(--reflet), 0.12) 0%, rgba(var(--reflet), 0.02) 50%, rgba(var(--reflet), 0.06) 100%), rgba(var(--nuit), 0.12);
+    -webkit-backdrop-filter: blur(3px) saturate(180%);
+    backdrop-filter: blur(3px) saturate(180%);
   }
 }
 html body #nav #navbar #theme-switch {
@@ -504,6 +507,7 @@ html body #nav #navbar ul li a i {
     display: flex;
     justify-content: center;
     align-items: center;
+    filter: drop-shadow(0 1px 2px rgba(var(--ombre), 0.6));
   }
 }
 @media (max-width: 768px) {
@@ -706,7 +710,7 @@ html body #hero #hero-links #hero-links-contact {
   text-decoration: none;
   padding: 16px 33px 18px 33px;
   gap: 8px;
-  cursor: not-allowed;
+  cursor: pointer;
   transition: all 300ms ease-in-out;
 }
 @media (max-width: 768px) {
@@ -1232,54 +1236,6 @@ html body #selection .section-container #selectionCard02 #rightSelectCard02 #sel
   border: 1px solid rgba(var(--blanc), 0.2);
   background: rgba(var(--blanc), 0.1);
   list-style: none;
-}
-@media (max-width: 768px) {
-  html body #selection .section-container #selectionCard01,
-  html body #selection .section-container #selectionCard02 {
-    align-items: flex-start;
-    padding: 0 74px 0 20px;
-    box-sizing: border-box;
-  }
-}
-@media (max-width: 768px) {
-  html body #selection .section-container #selectionCard01 #midSelectCard01,
-  html body #selection .section-container #selectionCard01 #midSelectCard02,
-  html body #selection .section-container #selectionCard02 #midSelectCard01,
-  html body #selection .section-container #selectionCard02 #midSelectCard02 {
-    width: 100%;
-  }
-}
-@media (max-width: 768px) {
-  html body #selection .section-container #selectionCard01 #midSelectCard01 img,
-  html body #selection .section-container #selectionCard01 #midSelectCard02 img,
-  html body #selection .section-container #selectionCard02 #midSelectCard01 img,
-  html body #selection .section-container #selectionCard02 #midSelectCard02 img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 1.6;
-  }
-}
-@media (max-width: 768px) {
-  html body #selection .section-container #selectionCard01 #rightSelectCard01,
-  html body #selection .section-container #selectionCard01 #rightSelectCard02,
-  html body #selection .section-container #selectionCard02 #rightSelectCard01,
-  html body #selection .section-container #selectionCard02 #rightSelectCard02 {
-    width: 100%;
-  }
-}
-@media (max-width: 768px) {
-  html body #selection .section-container #selectionCard01 #rightSelectCard01 #selectionTopic li,
-  html body #selection .section-container #selectionCard01 #rightSelectCard02 #selectionTopic li,
-  html body #selection .section-container #selectionCard02 #rightSelectCard01 #selectionTopic li,
-  html body #selection .section-container #selectionCard02 #rightSelectCard02 #selectionTopic li {
-    padding: 9px 4px;
-  }
-}
-@media (max-width: 768px) {
-  html body #nav.gauche ~ #selection .section-container #selectionCard01,
-  html body #nav.gauche ~ #selection .section-container #selectionCard02 {
-    padding: 0 20px 0 74px;
-  }
 }
 html body #swipe {
   display: flex;
@@ -3843,6 +3799,41 @@ html body #about-body #main-content #left-container #organisation-left-container
   gap: 28px;
   width: 100%;
 }
+html body #about-body #main-content #left-container #organisation-left-container #ecole-entreprise #deskit {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+html body #about-body #main-content #left-container #organisation-left-container #ecole-entreprise #deskit #left-deskit {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+html body #about-body #main-content #left-container #organisation-left-container #ecole-entreprise #deskit #left-deskit .fa-headset {
+  display: flex;
+  width: 36px;
+  height: 36px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  color: rgb(var(--violet));
+  border: 1px solid rgba(var(--violet), 0.3);
+  background: rgba(var(--violet-fonce), 0.2);
+}
+html body #about-body #main-content #left-container #organisation-left-container #ecole-entreprise #deskit #left-deskit #subtitle-deskit {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+html body #about-body #main-content #left-container #organisation-left-container #ecole-entreprise #deskit #left-deskit #subtitle-deskit p {
+  color: rgba(var(--blanc), 0.8);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+}
 html body #about-body #main-content #left-container #organisation-left-container #ecole-entreprise #presoa {
   display: flex;
   flex-direction: row;
@@ -4701,26 +4692,6 @@ html body #formation-body .formation-content .formation-title .promeo-desc p {
   font-style: normal;
   font-weight: 400;
   line-height: 26px; /* 162.5% */
-}
-@media (max-width: 768px) {
-  html body #experienceSection {
-    padding: 48px 74px 48px 20px;
-  }
-}
-@media (max-width: 768px) {
-  html body #experience-link .liste-et-lien {
-    padding: 0 74px 0 20px;
-  }
-}
-@media (max-width: 768px) {
-  html body #nav.gauche ~ #experienceSection {
-    padding: 48px 20px 48px 74px;
-  }
-}
-@media (max-width: 768px) {
-  html body #nav.gauche ~ #experience-link .liste-et-lien {
-    padding: 0 20px 0 74px;
-  }
 }
 html body footer {
   display: flex;

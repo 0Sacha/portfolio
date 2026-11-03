@@ -1,9 +1,6 @@
 .idea*
-.env*
-.env
-.env.save
-node_modules
-public/src/scripts/config.js
 public/index-old.html
 Claude outputs/
 .vscode/
+config/github.php
+cache/
