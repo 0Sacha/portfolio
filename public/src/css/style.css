@@ -120,6 +120,73 @@ html body {
     align-items: center;
   }
 }
+html body #theme-switch svg {
+  width: 18px;
+  height: 18px;
+  overflow: visible;
+  color: rgb(var(--blanc));
+  opacity: 0.8;
+  transition: opacity 150ms ease-in-out;
+}
+html body #theme-switch:hover svg {
+  opacity: 1;
+}
+html body #theme-switch .astre,
+html body #theme-switch .ombre,
+html body #theme-switch .rayons,
+html body #theme-switch .croissant {
+  transform-box: view-box;
+  transform-origin: center;
+}
+html body #theme-switch .astre {
+  fill: currentColor;
+  transition: transform 400ms ease-in-out, opacity 150ms ease-in-out;
+}
+html body #theme-switch .croissant {
+  fill: currentColor;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linejoin: round;
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
+}
+html body #theme-switch .ombre {
+  transition: transform 400ms ease-in-out;
+}
+html body #theme-switch .rayons {
+  stroke: currentColor;
+  stroke-width: 2;
+  stroke-linecap: round;
+  transition: transform 300ms ease-in-out 250ms, opacity 300ms ease-in-out 250ms;
+}
+html body #theme-switch.lune .astre {
+  transform: scale(1.9);
+  opacity: 0;
+  transition-delay: 150ms, 450ms;
+}
+html body #theme-switch.lune .croissant {
+  opacity: 1;
+  transform: scale(1);
+  transition-delay: 450ms;
+}
+html body #theme-switch.lune .ombre {
+  transform: translate(-6px, 6px);
+  transition-delay: 150ms;
+}
+html body #theme-switch.lune .rayons {
+  transform: rotate(45deg) scale(0);
+  opacity: 0;
+  transition-delay: 0ms;
+}
+html body #theme-switch.sans-anim * {
+  transition: none !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  html body #theme-switch * {
+    transition: none !important;
+  }
+}
 html body #homeAmbiance {
   display: flex;
   opacity: var(--bulles, 1);
@@ -377,73 +444,6 @@ html body #nav #navbar #theme-switch {
 }
 html body #nav #navbar #theme-switch:hover {
   color: rgb(var(--blanc));
-}
-html body #nav #navbar #theme-switch svg {
-  width: 18px;
-  height: 18px;
-  overflow: visible;
-  color: rgb(var(--blanc));
-  opacity: 0.8;
-  transition: opacity 150ms ease-in-out;
-}
-html body #nav #navbar #theme-switch:hover svg {
-  opacity: 1;
-}
-html body #nav #navbar #theme-switch .astre,
-html body #nav #navbar #theme-switch .ombre,
-html body #nav #navbar #theme-switch .rayons,
-html body #nav #navbar #theme-switch .croissant {
-  transform-box: view-box;
-  transform-origin: center;
-}
-html body #nav #navbar #theme-switch .astre {
-  fill: currentColor;
-  transition: transform 400ms ease-in-out, opacity 150ms ease-in-out;
-}
-html body #nav #navbar #theme-switch .croissant {
-  fill: currentColor;
-  stroke: currentColor;
-  stroke-width: 1.6;
-  stroke-linejoin: round;
-  opacity: 0;
-  transform: scale(0.9);
-  transition: opacity 150ms ease-in-out, transform 150ms ease-in-out;
-}
-html body #nav #navbar #theme-switch .ombre {
-  transition: transform 400ms ease-in-out;
-}
-html body #nav #navbar #theme-switch .rayons {
-  stroke: currentColor;
-  stroke-width: 2;
-  stroke-linecap: round;
-  transition: transform 300ms ease-in-out 250ms, opacity 300ms ease-in-out 250ms;
-}
-html body #nav #navbar #theme-switch.lune .astre {
-  transform: scale(1.9);
-  opacity: 0;
-  transition-delay: 150ms, 450ms;
-}
-html body #nav #navbar #theme-switch.lune .croissant {
-  opacity: 1;
-  transform: scale(1);
-  transition-delay: 450ms;
-}
-html body #nav #navbar #theme-switch.lune .ombre {
-  transform: translate(-6px, 6px);
-  transition-delay: 150ms;
-}
-html body #nav #navbar #theme-switch.lune .rayons {
-  transform: rotate(45deg) scale(0);
-  opacity: 0;
-  transition-delay: 0ms;
-}
-html body #nav #navbar #theme-switch.sans-anim * {
-  transition: none !important;
-}
-@media (prefers-reduced-motion: reduce) {
-  html body #nav #navbar #theme-switch * {
-    transition: none !important;
-  }
 }
 html body #nav #navbar ul {
   position: relative;
@@ -718,11 +718,6 @@ html body #hero #hero-links #hero-links-contact {
   gap: 8px;
   cursor: pointer;
   transition: all 300ms ease-in-out;
-}
-@media (max-width: 768px) {
-  html body #hero #hero-links #hero-links-contact {
-    display: none;
-  }
 }
 html body #hero #hero-links #hero-links-contact .trait {
   background: rgb(var(--blanc));
@@ -3539,7 +3534,9 @@ html body #about-body .orange {
   color: rgb(var(--orange-2));
 }
 html body #about-body #back-to-index {
-  align-self: flex-start;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 html body #about-body #back-to-index a {
   display: flex;
@@ -3552,14 +3549,56 @@ html body #about-body #back-to-index a {
   color: rgba(var(--blanc), 0.6);
   transition: all 300ms ease-in-out;
 }
+@media (max-width: 768px) {
+  html body #about-body #back-to-index a {
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: 1px solid rgba(var(--blanc), 0.15);
+    background: rgba(var(--blanc), 0.05);
+    color: rgb(var(--blanc));
+  }
+}
+@media (max-width: 768px) {
+  html body #about-body #back-to-index a p {
+    display: none;
+  }
+}
 html body #about-body #back-to-index a .fa-arrow-left {
   transition: all 300ms ease-in-out;
 }
-html body #about-body #back-to-index:hover a {
+html body #about-body #back-to-index a:hover {
   color: rgb(var(--blanc));
 }
-html body #about-body #back-to-index:hover a .fa-arrow-left {
+@media (max-width: 768px) {
+  html body #about-body #back-to-index a:hover {
+    border: 1px solid rgba(var(--blanc), 0.35);
+  }
+}
+html body #about-body #back-to-index a:hover .fa-arrow-left {
   transform: translateX(-5px);
+}
+@media (max-width: 768px) {
+  html body #about-body #back-to-index a:hover .fa-arrow-left {
+    transform: none;
+  }
+}
+html body #about-body #back-to-index #theme-switch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid rgba(var(--blanc), 0.15);
+  background: rgba(var(--blanc), 0.05);
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+html body #about-body #back-to-index #theme-switch:hover {
+  border: 1px solid rgba(var(--blanc), 0.35);
 }
 html body #about-body #moi-hero {
   display: flex;
@@ -4094,8 +4133,18 @@ html body footer {
   margin: 0 auto;
   padding: 32px;
 }
+@media (max-width: 768px) {
+  html body footer {
+    padding: 24px 20px;
+  }
+}
 html body footer p {
   color: rgb(var(--blanc));
+}
+@media (max-width: 768px) {
+  html body footer p {
+    font-size: 14px;
+  }
 }
 html body footer p a {
   color: rgb(var(--blanc));

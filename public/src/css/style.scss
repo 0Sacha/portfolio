@@ -50,6 +50,96 @@ html {
       align-items: center;
     }
 
+    #theme-switch {
+      svg {
+        width: 18px;
+        height: 18px;
+        overflow: visible;
+        color: rgb(var(--blanc));
+        opacity: 0.8;
+        transition: opacity 150ms ease-in-out;
+      }
+
+      &:hover svg {
+        opacity: 1;
+      }
+
+      .astre,
+      .ombre,
+      .rayons,
+      .croissant {
+        transform-box: view-box;
+        transform-origin: center;
+      }
+
+      .astre {
+        fill: currentColor;
+        transition:
+          transform 400ms ease-in-out,
+          opacity 150ms ease-in-out;
+      }
+
+      .croissant {
+        fill: currentColor;
+        stroke: currentColor;
+        stroke-width: 1.6;
+        stroke-linejoin: round;
+        opacity: 0;
+        transform: scale(0.9);
+        transition:
+          opacity 150ms ease-in-out,
+          transform 150ms ease-in-out;
+      }
+
+      .ombre {
+        transition: transform 400ms ease-in-out;
+      }
+
+      .rayons {
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        transition:
+          transform 300ms ease-in-out 250ms,
+          opacity 300ms ease-in-out 250ms;
+      }
+
+      &.lune {
+        .astre {
+          transform: scale(1.9);
+          opacity: 0;
+          transition-delay: 150ms, 450ms;
+        }
+
+        .croissant {
+          opacity: 1;
+          transform: scale(1);
+          transition-delay: 450ms;
+        }
+
+        .ombre {
+          transform: translate(-6px, 6px);
+          transition-delay: 150ms;
+        }
+
+        .rayons {
+          transform: rotate(45deg) scale(0);
+          opacity: 0;
+          transition-delay: 0ms;
+        }
+      }
+
+      &.sans-anim * {
+        transition: none !important;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition: none !important;
+        }
+      }
+    }
+
     #homeAmbiance {
       display: flex;
       opacity: var(--bulles, 1);
@@ -340,96 +430,6 @@ html {
 
         #theme-switch:hover {
           color: rgb(var(--blanc));
-        }
-
-        #theme-switch {
-          svg {
-            width: 18px;
-            height: 18px;
-            overflow: visible;
-            color: rgb(var(--blanc));
-            opacity: 0.8;
-            transition: opacity 150ms ease-in-out;
-          }
-
-          &:hover svg {
-            opacity: 1;
-          }
-
-          .astre,
-          .ombre,
-          .rayons,
-          .croissant {
-            transform-box: view-box;
-            transform-origin: center;
-          }
-
-          .astre {
-            fill: currentColor;
-            transition:
-              transform 400ms ease-in-out,
-              opacity 150ms ease-in-out;
-          }
-
-          .croissant {
-            fill: currentColor;
-            stroke: currentColor;
-            stroke-width: 1.6;
-            stroke-linejoin: round;
-            opacity: 0;
-            transform: scale(0.9);
-            transition:
-              opacity 150ms ease-in-out,
-              transform 150ms ease-in-out;
-          }
-
-          .ombre {
-            transition: transform 400ms ease-in-out;
-          }
-
-          .rayons {
-            stroke: currentColor;
-            stroke-width: 2;
-            stroke-linecap: round;
-            transition:
-              transform 300ms ease-in-out 250ms,
-              opacity 300ms ease-in-out 250ms;
-          }
-
-          &.lune {
-            .astre {
-              transform: scale(1.9);
-              opacity: 0;
-              transition-delay: 150ms, 450ms;
-            }
-
-            .croissant {
-              opacity: 1;
-              transform: scale(1);
-              transition-delay: 450ms;
-            }
-
-            .ombre {
-              transform: translate(-6px, 6px);
-              transition-delay: 150ms;
-            }
-
-            .rayons {
-              transform: rotate(45deg) scale(0);
-              opacity: 0;
-              transition-delay: 0ms;
-            }
-          }
-
-          &.sans-anim * {
-            transition: none !important;
-          }
-
-          @media (prefers-reduced-motion: reduce) {
-            * {
-              transition: none !important;
-            }
-          }
         }
 
         ul {
@@ -731,7 +731,6 @@ html {
           transition: all 300ms ease-in-out;
 
           @media (max-width: 768px) {
-            display: none;
           }
 
           .trait {
@@ -3915,7 +3914,9 @@ html {
       }
 
       #back-to-index {
-        align-self: flex-start;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
         a {
           display: flex;
@@ -3928,19 +3929,59 @@ html {
           color: rgba(var(--blanc), 0.6);
           transition: all 300ms ease-in-out;
 
+          @media (max-width: 768px) {
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 999px;
+            border: 1px solid rgba(var(--blanc), 0.15);
+            background: rgba(var(--blanc), 0.05);
+            color: rgb(var(--blanc));
+          }
+
+          p {
+            @media (max-width: 768px) {
+              display: none;
+            }
+          }
+
           .fa-arrow-left {
             transition: all 300ms ease-in-out;
           }
         }
-      }
 
-      #back-to-index:hover {
-        a {
+        a:hover {
           color: rgb(var(--blanc));
+
+          @media (max-width: 768px) {
+            border: 1px solid rgba(var(--blanc), 0.35);
+          }
 
           .fa-arrow-left {
             transform: translateX(-5px);
+
+            @media (max-width: 768px) {
+              transform: none;
+            }
           }
+        }
+
+        #theme-switch {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 44px;
+          height: 44px;
+          padding: 0;
+          border-radius: 999px;
+          border: 1px solid rgba(var(--blanc), 0.15);
+          background: rgba(var(--blanc), 0.05);
+          cursor: pointer;
+          transition: all 300ms ease-in-out;
+        }
+
+        #theme-switch:hover {
+          border: 1px solid rgba(var(--blanc), 0.35);
         }
       }
 
@@ -4524,8 +4565,16 @@ html {
       margin: 0 auto;
       padding: 32px;
 
+      @media (max-width: 768px) {
+        padding: 24px 20px;
+      }
+
       p {
         color: $text-default;
+
+        @media (max-width: 768px) {
+          font-size: 14px;
+        }
 
         a {
           color: $text-default;

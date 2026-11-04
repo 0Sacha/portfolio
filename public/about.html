@@ -20,8 +20,8 @@
     <meta content="website" property="og:type" name="og:type">
     <meta content="fr_FR" property="og:locale" name="og:locale">
     <link rel="icon" href="src/images/LogoPortfolio.png" type="image/x-icon">
-    <link rel="stylesheet" href="src/css/style.css?v=39">
-    <script src="src/scripts/script.js?v=39" defer></script>
+    <link rel="stylesheet" href="src/css/style.css?v=42">
+    <script src="src/scripts/script.js?v=42" defer></script>
     <script>
         try {
             const theme = localStorage.getItem('theme')
@@ -38,10 +38,30 @@
 </div>
 <div id="about-body">
     <div id="back-to-index">
-        <a href="index.html">
+        <a href="index.html" aria-label="Retour à l'accueil">
             <i class="fa-solid fa-arrow-left fa-sm"></i>
             <p>Retour à l'accueil</p>
         </a>
+        <button id="theme-switch" aria-label="Passer en mode clair">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <mask id="lune-masque">
+                    <rect width="24" height="24" fill="white"></rect>
+                    <circle class="ombre" cx="24" cy="4" r="7" fill="black"></circle>
+                </mask>
+                <circle class="astre" cx="12" cy="12" r="5" mask="url(#lune-masque)"></circle>
+                <path class="croissant" d="M15.59 2.87A10 10 0 1 0 19.17 18.41A8 8 0 0 1 15.59 2.87Z"></path>
+                <g class="rayons">
+                    <line x1="12" y1="1" x2="12" y2="3"></line>
+                    <line x1="12" y1="21" x2="12" y2="23"></line>
+                    <line x1="1" y1="12" x2="3" y2="12"></line>
+                    <line x1="21" y1="12" x2="23" y2="12"></line>
+                    <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                    <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                    <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                    <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                </g>
+            </svg>
+        </button>
     </div>
 
     <div id="moi-hero">
