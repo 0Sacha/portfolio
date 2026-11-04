@@ -432,6 +432,18 @@ async function fetchGitHubContributions() {
     const graphContainer = document.querySelector('.graph-container')
     if (!graphContainer) return;
 
+    for (let i = 0; i < 53; i++) {
+        const weekEl = document.createElement("div");
+        weekEl.classList.add("week");
+        for (let d = 0; d < 7; d++) {
+            const dayEl = document.createElement("div");
+            dayEl.classList.add("day");
+            weekEl.appendChild(dayEl);
+        }
+        graphContainer.appendChild(weekEl);
+    }
+    graphContainer.scrollLeft = graphContainer.scrollWidth
+
     try {
         const reponse = await fetch('api/github.php');
         if (!reponse.ok) {
@@ -458,6 +470,7 @@ async function fetchGitHubContributions() {
         graphContainer.scrollLeft = graphContainer.scrollWidth
     } catch (erreur) {
         console.error(erreur.message);
+        document.querySelector('.indisponible').hidden = false
     }
 }
 
