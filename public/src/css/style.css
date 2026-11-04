@@ -120,6 +120,7 @@ html body {
     align-items: center;
   }
 }
+
 html body #theme-switch svg {
   width: 18px;
   height: 18px;
@@ -187,6 +188,7 @@ html body #theme-switch.sans-anim * {
     transition: none !important;
   }
 }
+
 html body #homeAmbiance {
   display: flex;
   opacity: var(--bulles, 1);
@@ -272,6 +274,7 @@ html body #homeAmbiance #sphere3Home {
   left: 5%;
   background-color: rgba(var(--bleu-ciel), 0.15);
 }
+
 html body #nav {
   display: flex;
   align-items: center;
@@ -541,6 +544,7 @@ html body #nav #navbar ul svg:hover {
 html body #nav #navbar ul svg:hover path {
   stroke: rgb(var(--blanc));
 }
+
 html body #hero {
   position: relative;
   display: flex;
@@ -750,6 +754,7 @@ html body #hero #hero-links #hero-links-contact:hover .trait {
     background-position: 200px 200px;
   }
 }
+
 html body #section-projet {
   display: flex;
   flex-direction: column;
@@ -1266,6 +1271,7 @@ html body #swipe p {
   font-size: 14px;
   text-align: center;
 }
+
 html body #experienceTitle {
   display: flex;
   flex-direction: column;
@@ -2030,6 +2036,7 @@ html body #experience-link .liste-et-lien #liens-experience .telecharger-le-cv a
   cursor: not-allowed;
   color: rgba(var(--blanc), 0.5);
 }
+
 html body #contactTitle {
   display: flex;
   flex-direction: column;
@@ -2538,6 +2545,7 @@ html body #contactSection .section-container #contactRightMainContent #contactPa
     width: 350px;
   }
 }
+
 html body #login-body {
   display: flex;
   flex-direction: column;
@@ -2660,6 +2668,7 @@ html body #login-body .login-container .input-container button {
 html body #login-body .login-container .input-container button:hover {
   scale: 1.03;
 }
+
 html body #dashboard-body {
   display: flex;
   flex-direction: column;
@@ -3485,6 +3494,7 @@ html body #dashboard-body #messages-container .has-messages .messages-details-re
   stroke: rgb(var(--blanc));
   stroke-opacity: 1;
 }
+
 html body #about-body {
   display: flex;
   flex-direction: column;
@@ -4045,6 +4055,7 @@ html body #about-body #moi-projets .grille a.moi-carte:hover {
   border: 1px solid rgba(var(--blanc), 0.3);
   transform: translateY(-2px);
 }
+
 html body #formation-body .formation-content {
   display: flex;
   justify-content: center;
@@ -4125,6 +4136,7 @@ html body #formation-body .formation-content .formation-title .promeo-desc p {
   font-weight: 400;
   line-height: 26px; /* 162.5% */
 }
+
 html body footer {
   display: flex;
   flex-direction: row;

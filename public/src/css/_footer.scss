@@ -1,0 +1,28 @@
+html {
+  body {
+    footer {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      padding: 32px;
+
+      @media (max-width: 768px) {
+        padding: 24px 20px;
+      }
+
+      p {
+        color: $text-default;
+
+        @media (max-width: 768px) {
+          font-size: 14px;
+        }
+
+        a {
+          color: $text-default;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+/*$bg-color-dark: linear-gradient(156.2deg, rgba(0, 0, 0, 1) 14.8%, rgba(32, 104, 177, 1) 68.1%, rgb(224, 222, 237) 129%);*/
+/*$bg-color-light: linear-gradient(156.2deg, rgba(222, 229, 237) 14.8%, rgba(32, 104, 177, 1) 68.1%, rgba(0, 0, 0) 129%);*/
+
+$bg-color-dark: rgb(var(--noir));
+$bg-color-light: rgb(var(--blanc));
+
+$text-navbar-color: rgba(var(--blanc), 0.8);
+$text-default: rgb(var(--blanc));
+$subtext-default: rgba(var(--blanc), 0.8);
+$bg-navbar-color: rgba(var(--blanc), 0.1);
+$border-navbar-color: 1px solid rgba(var(--blanc), 0.2);
+$border_radius-navbar-color: 24px;
+
+$border_radius-card-topic: 10px;
+$border-card-topic: 1px solid rgba(var(--bleu), 0.3);
+$bg-card-topic: rgba(var(--bleu-vif), 0.2);
+$pad-card-topic: 6px 12px;
+$heigh-card-topic: 14px;
+
+$font-default: "Space Grotesk";
+$debug-color: red;
+$default-max-width: 1200px;
+$default-max-width-reponsive: 768px;

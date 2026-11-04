@@ -1,0 +1,93 @@
+html {
+  body {
+    #theme-switch {
+      svg {
+        width: 18px;
+        height: 18px;
+        overflow: visible;
+        color: rgb(var(--blanc));
+        opacity: 0.8;
+        transition: opacity 150ms ease-in-out;
+      }
+
+      &:hover svg {
+        opacity: 1;
+      }
+
+      .astre,
+      .ombre,
+      .rayons,
+      .croissant {
+        transform-box: view-box;
+        transform-origin: center;
+      }
+
+      .astre {
+        fill: currentColor;
+        transition:
+          transform 400ms ease-in-out,
+          opacity 150ms ease-in-out;
+      }
+
+      .croissant {
+        fill: currentColor;
+        stroke: currentColor;
+        stroke-width: 1.6;
+        stroke-linejoin: round;
+        opacity: 0;
+        transform: scale(0.9);
+        transition:
+          opacity 150ms ease-in-out,
+          transform 150ms ease-in-out;
+      }
+
+      .ombre {
+        transition: transform 400ms ease-in-out;
+      }
+
+      .rayons {
+        stroke: currentColor;
+        stroke-width: 2;
+        stroke-linecap: round;
+        transition:
+          transform 300ms ease-in-out 250ms,
+          opacity 300ms ease-in-out 250ms;
+      }
+
+      &.lune {
+        .astre {
+          transform: scale(1.9);
+          opacity: 0;
+          transition-delay: 150ms, 450ms;
+        }
+
+        .croissant {
+          opacity: 1;
+          transform: scale(1);
+          transition-delay: 450ms;
+        }
+
+        .ombre {
+          transform: translate(-6px, 6px);
+          transition-delay: 150ms;
+        }
+
+        .rayons {
+          transform: rotate(45deg) scale(0);
+          opacity: 0;
+          transition-delay: 0ms;
+        }
+      }
+
+      &.sans-anim * {
+        transition: none !important;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          transition: none !important;
+        }
+      }
+    }
+  }
+}

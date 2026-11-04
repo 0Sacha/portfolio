@@ -1,0 +1,95 @@
+html {
+  body {
+    #homeAmbiance {
+      display: flex;
+      opacity: var(--bulles, 1);
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+
+      &.fixe {
+        position: fixed;
+        inset: 0;
+        z-index: -1;
+        pointer-events: none;
+      }
+
+      #sphere1Home,
+      #sphere2Home,
+      #sphere3Home {
+        position: absolute;
+        filter: blur(150px);
+        border-radius: 999px;
+        z-index: -1;
+
+        @media (max-width: 1100px) {
+          filter: blur(100px);
+        }
+      }
+
+      #sphere1Home {
+        width: 600px;
+        height: 600px;
+        top: 10%;
+        left: 7%;
+        animation: sphere1Bounce 6s ease-in-out infinite;
+        background-color: rgba(var(--bleu-vif), 0.4);
+
+        @media (max-width: 1100px) {
+          width: 300px;
+          height: 300px;
+        }
+
+        @keyframes sphere1Bounce {
+          0% {
+            top: 10%;
+          }
+
+          50% {
+            top: 15%;
+          }
+
+          100% {
+            top: 10%;
+          }
+        }
+      }
+
+      #sphere2Home {
+        width: 600px;
+        height: 600px;
+        top: 65%;
+        right: 5%;
+        background-color: rgba(var(--violet-fonce), 0.4);
+        animation: sphere2Bounce 8s ease-in-out infinite;
+
+        @media (max-width: 1100px) {
+          width: 300px;
+          height: 300px;
+        }
+
+        @keyframes sphere2Bounce {
+          0% {
+            top: 65%;
+          }
+
+          50% {
+            top: 60%;
+          }
+
+          100% {
+            top: 65%;
+          }
+        }
+      }
+
+      #sphere3Home {
+        width: 600px;
+        height: 600px;
+        top: 165%;
+        left: 5%;
+        background-color: rgba(var(--bleu-ciel), 0.15);
+      }
+    }
+  }
+}
