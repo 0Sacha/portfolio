@@ -425,6 +425,20 @@ if (themeSwitch) {
     })
 }
 
+// filtres des projets
+
+const filtres = document.querySelectorAll('#tous-projets .filtres button')
+const cartes = document.querySelectorAll('#tous-projets .moi-carte')
+
+filtres.forEach(bouton => {
+    bouton.addEventListener('click', () => {
+        filtres.forEach(b => b.classList.toggle('actif', b === bouton))
+        cartes.forEach(carte => {
+            carte.hidden = bouton.dataset.filtre !== 'tous' && carte.dataset.type !== bouton.dataset.filtre
+        })
+    })
+})
+
 // API GITHUB
 
 

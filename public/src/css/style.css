@@ -1277,6 +1277,215 @@ html body #swipe p {
   text-align: center;
 }
 
+html body #tous-projets {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  max-width: 1500px;
+  margin: 0 auto;
+  padding: 170px 0 0;
+  box-sizing: border-box;
+  color: rgb(var(--blanc));
+}
+@media (max-width: 1540px) {
+  html body #tous-projets {
+    padding: 170px 20px 0;
+  }
+}
+@media (max-width: 1100px) {
+  html body #tous-projets {
+    padding: 80px 20px 0;
+  }
+}
+@media (max-width: 768px) {
+  html body #tous-projets {
+    gap: 20px;
+    padding: 40px 20px 0;
+  }
+}
+html body #tous-projets .bleu {
+  color: rgb(var(--bleu));
+}
+html body #tous-projets .violet {
+  color: rgb(var(--violet));
+}
+html body #tous-projets .vert {
+  color: rgb(var(--vert));
+}
+html body #tous-projets .cyan {
+  color: rgb(var(--cyan));
+}
+html body #tous-projets .orange {
+  color: rgb(var(--orange-2));
+}
+html body #tous-projets .titre {
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  text-align: center;
+}
+@media (max-width: 768px) {
+  html body #tous-projets .titre {
+    gap: 8px;
+  }
+}
+html body #tous-projets .titre h1 {
+  font-size: 60px;
+  color: rgb(var(--blanc));
+  text-transform: uppercase;
+}
+@media (max-width: 1100px) {
+  html body #tous-projets .titre h1 {
+    font-size: 36px;
+  }
+}
+@media (max-width: 768px) {
+  html body #tous-projets .titre h1 {
+    font-size: 30px;
+  }
+}
+html body #tous-projets .titre p {
+  font-size: 20px;
+  color: rgba(var(--blanc), 0.8);
+}
+@media (max-width: 1100px) {
+  html body #tous-projets .titre p {
+    font-size: 18px;
+  }
+}
+html body #tous-projets .filtres {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+@media (max-width: 768px) {
+  html body #tous-projets .filtres {
+    gap: 8px;
+  }
+}
+html body #tous-projets .filtres button {
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  border: 1px solid rgba(var(--blanc), 0.15);
+  background: rgba(var(--blanc), 0.05);
+  color: rgb(var(--blanc));
+  font-family: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 300ms ease-in-out;
+}
+@media (max-width: 768px) {
+  html body #tous-projets .filtres button {
+    min-height: 38px;
+    padding: 0 14px;
+    font-size: 13px;
+  }
+}
+html body #tous-projets .filtres button:hover {
+  border: 1px solid rgba(var(--blanc), 0.35);
+}
+html body #tous-projets .filtres .actif {
+  border: 1px solid rgba(var(--bleu), 0.5);
+  background: rgb(var(--bleu-bouton));
+  color: rgb(var(--blanc-fixe));
+}
+html body #tous-projets .grille {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+@media (max-width: 1100px) {
+  html body #tous-projets .grille {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 768px) {
+  html body #tous-projets .grille {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+html body #tous-projets .grille .moi-carte {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  min-height: 190px;
+  padding: 24px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  border: 1px solid rgba(var(--blanc), 0.1);
+  background: rgba(var(--blanc), 0.03);
+  color: rgb(var(--blanc));
+  text-decoration: none;
+  transition: all 300ms ease-in-out;
+}
+@media (max-width: 768px) {
+  html body #tous-projets .grille .moi-carte {
+    min-height: 0;
+    padding: 18px;
+    gap: 8px;
+  }
+}
+html body #tous-projets .grille .moi-carte .haut {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+html body #tous-projets .grille .moi-carte .haut i {
+  color: rgba(var(--blanc), 0.4);
+}
+html body #tous-projets .grille .moi-carte .type {
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+html body #tous-projets .grille .moi-carte .nom {
+  font-size: 22px;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  html body #tous-projets .grille .moi-carte .nom {
+    font-size: 18px;
+  }
+}
+html body #tous-projets .grille .moi-carte .desc {
+  flex-grow: 1;
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(var(--blanc), 0.65);
+}
+@media (max-width: 768px) {
+  html body #tous-projets .grille .moi-carte .desc {
+    font-size: 14px;
+  }
+}
+html body #tous-projets .grille .moi-carte .desc .court {
+  display: none;
+}
+@media (max-width: 768px) {
+  html body #tous-projets .grille .moi-carte .desc .court {
+    display: inline;
+  }
+}
+@media (max-width: 768px) {
+  html body #tous-projets .grille .moi-carte .desc .long {
+    display: none;
+  }
+}
+html body #tous-projets .grille .moi-carte .tags {
+  font-size: 13px;
+  color: rgba(var(--blanc), 0.5);
+}
+html body #tous-projets .grille .moi-carte[hidden] {
+  display: none;
+}
+html body #tous-projets .grille a.moi-carte:hover {
+  border: 1px solid rgba(var(--blanc), 0.3);
+  transform: translateY(-2px);
+}
+
 html body #experienceTitle {
   display: flex;
   flex-direction: column;
@@ -3755,17 +3964,11 @@ html body #about-body #moi-stats .moi-stat p:last-child {
     font-size: 12px;
   }
 }
-html body #about-body #moi-presentation {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 48px;
-}
 html body #about-body #moi-presentation #moi-qui {
-  flex: 1 1 480px;
-  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-width: 860px;
 }
 html body #about-body #moi-presentation #moi-qui p {
   font-size: 17px;
@@ -3777,27 +3980,39 @@ html body #about-body #moi-presentation #moi-qui p {
     font-size: 15px;
   }
 }
-html body #about-body #moi-presentation #moi-parcours {
-  flex: 1 1 420px;
+html body #about-body #moi-cv {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 48px;
+}
+html body #about-body #moi-cv #moi-experiences {
+  flex: 3 1 560px;
   min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-html body #about-body #moi-presentation #moi-parcours .frise {
+html body #about-body #moi-cv #moi-formation {
+  flex: 2 1 380px;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+html body #about-body #moi-cv .frise {
   display: flex;
   flex-direction: column;
   gap: 28px;
   padding-left: 28px;
   border-left: 1px solid rgba(var(--blanc), 0.15);
 }
-html body #about-body #moi-presentation #moi-parcours .frise .etape {
+html body #about-body #moi-cv .frise .etape {
   position: relative;
   display: flex;
   flex-direction: column;
   gap: 4px;
 }
-html body #about-body #moi-presentation #moi-parcours .frise .etape .point {
+html body #about-body #moi-cv .frise .etape .point {
   position: absolute;
   left: -35px;
   top: 4px;
@@ -3806,17 +4021,48 @@ html body #about-body #moi-presentation #moi-parcours .frise .etape .point {
   border-radius: 999px;
   background: currentColor;
 }
-html body #about-body #moi-presentation #moi-parcours .frise .etape .date {
+html body #about-body #moi-cv .frise .etape .date {
   font-size: 13px;
   color: rgba(var(--blanc), 0.55);
 }
-html body #about-body #moi-presentation #moi-parcours .frise .etape .poste {
+html body #about-body #moi-cv .frise .etape .poste {
   font-size: 18px;
   font-weight: 700;
 }
-html body #about-body #moi-presentation #moi-parcours .frise .etape .detail {
+html body #about-body #moi-cv .frise .etape .lieu {
   font-size: 15px;
   color: rgba(var(--blanc), 0.65);
+}
+html body #about-body #moi-cv .frise .etape .missions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: 8px;
+  padding-left: 18px;
+  list-style: disc;
+}
+html body #about-body #moi-cv .frise .etape .missions li {
+  font-size: 15px;
+  line-height: 1.5;
+  color: rgba(var(--blanc), 0.75);
+}
+@media (max-width: 768px) {
+  html body #about-body #moi-cv .frise .etape .missions li {
+    font-size: 14px;
+  }
+}
+html body #about-body #moi-cv .frise .etape .outils {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+}
+html body #about-body #moi-cv .frise .etape .outils span {
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid rgba(var(--blanc), 0.15);
+  font-size: 12px;
+  color: rgba(var(--blanc), 0.75);
 }
 html body #about-body #moi-competences {
   display: flex;
@@ -3976,89 +4222,6 @@ html body #about-body #moi-activite .legende span {
   width: 12px;
   height: 12px;
   border-radius: 3px;
-}
-html body #about-body #moi-projets {
-  display: flex;
-  flex-direction: column;
-  gap: 24px;
-}
-html body #about-body #moi-projets .grille {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 16px;
-}
-@media (max-width: 1100px) {
-  html body #about-body #moi-projets .grille {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-@media (max-width: 768px) {
-  html body #about-body #moi-projets .grille {
-    grid-template-columns: repeat(1, minmax(0, 1fr));
-    gap: 12px;
-  }
-}
-html body #about-body #moi-projets .grille .moi-carte {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-  min-height: 190px;
-  padding: 24px;
-  box-sizing: border-box;
-  border-radius: 16px;
-  border: 1px solid rgba(var(--blanc), 0.1);
-  background: rgba(var(--blanc), 0.03);
-  color: rgb(var(--blanc));
-  text-decoration: none;
-  transition: all 300ms ease-in-out;
-}
-@media (max-width: 768px) {
-  html body #about-body #moi-projets .grille .moi-carte {
-    min-height: 0;
-    padding: 18px;
-    gap: 8px;
-  }
-}
-html body #about-body #moi-projets .grille .moi-carte .haut {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-html body #about-body #moi-projets .grille .moi-carte .haut i {
-  color: rgba(var(--blanc), 0.4);
-}
-html body #about-body #moi-projets .grille .moi-carte .type {
-  font-size: 13px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
-html body #about-body #moi-projets .grille .moi-carte .nom {
-  font-size: 22px;
-  font-weight: 700;
-}
-@media (max-width: 768px) {
-  html body #about-body #moi-projets .grille .moi-carte .nom {
-    font-size: 18px;
-  }
-}
-html body #about-body #moi-projets .grille .moi-carte .desc {
-  flex-grow: 1;
-  font-size: 15px;
-  line-height: 1.5;
-  color: rgba(var(--blanc), 0.65);
-}
-@media (max-width: 768px) {
-  html body #about-body #moi-projets .grille .moi-carte .desc {
-    font-size: 14px;
-  }
-}
-html body #about-body #moi-projets .grille .moi-carte .tags {
-  font-size: 13px;
-  color: rgba(var(--blanc), 0.5);
-}
-html body #about-body #moi-projets .grille a.moi-carte:hover {
-  border: 1px solid rgba(var(--blanc), 0.3);
-  transform: translateY(-2px);
 }
 
 html body #formation-body .formation-content {

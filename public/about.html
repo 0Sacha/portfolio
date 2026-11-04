@@ -20,8 +20,8 @@
     <meta content="website" property="og:type" name="og:type">
     <meta content="fr_FR" property="og:locale" name="og:locale">
     <link rel="icon" href="src/images/LogoPortfolio.png" type="image/x-icon">
-    <link rel="stylesheet" href="src/css/style.css?v=43">
-    <script src="src/scripts/script.js?v=43" defer></script>
+    <link rel="stylesheet" href="src/css/style.css?v=44">
+    <script src="src/scripts/script.js?v=44" defer></script>
     <script>
         try {
             const theme = localStorage.getItem('theme')
@@ -104,26 +104,85 @@
             <p>Quand quelque chose plante, je creuse jusqu'à comprendre pourquoi. Sur un serveur de jeu que j'administre, avec environ 240 mods, je lis les logs, j'isole les conflits et j'explique les corrections aux joueurs.</p>
             <p>Curieux et touche-à-tout, j'ai de vraies bases en développement : je sais monter un site de A à Z en HTML, SCSS et JavaScript, et j'ai touché à React et React Native. Sur ce que je maîtrise déjà, j'utilise l'IA pour aller plus vite. En dehors de ça, il y a l'automobile, le sim racing et la musique.</p>
         </div>
-        <div id="moi-parcours">
-            <h2>Parcours</h2>
+    </div>
+
+    <div id="moi-cv">
+        <div id="moi-experiences">
+            <h2>Expériences</h2>
             <div class="frise">
                 <div class="etape">
                     <span class="point violet"></span>
-                    <p class="date">Oct. 2026 → aujourd'hui</p>
-                    <p class="poste">Technicien support N1 · <span class="violet">Desk IT</span></p>
-                    <p class="detail">Support client, incidents, Microsoft 365</p>
+                    <p class="date">Oct. 2026 → aujourd'hui · CDI</p>
+                    <p class="poste">Technicien support Help Desk · <span class="violet">Desk IT</span></p>
+                    <p class="lieu">Compiègne</p>
+                    <ul class="missions">
+                        <li>Prise d'appels clients et résolution d'incidents</li>
+                        <li>Administration des environnements Microsoft 365 des clients</li>
+                    </ul>
+                    <div class="outils"><span>Microsoft 365</span><span>Helpdesk</span></div>
                 </div>
                 <div class="etape">
                     <span class="point vert"></span>
-                    <p class="date">Nov. 2024 → Juil. 2026</p>
-                    <p class="poste">Technicien informatique · <span class="vert">Presoa</span></p>
-                    <p class="detail">Support interne, Active Directory, GLPI, postes</p>
+                    <p class="date">Nov. 2024 → Juil. 2026 · Alternance</p>
+                    <p class="poste">Alternant en informatique · <span class="vert">Presoa</span></p>
+                    <p class="lieu">Compiègne</p>
+                    <ul class="missions">
+                        <li>Création et gestion des comptes utilisateurs dans l'Active Directory</li>
+                        <li>Traitement des tickets (GLPI, SimplyDesk) et interventions sur site</li>
+                        <li>Assistance à distance des collaborateurs (Teams, MSRA)</li>
+                        <li>Diagnostic et résolution d'incidents Windows 10/11 : pannes système, imprimantes réseau, pilotes et firmware</li>
+                        <li>Préparation, installation et configuration de postes de travail</li>
+                    </ul>
+                    <div class="outils"><span>Active Directory</span><span>GLPI</span><span>SimplyDesk</span><span>Microsoft 365</span><span>MSRA</span></div>
                 </div>
                 <div class="etape">
+                    <span class="point orange"></span>
+                    <p class="date">Févr. 2022 → Juin 2023 · 4 stages d'un mois</p>
+                    <p class="poste">Stagiaire · <span class="orange">DESMAREZ SAS</span></p>
+                    <p class="lieu">Lacroix-Saint-Ouen</p>
+                    <ul class="missions">
+                        <li>Soudure, câblage et réglage de cartes électroniques</li>
+                        <li>Création de coffrets équipés d'alarme</li>
+                        <li>Programmation de talkies-walkies, sirènes d'alarme et GSM</li>
+                        <li>Installation et maintenance des coffrets sur site</li>
+                    </ul>
+                    <div class="outils"><span>Soudure</span><span>Câblage</span><span>Systèmes d'alarme</span></div>
+                </div>
+                <div class="etape">
+                    <span class="point cyan"></span>
+                    <p class="date">Juin 2021 · 3 semaines</p>
+                    <p class="poste">Stagiaire · <span class="cyan">Microcom</span></p>
+                    <p class="lieu">Compiègne</p>
+                    <ul class="missions">
+                        <li>Réparation d'appareils informatiques et électroniques</li>
+                    </ul>
+                    <div class="outils"><span>Maintenance informatique</span><span>Windows</span></div>
+                </div>
+            </div>
+        </div>
+        <div id="moi-formation">
+            <h2>Formation</h2>
+            <div class="frise">
+                <div class="etape">
                     <span class="point bleu"></span>
-                    <p class="date">Août 2024 → Juin 2026</p>
-                    <p class="poste">BTS SIO option SLAM · <span class="bleu">Promeo</span></p>
-                    <p class="detail">En alternance, CFA de Compiègne</p>
+                    <p class="date">Août 2024 → Juin 2026 · Alternance</p>
+                    <p class="poste">BTS SIO option SLAM</p>
+                    <p class="lieu"><span class="bleu">CFA Promeo</span>, Compiègne</p>
+                </div>
+                <div class="etape">
+                    <span class="point orange"></span>
+                    <p class="date">Sept. 2020 → Juin 2023 · Mention assez bien</p>
+                    <p class="poste">Bac pro Systèmes numériques, option SSIHT</p>
+                    <p class="lieu"><span class="orange">Lycée Mireille Grenet</span>, Compiègne</p>
+                    <ul class="missions">
+                        <li>Conception d'une éolienne démontable en première et terminale</li>
+                    </ul>
+                </div>
+                <div class="etape">
+                    <span class="point violet"></span>
+                    <p class="date">Janv. 2023 → Juin 2023</p>
+                    <p class="poste">Développement web : HTML et CSS</p>
+                    <p class="lieu"><span class="violet">OpenClassrooms</span>, en ligne</p>
                 </div>
             </div>
         </div>
@@ -174,65 +233,6 @@
             <span data-level="3"></span>
             <span data-level="4"></span>
             <p>Plus</p>
-        </div>
-    </div>
-
-    <div id="moi-projets">
-        <h2>Projets</h2>
-        <div class="grille">
-            <a class="moi-carte" href="https://mts-photographie.wstr.fr/" target="_blank" rel="noopener">
-                <div class="haut">
-                    <p class="type cyan">Perso</p>
-                <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
-                </div>
-                <p class="nom">MTS Photographie</p>
-                <p class="desc">Site vitrine pour un photographe nature et paysage, avec galerie et espace d'administration.</p>
-                <p class="tags">PHP · SCSS · JS · MySQL</p>
-            </a>
-            <a class="moi-carte" href="https://0sacha.github.io/DeltaOne-WebSite/" target="_blank" rel="noopener">
-                <div class="haut">
-                    <p class="type bleu">Perso</p>
-                <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
-                </div>
-                <p class="nom">DeltaOne</p>
-                <p class="desc">Mon tout premier site web, pour présenter notre projet d'éolienne du cahier des charges à sa conception théorique.</p>
-                <p class="tags">HTML · CSS · PHP · JS</p>
-            </a>
-            <a class="moi-carte" href="https://github.com/0Sacha/PC-City" target="_blank" rel="noopener">
-                <div class="haut">
-                    <p class="type cyan">Perso</p>
-                <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
-                </div>
-                <p class="nom">PC City</p>
-                <p class="desc">L'activité du PC (programmes, processeur, mémoire, disque, réseau) dessinée comme une ville animée. 100&nbsp;% locale, sans droits administrateur.</p>
-                <p class="tags">Python · JavaScript · Canvas · avec Claude</p>
-            </a>
-            <div class="moi-carte">
-                <div class="haut">
-                    <p class="type orange">BTS</p>
-                </div>
-                <p class="nom">Réserve ta table</p>
-                <p class="desc">Épreuve du BTS : une application web pour réserver une table au restaurant, simplement et sans attente.</p>
-                <p class="tags">HTML · SCSS · JS</p>
-            </div>
-            <a class="moi-carte" href="https://presoa.org/" target="_blank" rel="noopener">
-                <div class="haut">
-                    <p class="type vert">Alternance</p>
-                <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
-                </div>
-                <p class="nom">Presoa</p>
-                <p class="desc">Helpdesk N1, déploiement de postes, gestion de l'Active Directory, tickets GLPI et maintenance du parc.</p>
-                <p class="tags">Windows Server · AD · GLPI</p>
-            </a>
-            <a class="moi-carte" href="project/promeo.html">
-                <div class="haut">
-                    <p class="type violet">Formation</p>
-                <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
-                </div>
-                <p class="nom">Promeo</p>
-                <p class="desc">BTS SIO option SLAM en alternance au CFA Promeo de Compiègne.</p>
-                <p class="tags">2024 → 2026</p>
-            </a>
         </div>
     </div>
 </div>

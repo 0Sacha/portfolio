@@ -23,9 +23,9 @@
     <meta content="fr_FR" property="locale" name="locale">
 
     <link rel="icon" href="src/images/LogoPortfolio.png" type="image/x-icon">
-    <link rel="stylesheet" href="src/css/style.css?v=43">
+    <link rel="stylesheet" href="src/css/style.css?v=44">
     <!-- <script src="src/scripts/config.js" defer></script> -->
-    <script src="src/scripts/script.js?v=43" defer></script>
+    <script src="src/scripts/script.js?v=44" defer></script>
     <script>
         try {
             const theme = localStorage.getItem('theme')
@@ -99,7 +99,7 @@
     </div>
 </div>
 <div id="section-projet">
-    <h1>Projets Favoris</h1>
+    <h1>Projets phares</h1>
     <p>Le top des projets</p>
 </div>
 <div id="selection">
@@ -163,6 +163,75 @@
 </div>
 <div id="swipe">
     <p>Swipez pour naviguer</p>
+</div>
+
+<div id="tous-projets">
+    <div class="titre">
+        <h1>Tous mes projets</h1>
+        <p>Du web au support IT</p>
+    </div>
+    <div class="filtres">
+        <button class="actif" data-filtre="tous">Tous</button>
+        <button data-filtre="perso">Perso</button>
+        <button data-filtre="bts">BTS</button>
+        <button data-filtre="alternance">Alternance</button>
+        <button data-filtre="formation">Formation</button>
+    </div>
+    <div class="grille">
+        <a class="moi-carte" data-type="perso" href="https://mts-photographie.wstr.fr/" target="_blank" rel="noopener">
+            <div class="haut">
+                <p class="type cyan">Perso</p>
+            <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
+            </div>
+            <p class="nom">MTS Photographie</p>
+            <p class="desc"><span class="long">Site vitrine pour un photographe nature et paysage, avec galerie et espace d'administration.</span><span class="court">Site vitrine et galerie pour un photographe.</span></p>
+            <p class="tags">PHP · SCSS · JS · MySQL</p>
+        </a>
+        <a class="moi-carte" data-type="perso" href="https://0sacha.github.io/DeltaOne-WebSite/" target="_blank" rel="noopener">
+            <div class="haut">
+                <p class="type bleu">Perso</p>
+            <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
+            </div>
+            <p class="nom">DeltaOne</p>
+            <p class="desc"><span class="long">Mon tout premier site web, pour présenter notre projet d'éolienne du cahier des charges à sa conception théorique.</span><span class="court">Mon premier site, pour un projet d'éolienne.</span></p>
+            <p class="tags">HTML · CSS · PHP · JS</p>
+        </a>
+        <a class="moi-carte" data-type="perso" href="https://github.com/0Sacha/PC-City" target="_blank" rel="noopener">
+            <div class="haut">
+                <p class="type cyan">Perso</p>
+            <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
+            </div>
+            <p class="nom">PC City</p>
+            <p class="desc"><span class="long">L'activité du PC (programmes, processeur, mémoire, disque, réseau) dessinée comme une ville animée. 100&nbsp;% locale, sans droits administrateur.</span><span class="court">L'activité du PC dessinée comme une ville.</span></p>
+            <p class="tags">Python · JavaScript · Canvas · avec Claude</p>
+        </a>
+        <div class="moi-carte" data-type="bts">
+            <div class="haut">
+                <p class="type orange">BTS</p>
+            </div>
+            <p class="nom">Réserve ta table</p>
+            <p class="desc"><span class="long">Épreuve du BTS : une application web pour réserver une table au restaurant, simplement et sans attente.</span><span class="court">Réservation de table en ligne, pour l'épreuve du BTS.</span></p>
+            <p class="tags">HTML · SCSS · JS</p>
+        </div>
+        <a class="moi-carte" data-type="alternance" href="https://presoa.org/" target="_blank" rel="noopener">
+            <div class="haut">
+                <p class="type vert">Alternance</p>
+            <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
+            </div>
+            <p class="nom">Presoa</p>
+            <p class="desc"><span class="long">Helpdesk N1, déploiement de postes, gestion de l'Active Directory, tickets GLPI et maintenance du parc.</span><span class="court">Helpdesk N1, postes, Active Directory et GLPI.</span></p>
+            <p class="tags">Windows Server · AD · GLPI</p>
+        </a>
+        <a class="moi-carte" data-type="formation" href="project/promeo.html">
+            <div class="haut">
+                <p class="type violet">Formation</p>
+            <i class="fa-solid fa-arrow-up-right-from-square fa-sm"></i>
+            </div>
+            <p class="nom">Promeo</p>
+            <p class="desc"><span class="long">BTS SIO option SLAM en alternance au CFA Promeo de Compiègne.</span><span class="court">BTS SIO SLAM en alternance.</span></p>
+            <p class="tags">2024 → 2026</p>
+        </a>
+    </div>
 </div>
 
 <div id="experienceTitle">

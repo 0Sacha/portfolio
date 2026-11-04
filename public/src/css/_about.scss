@@ -31,25 +31,7 @@ html {
         }
       }
 
-      .bleu {
-        color: rgb(var(--bleu));
-      }
-
-      .violet {
-        color: rgb(var(--violet));
-      }
-
-      .vert {
-        color: rgb(var(--vert));
-      }
-
-      .cyan {
-        color: rgb(var(--cyan));
-      }
-
-      .orange {
-        color: rgb(var(--orange-2));
-      }
+      @include couleurs;
 
       #back-to-index {
         display: flex;
@@ -270,16 +252,11 @@ html {
       }
 
       #moi-presentation {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 48px;
-
         #moi-qui {
-          flex: 1 1 480px;
-          min-width: 0;
           display: flex;
           flex-direction: column;
           gap: 20px;
+          max-width: 860px;
 
           p {
             font-size: 17px;
@@ -291,50 +268,98 @@ html {
             }
           }
         }
+      }
 
-        #moi-parcours {
-          flex: 1 1 420px;
+      #moi-cv {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 48px;
+
+        #moi-experiences {
+          flex: 3 1 560px;
           min-width: 0;
           display: flex;
           flex-direction: column;
           gap: 20px;
+        }
 
-          .frise {
+        #moi-formation {
+          flex: 2 1 380px;
+          min-width: 0;
+          display: flex;
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .frise {
+          display: flex;
+          flex-direction: column;
+          gap: 28px;
+          padding-left: 28px;
+          border-left: 1px solid rgba(var(--blanc), 0.15);
+
+          .etape {
+            position: relative;
             display: flex;
             flex-direction: column;
-            gap: 28px;
-            padding-left: 28px;
-            border-left: 1px solid rgba(var(--blanc), 0.15);
+            gap: 4px;
 
-            .etape {
-              position: relative;
+            .point {
+              position: absolute;
+              left: -35px;
+              top: 4px;
+              width: 13px;
+              height: 13px;
+              border-radius: 999px;
+              background: currentColor;
+            }
+
+            .date {
+              font-size: 13px;
+              color: rgba(var(--blanc), 0.55);
+            }
+
+            .poste {
+              font-size: 18px;
+              font-weight: 700;
+            }
+
+            .lieu {
+              font-size: 15px;
+              color: rgba(var(--blanc), 0.65);
+            }
+
+            .missions {
               display: flex;
               flex-direction: column;
-              gap: 4px;
+              gap: 6px;
+              margin-top: 8px;
+              padding-left: 18px;
+              list-style: disc;
 
-              .point {
-                position: absolute;
-                left: -35px;
-                top: 4px;
-                width: 13px;
-                height: 13px;
-                border-radius: 999px;
-                background: currentColor;
-              }
-
-              .date {
-                font-size: 13px;
-                color: rgba(var(--blanc), 0.55);
-              }
-
-              .poste {
-                font-size: 18px;
-                font-weight: 700;
-              }
-
-              .detail {
+              li {
                 font-size: 15px;
-                color: rgba(var(--blanc), 0.65);
+                line-height: 1.5;
+                color: rgba(var(--blanc), 0.75);
+
+                @media (max-width: 768px) {
+                  font-size: 14px;
+                }
+              }
+            }
+
+            .outils {
+              display: flex;
+              flex-wrap: wrap;
+              gap: 6px;
+              margin-top: 10px;
+
+              span {
+                padding: 4px 10px;
+                border-radius: 999px;
+                border: 1px solid rgba(var(--blanc), 0.15);
+                font-size: 12px;
+                color: rgba(var(--blanc), 0.75);
               }
             }
           }
@@ -514,94 +539,6 @@ html {
             width: 12px;
             height: 12px;
             border-radius: 3px;
-          }
-        }
-      }
-
-      #moi-projets {
-        display: flex;
-        flex-direction: column;
-        gap: 24px;
-
-        .grille {
-          display: grid;
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-          gap: 16px;
-
-          @media (max-width: 1100px) {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-          }
-
-          @media (max-width: 768px) {
-            grid-template-columns: repeat(1, minmax(0, 1fr));
-            gap: 12px;
-          }
-
-          .moi-carte {
-            display: flex;
-            flex-direction: column;
-            gap: 14px;
-            min-height: 190px;
-            padding: 24px;
-            box-sizing: border-box;
-            border-radius: 16px;
-            border: 1px solid rgba(var(--blanc), 0.1);
-            background: rgba(var(--blanc), 0.03);
-            color: rgb(var(--blanc));
-            text-decoration: none;
-            transition: all 300ms ease-in-out;
-
-            @media (max-width: 768px) {
-              min-height: 0;
-              padding: 18px;
-              gap: 8px;
-            }
-
-            .haut {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-
-              i {
-                color: rgba(var(--blanc), 0.4);
-              }
-            }
-
-            .type {
-              font-size: 13px;
-              letter-spacing: 0.1em;
-              text-transform: uppercase;
-            }
-
-            .nom {
-              font-size: 22px;
-              font-weight: 700;
-
-              @media (max-width: 768px) {
-                font-size: 18px;
-              }
-            }
-
-            .desc {
-              flex-grow: 1;
-              font-size: 15px;
-              line-height: 1.5;
-              color: rgba(var(--blanc), 0.65);
-
-              @media (max-width: 768px) {
-                font-size: 14px;
-              }
-            }
-
-            .tags {
-              font-size: 13px;
-              color: rgba(var(--blanc), 0.5);
-            }
-          }
-
-          a.moi-carte:hover {
-            border: 1px solid rgba(var(--blanc), 0.3);
-            transform: translateY(-2px);
           }
         }
       }
